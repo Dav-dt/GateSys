@@ -86,7 +86,7 @@
             // 
             this.txtMdp.Location = new System.Drawing.Point(350, 354);
             this.txtMdp.Name = "txtMdp";
-            this.txtMdp.PasswordChar = '*';
+            this.txtMdp.PasswordChar = '●';
             this.txtMdp.Size = new System.Drawing.Size(221, 32);
             this.txtMdp.TabIndex = 5;
             // 
@@ -138,6 +138,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

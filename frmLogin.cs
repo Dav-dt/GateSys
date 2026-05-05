@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 
 namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
@@ -54,10 +55,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnAfficherMdp_Click(object sender, EventArgs e)
         {
-            if ( txtMdp.PasswordChar == '*' )
+            if ( txtMdp.PasswordChar == '●')
                 txtMdp.PasswordChar = '\0';
             else
-                txtMdp.PasswordChar = '*';
+                txtMdp.PasswordChar = '●';
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
