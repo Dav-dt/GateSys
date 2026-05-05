@@ -28,19 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnInfosPlanetes = new System.Windows.Forms.Button();
+            this.btnRaces = new System.Windows.Forms.Button();
+            this.btnNouvellesMissions = new System.Windows.Forms.Button();
+            this.btnTableauDeBord = new System.Windows.Forms.Button();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnInfosPlanetes
+            // 
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(73, 498);
+            this.btnInfosPlanetes.Name = "btnInfosPlanetes";
+            this.btnInfosPlanetes.Size = new System.Drawing.Size(155, 47);
+            this.btnInfosPlanetes.TabIndex = 0;
+            this.btnInfosPlanetes.Text = "Infos planetes";
+            this.btnInfosPlanetes.UseVisualStyleBackColor = true;
+            // 
+            // btnRaces
+            // 
+            this.btnRaces.Location = new System.Drawing.Point(73, 431);
+            this.btnRaces.Name = "btnRaces";
+            this.btnRaces.Size = new System.Drawing.Size(155, 44);
+            this.btnRaces.TabIndex = 1;
+            this.btnRaces.Text = "Races";
+            this.btnRaces.UseVisualStyleBackColor = true;
+            // 
+            // btnNouvellesMissions
+            // 
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(73, 339);
+            this.btnNouvellesMissions.Name = "btnNouvellesMissions";
+            this.btnNouvellesMissions.Size = new System.Drawing.Size(155, 66);
+            this.btnNouvellesMissions.TabIndex = 2;
+            this.btnNouvellesMissions.Text = "Nouvelles Missions";
+            this.btnNouvellesMissions.UseVisualStyleBackColor = true;
+            // 
+            // btnTableauDeBord
+            // 
+            this.btnTableauDeBord.Location = new System.Drawing.Point(73, 241);
+            this.btnTableauDeBord.Name = "btnTableauDeBord";
+            this.btnTableauDeBord.Size = new System.Drawing.Size(155, 65);
+            this.btnTableauDeBord.TabIndex = 3;
+            this.btnTableauDeBord.Text = "Tableau de Bord";
+            this.btnTableauDeBord.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(1012, 536);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(132, 37);
+            this.btnQuitter.TabIndex = 4;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.btnQuitter);
+            this.Controls.Add(this.btnTableauDeBord);
+            this.Controls.Add(this.btnNouvellesMissions);
+            this.Controls.Add(this.btnRaces);
+            this.Controls.Add(this.btnInfosPlanetes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
+            this.Text = "Gestion des extraterrestres";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnInfosPlanetes;
+        private System.Windows.Forms.Button btnRaces;
+        private System.Windows.Forms.Button btnNouvellesMissions;
+        private System.Windows.Forms.Button btnTableauDeBord;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }
 
