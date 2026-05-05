@@ -43,6 +43,7 @@
             this.btnInfosPlanetes.TabIndex = 0;
             this.btnInfosPlanetes.Text = "Infos planetes";
             this.btnInfosPlanetes.UseVisualStyleBackColor = true;
+            this.btnInfosPlanetes.Click += new System.EventHandler(this.btnInfosPlanetes_Click);
             // 
             // btnRaces
             // 
@@ -52,6 +53,7 @@
             this.btnRaces.TabIndex = 1;
             this.btnRaces.Text = "Races";
             this.btnRaces.UseVisualStyleBackColor = true;
+            this.btnRaces.Click += new System.EventHandler(this.btnRaces_Click);
             // 
             // btnNouvellesMissions
             // 
@@ -61,6 +63,7 @@
             this.btnNouvellesMissions.TabIndex = 2;
             this.btnNouvellesMissions.Text = "Nouvelles Missions";
             this.btnNouvellesMissions.UseVisualStyleBackColor = true;
+            this.btnNouvellesMissions.Click += new System.EventHandler(this.btnNouvellesMissions_Click);
             // 
             // btnTableauDeBord
             // 
@@ -70,6 +73,7 @@
             this.btnTableauDeBord.TabIndex = 3;
             this.btnTableauDeBord.Text = "Tableau de Bord";
             this.btnTableauDeBord.UseVisualStyleBackColor = true;
+            this.btnTableauDeBord.Click += new System.EventHandler(this.btnTableauDeBord_Click);
             // 
             // btnQuitter
             // 
@@ -79,6 +83,7 @@
             this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // frmMain
             // 
