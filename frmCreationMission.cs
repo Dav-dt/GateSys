@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,123 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
     public partial class frmCreationMission : Form
     {
+        private bool aValidePlanete = false;
+        private int numMission = -1;
+
         public frmCreationMission()
         {
             InitializeComponent();
+
+            txtBudget.KeyPress += onlyNumbers_KeyPress;
+            txtNbMembres.KeyPress += onlyNumbers_KeyPress;
+            txtObjectifQDB.KeyPress += onlyNumbers_KeyPress;
+
+        }
+
+        private void frmCreationMission_Load(object sender, EventArgs e)
+        {
+            //remplissage cmb Planetes
+            SQLiteCommand cmd = new SQLiteCommand(
+                @"SELECT nom FROM Planete", Connexion.Connec);
+
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cmbPlanete.Items.Add(reader["nom"].ToString());
+            }
+
+            //remplissage Choix chef mission
+
+            SQLiteCommand cmd2 = new SQLiteCommand(@"
+                SELECT matricule, nom, prenom,grade FROM Membre mb
+                JOIN Militaire m on mb.matricule = m.matriculeMembre
+                ", Connexion.Connec);
+
+            reader = cmd2.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string texteAffiche = reader["nom"].ToString() + " " +
+                    reader["prenom"].ToString() + "-" + reader["grade"].ToString();
+                cmbChefMission.Items.Add(texteAffiche);
+                cmbChefMission.ValueMember = reader["matricule"].ToString();
+            }
+
+        }
+
+        private void onlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (Keys)e.KeyChar != Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void grpCreationMission_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnValiderPlanete_Click(object sender, EventArgs e)
+        {
+            string nomPlanete = cmbPlanete.SelectedItem.ToString();
+            //id de la planete
+            SQLiteCommand cmd = new SQLiteCommand(
+                $@"SELECT COUNT(numero) FROM Mission
+                  WHERE nomPlanete = '{nomPlanete}'", Connexion.Connec);
+
+            //si mission sans planete on aura 1 qd même
+            int num = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+
+            lblNomMission.Text = "Nom de la Mission : " + nomPlanete + " - " + num.ToString();
+
+            aValidePlanete = true;
+            numMission = num;
+        }
+
+        private void btnValiderMission_Click(object sender, EventArgs e)
+        {
+            if (!aValidePlanete || numMission == -1)
+            {
+                MessageBox.Show("Veuillez valider la planète avant de " +
+                    "valider la mission.");
+                return;
+            }
+
+            else if (txtFeuilleDeRoute.Text == "" ||
+                txtObjectifQDB.Text == "" ||
+                txtBudget.Text == "" ||
+                txtNbMembres.Text == "")
+            {
+                MessageBox.Show("Veuillez remplir tous les champs avant de " +
+                    "valider la mission.");
+                return;
+            }
+
+            try
+            {
+                string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
+                    dateDepart, dateRetour, matriculeChef, feuilleDeRoute,objectifDatabaz,budget)
+                    VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
+                    '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
+                    '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
+                    {txtBudget.Text})";
+                MessageBox.Show(requete);
+
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show("Erreur lors de l'insertion de la mission : " +
+                    ex.Message);
+                return;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une erreur est survenue : " +
+                    ex.Message);
+                return;
+            }
         }
     }
 }
