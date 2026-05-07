@@ -65,5 +65,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
 
         }
+
+        private void txtMd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMdp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ( e.KeyChar == (char)Keys.Enter )
+            {
+                btnConfirmer_Click(sender, e);
+            }
+        }
     }
 }

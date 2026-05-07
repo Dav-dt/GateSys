@@ -37,24 +37,31 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 cmbPlanete.Items.Add(reader["nom"].ToString());
             }
+            cmbPlanete.SelectedIndex = 0;
 
             //remplissage Choix chef mission
 
             SQLiteCommand cmd2 = new SQLiteCommand(@"
-                SELECT matricule, nom, prenom,grade FROM Membre mb
-                JOIN Militaire m on mb.matricule = m.matriculeMembre
-                ", Connexion.Connec);
+                SELECT matricule, nom, prenom, grade
+                FROM Membre mb JOIN Militaire m 
+                ON mb.matricule = m.matriculeMembre", 
+                    Connexion.Connec);
+            
+            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd2);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-            reader = cmd2.ExecuteReader();
+            // colonne affichée
+            dt.Columns.Add("Affichage",typeof(string),
+                "nom + ' ' + prenom + ' - ' + grade");
 
-            while (reader.Read())
-            {
-                string texteAffiche = reader["nom"].ToString() + " " +
-                    reader["prenom"].ToString() + "-" + reader["grade"].ToString();
-                cmbChefMission.Items.Add(texteAffiche);
-                cmbChefMission.ValueMember = reader["matricule"].ToString();
-            }
+            cmbChefMission.DataSource = dt;
 
+            // texte visible
+            cmbChefMission.DisplayMember = "Affichage";
+
+            // valeur associée
+            cmbChefMission.ValueMember = "matricule";
         }
 
         private void onlyNumbers_KeyPress(object sender, KeyPressEventArgs e)

@@ -89,6 +89,8 @@
             this.txtMdp.PasswordChar = '●';
             this.txtMdp.Size = new System.Drawing.Size(221, 32);
             this.txtMdp.TabIndex = 5;
+            this.txtMdp.TextChanged += new System.EventHandler(this.txtMd_TextChanged);
+            this.txtMdp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMdp_KeyPress);
             // 
             // btnConfirmer
             // 
