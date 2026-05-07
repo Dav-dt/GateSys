@@ -34,24 +34,25 @@
             this.lblBudgetText = new System.Windows.Forms.Label();
             this.lblDateDepart = new System.Windows.Forms.Label();
             this.lblDateFin = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInfo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbPlanete = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomMission
             // 
             this.lblNomMission.AutoSize = true;
-            this.lblNomMission.Location = new System.Drawing.Point(142, 13);
+            this.lblNomMission.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomMission.Location = new System.Drawing.Point(167, 17);
             this.lblNomMission.Name = "lblNomMission";
-            this.lblNomMission.Size = new System.Drawing.Size(35, 13);
+            this.lblNomMission.Size = new System.Drawing.Size(66, 24);
             this.lblNomMission.TabIndex = 0;
             this.lblNomMission.Text = "label1";
             // 
             // lblNomCapitaine
             // 
             this.lblNomCapitaine.AutoSize = true;
-            this.lblNomCapitaine.Location = new System.Drawing.Point(142, 106);
+            this.lblNomCapitaine.Location = new System.Drawing.Point(167, 110);
             this.lblNomCapitaine.Name = "lblNomCapitaine";
             this.lblNomCapitaine.Size = new System.Drawing.Size(35, 13);
             this.lblNomCapitaine.TabIndex = 1;
@@ -60,7 +61,7 @@
             // lblbudget
             // 
             this.lblbudget.AutoSize = true;
-            this.lblbudget.Location = new System.Drawing.Point(417, 106);
+            this.lblbudget.Location = new System.Drawing.Point(442, 110);
             this.lblbudget.Name = "lblbudget";
             this.lblbudget.Size = new System.Drawing.Size(47, 13);
             this.lblbudget.TabIndex = 2;
@@ -69,7 +70,7 @@
             // lblBudgetText
             // 
             this.lblBudgetText.AutoSize = true;
-            this.lblBudgetText.Location = new System.Drawing.Point(470, 106);
+            this.lblBudgetText.Location = new System.Drawing.Point(495, 110);
             this.lblBudgetText.Name = "lblBudgetText";
             this.lblBudgetText.Size = new System.Drawing.Size(0, 13);
             this.lblBudgetText.TabIndex = 3;
@@ -77,7 +78,7 @@
             // lblDateDepart
             // 
             this.lblDateDepart.AutoSize = true;
-            this.lblDateDepart.Location = new System.Drawing.Point(142, 59);
+            this.lblDateDepart.Location = new System.Drawing.Point(167, 63);
             this.lblDateDepart.Name = "lblDateDepart";
             this.lblDateDepart.Size = new System.Drawing.Size(35, 13);
             this.lblDateDepart.TabIndex = 4;
@@ -86,36 +87,38 @@
             // lblDateFin
             // 
             this.lblDateFin.AutoSize = true;
-            this.lblDateFin.Location = new System.Drawing.Point(417, 59);
+            this.lblDateFin.Location = new System.Drawing.Point(442, 63);
             this.lblDateFin.Name = "lblDateFin";
             this.lblDateFin.Size = new System.Drawing.Size(35, 13);
             this.lblDateFin.TabIndex = 5;
             this.lblDateFin.Text = "label1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 110);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnInfo
             // 
-            this.btnInfo.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupe;
+            this.btnInfo.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupe;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInfo.Location = new System.Drawing.Point(526, 54);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(77, 64);
+            this.btnInfo.Size = new System.Drawing.Size(64, 64);
             this.btnInfo.TabIndex = 7;
-            this.btnInfo.Text = "btnInfo";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInfo.UseVisualStyleBackColor = true;
+            // 
+            // pbPlanete
+            // 
+            this.pbPlanete.Location = new System.Drawing.Point(3, 13);
+            this.pbPlanete.Name = "pbPlanete";
+            this.pbPlanete.Size = new System.Drawing.Size(145, 128);
+            this.pbPlanete.TabIndex = 6;
+            this.pbPlanete.TabStop = false;
             // 
             // Mission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbPlanete);
             this.Controls.Add(this.lblDateFin);
             this.Controls.Add(this.lblDateDepart);
             this.Controls.Add(this.lblBudgetText);
@@ -123,8 +126,8 @@
             this.Controls.Add(this.lblNomCapitaine);
             this.Controls.Add(this.lblNomMission);
             this.Name = "Mission";
-            this.Size = new System.Drawing.Size(626, 161);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(676, 188);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +141,7 @@
         private System.Windows.Forms.Label lblBudgetText;
         private System.Windows.Forms.Label lblDateDepart;
         private System.Windows.Forms.Label lblDateFin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPlanete;
         private System.Windows.Forms.Button btnInfo;
     }
 }
