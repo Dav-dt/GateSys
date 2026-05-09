@@ -67,6 +67,12 @@
     <Compile Include="control\Alien.Designer.cs">
       <DependentUpon>Alien.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\Planete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Planete.Designer.cs">
+      <DependentUpon>Planete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\Planete.resx">
+      <DependentUpon>Planete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
