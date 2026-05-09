@@ -33,6 +33,7 @@
             this.btnNouvellesMissions = new System.Windows.Forms.Button();
             this.btnTableauDeBord = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInfosPlanetes
@@ -85,11 +86,22 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(12, 12);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 50);
+            this.btnTest.TabIndex = 5;
+            this.btnTest.Text = "page test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnTableauDeBord);
             this.Controls.Add(this.btnNouvellesMissions);
@@ -111,6 +123,7 @@
         private System.Windows.Forms.Button btnNouvellesMissions;
         private System.Windows.Forms.Button btnTableauDeBord;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 

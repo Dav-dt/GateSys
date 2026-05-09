@@ -61,6 +61,12 @@
     <Compile Include="control\Mission.Designer.cs">
       <DependentUpon>Mission.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\Alien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Alien.Designer.cs">
+      <DependentUpon>Alien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="mesDatas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="control\Alien.resx">
+      <DependentUpon>Alien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mars.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

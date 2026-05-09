@@ -16,5 +16,19 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         {
             InitializeComponent();
         }
+        public Mission(string nonMission,string dateDepart,string dateFin,string commandant,string budget,Image image)
+        {
+            InitializeComponent();
+            lblNomMission.Text = nonMission;
+            lblDateDepart.Text = dateDepart;
+            lblDateFin.Text = dateFin;
+            lblNomCapitaine.Text = commandant;
+            lblbudget.Text = budget;
+
+            pbPlanete.Image = image;
+            pbPlanete.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+        }
     }
 }

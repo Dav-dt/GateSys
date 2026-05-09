@@ -79,6 +79,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             
         }
 
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            Form test = new frmTest();
+            test.Show();
+
         private void frmMain_Load(object sender, EventArgs e)
         {
 
