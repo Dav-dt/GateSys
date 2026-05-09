@@ -32,6 +32,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmLogin frmLogin = new frmLogin();
             frmLogin.ShowDialog();
+
+            if (  frmLogin.DialogResult == DialogResult.OK)
+            {
+                frmCreationMission frmCreationMission = new frmCreationMission();
+                frmCreationMission.ShowDialog();
+            }
         }
 
         private void btnRaces_Click(object sender, EventArgs e)
@@ -77,6 +83,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             Form test = new frmTest();
             test.Show();
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
