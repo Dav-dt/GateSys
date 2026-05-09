@@ -22,9 +22,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void frmTest_Load(object sender, EventArgs e)
         {
             Image img = Resources.mars;
-            Mission ms = new Mission("Mars", "01-01-2090", "01-01-2090", "test", "beaucoup", img);
+            List<string> ls = new List<string>{ "Terre", "mars" };
+            Alien al = new Alien("test", "test", ls, img);
+            Alien al2 = new Alien("test", "test", img);
+            al2.Top = 200;
 
-            this.Controls.Add(ms);
+            this.Controls.Add(al);
+            this.Controls.Add(al2);
         }
     }
 }

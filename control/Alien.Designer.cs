@@ -31,6 +31,7 @@
             this.pbAlien = new System.Windows.Forms.PictureBox();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblRace = new System.Windows.Forms.Label();
+            this.lblPlanete = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             this.pbAlien.Location = new System.Drawing.Point(18, 16);
             this.pbAlien.Name = "pbAlien";
             this.pbAlien.Size = new System.Drawing.Size(144, 148);
+            this.pbAlien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAlien.TabIndex = 0;
             this.pbAlien.TabStop = false;
             // 
@@ -60,10 +62,20 @@
             this.lblRace.TabIndex = 2;
             this.lblRace.Text = "label2";
             // 
+            // lblPlanete
+            // 
+            this.lblPlanete.AutoSize = true;
+            this.lblPlanete.Location = new System.Drawing.Point(181, 106);
+            this.lblPlanete.Name = "lblPlanete";
+            this.lblPlanete.Size = new System.Drawing.Size(0, 13);
+            this.lblPlanete.TabIndex = 3;
+            // 
             // Alien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.lblPlanete);
             this.Controls.Add(this.lblRace);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pbAlien);
@@ -80,5 +92,6 @@
         private System.Windows.Forms.PictureBox pbAlien;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblRace;
+        private System.Windows.Forms.Label lblPlanete;
     }
 }
