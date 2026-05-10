@@ -48,6 +48,33 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
         }
 
+        public Planete(string non, string planete, int temperature, float gravite, int databaz)
+        {
+            InitializeComponent();
+            //this.BackColor = Color.FromArgb(60, 56, 54);
+            pbPlanete.Image = getImage(planete);
+            lblPlanete.Text = non.ToUpper();
+            lblGravite.Text += " " + gravite.ToString();
+
+            if (temperature >= 0)
+            {
+                ajouteJauge(Color.LightGreen);
+                if (temperature > 40) ajouteJauge(Color.Orange);
+                if (temperature > 100) ajouteJauge(Color.Red);
+            }
+            else if (temperature < 0)
+            {
+                ajouteJauge(Color.FromArgb(122, 242, 252));
+                if (temperature < -40) ajouteJauge(Color.FromArgb(100, 131, 249));
+                if (temperature < -100) ajouteJauge(Color.FromArgb(128, 1, 254));
+            }
+            placeTemp(temperature);
+            if (databaz == 1)
+            {
+                chkDatabaz.Checked = true;
+            }
+        }
+
         private void ajouteJauge(Color color)
         {
             int debut = rtxtTemp.TextLength;
@@ -84,6 +111,49 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         private void chkDatabaz_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private Image getImage(string planete)
+        {
+            switch (planete.ToLower())
+            {
+                case "mercure":
+                    return Properties.Resources.mercury;
+                case "venus":
+                    return Properties.Resources.venus;
+                case "terre":
+                    return Properties.Resources.earth;
+                case "mars":
+                    return Properties.Resources.mars;
+                case "jupiter":
+                    return Properties.Resources.jupiter;
+                case "saturne":
+                    return Properties.Resources.saturne;
+                case "uranus":
+                    return Properties.Resources.uranus;
+                case "neptune":
+                    return Properties.Resources.neptune;
+                case "la 9ème planète":
+                    return Properties.Resources._9planete;
+                case "aina":
+                    return Properties.Resources.Aina;
+                case "aurae":
+                    return Properties.Resources.Aurae;
+                case "kobaia":
+                    return Properties.Resources.Kobaia;
+                case "malaria":
+                    return Properties.Resources.Malaria;
+                case "muh":
+                    return Properties.Resources.Muh;
+                case "sckxyss":
+                    return Properties.Resources.Sckxyss;
+                case "setna":
+                    return Properties.Resources.setna;
+                case "sohia":
+                    return Properties.Resources.Sohia;
+                default:
+                    return null;
+            }
         }
     }
 }
