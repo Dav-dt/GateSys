@@ -63,9 +63,65 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap civil {
             get {
                 object obj = ResourceManager.GetObject("civil", resourceCulture);
+
+        internal static System.Drawing.Bitmap _9planete {
+            get {
+                object obj = ResourceManager.GetObject("9planete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Aina {
+            get {
+                object obj = ResourceManager.GetObject("Aina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Aurae {
+            get {
+                object obj = ResourceManager.GetObject("Aurae", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap earth {
+            get {
+                object obj = ResourceManager.GetObject("earth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jupiter {
+            get {
+                object obj = ResourceManager.GetObject("jupiter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kobaia {
+            get {
+                object obj = ResourceManager.GetObject("Kobaia", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,6 +139,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Malaria {
+            get {
+                object obj = ResourceManager.GetObject("Malaria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mars {
             get {
                 object obj = ResourceManager.GetObject("mars", resourceCulture);
@@ -93,9 +159,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap militaire {
             get {
                 object obj = ResourceManager.GetObject("militaire", resourceCulture);
+
+        internal static System.Drawing.Bitmap mercury {
+            get {
+                object obj = ResourceManager.GetObject("mercury", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +175,85 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap pengu {
             get {
                 object obj = ResourceManager.GetObject("pengu", resourceCulture);
+
+        internal static System.Drawing.Bitmap Muh {
+            get {
+                object obj = ResourceManager.GetObject("Muh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap neptune {
+            get {
+                object obj = ResourceManager.GetObject("neptune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saturne {
+            get {
+                object obj = ResourceManager.GetObject("saturne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sckxyss {
+            get {
+                object obj = ResourceManager.GetObject("Sckxyss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setna {
+            get {
+                object obj = ResourceManager.GetObject("setna", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sohia {
+            get {
+                object obj = ResourceManager.GetObject("Sohia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uranus {
+            get {
+                object obj = ResourceManager.GetObject("uranus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venus {
+            get {
+                object obj = ResourceManager.GetObject("venus", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

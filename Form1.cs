@@ -13,6 +13,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
     public partial class frmMain : Form
     {
+        private bool m_hasConnectedOnce = false;
+
         public frmMain()
         {
             InitializeComponent();
@@ -30,10 +32,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnNouvellesMissions_Click(object sender, EventArgs e)
         {
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.ShowDialog();
+            if ( !m_hasConnectedOnce )
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.ShowDialog();
+                if ( frmLogin.DialogResult == DialogResult.OK )
+                {
+                    m_hasConnectedOnce = true;
+                }
+            }
 
-            if (  frmLogin.DialogResult == DialogResult.OK)
+            if ( m_hasConnectedOnce )
             {
                 frmCreationMission frmCreationMission = new frmCreationMission();
                 frmCreationMission.ShowDialog();
@@ -88,6 +97,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTestMembre_Click(object sender, EventArgs e)
+        {
+            frmSaisieMembresObjectifs frmSaisieMembresObjectifs = new frmSaisieMembresObjectifs();
+            frmSaisieMembresObjectifs.ShowDialog();
         }
     }
 }

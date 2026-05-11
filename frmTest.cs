@@ -22,9 +22,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void frmTest_Load(object sender, EventArgs e)
         {
             Image img = Resources.mars;
-            //Planete mars = new Planete("mars", img, 150,0.5f,1);
-            Menbre mb = new Menbre("agagaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaa", false);
-            this.Controls.Add(mb);
             
         }
     }
