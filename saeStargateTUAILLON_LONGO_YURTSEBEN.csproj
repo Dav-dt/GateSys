@@ -105,6 +105,12 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInfoPlanete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoPlanete.Designer.cs">
+      <DependentUpon>frmInfoPlanete.cs</DependentUpon>
+    </Compile>
     <Compile Include="mesDatas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreationMission.resx">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoPlanete.resx">
+      <DependentUpon>frmInfoPlanete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

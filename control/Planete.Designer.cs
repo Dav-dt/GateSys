@@ -28,23 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbPlanete = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
             this.lblPlanete = new System.Windows.Forms.Label();
             this.rtxtTemp = new System.Windows.Forms.RichTextBox();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.lblGravite = new System.Windows.Forms.Label();
             this.chkDatabaz = new System.Windows.Forms.CheckBox();
+            this.cmsPlanete = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbPlanete = new System.Windows.Forms.PictureBox();
+            this.cmsPlanete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbPlanete
-            // 
-            this.pbPlanete.Location = new System.Drawing.Point(13, 21);
-            this.pbPlanete.Name = "pbPlanete";
-            this.pbPlanete.Size = new System.Drawing.Size(155, 155);
-            this.pbPlanete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPlanete.TabIndex = 0;
-            this.pbPlanete.TabStop = false;
             // 
             // lblPlanete
             // 
@@ -98,11 +94,42 @@
             this.chkDatabaz.UseVisualStyleBackColor = true;
             this.chkDatabaz.CheckedChanged += new System.EventHandler(this.chkDatabaz_CheckedChanged);
             // 
+            // cmsPlanete
+            // 
+            this.cmsPlanete.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.cmsPlanete.Name = "cmsPlanete";
+            this.cmsPlanete.Size = new System.Drawing.Size(181, 70);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Infos";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "quitter";
+            // 
+            // pbPlanete
+            // 
+            this.pbPlanete.Location = new System.Drawing.Point(13, 21);
+            this.pbPlanete.Name = "pbPlanete";
+            this.pbPlanete.Size = new System.Drawing.Size(155, 155);
+            this.pbPlanete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPlanete.TabIndex = 0;
+            this.pbPlanete.TabStop = false;
+            // 
             // Planete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ContextMenuStrip = this.cmsPlanete;
             this.Controls.Add(this.chkDatabaz);
             this.Controls.Add(this.lblGravite);
             this.Controls.Add(this.rtxtTemp);
@@ -110,6 +137,8 @@
             this.Controls.Add(this.pbPlanete);
             this.Name = "Planete";
             this.Size = new System.Drawing.Size(371, 188);
+            this.Load += new System.EventHandler(this.Planete_Load);
+            this.cmsPlanete.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,5 +153,8 @@
         private System.Data.SQLite.SQLiteCommand sqLiteCommand1;
         private System.Windows.Forms.Label lblGravite;
         private System.Windows.Forms.CheckBox chkDatabaz;
+        private System.Windows.Forms.ContextMenuStrip cmsPlanete;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

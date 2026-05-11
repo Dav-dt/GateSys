@@ -73,6 +73,42 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             {
                 chkDatabaz.Checked = true;
             }
+            
+        }
+        int temp;
+        double grav;
+        int data;
+
+        public Planete(string non, string planete, int temperature, double gravite, int databaz,bool enable)
+        {
+            temp = temperature;
+            grav = gravite;
+            data = databaz;
+            InitializeComponent();
+            //this.BackColor = Color.FromArgb(60, 56, 54);
+            pbPlanete.Image = getImage(planete);
+            lblPlanete.Text = non.ToUpper();
+            lblGravite.Text += " " + gravite.ToString();
+
+            if (temperature >= 0)
+            {
+                ajouteJauge(Color.LightGreen);
+                if (temperature > 40) ajouteJauge(Color.Orange);
+                if (temperature > 100) ajouteJauge(Color.Red);
+            }
+            else if (temperature < 0)
+            {
+                ajouteJauge(Color.FromArgb(122, 242, 252));
+                if (temperature < -40) ajouteJauge(Color.FromArgb(100, 131, 249));
+                if (temperature < -100) ajouteJauge(Color.FromArgb(128, 1, 254));
+            }
+            placeTemp(temperature);
+            if (databaz == 1)
+            {
+                chkDatabaz.Checked = true;
+            }
+            cmsPlanete.Enabled = false;
+            this.BorderStyle = BorderStyle.None;
         }
 
         private void ajouteJauge(Color color)
@@ -154,6 +190,23 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 default:
                     return null;
             }
+        }
+
+        private void Planete_Load(object sender, EventArgs e)
+        {
+
+        }
+        private string getNom()
+        {
+            return lblPlanete.Text;
+        }
+
+        
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmInfoPlanete infoplanete = new frmInfoPlanete(getNom(), getNom(), temp, grav, data);
+            infoplanete.ShowDialog();
         }
     }
 }
