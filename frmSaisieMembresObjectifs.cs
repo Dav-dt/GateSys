@@ -13,8 +13,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
     public partial class frmSaisieMembresObjectifs : Form
     {
-        private List<int> idsMembres = new List<int>();
-        private Dictionary<int, int> captures = new Dictionary<int, int>();
+        private List<string> m_idsMembres = new List<string>();
+        private Dictionary<int, int> m_captures = new Dictionary<int, int>();
+
+        private int m_numeroMission;
+        private string m_nomPlanete;
 
         public frmSaisieMembresObjectifs()
         {
@@ -25,6 +28,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             InitializeComponent();
 
+            m_nomPlanete = nomPlanete;
+            m_numeroMission = numeroMission;
         }
 
         private void frmSaisieMembresObjectifs_Load(object sender, EventArgs e)
@@ -77,28 +82,85 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnValiderTout_Click(object sender, EventArgs e)
         {
+            //debut des inserts
+
+            SQLiteTransaction transaction = Connexion.Connec.BeginTransaction();
+            try
+            {
+                //insertion des membres
+                foreach ( string idMembre in m_idsMembres )
+                {
+                    string requete = $@"INSERT INTO Composer(nomPlanete, numeroMission, matriculeMembre) 
+                                        VALUES ('{m_nomPlanete}', '{m_numeroMission}',
+                                           '{idMembre}')";
+                    SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    cmd.ExecuteNonQuery();
+                }
+
+                //insertion des captures
+
+                foreach ( KeyValuePair<int,int> capture in m_captures )
+                {
+                    string requete = $@"INSERT INTO ObjectifCapture(nomPlanete, numeroMission, 
+                                        idEspeceEnnemi, objectif) 
+                                        VALUES ('{m_nomPlanete}', '{m_numeroMission}',
+                                           '{capture.Key}', '{capture.Value}')";
+                    SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    cmd.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+                MessageBox.Show("Données insérées avec succès !");
+                
+                this.DialogResult = DialogResult.OK;
+
+            }
+            catch ( SQLiteException ex )
+            {
+                transaction.Rollback();
+                MessageBox.Show("Erreur lors de l'insertion : " + ex.Message);
+            }
+
+            catch ( Exception ex )
+            {
+                transaction.Rollback();
+                MessageBox.Show("Erreur inattendue : " + ex.Message);
+            }
+
 
         }
 
         private void btnEffacerMembre_Click(object sender, EventArgs e)
         {
             lstMembres.Items.Clear();
+            m_idsMembres.Clear();
         }
 
         private void btnEffacerCapture_Click(object sender, EventArgs e)
         {
             lstCapture.Items.Clear();
+            m_captures.Clear();
         }
 
         private void btnAjouterMembres_Click(object sender, EventArgs e)
         {
             lstMembres.Items.Add(cmbMembres.Text);
+            m_idsMembres.Add(cmbMembres.SelectedValue.ToString());
 
         }
 
         private void btnAjouterCapture_Click(object sender, EventArgs e)
         {
+            if ( txtNbCapture.Text == String.Empty || 
+                !int.TryParse(txtNbCapture.Text, out int nbCapture) ||
+                nbCapture <= 0 )
+            {
+                MessageBox.Show("Veuillez entrer un nombre de captures valide.");
+                return;
+            }
 
+            lstCapture.Items.Add(cmbCapture.Text + " -> " + nbCapture);
+            m_captures.Add(Convert.ToInt32(cmbCapture.SelectedValue), nbCapture);
         }
     }
 }
