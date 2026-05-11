@@ -94,6 +94,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                                         VALUES ('{m_nomPlanete}', '{m_numeroMission}',
                                            '{idMembre}')";
                     SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    cmd.Transaction = transaction;
                     cmd.ExecuteNonQuery();
                 }
 
@@ -106,6 +107,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                                         VALUES ('{m_nomPlanete}', '{m_numeroMission}',
                                            '{capture.Key}', '{capture.Value}')";
                     SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    cmd.Transaction = transaction;
                     cmd.ExecuteNonQuery();
                 }
 
