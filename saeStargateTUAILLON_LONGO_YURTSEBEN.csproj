@@ -93,6 +93,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSaisieMembresObjectifs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaisieMembresObjectifs.Designer.cs">
+      <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaisieMembresObjectifs.resx">
+      <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
