@@ -63,6 +63,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
+        internal static System.Drawing.Bitmap civil {
+            get {
+                object obj = ResourceManager.GetObject("civil", resourceCulture);
+
         internal static System.Drawing.Bitmap _9planete {
             get {
                 object obj = ResourceManager.GetObject("9planete", resourceCulture);
@@ -116,6 +121,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap Kobaia {
             get {
                 object obj = ResourceManager.GetObject("Kobaia", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +159,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
+        internal static System.Drawing.Bitmap militaire {
+            get {
+                object obj = ResourceManager.GetObject("militaire", resourceCulture);
+
         internal static System.Drawing.Bitmap mercury {
             get {
                 object obj = ResourceManager.GetObject("mercury", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +175,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+
+        internal static System.Drawing.Bitmap pengu {
+            get {
+                object obj = ResourceManager.GetObject("pengu", resourceCulture);
+
         internal static System.Drawing.Bitmap Muh {
             get {
                 object obj = ResourceManager.GetObject("Muh", resourceCulture);
@@ -236,6 +253,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap venus {
             get {
                 object obj = ResourceManager.GetObject("venus", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
