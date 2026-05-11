@@ -19,7 +19,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,6 +63,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap civil {
+            get {
+                object obj = ResourceManager.GetObject("civil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loupe {
             get {
                 object obj = ResourceManager.GetObject("loupe", resourceCulture);
@@ -76,6 +86,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap mars {
             get {
                 object obj = ResourceManager.GetObject("mars", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap militaire {
+            get {
+                object obj = ResourceManager.GetObject("militaire", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

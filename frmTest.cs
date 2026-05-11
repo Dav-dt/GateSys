@@ -23,7 +23,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             Image img = Resources.mars;
             //Planete mars = new Planete("mars", img, 150,0.5f,1);
-            Menbre mb = new Menbre("agagaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaa", true);
+            Menbre mb = new Menbre("agagaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaa", false);
             this.Controls.Add(mb);
             
         }

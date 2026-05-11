@@ -24,7 +24,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             lblPrenom.Text = prenom;
             if (militaire)
             {
-                Image img = Properties.Resources.pengu;
+                Image img = Properties.Resources.militaire;
+                pbMenbre.Image = img;
+            }
+            else
+            {
+                Image img = Properties.Resources.civil;
                 pbMenbre.Image = img;
             }
         }
