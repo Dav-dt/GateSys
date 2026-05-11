@@ -48,7 +48,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
         }
 
-        public Planete(string non, string planete, int temperature, float gravite, int databaz)
+        public Planete(string non, string planete, int temperature, double gravite, int databaz)
         {
             InitializeComponent();
             //this.BackColor = Color.FromArgb(60, 56, 54);
@@ -119,7 +119,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             {
                 case "mercure":
                     return Properties.Resources.mercury;
-                case "venus":
+                case "vénus":
                     return Properties.Resources.venus;
                 case "terre":
                     return Properties.Resources.earth;
