@@ -127,8 +127,14 @@
   <data name="Aurae" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aurae.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bleu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bleu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\earth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jupiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jupiter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,6 +148,9 @@
   <data name="Malaria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Malaria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="marron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mars.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +162,15 @@
   </data>
   <data name="neptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neptune.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pourpre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pourpre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saturne" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saturne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,5 +189,11 @@
   </data>
   <data name="venus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\venus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vert.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="violet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\violet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
