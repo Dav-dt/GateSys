@@ -84,6 +84,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             //debut des inserts
 
+            if ( lstMembres.Items.Count == 0 || lstCapture.Items.Count == 0)
+            {
+                MessageBox.Show("Veuillez entrer des informations valides");
+                return;
+            }
+
             SQLiteTransaction transaction = Connexion.Connec.BeginTransaction();
             try
             {
