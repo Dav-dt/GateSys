@@ -21,8 +21,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            Image img = Resources.mars;
-            Planete mars = new Planete("mars", "aurae", 10,0.5f,1);
+            Alien mars = new Alien("Mars", "Planete", "vert");
 
             this.Controls.Add(mars);
             

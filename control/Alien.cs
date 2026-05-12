@@ -38,7 +38,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             pbAlien.Image = getImage(couleur);
 
         }
-        public Alien(string nom, string race, Image image,string couleur)
+        public Alien(string nom, string race,string couleur)
         {
             InitializeComponent();
             lblNom.Text = nom;
