@@ -93,6 +93,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bleu {
+            get {
+                object obj = ResourceManager.GetObject("bleu", resourceCulture);
         internal static System.Drawing.Bitmap civil {
             get {
                 object obj = ResourceManager.GetObject("civil", resourceCulture);
@@ -106,6 +109,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap earth {
             get {
                 object obj = ResourceManager.GetObject("earth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gris {
+            get {
+                object obj = ResourceManager.GetObject("gris", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +159,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap Malaria {
             get {
                 object obj = ResourceManager.GetObject("Malaria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marron {
+            get {
+                object obj = ResourceManager.GetObject("marron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +226,29 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap orange {
+            get {
+                object obj = ResourceManager.GetObject("orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pourpre {
+            get {
+                object obj = ResourceManager.GetObject("pourpre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rose {
+            get {
+                object obj = ResourceManager.GetObject("rose", resourceCulture);
         internal static System.Drawing.Bitmap pengu {
             get {
                 object obj = ResourceManager.GetObject("pengu", resourceCulture);
@@ -266,6 +312,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap venus {
             get {
                 object obj = ResourceManager.GetObject("venus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vert {
+            get {
+                object obj = ResourceManager.GetObject("vert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap violet {
+            get {
+                object obj = ResourceManager.GetObject("violet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
