@@ -21,7 +21,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            Image img = Resources.mars;
+
             
         }
     }

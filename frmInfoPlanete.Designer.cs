@@ -1,0 +1,100 @@
+﻿namespace saeStargateTUAILLON_LONGO_YURTSEBEN
+{
+    partial class frmInfoPlanete
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.labelEspece = new System.Windows.Forms.Label();
+            this.lbEspece = new System.Windows.Forms.ListBox();
+            this.lbMission = new System.Windows.Forms.ListBox();
+            this.labelMission = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // labelEspece
+            // 
+            this.labelEspece.AutoSize = true;
+            this.labelEspece.Location = new System.Drawing.Point(9, 196);
+            this.labelEspece.Name = "labelEspece";
+            this.labelEspece.Size = new System.Drawing.Size(84, 13);
+            this.labelEspece.TabIndex = 0;
+            this.labelEspece.Text = "Espece vivante:";
+            // 
+            // lbEspece
+            // 
+            this.lbEspece.FormattingEnabled = true;
+            this.lbEspece.Items.AddRange(new object[] {
+            ""});
+            this.lbEspece.Location = new System.Drawing.Point(12, 221);
+            this.lbEspece.Name = "lbEspece";
+            this.lbEspece.Size = new System.Drawing.Size(244, 95);
+            this.lbEspece.TabIndex = 1;
+            this.lbEspece.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // lbMission
+            // 
+            this.lbMission.FormattingEnabled = true;
+            this.lbMission.Items.AddRange(new object[] {
+            ""});
+            this.lbMission.Location = new System.Drawing.Point(12, 353);
+            this.lbMission.Name = "lbMission";
+            this.lbMission.Size = new System.Drawing.Size(244, 95);
+            this.lbMission.TabIndex = 3;
+            // 
+            // labelMission
+            // 
+            this.labelMission.AutoSize = true;
+            this.labelMission.Location = new System.Drawing.Point(9, 328);
+            this.labelMission.Name = "labelMission";
+            this.labelMission.Size = new System.Drawing.Size(45, 13);
+            this.labelMission.TabIndex = 2;
+            this.labelMission.Text = "Mission:";
+            // 
+            // frmInfoPlanete
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.lbMission);
+            this.Controls.Add(this.labelMission);
+            this.Controls.Add(this.lbEspece);
+            this.Controls.Add(this.labelEspece);
+            this.Name = "frmInfoPlanete";
+            this.Text = "InfoPlanete";
+            this.Load += new System.EventHandler(this.frmInfoPlanete_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label labelEspece;
+        private System.Windows.Forms.ListBox lbEspece;
+        private System.Windows.Forms.ListBox lbMission;
+        private System.Windows.Forms.Label labelMission;
+    }
+}

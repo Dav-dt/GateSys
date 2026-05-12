@@ -99,6 +99,11 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlanete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanete.Designer.cs">
+      <DependentUpon>frmPlanete.cs</DependentUpon>
     <Compile Include="frmSaisieMembresObjectifs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +115,12 @@
     </Compile>
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoPlanete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoPlanete.Designer.cs">
+      <DependentUpon>frmInfoPlanete.cs</DependentUpon>
     </Compile>
     <Compile Include="mesDatas.cs" />
     <Compile Include="Program.cs" />
@@ -132,9 +143,14 @@
     <EmbeddedResource Include="frmCreationMission.resx">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoPlanete.resx">
+      <DependentUpon>frmInfoPlanete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanete.resx">
+      <DependentUpon>frmPlanete.cs</DependentUpon>
     <EmbeddedResource Include="frmSaisieMembresObjectifs.resx">
       <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
     </EmbeddedResource>
