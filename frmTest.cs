@@ -21,9 +21,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            Alien mars = new Alien("Mars", "Planete", "vert");
 
-            this.Controls.Add(mars);
             
         }
     }

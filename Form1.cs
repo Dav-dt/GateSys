@@ -100,5 +100,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
 
         }
+
+        private void btnTestMembre_Click(object sender, EventArgs e)
+        {
+            frmSaisieMembresObjectifs frmSaisieMembresObjectifs = new frmSaisieMembresObjectifs();
+            frmSaisieMembresObjectifs.ShowDialog();
+        }
     }
 }
