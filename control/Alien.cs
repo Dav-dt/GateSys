@@ -17,7 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             InitializeComponent();
         }
 
-        public Alien(string nom,string race, List<string> planete,string couleur)
+        public Alien(string nom,string race, List<string> planete)
         {
             InitializeComponent();
             lblNom.Text = nom;
@@ -35,10 +35,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 }
             }
 
-            pbAlien.Image = getImage(couleur);
+            pbAlien.Image = getImage(race);
 
         }
-        public Alien(string nom, string race,string couleur)
+        public Alien(string nom, string race)
         {
             InitializeComponent();
             lblNom.Text = nom;
@@ -47,13 +47,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             lblPlanete.ForeColor = Color.Red;
             lblPlanete.Text = "Inconnu";
 
-            pbAlien.Image = getImage(couleur);
+            pbAlien.Image = getImage(race);
 
         }
 
         private Image getImage(string nom)
         {
-            switch (nom)
+            switch (nom.ToLower())
             {
                 case "vert":
                     return Properties.Resources.vert;

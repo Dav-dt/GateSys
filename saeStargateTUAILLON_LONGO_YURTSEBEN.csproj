@@ -104,7 +104,13 @@
     </Compile>
     <Compile Include="frmPlanete.Designer.cs">
       <DependentUpon>frmPlanete.cs</DependentUpon>
-	</Compile>	
+    </Compile>
+    <Compile Include="frmRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRace.Designer.cs">
+      <DependentUpon>frmRace.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSaisieMembresObjectifs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,7 +158,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanete.resx">
       <DependentUpon>frmPlanete.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRace.resx">
+      <DependentUpon>frmRace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSaisieMembresObjectifs.resx">
       <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
     </EmbeddedResource>
