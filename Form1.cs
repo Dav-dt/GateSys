@@ -47,6 +47,27 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 frmCreationMission frmCreationMission = new frmCreationMission();
                 frmCreationMission.ShowDialog();
+
+                if ( frmCreationMission.DialogResult == DialogResult.OK )
+                {
+                    MettreAJourDs(MesDatas.DsGlobal);
+
+                    frmSaisieMembresObjectifs frmS = new frmSaisieMembresObjectifs(
+                        frmCreationMission.nomPlanete, frmCreationMission.numeroMission);
+                    frmS.ShowDialog();
+
+                    if ( frmS.DialogResult == DialogResult.OK )
+                    {
+                        MessageBox.Show("Mission créée et objectifs saisis avec succès !" +
+                            "Vous pouvez consulter la mission dans le tableau de bord");
+                        MettreAJourDs(MesDatas.DsGlobal);
+
+                        frmFicheMission frmFicheMission = new frmFicheMission(frmCreationMission.nomPlanete, 
+                            frmCreationMission.numeroMission);
+
+                        //frmFicheMission.ShowDialog();
+                    }
+                }
             }
         }
 
@@ -88,7 +109,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataTable schemaTable = Connexion.Connec.GetSchema("Tables");
             SQLiteDataAdapter da;
 
-            for (int i = 0; i < schemaTable.Rows.Count; i++)
+            for ( int i = 0; i < schemaTable.Rows.Count; i++ )
             {
                 string nomTable = schemaTable.Rows[i]["TABLE_NAME"].ToString();
 

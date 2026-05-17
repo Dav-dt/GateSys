@@ -16,6 +16,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private bool aValidePlanete = false;
         private int numMission = -1;
 
+        //guetteurs pour apres faire le constructeur des autres frms
+        public string nomPlanete
+        {
+            get { return cmbPlanete.SelectedItem.ToString();}
+        }
+
+        public int numeroMission
+        {
+            get { return numMission;}
+        }
+
         public frmCreationMission()
         {
             InitializeComponent();
@@ -33,7 +44,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 @"SELECT nom FROM Planete", Connexion.Connec);
 
             SQLiteDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while ( reader.Read() )
             {
                 cmbPlanete.Items.Add(reader["nom"].ToString());
             }
@@ -56,27 +67,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 "nom + ' ' + prenom + ' - ' + grade");
 
             cmbChefMission.DataSource = dt;
-
-            // texte visible
             cmbChefMission.DisplayMember = "Affichage";
-
-            // valeur associée
             cmbChefMission.ValueMember = "matricule";
         }
 
         private void onlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (Keys)e.KeyChar != Keys.Back)
+            if ( !char.IsDigit(e.KeyChar) && (Keys)e.KeyChar != Keys.Back )
             {
                 e.Handled = true;
             }
         }
-
-        private void grpCreationMission_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnValiderPlanete_Click(object sender, EventArgs e)
         {
             string nomPlanete = cmbPlanete.SelectedItem.ToString();
@@ -96,17 +98,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnValiderMission_Click(object sender, EventArgs e)
         {
-            if (!aValidePlanete || numMission == -1)
+            if ( !aValidePlanete || numMission == -1 )
             {
                 MessageBox.Show("Veuillez valider la planète avant de " +
                     "valider la mission.");
                 return;
             }
 
-            else if (txtFeuilleDeRoute.Text == "" ||
+            else if ( txtFeuilleDeRoute.Text == "" ||
                 txtObjectifQDB.Text == "" ||
                 txtBudget.Text == "" ||
-                txtNbMembres.Text == "")
+                txtNbMembres.Text == "" )
             {
                 MessageBox.Show("Veuillez remplir tous les champs avant de " +
                     "valider la mission.");
@@ -121,17 +123,21 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
                     '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
                     {txtBudget.Text})";
-                MessageBox.Show(requete);
+                
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Mission créée avec succès !");
 
+                this.DialogResult = DialogResult.OK;
             }
-            catch (SQLiteException ex)
+            catch ( SQLiteException ex )
             {
                 MessageBox.Show("Erreur lors de l'insertion de la mission : " +
                     ex.Message);
                 return;
             }
 
-            catch (Exception ex)
+            catch ( Exception ex )
             {
                 MessageBox.Show("Une erreur est survenue : " +
                     ex.Message);

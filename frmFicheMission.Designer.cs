@@ -56,17 +56,16 @@
             this.lblBudget = new System.Windows.Forms.Label();
             this.lblBudgetApresDepenses = new System.Windows.Forms.Label();
             this.grpFeuilleDeRoute = new System.Windows.Forms.GroupBox();
-            this.pnlFeuilleDeRoute = new System.Windows.Forms.Panel();
-            this.txtFeuilleDeRoute = new System.Windows.Forms.TextBox();
             this.grpMembresEquipe = new System.Windows.Forms.GroupBox();
             this.pnlMembres = new System.Windows.Forms.Panel();
             this.grpCapture = new System.Windows.Forms.GroupBox();
             this.pnlCapture = new System.Windows.Forms.Panel();
             this.btnJournal = new System.Windows.Forms.Button();
+            this.txtFeuilleDeRoute = new System.Windows.Forms.TextBox();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
-            this.pnlFeuilleDeRoute.SuspendLayout();
+            this.grpFeuilleDeRoute.SuspendLayout();
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +115,7 @@
             // 
             // cmbINomIndic
             // 
+            this.cmbINomIndic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbINomIndic.FormattingEnabled = true;
             this.cmbINomIndic.Location = new System.Drawing.Point(136, 443);
             this.cmbINomIndic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -200,11 +200,11 @@
             this.tabNouvelleDepense.Controls.Add(this.lblDepense);
             this.tabNouvelleDepense.Controls.Add(this.dtDepense);
             this.tabNouvelleDepense.Controls.Add(this.lblDtDepense);
-            this.tabNouvelleDepense.Location = new System.Drawing.Point(4, 34);
+            this.tabNouvelleDepense.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelleDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouvelleDepense.Name = "tabNouvelleDepense";
             this.tabNouvelleDepense.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabNouvelleDepense.Size = new System.Drawing.Size(424, 610);
+            this.tabNouvelleDepense.Size = new System.Drawing.Size(424, 613);
             this.tabNouvelleDepense.TabIndex = 1;
             this.tabNouvelleDepense.Text = "NouvelleDepense";
             this.tabNouvelleDepense.UseVisualStyleBackColor = true;
@@ -221,6 +221,7 @@
             // 
             // cmbIdDepense
             // 
+            this.cmbIdDepense.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdDepense.FormattingEnabled = true;
             this.cmbIdDepense.Location = new System.Drawing.Point(139, 434);
             this.cmbIdDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -295,10 +296,10 @@
             // 
             // tabNouvelEvenement
             // 
-            this.tabNouvelEvenement.Location = new System.Drawing.Point(4, 34);
+            this.tabNouvelEvenement.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelEvenement.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouvelEvenement.Name = "tabNouvelEvenement";
-            this.tabNouvelEvenement.Size = new System.Drawing.Size(424, 610);
+            this.tabNouvelEvenement.Size = new System.Drawing.Size(424, 613);
             this.tabNouvelEvenement.TabIndex = 2;
             this.tabNouvelEvenement.Text = "Nouvel évènement";
             this.tabNouvelEvenement.UseVisualStyleBackColor = true;
@@ -355,6 +356,7 @@
             // 
             // grpFeuilleDeRoute
             // 
+            this.grpFeuilleDeRoute.Controls.Add(this.txtFeuilleDeRoute);
             this.grpFeuilleDeRoute.Location = new System.Drawing.Point(32, 146);
             this.grpFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.grpFeuilleDeRoute.Name = "grpFeuilleDeRoute";
@@ -363,26 +365,6 @@
             this.grpFeuilleDeRoute.TabIndex = 6;
             this.grpFeuilleDeRoute.TabStop = false;
             this.grpFeuilleDeRoute.Text = "Feuille de Route";
-            // 
-            // pnlFeuilleDeRoute
-            // 
-            this.pnlFeuilleDeRoute.AutoScroll = true;
-            this.pnlFeuilleDeRoute.Controls.Add(this.txtFeuilleDeRoute);
-            this.pnlFeuilleDeRoute.Location = new System.Drawing.Point(51, 165);
-            this.pnlFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pnlFeuilleDeRoute.Name = "pnlFeuilleDeRoute";
-            this.pnlFeuilleDeRoute.Size = new System.Drawing.Size(448, 131);
-            this.pnlFeuilleDeRoute.TabIndex = 0;
-            // 
-            // txtFeuilleDeRoute
-            // 
-            this.txtFeuilleDeRoute.Location = new System.Drawing.Point(12, 3);
-            this.txtFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtFeuilleDeRoute.Multiline = true;
-            this.txtFeuilleDeRoute.Name = "txtFeuilleDeRoute";
-            this.txtFeuilleDeRoute.ReadOnly = true;
-            this.txtFeuilleDeRoute.Size = new System.Drawing.Size(397, 101);
-            this.txtFeuilleDeRoute.TabIndex = 0;
             // 
             // grpMembresEquipe
             // 
@@ -436,6 +418,17 @@
             this.btnJournal.Text = "Journal";
             this.btnJournal.UseVisualStyleBackColor = true;
             // 
+            // txtFeuilleDeRoute
+            // 
+            this.txtFeuilleDeRoute.Location = new System.Drawing.Point(17, 27);
+            this.txtFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtFeuilleDeRoute.Multiline = true;
+            this.txtFeuilleDeRoute.Name = "txtFeuilleDeRoute";
+            this.txtFeuilleDeRoute.ReadOnly = true;
+            this.txtFeuilleDeRoute.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFeuilleDeRoute.Size = new System.Drawing.Size(438, 110);
+            this.txtFeuilleDeRoute.TabIndex = 0;
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -444,7 +437,6 @@
             this.Controls.Add(this.btnJournal);
             this.Controls.Add(this.grpCapture);
             this.Controls.Add(this.grpMembresEquipe);
-            this.Controls.Add(this.pnlFeuilleDeRoute);
             this.Controls.Add(this.grpFeuilleDeRoute);
             this.Controls.Add(this.lblBudgetApresDepenses);
             this.Controls.Add(this.lblBudget);
@@ -461,8 +453,8 @@
             this.tabNouveauContact.PerformLayout();
             this.tabNouvelleDepense.ResumeLayout(false);
             this.tabNouvelleDepense.PerformLayout();
-            this.pnlFeuilleDeRoute.ResumeLayout(false);
-            this.pnlFeuilleDeRoute.PerformLayout();
+            this.grpFeuilleDeRoute.ResumeLayout(false);
+            this.grpFeuilleDeRoute.PerformLayout();
             this.grpMembresEquipe.ResumeLayout(false);
             this.grpCapture.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -482,8 +474,6 @@
         private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.Label lblBudgetApresDepenses;
         private System.Windows.Forms.GroupBox grpFeuilleDeRoute;
-        private System.Windows.Forms.Panel pnlFeuilleDeRoute;
-        private System.Windows.Forms.TextBox txtFeuilleDeRoute;
         private System.Windows.Forms.GroupBox grpMembresEquipe;
         private System.Windows.Forms.Panel pnlMembres;
         private System.Windows.Forms.GroupBox grpCapture;
@@ -507,5 +497,6 @@
         private System.Windows.Forms.Label lblDepense;
         private System.Windows.Forms.DateTimePicker dtDepense;
         private System.Windows.Forms.Label lblDtDepense;
+        private System.Windows.Forms.TextBox txtFeuilleDeRoute;
     }
 }

@@ -16,6 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
     {
         private string m_nomPlanete;
         private int m_numero;
+        private bool m_missionTerminee;
 
         public frmFicheMission()
         {
@@ -58,6 +59,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             $@"numeroMission = '{m_numero}' AND 
                             NomPlanete = '{m_nomPlanete}'");
 
+            m_missionTerminee = MissionTerminee();
 
             int index = 0;
             foreach ( DataRow row in drMatricules )
@@ -106,6 +108,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 pnlCapture.Controls.Add(lbl);
                 posYCapture += lbl.Height+ 5;
             }
+
+            //Remplissage des cmbs
+            cmbINomIndic.DataSource = MesDatas.DsGlobal.Tables["Informateur"];
+            cmbINomIndic.DisplayMember  = "nom";
+            cmbINomIndic.ValueMember = "idEspeceEnnemi";
+
+            cmbIdDepense.DataSource = MesDatas.DsGlobal.Tables["TypeDepense"];
+            cmbIdDepense.DisplayMember = "libelle";
+            cmbIdDepense.ValueMember = "id";
         }
 
         private int GetMontantDesDepenses()
@@ -133,7 +144,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnValiderIndic_Click(object sender, EventArgs e)
         {
-            if ( MissionTerminee() )
+            if ( m_missionTerminee )
             {
                 MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
                 return;
