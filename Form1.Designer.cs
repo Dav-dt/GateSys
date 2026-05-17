@@ -35,6 +35,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
             this.btnTestMembre = new System.Windows.Forms.Button();
+            this.btnTestFiche = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInfosPlanetes
@@ -107,11 +108,22 @@
             this.btnTestMembre.UseVisualStyleBackColor = true;
             this.btnTestMembre.Click += new System.EventHandler(this.btnTestMembre_Click);
             // 
+            // btnTestFiche
+            // 
+            this.btnTestFiche.Location = new System.Drawing.Point(276, 18);
+            this.btnTestFiche.Name = "btnTestFiche";
+            this.btnTestFiche.Size = new System.Drawing.Size(127, 38);
+            this.btnTestFiche.TabIndex = 7;
+            this.btnTestFiche.Text = "testFiche";
+            this.btnTestFiche.UseVisualStyleBackColor = true;
+            this.btnTestFiche.Click += new System.EventHandler(this.btnTestFiche_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.btnTestFiche);
             this.Controls.Add(this.btnTestMembre);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnQuitter);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnTestMembre;
+        private System.Windows.Forms.Button btnTestFiche;
     }
 }
 

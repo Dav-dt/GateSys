@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
@@ -82,6 +83,25 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         }
 
+        private void MettreAJourDs(DataSet ds)
+        {
+            DataTable schemaTable = Connexion.Connec.GetSchema("Tables");
+            SQLiteDataAdapter da;
+
+            for (int i = 0; i < schemaTable.Rows.Count; i++)
+            {
+                string nomTable = schemaTable.Rows[i]["TABLE_NAME"].ToString();
+
+                if (ds.Tables.Contains(nomTable))
+                    ds.Tables[nomTable].Clear();
+
+                da = new SQLiteDataAdapter("SELECT * FROM " + nomTable,
+                                           Connexion.Connec);
+
+                da.Fill(ds, nomTable);
+            }
+        }
+
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Connexion.FermerConnexion();
@@ -105,6 +125,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmSaisieMembresObjectifs frmSaisieMembresObjectifs = new frmSaisieMembresObjectifs();
             frmSaisieMembresObjectifs.ShowDialog();
+        }
+
+        private void btnTestFiche_Click(object sender, EventArgs e)
+        {
+            frmFicheMission frmFicheMission = new frmFicheMission("test", 1);
+            frmFicheMission.ShowDialog();
         }
     }
 }
