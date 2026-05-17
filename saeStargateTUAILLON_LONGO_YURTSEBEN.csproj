@@ -93,6 +93,12 @@
     <Compile Include="frmCreationMission.Designer.cs">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFicheMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFicheMission.Designer.cs">
+      <DependentUpon>frmFicheMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,7 +110,7 @@
     </Compile>
     <Compile Include="frmPlanete.Designer.cs">
       <DependentUpon>frmPlanete.cs</DependentUpon>
-	</Compile>	
+    </Compile>
     <Compile Include="frmSaisieMembresObjectifs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <EmbeddedResource Include="frmCreationMission.resx">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFicheMission.resx">
+      <DependentUpon>frmFicheMission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfoPlanete.resx">
       <DependentUpon>frmInfoPlanete.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,7 +161,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanete.resx">
       <DependentUpon>frmPlanete.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSaisieMembresObjectifs.resx">
       <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
     </EmbeddedResource>
