@@ -1,6 +1,6 @@
 ﻿namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 {
-    partial class Menbre
+    partial class Membre
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

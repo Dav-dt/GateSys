@@ -57,11 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
-    <Compile Include="control\Menbre.cs">
+    <Compile Include="control\Membre.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="control\Menbre.Designer.cs">
-      <DependentUpon>Menbre.cs</DependentUpon>
+    <Compile Include="control\Membre.Designer.cs">
+      <DependentUpon>Membre.cs</DependentUpon>
     </Compile>
     <Compile Include="control\Mission.cs">
       <SubType>UserControl</SubType>
@@ -135,8 +135,8 @@
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control\Menbre.resx">
-      <DependentUpon>Menbre.cs</DependentUpon>
+    <EmbeddedResource Include="control\Membre.resx">
+      <DependentUpon>Membre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 {
-    public partial class Menbre : UserControl
+    public partial class Membre : UserControl
     {
-        public Menbre()
+        public Membre()
         {
             InitializeComponent();
         }
 
-        public Menbre(string nom,string prenom,bool militaire)
+        public Membre(string nom,string prenom,bool militaire)
         {
             InitializeComponent();
             lblNom.Text = nom;
