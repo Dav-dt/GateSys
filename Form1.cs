@@ -150,7 +150,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnTestFiche_Click(object sender, EventArgs e)
         {
-            frmFicheMission frmFicheMission = new frmFicheMission("Kobaia", 1);
+            frmFicheMission frmFicheMission = new frmFicheMission("Sckxyss", 1);
             frmFicheMission.ShowDialog();
         }
     }

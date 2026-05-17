@@ -50,21 +50,27 @@
             this.dtDepense = new System.Windows.Forms.DateTimePicker();
             this.lblDtDepense = new System.Windows.Forms.Label();
             this.tabNouvelEvenement = new System.Windows.Forms.TabPage();
+            this.btnValiderNouvelEvent = new System.Windows.Forms.Button();
+            this.txtNouvelEvent = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtNouvelEvent = new System.Windows.Forms.DateTimePicker();
+            this.lblDtNouvelEvent = new System.Windows.Forms.Label();
             this.lblMission = new System.Windows.Forms.Label();
             this.lblDtDepart = new System.Windows.Forms.Label();
             this.lblDtRetour = new System.Windows.Forms.Label();
             this.lblBudget = new System.Windows.Forms.Label();
             this.lblBudgetApresDepenses = new System.Windows.Forms.Label();
             this.grpFeuilleDeRoute = new System.Windows.Forms.GroupBox();
+            this.txtFeuilleDeRoute = new System.Windows.Forms.TextBox();
             this.grpMembresEquipe = new System.Windows.Forms.GroupBox();
             this.pnlMembres = new System.Windows.Forms.Panel();
             this.grpCapture = new System.Windows.Forms.GroupBox();
             this.pnlCapture = new System.Windows.Forms.Panel();
             this.btnJournal = new System.Windows.Forms.Button();
-            this.txtFeuilleDeRoute = new System.Windows.Forms.TextBox();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
+            this.tabNouvelEvenement.SuspendLayout();
             this.grpFeuilleDeRoute.SuspendLayout();
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
@@ -218,6 +224,7 @@
             this.btnValiderDepense.TabIndex = 17;
             this.btnValiderDepense.Text = "Valider";
             this.btnValiderDepense.UseVisualStyleBackColor = true;
+            this.btnValiderDepense.Click += new System.EventHandler(this.btnValiderDepense_Click);
             // 
             // cmbIdDepense
             // 
@@ -296,6 +303,11 @@
             // 
             // tabNouvelEvenement
             // 
+            this.tabNouvelEvenement.Controls.Add(this.btnValiderNouvelEvent);
+            this.tabNouvelEvenement.Controls.Add(this.txtNouvelEvent);
+            this.tabNouvelEvenement.Controls.Add(this.label1);
+            this.tabNouvelEvenement.Controls.Add(this.dtNouvelEvent);
+            this.tabNouvelEvenement.Controls.Add(this.lblDtNouvelEvent);
             this.tabNouvelEvenement.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelEvenement.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouvelEvenement.Name = "tabNouvelEvenement";
@@ -303,6 +315,54 @@
             this.tabNouvelEvenement.TabIndex = 2;
             this.tabNouvelEvenement.Text = "Nouvel évènement";
             this.tabNouvelEvenement.UseVisualStyleBackColor = true;
+            // 
+            // btnValiderNouvelEvent
+            // 
+            this.btnValiderNouvelEvent.Location = new System.Drawing.Point(299, 545);
+            this.btnValiderNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnValiderNouvelEvent.Name = "btnValiderNouvelEvent";
+            this.btnValiderNouvelEvent.Size = new System.Drawing.Size(112, 51);
+            this.btnValiderNouvelEvent.TabIndex = 18;
+            this.btnValiderNouvelEvent.Text = "Valider";
+            this.btnValiderNouvelEvent.UseVisualStyleBackColor = true;
+            this.btnValiderNouvelEvent.Click += new System.EventHandler(this.btnValiderNouvelEvent_Click);
+            // 
+            // txtNouvelEvent
+            // 
+            this.txtNouvelEvent.Location = new System.Drawing.Point(19, 147);
+            this.txtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNouvelEvent.Multiline = true;
+            this.txtNouvelEvent.Name = "txtNouvelEvent";
+            this.txtNouvelEvent.Size = new System.Drawing.Size(392, 177);
+            this.txtNouvelEvent.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Commentaire";
+            // 
+            // dtNouvelEvent
+            // 
+            this.dtNouvelEvent.Location = new System.Drawing.Point(129, 27);
+            this.dtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtNouvelEvent.Name = "dtNouvelEvent";
+            this.dtNouvelEvent.Size = new System.Drawing.Size(258, 28);
+            this.dtNouvelEvent.TabIndex = 12;
+            // 
+            // lblDtNouvelEvent
+            // 
+            this.lblDtNouvelEvent.AutoSize = true;
+            this.lblDtNouvelEvent.Location = new System.Drawing.Point(25, 27);
+            this.lblDtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDtNouvelEvent.Name = "lblDtNouvelEvent";
+            this.lblDtNouvelEvent.Size = new System.Drawing.Size(48, 22);
+            this.lblDtNouvelEvent.TabIndex = 11;
+            this.lblDtNouvelEvent.Text = "Date";
             // 
             // lblMission
             // 
@@ -366,6 +426,17 @@
             this.grpFeuilleDeRoute.TabStop = false;
             this.grpFeuilleDeRoute.Text = "Feuille de Route";
             // 
+            // txtFeuilleDeRoute
+            // 
+            this.txtFeuilleDeRoute.Location = new System.Drawing.Point(17, 27);
+            this.txtFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtFeuilleDeRoute.Multiline = true;
+            this.txtFeuilleDeRoute.Name = "txtFeuilleDeRoute";
+            this.txtFeuilleDeRoute.ReadOnly = true;
+            this.txtFeuilleDeRoute.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFeuilleDeRoute.Size = new System.Drawing.Size(438, 110);
+            this.txtFeuilleDeRoute.TabIndex = 0;
+            // 
             // grpMembresEquipe
             // 
             this.grpMembresEquipe.Controls.Add(this.pnlMembres);
@@ -417,17 +488,7 @@
             this.btnJournal.TabIndex = 8;
             this.btnJournal.Text = "Journal";
             this.btnJournal.UseVisualStyleBackColor = true;
-            // 
-            // txtFeuilleDeRoute
-            // 
-            this.txtFeuilleDeRoute.Location = new System.Drawing.Point(17, 27);
-            this.txtFeuilleDeRoute.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtFeuilleDeRoute.Multiline = true;
-            this.txtFeuilleDeRoute.Name = "txtFeuilleDeRoute";
-            this.txtFeuilleDeRoute.ReadOnly = true;
-            this.txtFeuilleDeRoute.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtFeuilleDeRoute.Size = new System.Drawing.Size(438, 110);
-            this.txtFeuilleDeRoute.TabIndex = 0;
+            this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
             // 
             // frmFicheMission
             // 
@@ -453,6 +514,8 @@
             this.tabNouveauContact.PerformLayout();
             this.tabNouvelleDepense.ResumeLayout(false);
             this.tabNouvelleDepense.PerformLayout();
+            this.tabNouvelEvenement.ResumeLayout(false);
+            this.tabNouvelEvenement.PerformLayout();
             this.grpFeuilleDeRoute.ResumeLayout(false);
             this.grpFeuilleDeRoute.PerformLayout();
             this.grpMembresEquipe.ResumeLayout(false);
@@ -498,5 +561,10 @@
         private System.Windows.Forms.DateTimePicker dtDepense;
         private System.Windows.Forms.Label lblDtDepense;
         private System.Windows.Forms.TextBox txtFeuilleDeRoute;
+        private System.Windows.Forms.DateTimePicker dtNouvelEvent;
+        private System.Windows.Forms.Label lblDtNouvelEvent;
+        private System.Windows.Forms.Button btnValiderNouvelEvent;
+        private System.Windows.Forms.TextBox txtNouvelEvent;
+        private System.Windows.Forms.Label label1;
     }
 }

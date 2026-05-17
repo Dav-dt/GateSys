@@ -165,5 +165,33 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 e.Handled = true;
             }
         }
+
+        private void btnValiderNouvelEvent_Click(object sender, EventArgs e)
+        {
+            if (m_missionTerminee)
+            {
+                MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
+                return;
+            }
+
+
+        }
+
+        private void btnValiderDepense_Click(object sender, EventArgs e)
+        {
+            if (m_missionTerminee)
+            {
+                MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
+                return;
+            }
+
+
+        }
+
+        private void btnJournal_Click(object sender, EventArgs e)
+        {
+            frmJournal frmJournal = new frmJournal(m_nomPlanete, m_numero);
+            frmJournal.Show();
+        }
     }
 }
