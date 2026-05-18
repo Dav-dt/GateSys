@@ -80,7 +80,6 @@
             this.grpCreationMission.TabIndex = 0;
             this.grpCreationMission.TabStop = false;
             this.grpCreationMission.Text = "Nouvelle Mission";
-            this.grpCreationMission.Enter += new System.EventHandler(this.grpCreationMission_Enter);
             // 
             // btnValiderMission
             // 

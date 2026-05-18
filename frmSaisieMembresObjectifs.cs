@@ -170,5 +170,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             lstCapture.Items.Add(cmbCapture.Text + " -> " + nbCapture);
             m_captures.Add(Convert.ToInt32(cmbCapture.SelectedValue), nbCapture);
         }
+
+        private void frmSaisieMembresObjectifs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.DialogResult == DialogResult.OK)
+                return;
+            //eviter que ca empeche de fermer meme si tout est ok
+
+            MessageBox.Show("Ces informations sont obligatoires");
+            e.Cancel = true;
+            //empêcher le user de fermer le formulaire et
+            // de tout casser
+        }
     }
 }

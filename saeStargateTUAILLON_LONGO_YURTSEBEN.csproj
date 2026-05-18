@@ -57,11 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
-    <Compile Include="control\Menbre.cs">
+    <Compile Include="control\Depense.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="control\Menbre.Designer.cs">
-      <DependentUpon>Menbre.cs</DependentUpon>
+    <Compile Include="control\Depense.Designer.cs">
+      <DependentUpon>Depense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\Indic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Indic.Designer.cs">
+      <DependentUpon>Indic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\Membre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Membre.Designer.cs">
+      <DependentUpon>Membre.cs</DependentUpon>
     </Compile>
     <Compile Include="control\Mission.cs">
       <SubType>UserControl</SubType>
@@ -92,6 +104,36 @@
     </Compile>
     <Compile Include="frmCreationMission.Designer.cs">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFicheMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFicheMission.Designer.cs">
+      <DependentUpon>frmFicheMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournal.Designer.cs">
+      <DependentUpon>frmJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalCaptures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalCaptures.Designer.cs">
+      <DependentUpon>frmJournalCaptures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalDepenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalDepenses.Designer.cs">
+      <DependentUpon>frmJournalDepenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalIndics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalIndics.Designer.cs">
+      <DependentUpon>frmJournalIndics.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -135,8 +177,14 @@
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control\Menbre.resx">
-      <DependentUpon>Menbre.cs</DependentUpon>
+    <EmbeddedResource Include="control\Depense.resx">
+      <DependentUpon>Depense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\Indic.resx">
+      <DependentUpon>Indic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\Membre.resx">
+      <DependentUpon>Membre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
@@ -150,8 +198,23 @@
     <EmbeddedResource Include="frmCreationMission.resx">
       <DependentUpon>frmCreationMission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFicheMission.resx">
+      <DependentUpon>frmFicheMission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfoPlanete.resx">
       <DependentUpon>frmInfoPlanete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournal.resx">
+      <DependentUpon>frmJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalCaptures.resx">
+      <DependentUpon>frmJournalCaptures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalDepenses.resx">
+      <DependentUpon>frmJournalDepenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalIndics.resx">
+      <DependentUpon>frmJournalIndics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
