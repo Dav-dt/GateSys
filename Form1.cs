@@ -76,6 +76,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnRaces_Click(object sender, EventArgs e)
         {
+            frmRace frmRace = new frmRace();
+            frmRace.ShowDialog();
             
         }
 

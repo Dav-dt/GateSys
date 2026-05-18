@@ -17,28 +17,68 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             InitializeComponent();
         }
 
-        public Alien(string nom,string race, List<string> planete,string couleur)
+        public Alien(string nom,string race, List<string> planete)
         {
             InitializeComponent();
             lblNom.Text = nom;
             lblRace.Text = race;
 
-            for (int i = 0; i < planete.Count(); i++)
+            if (planete.Count > 0)
             {
-                if (i == planete.Count() - 1)
+                for (int i = 0; i < planete.Count(); i++)
                 {
-                    lblPlanete.Text += planete[i];
-                }
-                else
-                {
-                    lblPlanete.Text += planete[i] + "/";
+                    if (i == planete.Count() - 1)
+                    {
+                        lblPlanete.Text += planete[i];
+                    }
+                    else
+                    {
+                        lblPlanete.Text += planete[i] + "/";
+                    }
                 }
             }
+            else
+            {
+                lblPlanete.ForeColor = Color.Red;
+                lblPlanete.Text = "Inconnu";
+            }
 
-            pbAlien.Image = getImage(couleur);
+            pbAlien.Image = getImage(race);
 
         }
-        public Alien(string nom, string race,string couleur)
+        public Alien(string nom, string race, List<string> planete,string degre,string outil,Color couleur)
+        {
+            InitializeComponent();
+            lblNom.Text = nom;
+            lblRace.Text = race;
+
+            if (planete.Count > 0)
+            {
+                for (int i = 0; i < planete.Count(); i++)
+                {
+                    if (i == planete.Count() - 1)
+                    {
+                        lblPlanete.Text += planete[i];
+                    }
+                    else
+                    {
+                        lblPlanete.Text += planete[i] + "/";
+                    }
+                }
+            }
+            else
+            {
+                lblPlanete.ForeColor = Color.Red;
+                lblPlanete.Text = "Inconnu";
+            }
+
+            pbAlien.Image = getImage(race);
+            lbDegre.Text = degre;
+            lbOutil.Text = outil;
+            lbOutil.ForeColor = couleur;
+
+        }
+        public Alien(string nom, string race)
         {
             InitializeComponent();
             lblNom.Text = nom;
@@ -47,13 +87,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             lblPlanete.ForeColor = Color.Red;
             lblPlanete.Text = "Inconnu";
 
-            pbAlien.Image = getImage(couleur);
+            pbAlien.Image = getImage(race);
 
         }
 
         private Image getImage(string nom)
         {
-            switch (nom)
+            switch (nom.ToLower())
             {
                 case "vert":
                     return Properties.Resources.vert;
@@ -74,6 +114,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 default: return null;
             }
         }
+        public string getNom()
+        {
+            return lblNom.Text.ToLower();
+        }
+
+        public string getCouleur()
+        {
+            return lblRace.Text.ToLower();
+        }
+
 
     }
 }
