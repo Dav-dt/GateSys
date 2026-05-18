@@ -39,7 +39,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataTable dtJournal = drJournal.CopyToDataTable();
             m_bsJournal.DataSource = dtJournal;
 
-            if (m_bsJournal.Count > 0)
+            if ( m_bsJournal.Count > 0 )
             {
                 lblEventJournal.DataBindings.Add("Text",m_bsJournal, "commentaires");
                 dtEventJournal.DataBindings.Add("Text",m_bsJournal, "dateJ");
