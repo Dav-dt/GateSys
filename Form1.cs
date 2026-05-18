@@ -1,9 +1,11 @@
-﻿using System;
+﻿using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             //chargement initial de la toute la bdd
             List<string> tables = ChargerBddDansDs(MesDatas.DsGlobal);
-
+            pnlAffichageMissions.AutoScroll = true;
+            afficherMissionsPanel();
 
         }
 
@@ -152,6 +155,38 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmFicheMission frmFicheMission = new frmFicheMission("Sckxyss", 1);
             frmFicheMission.ShowDialog();
+        }
+
+        private void afficherMissionsPanel()
+        {
+            SQLiteCommand cmd = new SQLiteCommand(
+                "SELECT * FROM Mission", Connexion.Connec);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            int positionY = 0;
+            while ( reader.Read() )
+            {
+                SQLiteCommand cmdChef = new SQLiteCommand(
+                    $@"SELECT CONCAT(nom, ' ',prenom)
+                    FROM Membre WHERE matricule = '{reader["matriculeChef"]}'",
+                    Connexion.Connec);
+
+                string nomChef = cmdChef.ExecuteScalar().ToString();
+
+                Mission mission = new Mission(
+                    reader["nomPlanete"].ToString(),
+                    Convert.ToInt32(reader["numero"]),
+                    reader["dateDepart"].ToString(),
+                    reader["dateRetour"].ToString(),
+                    nomChef, reader["budget"].ToString(),
+                    Properties.Resources.Aurae
+                    );
+                mission.Location = new Point(0, positionY);
+                positionY += mission.Height + 10;
+
+                pnlAffichageMissions.Controls.Add(mission);
+
+            }
         }
     }
 }

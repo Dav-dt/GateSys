@@ -57,7 +57,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(301, 31);
+            this.lblMontant.Location = new System.Drawing.Point(288, 30);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(51, 20);
             this.lblMontant.TabIndex = 2;
@@ -66,7 +66,7 @@
             // lblDG
             // 
             this.lblDG.AutoSize = true;
-            this.lblDG.Location = new System.Drawing.Point(372, 30);
+            this.lblDG.Location = new System.Drawing.Point(345, 30);
             this.lblDG.Name = "lblDG";
             this.lblDG.Size = new System.Drawing.Size(43, 20);
             this.lblDG.TabIndex = 3;

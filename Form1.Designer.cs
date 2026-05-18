@@ -36,11 +36,12 @@
             this.btnTest = new System.Windows.Forms.Button();
             this.btnTestMembre = new System.Windows.Forms.Button();
             this.btnTestFiche = new System.Windows.Forms.Button();
+            this.pnlAffichageMissions = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnInfosPlanetes
             // 
-            this.btnInfosPlanetes.Location = new System.Drawing.Point(73, 498);
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(33, 483);
             this.btnInfosPlanetes.Name = "btnInfosPlanetes";
             this.btnInfosPlanetes.Size = new System.Drawing.Size(155, 47);
             this.btnInfosPlanetes.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // btnRaces
             // 
-            this.btnRaces.Location = new System.Drawing.Point(73, 431);
+            this.btnRaces.Location = new System.Drawing.Point(33, 416);
             this.btnRaces.Name = "btnRaces";
             this.btnRaces.Size = new System.Drawing.Size(155, 44);
             this.btnRaces.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // btnNouvellesMissions
             // 
-            this.btnNouvellesMissions.Location = new System.Drawing.Point(73, 339);
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(33, 324);
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
             this.btnNouvellesMissions.Size = new System.Drawing.Size(155, 66);
             this.btnNouvellesMissions.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             // btnTableauDeBord
             // 
-            this.btnTableauDeBord.Location = new System.Drawing.Point(73, 241);
+            this.btnTableauDeBord.Location = new System.Drawing.Point(33, 226);
             this.btnTableauDeBord.Name = "btnTableauDeBord";
             this.btnTableauDeBord.Size = new System.Drawing.Size(155, 65);
             this.btnTableauDeBord.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(1012, 536);
+            this.btnQuitter.Location = new System.Drawing.Point(43, 536);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(132, 37);
             this.btnQuitter.TabIndex = 4;
@@ -118,11 +119,22 @@
             this.btnTestFiche.UseVisualStyleBackColor = true;
             this.btnTestFiche.Click += new System.EventHandler(this.btnTestFiche_Click);
             // 
+            // pnlAffichageMissions
+            // 
+            this.pnlAffichageMissions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAffichageMissions.Location = new System.Drawing.Point(426, 18);
+            this.pnlAffichageMissions.Name = "pnlAffichageMissions";
+            this.pnlAffichageMissions.Size = new System.Drawing.Size(700, 555);
+            this.pnlAffichageMissions.TabIndex = 8;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.pnlAffichageMissions);
             this.Controls.Add(this.btnTestFiche);
             this.Controls.Add(this.btnTestMembre);
             this.Controls.Add(this.btnTest);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnTestMembre;
         private System.Windows.Forms.Button btnTestFiche;
+        private System.Windows.Forms.Panel pnlAffichageMissions;
     }
 }
 

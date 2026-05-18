@@ -34,6 +34,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataRow[] drDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
                 $"nomPlanete = '{m_nomPlanete}' " +
                 $"AND numeroMission = {m_numeroMission}", "dateD ASC");
+            int totalDepense = 0;
 
             int positionY = 0;
             foreach ( DataRow row in drDepenses )
@@ -47,12 +48,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 depense.Location = new Point(0, positionY);
                 this.pnlDepenses.Controls.Add(depense);
                 positionY += depense.Height + 5;
+                
+                totalDepense += Convert.ToInt32(row["montant"]);
             }
-        }
-
-        private void pnlDepenses_Paint(object sender, PaintEventArgs e)
-        {
-            
+            lblTotal.Text = totalDepense + " $DG";
         }
     }
 }

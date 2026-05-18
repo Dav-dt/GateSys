@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlDepenses = new System.Windows.Forms.Panel();
+            this.lblTotalSommeTitre = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlDepenses
@@ -38,23 +40,45 @@
             this.pnlDepenses.Name = "pnlDepenses";
             this.pnlDepenses.Size = new System.Drawing.Size(791, 465);
             this.pnlDepenses.TabIndex = 0;
-            this.pnlDepenses.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDepenses_Paint);
+            // 
+            // lblTotalSommeTitre
+            // 
+            this.lblTotalSommeTitre.AutoSize = true;
+            this.lblTotalSommeTitre.Location = new System.Drawing.Point(12, 540);
+            this.lblTotalSommeTitre.Name = "lblTotalSommeTitre";
+            this.lblTotalSommeTitre.Size = new System.Drawing.Size(205, 20);
+            this.lblTotalSommeTitre.TabIndex = 1;
+            this.lblTotalSommeTitre.Text = "Total des sommes versées :";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(257, 540);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(51, 20);
+            this.lblTotal.TabIndex = 2;
+            this.lblTotal.Text = "label1";
             // 
             // frmJournalDepenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 663);
+            this.ClientSize = new System.Drawing.Size(1024, 594);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblTotalSommeTitre);
             this.Controls.Add(this.pnlDepenses);
             this.Name = "frmJournalDepenses";
             this.Text = "frmJournalDepenses";
             this.Load += new System.EventHandler(this.frmJournalDepenses_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel pnlDepenses;
+        private System.Windows.Forms.Label lblTotalSommeTitre;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
