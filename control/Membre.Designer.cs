@@ -36,18 +36,18 @@
             // 
             // lblNom
             // 
-            this.lblNom.Location = new System.Drawing.Point(3, 170);
+            this.lblNom.Location = new System.Drawing.Point(3, 98);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(165, 19);
+            this.lblNom.Size = new System.Drawing.Size(85, 19);
             this.lblNom.TabIndex = 1;
             this.lblNom.Text = "label1";
             this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPrenom
             // 
-            this.lblPrenom.Location = new System.Drawing.Point(3, 200);
+            this.lblPrenom.Location = new System.Drawing.Point(3, 117);
             this.lblPrenom.Name = "lblPrenom";
-            this.lblPrenom.Size = new System.Drawing.Size(162, 19);
+            this.lblPrenom.Size = new System.Drawing.Size(85, 19);
             this.lblPrenom.TabIndex = 2;
             this.lblPrenom.Text = "label2";
             this.lblPrenom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,12 +56,12 @@
             // 
             this.pbMenbre.Location = new System.Drawing.Point(13, 17);
             this.pbMenbre.Name = "pbMenbre";
-            this.pbMenbre.Size = new System.Drawing.Size(144, 140);
+            this.pbMenbre.Size = new System.Drawing.Size(67, 78);
             this.pbMenbre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMenbre.TabIndex = 0;
             this.pbMenbre.TabStop = false;
             // 
-            // Menbre
+            // Membre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,8 +69,8 @@
             this.Controls.Add(this.lblPrenom);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pbMenbre);
-            this.Name = "Menbre";
-            this.Size = new System.Drawing.Size(171, 234);
+            this.Name = "Membre";
+            this.Size = new System.Drawing.Size(94, 142);
             ((System.ComponentModel.ISupportInitialize)(this.pbMenbre)).EndInit();
             this.ResumeLayout(false);
 

@@ -74,13 +74,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 string prenom = infosMembre[0]["prenom"].ToString();
 
                 Membre membre = new Membre(nom, prenom, estMilitaire);
-                membre.Width = (pnlMembres.ClientSize.Width - 30) / 2;
+                //membre.Width = (pnlMembres.ClientSize.Width - 30) / 2;
 
-                int colonne = index % 2;
-                int ligne = index / 2;
+                int colonne = index % 3;
+                int ligne = index / 3;
 
-                int posX = 10 + colonne * (membre.Width + 10);
-                int posY = 10 + ligne * (membre.Height + 5);
+                int posX = 30 + colonne * (membre.Width + 10);
+                int posY = 5 + ligne * (membre.Height + 5);
 
                 membre.Location = new Point(posX, posY);
                 pnlMembres.Controls.Add(membre);
