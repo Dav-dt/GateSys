@@ -33,9 +33,6 @@
             this.btnNouvellesMissions = new System.Windows.Forms.Button();
             this.btnTableauDeBord = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.btnTestMembre = new System.Windows.Forms.Button();
-            this.btnTestFiche = new System.Windows.Forms.Button();
             this.pnlAffichageMissions = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -89,44 +86,14 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(12, 12);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 50);
-            this.btnTest.TabIndex = 5;
-            this.btnTest.Text = "page test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
-            // btnTestMembre
-            // 
-            this.btnTestMembre.Location = new System.Drawing.Point(133, 18);
-            this.btnTestMembre.Name = "btnTestMembre";
-            this.btnTestMembre.Size = new System.Drawing.Size(86, 38);
-            this.btnTestMembre.TabIndex = 6;
-            this.btnTestMembre.Text = "testMem";
-            this.btnTestMembre.UseVisualStyleBackColor = true;
-            this.btnTestMembre.Click += new System.EventHandler(this.btnTestMembre_Click);
-            // 
-            // btnTestFiche
-            // 
-            this.btnTestFiche.Location = new System.Drawing.Point(276, 18);
-            this.btnTestFiche.Name = "btnTestFiche";
-            this.btnTestFiche.Size = new System.Drawing.Size(127, 38);
-            this.btnTestFiche.TabIndex = 7;
-            this.btnTestFiche.Text = "testFiche";
-            this.btnTestFiche.UseVisualStyleBackColor = true;
-            this.btnTestFiche.Click += new System.EventHandler(this.btnTestFiche_Click);
-            // 
             // pnlAffichageMissions
             // 
             this.pnlAffichageMissions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAffichageMissions.Location = new System.Drawing.Point(426, 18);
+            this.pnlAffichageMissions.Location = new System.Drawing.Point(293, 18);
             this.pnlAffichageMissions.Name = "pnlAffichageMissions";
-            this.pnlAffichageMissions.Size = new System.Drawing.Size(700, 555);
+            this.pnlAffichageMissions.Size = new System.Drawing.Size(833, 555);
             this.pnlAffichageMissions.TabIndex = 8;
             // 
             // frmMain
@@ -135,9 +102,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
             this.Controls.Add(this.pnlAffichageMissions);
-            this.Controls.Add(this.btnTestFiche);
-            this.Controls.Add(this.btnTestMembre);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnTableauDeBord);
             this.Controls.Add(this.btnNouvellesMissions);
@@ -146,7 +110,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "Gestion des extraterrestres";
+            this.Text = "Gestion Interstellaire";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 
@@ -159,9 +123,6 @@
         private System.Windows.Forms.Button btnNouvellesMissions;
         private System.Windows.Forms.Button btnTableauDeBord;
         private System.Windows.Forms.Button btnQuitter;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.Button btnTestMembre;
-        private System.Windows.Forms.Button btnTestFiche;
         private System.Windows.Forms.Panel pnlAffichageMissions;
     }
 }
