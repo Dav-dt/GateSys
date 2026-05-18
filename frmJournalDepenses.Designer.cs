@@ -46,14 +46,14 @@
             this.lblTotalSommeTitre.AutoSize = true;
             this.lblTotalSommeTitre.Location = new System.Drawing.Point(12, 540);
             this.lblTotalSommeTitre.Name = "lblTotalSommeTitre";
-            this.lblTotalSommeTitre.Size = new System.Drawing.Size(205, 20);
+            this.lblTotalSommeTitre.Size = new System.Drawing.Size(156, 20);
             this.lblTotalSommeTitre.TabIndex = 1;
-            this.lblTotalSommeTitre.Text = "Total des sommes versées :";
+            this.lblTotalSommeTitre.Text = "Total des dépenses :";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(257, 540);
+            this.lblTotal.Location = new System.Drawing.Point(228, 540);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(51, 20);
             this.lblTotal.TabIndex = 2;

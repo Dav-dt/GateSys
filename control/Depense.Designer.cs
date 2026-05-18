@@ -94,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblMotif);
             this.Controls.Add(this.lblDG);
@@ -101,7 +102,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblNumero);
             this.Name = "Depense";
-            this.Size = new System.Drawing.Size(659, 231);
+            this.Size = new System.Drawing.Size(657, 229);
             this.Load += new System.EventHandler(this.Depense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

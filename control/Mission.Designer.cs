@@ -85,10 +85,10 @@
             // 
             this.btnInfo.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.detailLogo;
             this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInfo.Location = new System.Drawing.Point(724, 71);
+            this.btnInfo.Location = new System.Drawing.Point(616, 69);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(96, 95);
+            this.btnInfo.Size = new System.Drawing.Size(84, 77);
             this.btnInfo.TabIndex = 7;
             this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInfo.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.pbPlanete.Location = new System.Drawing.Point(24, 17);
             this.pbPlanete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbPlanete.Name = "pbPlanete";
-            this.pbPlanete.Size = new System.Drawing.Size(218, 194);
+            this.pbPlanete.Size = new System.Drawing.Size(195, 172);
             this.pbPlanete.TabIndex = 6;
             this.pbPlanete.TabStop = false;
             // 
@@ -107,13 +107,14 @@
             // 
             this.btnGenererPdf.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.pdfAdobe;
             this.btnGenererPdf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenererPdf.Location = new System.Drawing.Point(595, 71);
+            this.btnGenererPdf.Location = new System.Drawing.Point(498, 69);
             this.btnGenererPdf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenererPdf.Name = "btnGenererPdf";
-            this.btnGenererPdf.Size = new System.Drawing.Size(96, 95);
+            this.btnGenererPdf.Size = new System.Drawing.Size(84, 77);
             this.btnGenererPdf.TabIndex = 8;
             this.btnGenererPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGenererPdf.UseVisualStyleBackColor = true;
+            this.btnGenererPdf.Click += new System.EventHandler(this.btnGenererPdf_Click);
             // 
             // lblbudget
             // 
@@ -150,7 +151,7 @@
             this.Controls.Add(this.lblNomMission);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Mission";
-            this.Size = new System.Drawing.Size(853, 246);
+            this.Size = new System.Drawing.Size(724, 206);
             this.Load += new System.EventHandler(this.Mission_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);

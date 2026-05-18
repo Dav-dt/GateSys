@@ -37,6 +37,7 @@
             this.dtEventJournal = new System.Windows.Forms.DateTimePicker();
             this.btnDepenses = new System.Windows.Forms.Button();
             this.btnIndics = new System.Windows.Forms.Button();
+            this.btnCapturesAfficher = new System.Windows.Forms.Button();
             this.grpEventsJournal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,11 +134,22 @@
             this.btnIndics.UseVisualStyleBackColor = true;
             this.btnIndics.Click += new System.EventHandler(this.btnIndics_Click);
             // 
+            // btnCapturesAfficher
+            // 
+            this.btnCapturesAfficher.Location = new System.Drawing.Point(301, 379);
+            this.btnCapturesAfficher.Name = "btnCapturesAfficher";
+            this.btnCapturesAfficher.Size = new System.Drawing.Size(165, 64);
+            this.btnCapturesAfficher.TabIndex = 3;
+            this.btnCapturesAfficher.Text = "Afficher l\'avancée des captures";
+            this.btnCapturesAfficher.UseVisualStyleBackColor = true;
+            this.btnCapturesAfficher.Click += new System.EventHandler(this.btnCapturesAfficher_Click);
+            // 
             // frmJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 467);
+            this.Controls.Add(this.btnCapturesAfficher);
             this.Controls.Add(this.btnIndics);
             this.Controls.Add(this.btnDepenses);
             this.Controls.Add(this.grpEventsJournal);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Button btnTTdebut;
         private System.Windows.Forms.Button btnDepenses;
         private System.Windows.Forms.Button btnIndics;
+        private System.Windows.Forms.Button btnCapturesAfficher;
     }
 }

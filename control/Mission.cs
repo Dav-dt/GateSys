@@ -22,7 +22,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         public Mission(string nomPlanete, int numMission, string dateDepart, string dateFin, string commandant, string budget, Image image)
         {
             InitializeComponent();
-            lblNomMission.Text = nomPlanete;
+            lblNomMission.Text = $"{nomPlanete}-{numMission}" ;
             lblDateDepart.Text = dateDepart;
             lblDateFin.Text = dateFin;
             lblNomCapitaine.Text = commandant;
@@ -45,6 +45,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             frmFicheMission frmFicheMission = new
                 frmFicheMission(m_nomPlanete, m_numMission);
             frmFicheMission.Show();
+        }
+
+        private void btnGenererPdf_Click(object sender, EventArgs e)
+        {
+            //A générer : un pdf avec toutes les infos de la mission
+            //filedialog obligatoire pour choisir lendroit denregistrement et le nom
+
         }
     }
 }
