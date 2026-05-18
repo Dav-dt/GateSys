@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="control\Depense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Depense.Designer.cs">
+      <DependentUpon>Depense.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\Membre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     <Compile Include="frmJournal.Designer.cs">
       <DependentUpon>frmJournal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJournalDepenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalDepenses.Designer.cs">
+      <DependentUpon>frmJournalDepenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,9 @@
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="control\Depense.resx">
+      <DependentUpon>Depense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJournal.resx">
       <DependentUpon>frmJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalDepenses.resx">
+      <DependentUpon>frmJournalDepenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -65,5 +65,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             m_bsJournal.MoveLast();
         }
+
+        private void btnDepenses_Click(object sender, EventArgs e)
+        {
+            frmJournalDepenses frmJournalDepenses = new frmJournalDepenses(m_nomPlanete, m_numeroMission);
+            frmJournalDepenses.Show();
+        }
+
+        private void btnIndics_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

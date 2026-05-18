@@ -156,6 +156,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 MessageBox.Show("Champs incomplets ou invalides");
             }
+
+            DataRow row = MesDatas.DsGlobal.Tables["Contact"].NewRow();
+            row["nomPlanete"] = m_nomPlanete;
+            row["numeroMission"] = m_numero;
+            row["dateC"] = dtIndic.Value;
+            row["sommeVersee"] = Convert.ToInt32(txtSoudoiementIndic.Text);
+            row["appreciation"] = txtAppreciationIndic.Text;
+            row["nomCodeInformateur"] = cmbINomIndic.Text;
+            
+            MesDatas.DsGlobal.Tables["Contact"].Rows.Add(row);
+            MessageBox.Show("Contact ajouté avec succès !");
+
         }
 
         private void numberOnlyField_KeyPress(object sender, KeyPressEventArgs e)
@@ -174,6 +186,20 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
+            if ( txtNouvelEvent.Text == String.Empty )
+            {
+                MessageBox.Show("Champs incomplets ou invalides");
+            }
+
+            DataRow row = MesDatas.DsGlobal.Tables["JournalDeBord"].NewRow();
+            row["nomPlanete"] = m_nomPlanete;
+            row["numero"] = m_numero;
+            row["dateJ"] = dtNouvelEvent.Value;
+            row["commentaires"] = txtNouvelEvent.Text;
+
+            MesDatas.DsGlobal.Tables["JournalDeBord"].Rows.Add(row);
+            MessageBox.Show("Evènement ajouté avec succès !");
+
 
         }
 
@@ -184,9 +210,39 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
                 return;
             }
+            
+            if ( txtMontantDepense.Text == String.Empty ||
+                    cmbIdDepense.SelectedIndex == -1 ||
+                    txtMotifDepense.Text == String.Empty )
+            {
+                    MessageBox.Show("Champs incomplets ou invalides");
+            }
 
+            DataRow row = MesDatas.DsGlobal.Tables["Depense"].NewRow();
+            row["nomPlanete"] = m_nomPlanete;
+            row["numeroMission"] = m_numero;
+            row["id"] = GetProchainIdDepense();
+            row["dateD"] = dtDepense.Value;
+            row["montant"] = Convert.ToInt32(txtMontantDepense.Text);
+            row["motif"] = txtMotifDepense.Text;
+            row["idTypeDepense"] = cmbIdDepense.SelectedValue;
 
+            MesDatas.DsGlobal.Tables["Depense"].Rows.Add(row);
+            MessageBox.Show("Dépense ajoutée avec succès !");
         }
+
+        private int GetProchainIdDepense()
+        {
+            DataRow[] drDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
+                            $@"numeroMission = '{m_numero}' AND 
+                            nomPlanete = '{m_nomPlanete}'");
+
+            if ( drDepenses.Length == 0 )
+                return 1;
+
+            return drDepenses.GetLength(0)+ 1; //nb lignes ++;
+        }
+
 
         private void btnJournal_Click(object sender, EventArgs e)
         {

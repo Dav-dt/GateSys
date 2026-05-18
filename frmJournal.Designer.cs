@@ -121,6 +121,7 @@
             this.btnDepenses.TabIndex = 1;
             this.btnDepenses.Text = "Consulter les dépenses";
             this.btnDepenses.UseVisualStyleBackColor = true;
+            this.btnDepenses.Click += new System.EventHandler(this.btnDepenses_Click);
             // 
             // btnIndics
             // 
@@ -130,6 +131,7 @@
             this.btnIndics.TabIndex = 2;
             this.btnIndics.Text = "Consulter les contacts";
             this.btnIndics.UseVisualStyleBackColor = true;
+            this.btnIndics.Click += new System.EventHandler(this.btnIndics_Click);
             // 
             // frmJournal
             // 
