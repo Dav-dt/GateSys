@@ -93,21 +93,21 @@
             // 
             // txtBudget
             // 
-            this.txtBudget.Location = new System.Drawing.Point(262, 670);
+            this.txtBudget.Location = new System.Drawing.Point(418, 664);
             this.txtBudget.Name = "txtBudget";
             this.txtBudget.Size = new System.Drawing.Size(100, 32);
             this.txtBudget.TabIndex = 18;
             // 
             // txtObjectifQDB
             // 
-            this.txtObjectifQDB.Location = new System.Drawing.Point(262, 629);
+            this.txtObjectifQDB.Location = new System.Drawing.Point(418, 622);
             this.txtObjectifQDB.Name = "txtObjectifQDB";
             this.txtObjectifQDB.Size = new System.Drawing.Size(100, 32);
             this.txtObjectifQDB.TabIndex = 17;
             // 
             // txtNbMembres
             // 
-            this.txtNbMembres.Location = new System.Drawing.Point(262, 584);
+            this.txtNbMembres.Location = new System.Drawing.Point(418, 584);
             this.txtNbMembres.Name = "txtNbMembres";
             this.txtNbMembres.Size = new System.Drawing.Size(100, 32);
             this.txtNbMembres.TabIndex = 16;
@@ -135,9 +135,9 @@
             this.lblNbMembres.AutoSize = true;
             this.lblNbMembres.Location = new System.Drawing.Point(14, 584);
             this.lblNbMembres.Name = "lblNbMembres";
-            this.lblNbMembres.Size = new System.Drawing.Size(229, 26);
+            this.lblNbMembres.Size = new System.Drawing.Size(419, 26);
             this.lblNbMembres.TabIndex = 13;
-            this.lblNbMembres.Text = "Nombre de Membres :";
+            this.lblNbMembres.Text = "Nombre de Membres (capitaine compris) :";
             // 
             // txtFeuilleDeRoute
             // 

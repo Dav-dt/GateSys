@@ -56,19 +56,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     MettreAJourDs(MesDatas.DsGlobal);
 
                     frmSaisieMembresObjectifs frmS = new frmSaisieMembresObjectifs(
-                        frmCreationMission.nomPlanete, frmCreationMission.numeroMission);
+                        frmCreationMission.nomPlanete, frmCreationMission.numeroMission,
+                        frmCreationMission.nbMembres);
                     frmS.ShowDialog();
 
                     if ( frmS.DialogResult == DialogResult.OK )
                     {
+                        afficherMissionsPanel(); //rafraichir
                         MessageBox.Show("Mission créée et objectifs saisis avec succès !" +
                             "Vous pouvez consulter la mission dans le tableau de bord");
                         MettreAJourDs(MesDatas.DsGlobal);
 
-                        frmFicheMission frmFicheMission = new frmFicheMission(frmCreationMission.nomPlanete, 
-                            frmCreationMission.numeroMission);
-
-                        //frmFicheMission.ShowDialog();
                     }
                 }
             }

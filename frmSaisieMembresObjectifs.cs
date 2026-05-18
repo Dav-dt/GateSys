@@ -15,21 +15,22 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
     {
         private List<string> m_idsMembres = new List<string>();
         private Dictionary<int, int> m_captures = new Dictionary<int, int>();
-
         private int m_numeroMission;
         private string m_nomPlanete;
+        private int m_nbMembres;
 
         public frmSaisieMembresObjectifs()
         {
             InitializeComponent();
         }
 
-        public frmSaisieMembresObjectifs(string nomPlanete, int numeroMission)
+        public frmSaisieMembresObjectifs(string nomPlanete, int numeroMission, int nbMembres)
         {
             InitializeComponent();
 
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;
+            m_nbMembres = nbMembres;
         }
 
         private void frmSaisieMembresObjectifs_Load(object sender, EventArgs e)
@@ -90,7 +91,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
-            SQLiteTransaction transaction = Connexion.Connec.BeginTransaction();
+            if ( lstMembres.Items.Count != m_nbMembres )
+            {
+                MessageBox.Show($"Assurez-vous d'avoir ajouté exactement " +
+                    $"{m_nbMembres} membres sans compter le capitaine");
+                return;
+            }
+
+                SQLiteTransaction transaction = Connexion.Connec.BeginTransaction();
             try
             {
                 //insertion des membres
@@ -135,7 +143,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 MessageBox.Show("Erreur inattendue : " + ex.Message);
             }
 
-
         }
 
         private void btnEffacerMembre_Click(object sender, EventArgs e)
@@ -152,6 +159,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnAjouterMembres_Click(object sender, EventArgs e)
         {
+            //pas 2 fois
+            if ( lstMembres.Items.Contains(cmbMembres.Text) )
+                return;
+
             lstMembres.Items.Add(cmbMembres.Text);
             m_idsMembres.Add(cmbMembres.SelectedValue.ToString());
 
@@ -167,8 +178,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
+            int idEspece = Convert.ToInt32(cmbCapture.SelectedValue);
+            //pas 2 fois
+            if (m_captures.ContainsKey(idEspece))
+                return;
+
             lstCapture.Items.Add(cmbCapture.Text + " -> " + nbCapture);
-            m_captures.Add(Convert.ToInt32(cmbCapture.SelectedValue), nbCapture);
+            m_captures.Add(idEspece, nbCapture);
         }
 
         private void frmSaisieMembresObjectifs_FormClosing(object sender, FormClosingEventArgs e)

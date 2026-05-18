@@ -62,7 +62,7 @@
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
             this.btnNouvellesMissions.Size = new System.Drawing.Size(155, 66);
             this.btnNouvellesMissions.TabIndex = 2;
-            this.btnNouvellesMissions.Text = "Nouvelles Missions";
+            this.btnNouvellesMissions.Text = "Nouvelle Mission";
             this.btnNouvellesMissions.UseVisualStyleBackColor = true;
             this.btnNouvellesMissions.Click += new System.EventHandler(this.btnNouvellesMissions_Click);
             // 

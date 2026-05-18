@@ -27,6 +27,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             get { return numMission;}
         }
 
+        public int nbMembres
+        {
+            get { return Convert.ToInt32(txtNbMembres.Text) - 1;}
+        }
+
         public frmCreationMission()
         {
             InitializeComponent();
@@ -115,34 +120,58 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
-            try
+            else if ( !estCapitaine(cmbChefMission.SelectedValue.ToString()) )
             {
-                string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
+                MessageBox.Show("La personne sélectionnée n'est pas capitaine");
+                return;
+            }
+
+            try
+                {
+                    string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
                     dateDepart, dateRetour, matriculeChef, feuilleDeRoute,objectifDatabaz,budget)
                     VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
                     '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
                     {txtBudget.Text})";
-                
-                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Mission créée avec succès !");
 
-                this.DialogResult = DialogResult.OK;
-            }
-            catch ( SQLiteException ex )
-            {
-                MessageBox.Show("Erreur lors de l'insertion de la mission : " +
-                    ex.Message);
-                return;
-            }
+                    SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    cmd.ExecuteNonQuery();
 
-            catch ( Exception ex )
-            {
-                MessageBox.Show("Une erreur est survenue : " +
-                    ex.Message);
-                return;
-            }
+                    //insérer le chef aussi dans composer
+                    cmd.CommandText = $@"INSERT INTO Composer(nomPlanete,
+                                numeroMission, matriculeMembre) 
+                                VALUES ('{cmbPlanete.SelectedItem.ToString()}',
+                                {numMission}, '{cmbChefMission.SelectedValue.ToString()}')";
+                    
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Mission créée avec succès !");
+
+                    this.DialogResult = DialogResult.OK;
+                }
+                catch ( SQLiteException ex )
+                {
+                    MessageBox.Show("Erreur lors de l'insertion de la mission : " +
+                        ex.Message);
+                    return;
+                }
+
+                catch ( Exception ex )
+                {
+                    MessageBox.Show("Une erreur est survenue : " +
+                        ex.Message);
+                    return;
+                }
+        }
+
+        private bool estCapitaine(string matricule)
+        {
+            SQLiteCommand cmd = new SQLiteCommand(
+                $@"SELECT COUNT(*) FROM Militaire 
+              WHERE matriculeMembre = '{matricule}' 
+                  AND grade = 'Capitaine'", Connexion.Connec);
+            int nbLigne = Convert.ToInt32(cmd.ExecuteScalar());
+            return nbLigne> 0;
         }
     }
 }
