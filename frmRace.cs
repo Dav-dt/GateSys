@@ -20,7 +20,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmRace_Load(object sender, EventArgs e)
         {
-            ajoutAlien();
+            //ajoutAlien();
+            rbTous.Checked = true;
             DataSet ds = MesDatas.DsGlobal;
             DataTable dt = ds.Tables["Espece"];
             DataTable couleur = dt.DefaultView.ToTable(true, "couleur");
@@ -64,19 +65,24 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnFiltre_Click(object sender, EventArgs e)
         {
+            
             Clear();
             ajoutAlien();
             string nom = txtNom.Text.ToLower();
-            string couleur = cboCouleur.SelectedItem.ToString().ToLower();
-            //MessageBox.Show(couleur);
-            
+            string couleur = "";
+            if (cboCouleur.SelectedItem != null)
+            {
+                couleur = cboCouleur.SelectedItem.ToString().ToLower();
+            }
 
-            for (int i = flpRace.Controls.Count - 1; i >= 0; i--)
+
+
+                for (int i = flpRace.Controls.Count - 1; i >= 0; i--)
             {
                 if (flpRace.Controls[i] is Alien al)
                 {
                     //MessageBox.Show(couleur + "      " + al.getCouleur());
-                    if (!(al.getNom().Contains(nom)) || (al.getCouleur() != couleur))
+                    if (!(al.getNom().Contains(nom)) || (al.getCouleur() != couleur && !string.IsNullOrEmpty(couleur)))
                     {
                         //MessageBox.Show(al.getCouleur());
                         flpRace.Controls.Remove(al);
@@ -87,7 +93,53 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            DataSet ds = MesDatas.DsGlobal;
+            Clear();
+            if (!ds.Relations.Contains("relAllieEnnemi"))
+            {
+                DataRelation rel = new DataRelation("relAllieEnnemi", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Ennemi"].Columns["idEspece"]);
+                ds.Relations.Add(rel);
+            }
+            DataRow[] allie = ds.Tables["Ennemi"].Select();
+            if (allie.Length > 0)
+            {
+                foreach (DataRow dr in allie)
+                {
+                    DataRow espece = dr.GetParentRow("relAllieEnnemi");
+                    List<string> nomPlanete = getPlanete(espece["id"].ToString());
+                    Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Agréssivité:{dr["degreAgressivite"].ToString()}", $"{dr["typeArme"].ToString()}", Color.Red);
+                    flpRace.Controls.Add(al);
+                }
+            }
 
+        }
+
+        private void rbTous_CheckedChanged(object sender, EventArgs e)
+        {
+            Clear();
+            ajoutAlien();
+        }
+
+        private void rbAllie_CheckedChanged(object sender, EventArgs e)
+        {
+            DataSet ds = MesDatas.DsGlobal;
+            Clear();
+            if (!ds.Relations.Contains("relAllieEspece"))
+            {
+                DataRelation rel = new DataRelation("relAllieEspece", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Allie"].Columns["idEspece"]);
+                ds.Relations.Add(rel);
+            }
+            DataRow[] allie = ds.Tables["Allie"].Select();
+            if (allie.Length > 0)
+            {
+                foreach (DataRow dr in allie)
+                {
+                    DataRow espece = dr.GetParentRow("relAllieEspece");
+                    List<string> nomPlanete = getPlanete(espece["id"].ToString());
+                    Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Bienveillance:{dr["degreBienveillance"].ToString()}", $"{dr["instrumentMusique"].ToString()}",Color.Green);
+                    flpRace.Controls.Add(al);
+                }
+            }
         }
     }
 }

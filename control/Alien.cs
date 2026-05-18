@@ -46,6 +46,38 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             pbAlien.Image = getImage(race);
 
         }
+        public Alien(string nom, string race, List<string> planete,string degre,string outil,Color couleur)
+        {
+            InitializeComponent();
+            lblNom.Text = nom;
+            lblRace.Text = race;
+
+            if (planete.Count > 0)
+            {
+                for (int i = 0; i < planete.Count(); i++)
+                {
+                    if (i == planete.Count() - 1)
+                    {
+                        lblPlanete.Text += planete[i];
+                    }
+                    else
+                    {
+                        lblPlanete.Text += planete[i] + "/";
+                    }
+                }
+            }
+            else
+            {
+                lblPlanete.ForeColor = Color.Red;
+                lblPlanete.Text = "Inconnu";
+            }
+
+            pbAlien.Image = getImage(race);
+            lbDegre.Text = degre;
+            lbOutil.Text = outil;
+            lbOutil.ForeColor = couleur;
+
+        }
         public Alien(string nom, string race)
         {
             InitializeComponent();

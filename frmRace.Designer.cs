@@ -30,16 +30,16 @@
         {
             this.flpRace = new System.Windows.Forms.FlowLayoutPanel();
             this.grpFiltre = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblNom = new System.Windows.Forms.Label();
-            this.lblCouleur = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.cboCouleur = new System.Windows.Forms.ComboBox();
-            this.btnFiltre = new System.Windows.Forms.Button();
-            this.rbTous = new System.Windows.Forms.RadioButton();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.rbAllie = new System.Windows.Forms.RadioButton();
             this.rbEnnemi = new System.Windows.Forms.RadioButton();
+            this.rbAllie = new System.Windows.Forms.RadioButton();
+            this.rbTous = new System.Windows.Forms.RadioButton();
+            this.btnFiltre = new System.Windows.Forms.Button();
+            this.cboCouleur = new System.Windows.Forms.ComboBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.lblCouleur = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.grpFiltre.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,38 +68,41 @@
             this.grpFiltre.TabStop = false;
             this.grpFiltre.Text = "Filtres";
             // 
-            // lblNom
+            // rbEnnemi
             // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(10, 30);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(29, 13);
-            this.lblNom.TabIndex = 0;
-            this.lblNom.Text = "Nom";
+            this.rbEnnemi.AutoSize = true;
+            this.rbEnnemi.Location = new System.Drawing.Point(414, 99);
+            this.rbEnnemi.Name = "rbEnnemi";
+            this.rbEnnemi.Size = new System.Drawing.Size(60, 17);
+            this.rbEnnemi.TabIndex = 7;
+            this.rbEnnemi.TabStop = true;
+            this.rbEnnemi.Text = "Ennemi";
+            this.rbEnnemi.UseVisualStyleBackColor = true;
+            this.rbEnnemi.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // lblCouleur
+            // rbAllie
             // 
-            this.lblCouleur.AutoSize = true;
-            this.lblCouleur.Location = new System.Drawing.Point(6, 74);
-            this.lblCouleur.Name = "lblCouleur";
-            this.lblCouleur.Size = new System.Drawing.Size(43, 13);
-            this.lblCouleur.TabIndex = 1;
-            this.lblCouleur.Text = "Couleur";
+            this.rbAllie.AutoSize = true;
+            this.rbAllie.Location = new System.Drawing.Point(414, 66);
+            this.rbAllie.Name = "rbAllie";
+            this.rbAllie.Size = new System.Drawing.Size(44, 17);
+            this.rbAllie.TabIndex = 6;
+            this.rbAllie.TabStop = true;
+            this.rbAllie.Text = "Allie";
+            this.rbAllie.UseVisualStyleBackColor = true;
+            this.rbAllie.CheckedChanged += new System.EventHandler(this.rbAllie_CheckedChanged);
             // 
-            // txtNom
+            // rbTous
             // 
-            this.txtNom.Location = new System.Drawing.Point(57, 30);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(143, 20);
-            this.txtNom.TabIndex = 2;
-            // 
-            // cboCouleur
-            // 
-            this.cboCouleur.FormattingEnabled = true;
-            this.cboCouleur.Location = new System.Drawing.Point(57, 66);
-            this.cboCouleur.Name = "cboCouleur";
-            this.cboCouleur.Size = new System.Drawing.Size(148, 21);
-            this.cboCouleur.TabIndex = 3;
+            this.rbTous.AutoSize = true;
+            this.rbTous.Location = new System.Drawing.Point(414, 33);
+            this.rbTous.Name = "rbTous";
+            this.rbTous.Size = new System.Drawing.Size(49, 17);
+            this.rbTous.TabIndex = 5;
+            this.rbTous.TabStop = true;
+            this.rbTous.Text = "Tous";
+            this.rbTous.UseVisualStyleBackColor = true;
+            this.rbTous.CheckedChanged += new System.EventHandler(this.rbTous_CheckedChanged);
             // 
             // btnFiltre
             // 
@@ -113,39 +116,38 @@
             this.btnFiltre.UseVisualStyleBackColor = true;
             this.btnFiltre.Click += new System.EventHandler(this.btnFiltre_Click);
             // 
-            // rbTous
+            // cboCouleur
             // 
-            this.rbTous.AutoSize = true;
-            this.rbTous.Location = new System.Drawing.Point(414, 33);
-            this.rbTous.Name = "rbTous";
-            this.rbTous.Size = new System.Drawing.Size(49, 17);
-            this.rbTous.TabIndex = 5;
-            this.rbTous.TabStop = true;
-            this.rbTous.Text = "Tous";
-            this.rbTous.UseVisualStyleBackColor = true;
+            this.cboCouleur.FormattingEnabled = true;
+            this.cboCouleur.Location = new System.Drawing.Point(57, 66);
+            this.cboCouleur.Name = "cboCouleur";
+            this.cboCouleur.Size = new System.Drawing.Size(148, 21);
+            this.cboCouleur.TabIndex = 3;
             // 
-            // rbAllie
+            // txtNom
             // 
-            this.rbAllie.AutoSize = true;
-            this.rbAllie.Location = new System.Drawing.Point(414, 66);
-            this.rbAllie.Name = "rbAllie";
-            this.rbAllie.Size = new System.Drawing.Size(44, 17);
-            this.rbAllie.TabIndex = 6;
-            this.rbAllie.TabStop = true;
-            this.rbAllie.Text = "Allie";
-            this.rbAllie.UseVisualStyleBackColor = true;
+            this.txtNom.Location = new System.Drawing.Point(57, 30);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(143, 20);
+            this.txtNom.TabIndex = 2;
             // 
-            // rbEnnemi
+            // lblCouleur
             // 
-            this.rbEnnemi.AutoSize = true;
-            this.rbEnnemi.Location = new System.Drawing.Point(414, 99);
-            this.rbEnnemi.Name = "rbEnnemi";
-            this.rbEnnemi.Size = new System.Drawing.Size(60, 17);
-            this.rbEnnemi.TabIndex = 7;
-            this.rbEnnemi.TabStop = true;
-            this.rbEnnemi.Text = "Ennemi";
-            this.rbEnnemi.UseVisualStyleBackColor = true;
-            this.rbEnnemi.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.lblCouleur.AutoSize = true;
+            this.lblCouleur.Location = new System.Drawing.Point(6, 74);
+            this.lblCouleur.Name = "lblCouleur";
+            this.lblCouleur.Size = new System.Drawing.Size(43, 13);
+            this.lblCouleur.TabIndex = 1;
+            this.lblCouleur.Text = "Couleur";
+            // 
+            // lblNom
+            // 
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(10, 30);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(29, 13);
+            this.lblNom.TabIndex = 0;
+            this.lblNom.Text = "Nom";
             // 
             // frmRace
             // 

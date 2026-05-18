@@ -32,6 +32,8 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.lblRace = new System.Windows.Forms.Label();
             this.lblPlanete = new System.Windows.Forms.Label();
+            this.lbDegre = new System.Windows.Forms.Label();
+            this.lbOutil = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // lblRace
             // 
             this.lblRace.AutoSize = true;
-            this.lblRace.Location = new System.Drawing.Point(181, 62);
+            this.lblRace.Location = new System.Drawing.Point(181, 75);
             this.lblRace.Name = "lblRace";
             this.lblRace.Size = new System.Drawing.Size(35, 13);
             this.lblRace.TabIndex = 2;
@@ -71,11 +73,31 @@
             this.lblPlanete.Size = new System.Drawing.Size(0, 13);
             this.lblPlanete.TabIndex = 3;
             // 
+            // lbDegre
+            // 
+            this.lbDegre.AutoSize = true;
+            this.lbDegre.Location = new System.Drawing.Point(181, 49);
+            this.lbDegre.Name = "lbDegre";
+            this.lbDegre.Size = new System.Drawing.Size(35, 13);
+            this.lbDegre.TabIndex = 4;
+            this.lbDegre.Text = "label1";
+            // 
+            // lbOutil
+            // 
+            this.lbOutil.AutoSize = true;
+            this.lbOutil.Location = new System.Drawing.Point(182, 151);
+            this.lbOutil.Name = "lbOutil";
+            this.lbOutil.Size = new System.Drawing.Size(35, 13);
+            this.lbOutil.TabIndex = 5;
+            this.lbOutil.Text = "label2";
+            // 
             // Alien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.lbOutil);
+            this.Controls.Add(this.lbDegre);
             this.Controls.Add(this.lblPlanete);
             this.Controls.Add(this.lblRace);
             this.Controls.Add(this.lblNom);
@@ -94,5 +116,7 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblRace;
         private System.Windows.Forms.Label lblPlanete;
+        private System.Windows.Forms.Label lbDegre;
+        private System.Windows.Forms.Label lbOutil;
     }
 }
