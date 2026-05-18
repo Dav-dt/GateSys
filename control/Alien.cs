@@ -23,16 +23,24 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             lblNom.Text = nom;
             lblRace.Text = race;
 
-            for (int i = 0; i < planete.Count(); i++)
+            if (planete.Count > 0)
             {
-                if (i == planete.Count() - 1)
+                for (int i = 0; i < planete.Count(); i++)
                 {
-                    lblPlanete.Text += planete[i];
+                    if (i == planete.Count() - 1)
+                    {
+                        lblPlanete.Text += planete[i];
+                    }
+                    else
+                    {
+                        lblPlanete.Text += planete[i] + "/";
+                    }
                 }
-                else
-                {
-                    lblPlanete.Text += planete[i] + "/";
-                }
+            }
+            else
+            {
+                lblPlanete.ForeColor = Color.Red;
+                lblPlanete.Text = "Inconnu";
             }
 
             pbAlien.Image = getImage(race);
@@ -74,6 +82,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 default: return null;
             }
         }
+        public string getNom()
+        {
+            return lblNom.Text.ToLower();
+        }
+
+        public string getCouleur()
+        {
+            return lblRace.Text.ToLower();
+        }
+
 
     }
 }

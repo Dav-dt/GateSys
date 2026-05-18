@@ -47,9 +47,10 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNom.Location = new System.Drawing.Point(181, 18);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(35, 13);
+            this.lblNom.Size = new System.Drawing.Size(57, 20);
             this.lblNom.TabIndex = 1;
             this.lblNom.Text = "label1";
             // 
