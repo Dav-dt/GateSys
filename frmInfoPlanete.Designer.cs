@@ -59,7 +59,7 @@
             this.lbMission.FormattingEnabled = true;
             this.lbMission.Items.AddRange(new object[] {
             ""});
-            this.lbMission.Location = new System.Drawing.Point(12, 353);
+            this.lbMission.Location = new System.Drawing.Point(427, 221);
             this.lbMission.Name = "lbMission";
             this.lbMission.Size = new System.Drawing.Size(244, 95);
             this.lbMission.TabIndex = 3;
@@ -67,7 +67,7 @@
             // labelMission
             // 
             this.labelMission.AutoSize = true;
-            this.labelMission.Location = new System.Drawing.Point(9, 328);
+            this.labelMission.Location = new System.Drawing.Point(424, 196);
             this.labelMission.Name = "labelMission";
             this.labelMission.Size = new System.Drawing.Size(45, 13);
             this.labelMission.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.ClientSize = new System.Drawing.Size(701, 340);
             this.Controls.Add(this.lbMission);
             this.Controls.Add(this.labelMission);
             this.Controls.Add(this.lbEspece);

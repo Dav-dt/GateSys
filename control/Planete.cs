@@ -50,7 +50,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
         public Planete(string non, string planete, int temperature, double gravite, int databaz)
         {
+
             InitializeComponent();
+            temp = temperature;
+            grav = gravite;
+            data = databaz;
+
             //this.BackColor = Color.FromArgb(60, 56, 54);
             pbPlanete.Image = getImage(planete);
             lblPlanete.Text = non.ToUpper();
@@ -75,9 +80,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
             
         }
-        int temp;
-        double grav;
-        int data;
+        private int temp;
+        private double grav;
+        private int data;
 
         public Planete(string non, string planete, int temperature, double gravite, int databaz,bool enable)
         {
