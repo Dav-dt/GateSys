@@ -13,6 +13,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 {
     public partial class frmInfoPlanete : Form
     {
+        DataSet ds = MesDatas.DsGlobal;
         public frmInfoPlanete()
         {
             InitializeComponent();
@@ -34,7 +35,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmInfoPlanete_Load(object sender, EventArgs e)
         {
-            DataSet ds = MesDatas.DsGlobal;
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+            Dictionary<string,Color> color = new Dictionary<string, Color>();
+
             if (!ds.Relations.Contains("relHabiterEspece"))
             {
                 DataRelation rel = new DataRelation("relHabiterEspece", ds.Tables["Espece"].Columns["id"], ds.Tables["Habiter"].Columns["idEspece"]);
@@ -47,15 +50,22 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 {
                     // Accès direct à la ligne correspondante dans la table Espece
                     DataRow espece = ligne.GetParentRow("relHabiterEspece");
+                    ;
 
-                    lbEspece.Items.Add(espece["nom"].ToString());
+                    
+                    dic.Add(espece["nom"].ToString(), Convert.ToInt32(ligne["pourcentage"]));
+                    color.Add(espece["nom"].ToString(), getCouleur(Convert.ToInt32(espece["id"])));
                 }
+                
 
             }
             else
             {
-                lbEspece.Items.Add("Aucune espèce n'habite cette planète.");
+                //lbEspece.Items.Add("Aucune espèce n'habite cette planète.");
             }
+
+
+
             DataRow[] mission = ds.Tables["Mission"].Select($"nomPlanete = '{nomplanete}'");
             if (mission.Length > 0)
             {
@@ -67,6 +77,25 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             else
             {
                 lbMission.Items.Add("Aucune mission n'est prévue pour cette planète.");
+            }
+            //Dictionary<string, int> dic = new Dictionary<string, int> { { "test", 100 }, { "test2",20} };
+            populationPlanete pl = new populationPlanete(dic,color);
+            pl.Top = 220;
+            pl.Left = 10;
+            this.Controls.Add(pl);
+
+        }
+
+        private Color getCouleur(int id)
+        {
+            DataRow[] res = ds.Tables["Allie"].Select($"idEspece = {id}");
+            if (res.Length > 0)
+            {
+                return Color.Green;
+            }
+            else
+            {
+                return Color.Red;
             }
         }
         

@@ -112,7 +112,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             {
                 chkDatabaz.Checked = true;
             }
-            cmsPlanete.Enabled = false;
+            btnDetail.Enabled = false;
+            btnDetail.Visible = false;
             this.BorderStyle = BorderStyle.None;
         }
 
@@ -204,14 +205,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         private string getNom()
         {
             return lblPlanete.Text;
-        }
+        } 
 
-        
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btnDetail_Click(object sender, EventArgs e)
         {
             frmInfoPlanete infoplanete = new frmInfoPlanete(getNom(), getNom(), temp, grav, data);
             infoplanete.ShowDialog();
+
         }
     }
 }

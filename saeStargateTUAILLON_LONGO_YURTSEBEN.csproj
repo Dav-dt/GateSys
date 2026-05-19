@@ -93,6 +93,12 @@
     <Compile Include="control\Planete.Designer.cs">
       <DependentUpon>Planete.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\populationPlanete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\populationPlanete.Designer.cs">
+      <DependentUpon>populationPlanete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Planete.resx">
       <DependentUpon>Planete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\populationPlanete.resx">
+      <DependentUpon>populationPlanete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
