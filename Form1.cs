@@ -40,7 +40,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 frmLogin frmLogin = new frmLogin();
                 frmLogin.ShowDialog();
-                if ( frmLogin.DialogResult == DialogResult.OK )
+                if (frmLogin.DialogResult == DialogResult.OK)
                 {
                     m_hasConnectedOnce = true;
                 }
@@ -76,7 +76,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmRace frmRace = new frmRace();
             frmRace.ShowDialog();
-            
+
         }
 
         private void btnInfosPlanetes_Click(object sender, EventArgs e)
@@ -94,11 +94,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataTable schemaTable = Connexion.Connec.GetSchema("Tables");
             SQLiteDataAdapter da;
 
-            for ( int i = 0; i < schemaTable.Rows.Count; i++)
+            for ( int i = 0; i < schemaTable.Rows.Count; i++ )
             {
                 string nomTable = schemaTable.Rows[i]["TABLE_NAME"].ToString();
                 tables.Add(nomTable);
-                da = new SQLiteDataAdapter("SELECT * FROM " + nomTable, 
+                da = new SQLiteDataAdapter("SELECT * FROM " + nomTable,
                                             Connexion.Connec);
                 da.Fill(ds, nomTable);
             }
@@ -131,18 +131,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             Connexion.FermerConnexion();
 
             this.Close();
-            
+
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
             Form test = new frmTest();
             test.Show();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTestMembre_Click(object sender, EventArgs e)
@@ -178,9 +173,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     Convert.ToInt32(reader["numero"]),
                     reader["dateDepart"].ToString(),
                     reader["dateRetour"].ToString(),
-                    nomChef, reader["budget"].ToString(),
-                    Properties.Resources.Aurae
-                    );
+                    nomChef, reader["budget"].ToString());
+
                 mission.Location = new Point(0, positionY);
                 positionY += mission.Height + 10;
 
