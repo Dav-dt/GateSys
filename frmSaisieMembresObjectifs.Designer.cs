@@ -53,6 +53,7 @@
             // 
             // cmbMembres
             // 
+            this.cmbMembres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbMembres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMembres.FormattingEnabled = true;
             this.cmbMembres.Location = new System.Drawing.Point(54, 93);
@@ -62,6 +63,7 @@
             // 
             // btnAjouterMembres
             // 
+            this.btnAjouterMembres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouterMembres.Location = new System.Drawing.Point(693, 93);
             this.btnAjouterMembres.Name = "btnAjouterMembres";
             this.btnAjouterMembres.Size = new System.Drawing.Size(181, 34);
@@ -72,6 +74,7 @@
             // 
             // btnEffacerMembre
             // 
+            this.btnEffacerMembre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEffacerMembre.Location = new System.Drawing.Point(535, 93);
             this.btnEffacerMembre.Name = "btnEffacerMembre";
             this.btnEffacerMembre.Size = new System.Drawing.Size(135, 34);
@@ -100,6 +103,7 @@
             // 
             // cmbCapture
             // 
+            this.cmbCapture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCapture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCapture.FormattingEnabled = true;
             this.cmbCapture.Location = new System.Drawing.Point(54, 445);
@@ -116,6 +120,7 @@
             // 
             // btnAjouterCapture
             // 
+            this.btnAjouterCapture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouterCapture.Location = new System.Drawing.Point(693, 445);
             this.btnAjouterCapture.Name = "btnAjouterCapture";
             this.btnAjouterCapture.Size = new System.Drawing.Size(181, 32);
@@ -135,6 +140,7 @@
             // 
             // btnValiderTout
             // 
+            this.btnValiderTout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValiderTout.Location = new System.Drawing.Point(662, 652);
             this.btnValiderTout.Name = "btnValiderTout";
             this.btnValiderTout.Size = new System.Drawing.Size(212, 40);
@@ -145,6 +151,7 @@
             // 
             // btnEffacerCapture
             // 
+            this.btnEffacerCapture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEffacerCapture.Location = new System.Drawing.Point(590, 445);
             this.btnEffacerCapture.Name = "btnEffacerCapture";
             this.btnEffacerCapture.Size = new System.Drawing.Size(97, 34);

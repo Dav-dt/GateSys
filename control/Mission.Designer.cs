@@ -85,6 +85,7 @@
             // 
             this.btnInfo.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.detailLogo;
             this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInfo.Location = new System.Drawing.Point(616, 69);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInfo.Name = "btnInfo";
@@ -107,6 +108,7 @@
             // 
             this.btnGenererPdf.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.pdfAdobe;
             this.btnGenererPdf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenererPdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenererPdf.Location = new System.Drawing.Point(498, 69);
             this.btnGenererPdf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenererPdf.Name = "btnGenererPdf";

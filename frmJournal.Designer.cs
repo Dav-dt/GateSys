@@ -87,6 +87,7 @@
             // 
             // btnTTdebut
             // 
+            this.btnTTdebut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTTdebut.Location = new System.Drawing.Point(19, 205);
             this.btnTTdebut.Name = "btnTTdebut";
             this.btnTTdebut.Size = new System.Drawing.Size(101, 47);
@@ -97,6 +98,7 @@
             // 
             // btnPrecedent
             // 
+            this.btnPrecedent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrecedent.Location = new System.Drawing.Point(207, 205);
             this.btnPrecedent.Name = "btnPrecedent";
             this.btnPrecedent.Size = new System.Drawing.Size(118, 47);
@@ -107,6 +109,7 @@
             // 
             // btnSuivant
             // 
+            this.btnSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuivant.Location = new System.Drawing.Point(410, 205);
             this.btnSuivant.Name = "btnSuivant";
             this.btnSuivant.Size = new System.Drawing.Size(106, 47);
@@ -117,6 +120,7 @@
             // 
             // btnTTfin
             // 
+            this.btnTTfin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTTfin.Location = new System.Drawing.Point(585, 205);
             this.btnTTfin.Name = "btnTTfin";
             this.btnTTfin.Size = new System.Drawing.Size(110, 47);
@@ -127,6 +131,7 @@
             // 
             // btnDepenses
             // 
+            this.btnDepenses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDepenses.Location = new System.Drawing.Point(31, 379);
             this.btnDepenses.Name = "btnDepenses";
             this.btnDepenses.Size = new System.Drawing.Size(143, 64);
@@ -137,6 +142,7 @@
             // 
             // btnCapturesAfficher
             // 
+            this.btnCapturesAfficher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapturesAfficher.Location = new System.Drawing.Point(301, 379);
             this.btnCapturesAfficher.Name = "btnCapturesAfficher";
             this.btnCapturesAfficher.Size = new System.Drawing.Size(165, 64);
@@ -147,6 +153,7 @@
             // 
             // btnIndics
             // 
+            this.btnIndics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIndics.Location = new System.Drawing.Point(564, 379);
             this.btnIndics.Name = "btnIndics";
             this.btnIndics.Size = new System.Drawing.Size(143, 64);

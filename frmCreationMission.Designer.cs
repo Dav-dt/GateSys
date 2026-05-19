@@ -83,6 +83,7 @@
             // 
             // btnValiderMission
             // 
+            this.btnValiderMission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValiderMission.Location = new System.Drawing.Point(596, 656);
             this.btnValiderMission.Name = "btnValiderMission";
             this.btnValiderMission.Size = new System.Drawing.Size(146, 61);
@@ -158,6 +159,7 @@
             // 
             // dtRetour
             // 
+            this.dtRetour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtRetour.Location = new System.Drawing.Point(574, 374);
             this.dtRetour.Name = "dtRetour";
             this.dtRetour.Size = new System.Drawing.Size(154, 32);
@@ -165,6 +167,7 @@
             // 
             // dtDepart
             // 
+            this.dtDepart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtDepart.Location = new System.Drawing.Point(226, 374);
             this.dtDepart.Name = "dtDepart";
             this.dtDepart.Size = new System.Drawing.Size(154, 32);
@@ -199,6 +202,7 @@
             // 
             // cmbChefMission
             // 
+            this.cmbChefMission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbChefMission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChefMission.FormattingEnabled = true;
             this.cmbChefMission.Location = new System.Drawing.Point(316, 197);
@@ -226,6 +230,7 @@
             // 
             // btnValiderPlanete
             // 
+            this.btnValiderPlanete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValiderPlanete.Location = new System.Drawing.Point(616, 58);
             this.btnValiderPlanete.Name = "btnValiderPlanete";
             this.btnValiderPlanete.Size = new System.Drawing.Size(126, 33);
@@ -236,6 +241,7 @@
             // 
             // cmbPlanete
             // 
+            this.cmbPlanete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPlanete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPlanete.FormattingEnabled = true;
             this.cmbPlanete.Location = new System.Drawing.Point(316, 57);

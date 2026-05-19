@@ -26,6 +26,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             List<string> tables = ChargerBddDansDs(MesDatas.DsGlobal);
             pnlAffichageMissions.AutoScroll = true;
             afficherMissionsPanel();
+            btnNouvellesMissions.Select();//plus beau
 
         }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -155,6 +156,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                  txtSoudoiementIndic.Text == String.Empty )
             {
                 MessageBox.Show("Champs incomplets ou invalides");
+                return;
             }
 
             DataRow row = MesDatas.DsGlobal.Tables["Contact"].NewRow();
@@ -166,7 +168,28 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             row["nomCodeInformateur"] = cmbINomIndic.Text;
             
             MesDatas.DsGlobal.Tables["Contact"].Rows.Add(row);
-            MessageBox.Show("Contact ajouté avec succès !");
+
+            try
+            {
+                string requete = $@"INSERT INTO Contact(nomPlanete, numeroMission, dateC,
+                       sommeVersee, appreciation, nomCodeInformateur)
+                        VALUES('{m_nomPlanete}', {m_numero}, 
+                        '{dtIndic.Value.ToString("yyyy-MM-dd")}', 
+                        {Convert.ToInt32(txtSoudoiementIndic.Text)}, '{txtAppreciationIndic.Text}', 
+                        '{cmbINomIndic.SelectedValue}')";
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+                
+                MessageBox.Show("Contact ajouté avec succès !");
+            }
+            catch ( SQLiteException ex )
+            {
+                MessageBox.Show("Erreur lors de l'ajout du contact : " +ex.Message);
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show("Erreur lors de l'ajout du contact : " +ex.Message);
+            }
 
         }
 
@@ -186,9 +209,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
-            if ( txtNouvelEvent.Text == String.Empty )
+            if (txtNouvelEvent.Text == String.Empty)
             {
                 MessageBox.Show("Champs incomplets ou invalides");
+                return;
             }
 
             DataRow row = MesDatas.DsGlobal.Tables["JournalDeBord"].NewRow();
@@ -198,9 +222,27 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             row["commentaires"] = txtNouvelEvent.Text;
 
             MesDatas.DsGlobal.Tables["JournalDeBord"].Rows.Add(row);
-            MessageBox.Show("Evènement ajouté avec succès !");
+            //synchro vraie bdd
+            try
+            {
+                string requete = $@"INSERT INTO JournalDeBord(nomPlanete, numero, dateJ,
+                        commentaires)
+                        VALUES('{m_nomPlanete}', {m_numero}, 
+                        '{dtNouvelEvent.Value.ToString("yyyy-MM-dd")}',
+                        {txtNouvelEvent.Text}')";
 
-
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Evènement ajouté avec succès !");
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " +ex.Message);
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " +ex.Message);
+            }
         }
 
         private void btnValiderDepense_Click(object sender, EventArgs e)
@@ -215,20 +257,43 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     cmbIdDepense.SelectedIndex == -1 ||
                     txtMotifDepense.Text == String.Empty )
             {
-                    MessageBox.Show("Champs incomplets ou invalides");
+                MessageBox.Show("Champs incomplets ou invalides");
+                return;
             }
-
+            int prochainId = GetProchainIdDepense();
             DataRow row = MesDatas.DsGlobal.Tables["Depense"].NewRow();
             row["nomPlanete"] = m_nomPlanete;
             row["numeroMission"] = m_numero;
-            row["id"] = GetProchainIdDepense();
+            row["id"] = prochainId;
             row["dateD"] = dtDepense.Value;
             row["montant"] = Convert.ToInt32(txtMontantDepense.Text);
             row["motif"] = txtMotifDepense.Text;
             row["idTypeDepense"] = cmbIdDepense.SelectedValue;
 
             MesDatas.DsGlobal.Tables["Depense"].Rows.Add(row);
-            MessageBox.Show("Dépense ajoutée avec succès !");
+
+            try
+            {
+                string requete = $@"INSERT INTO Depense(nomPlanete, numeroMission, id, dateD,
+                        montant, motif, idTypeDepense)
+                    VALUES('{m_nomPlanete}', {m_numero}, {prochainId},
+                    '{dtDepense.Value.ToString("yyyy-MM-dd")}', 
+                        {Convert.ToInt32(txtMontantDepense.Text)},'{txtMotifDepense.Text}', 
+                        {cmbIdDepense.SelectedValue})";
+
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Dépense ajoutée avec succès !");
+            }
+            catch ( SQLiteException ex )
+            {
+                MessageBox.Show("Erreur lors de l'ajout de la dépense : " +ex.Message);
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show("Erreur lors de l'ajout de la dépense : " +ex.Message);
+            }
         }
 
         private int GetProchainIdDepense()

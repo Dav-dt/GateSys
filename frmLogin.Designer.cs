@@ -94,6 +94,7 @@
             // 
             // btnConfirmer
             // 
+            this.btnConfirmer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmer.Location = new System.Drawing.Point(494, 482);
             this.btnConfirmer.Name = "btnConfirmer";
             this.btnConfirmer.Size = new System.Drawing.Size(159, 48);
@@ -104,6 +105,7 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Location = new System.Drawing.Point(294, 482);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(159, 48);
@@ -114,6 +116,7 @@
             // 
             // btnAfficherMdp
             // 
+            this.btnAfficherMdp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAfficherMdp.Location = new System.Drawing.Point(598, 354);
             this.btnAfficherMdp.Name = "btnAfficherMdp";
             this.btnAfficherMdp.Size = new System.Drawing.Size(55, 32);

@@ -31,16 +31,16 @@
             this.btnInfosPlanetes = new System.Windows.Forms.Button();
             this.btnRaces = new System.Windows.Forms.Button();
             this.btnNouvellesMissions = new System.Windows.Forms.Button();
-            this.btnTableauDeBord = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.pnlAffichageMissions = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnInfosPlanetes
             // 
-            this.btnInfosPlanetes.Location = new System.Drawing.Point(33, 483);
+            this.btnInfosPlanetes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(34, 451);
             this.btnInfosPlanetes.Name = "btnInfosPlanetes";
-            this.btnInfosPlanetes.Size = new System.Drawing.Size(155, 47);
+            this.btnInfosPlanetes.Size = new System.Drawing.Size(198, 47);
             this.btnInfosPlanetes.TabIndex = 0;
             this.btnInfosPlanetes.Text = "Infos planetes";
             this.btnInfosPlanetes.UseVisualStyleBackColor = true;
@@ -48,9 +48,10 @@
             // 
             // btnRaces
             // 
-            this.btnRaces.Location = new System.Drawing.Point(33, 416);
+            this.btnRaces.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRaces.Location = new System.Drawing.Point(34, 384);
             this.btnRaces.Name = "btnRaces";
-            this.btnRaces.Size = new System.Drawing.Size(155, 44);
+            this.btnRaces.Size = new System.Drawing.Size(198, 44);
             this.btnRaces.TabIndex = 1;
             this.btnRaces.Text = "Races";
             this.btnRaces.UseVisualStyleBackColor = true;
@@ -58,29 +59,21 @@
             // 
             // btnNouvellesMissions
             // 
-            this.btnNouvellesMissions.Location = new System.Drawing.Point(33, 324);
+            this.btnNouvellesMissions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(34, 292);
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
-            this.btnNouvellesMissions.Size = new System.Drawing.Size(155, 66);
+            this.btnNouvellesMissions.Size = new System.Drawing.Size(198, 66);
             this.btnNouvellesMissions.TabIndex = 2;
             this.btnNouvellesMissions.Text = "Nouvelle Mission";
             this.btnNouvellesMissions.UseVisualStyleBackColor = true;
             this.btnNouvellesMissions.Click += new System.EventHandler(this.btnNouvellesMissions_Click);
             // 
-            // btnTableauDeBord
-            // 
-            this.btnTableauDeBord.Location = new System.Drawing.Point(33, 226);
-            this.btnTableauDeBord.Name = "btnTableauDeBord";
-            this.btnTableauDeBord.Size = new System.Drawing.Size(155, 65);
-            this.btnTableauDeBord.TabIndex = 3;
-            this.btnTableauDeBord.Text = "Tableau de Bord";
-            this.btnTableauDeBord.UseVisualStyleBackColor = true;
-            this.btnTableauDeBord.Click += new System.EventHandler(this.btnTableauDeBord_Click);
-            // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(43, 536);
+            this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitter.Location = new System.Drawing.Point(44, 504);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(132, 37);
+            this.btnQuitter.Size = new System.Drawing.Size(175, 37);
             this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -103,7 +96,6 @@
             this.ClientSize = new System.Drawing.Size(1156, 585);
             this.Controls.Add(this.pnlAffichageMissions);
             this.Controls.Add(this.btnQuitter);
-            this.Controls.Add(this.btnTableauDeBord);
             this.Controls.Add(this.btnNouvellesMissions);
             this.Controls.Add(this.btnRaces);
             this.Controls.Add(this.btnInfosPlanetes);
@@ -120,7 +112,6 @@
         private System.Windows.Forms.Button btnInfosPlanetes;
         private System.Windows.Forms.Button btnRaces;
         private System.Windows.Forms.Button btnNouvellesMissions;
-        private System.Windows.Forms.Button btnTableauDeBord;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Panel pnlAffichageMissions;
     }

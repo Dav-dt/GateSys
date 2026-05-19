@@ -99,6 +99,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             aValidePlanete = true;
             numMission = num;
+            cmbPlanete.Cursor = Cursors.Default;
         }
 
         private void btnValiderMission_Click(object sender, EventArgs e)
