@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="control\ButtonBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ButtonBack.Designer.cs">
+      <DependentUpon>ButtonBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\Depense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\ButtonBack.resx">
+      <DependentUpon>ButtonBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Depense.resx">
       <DependentUpon>Depense.cs</DependentUpon>

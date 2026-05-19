@@ -31,6 +31,7 @@
             this.labelEspece = new System.Windows.Forms.Label();
             this.lbMission = new System.Windows.Forms.ListBox();
             this.labelMission = new System.Windows.Forms.Label();
+            this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.SuspendLayout();
             // 
             // labelEspece
@@ -61,11 +62,19 @@
             this.labelMission.TabIndex = 2;
             this.labelMission.Text = "Mission:";
             // 
+            // buttonBack1
+            // 
+            this.buttonBack1.Location = new System.Drawing.Point(607, 378);
+            this.buttonBack1.Name = "buttonBack1";
+            this.buttonBack1.Size = new System.Drawing.Size(82, 73);
+            this.buttonBack1.TabIndex = 4;
+            // 
             // frmInfoPlanete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 463);
+            this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.lbMission);
             this.Controls.Add(this.labelMission);
             this.Controls.Add(this.labelEspece);
@@ -82,5 +91,6 @@
         private System.Windows.Forms.Label labelEspece;
         private System.Windows.Forms.ListBox lbMission;
         private System.Windows.Forms.Label labelMission;
+        private control.ButtonBack buttonBack1;
     }
 }
