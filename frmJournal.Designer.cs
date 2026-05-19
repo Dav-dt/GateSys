@@ -41,9 +41,9 @@
             this.btnIndics = new System.Windows.Forms.Button();
             this.grpEventsJournal.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // grpEventsJournal
-            //
+            // 
             this.grpEventsJournal.Controls.Add(this.lblCompteur);
             this.grpEventsJournal.Controls.Add(this.dtEventJournal);
             this.grpEventsJournal.Controls.Add(this.lblEventJournal);
@@ -57,18 +57,18 @@
             this.grpEventsJournal.TabIndex = 0;
             this.grpEventsJournal.TabStop = false;
             this.grpEventsJournal.Text = "Évènements du journal";
-            //
-            // lblCompteur — affiche "Événement X / Y"
-            //
+            // 
+            // lblCompteur
+            // 
+            this.lblCompteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblCompteur.Location = new System.Drawing.Point(15, 55);
             this.lblCompteur.Name = "lblCompteur";
             this.lblCompteur.Size = new System.Drawing.Size(220, 26);
             this.lblCompteur.TabIndex = 6;
             this.lblCompteur.Text = "Évènement - / -";
-            this.lblCompteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            //
-            // dtEventJournal — affiche la date de l'événement (lecture seule)
-            //
+            // 
+            // dtEventJournal
+            // 
             this.dtEventJournal.CustomFormat = "dd/MM/yyyy";
             this.dtEventJournal.Enabled = false;
             this.dtEventJournal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -76,19 +76,17 @@
             this.dtEventJournal.Name = "dtEventJournal";
             this.dtEventJournal.Size = new System.Drawing.Size(200, 26);
             this.dtEventJournal.TabIndex = 0;
-            //
-            // lblEventJournal — affiche le texte de l'événement (taille fixe pour le wrapping)
-            //
-            this.lblEventJournal.AutoSize = false;
+            // 
+            // lblEventJournal
+            // 
             this.lblEventJournal.Location = new System.Drawing.Point(15, 100);
             this.lblEventJournal.Name = "lblEventJournal";
             this.lblEventJournal.Size = new System.Drawing.Size(680, 90);
             this.lblEventJournal.TabIndex = 1;
             this.lblEventJournal.Text = "Aucun événement trouvé";
-            this.lblEventJournal.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            //
-            // btnTTdebut — aller au premier événement
-            //
+            // 
+            // btnTTdebut
+            // 
             this.btnTTdebut.Location = new System.Drawing.Point(19, 205);
             this.btnTTdebut.Name = "btnTTdebut";
             this.btnTTdebut.Size = new System.Drawing.Size(101, 47);
@@ -96,19 +94,19 @@
             this.btnTTdebut.Text = "|<  Début";
             this.btnTTdebut.UseVisualStyleBackColor = true;
             this.btnTTdebut.Click += new System.EventHandler(this.btnTTdebut_Click);
-            //
-            // btnPrecedent — aller à l'événement précédent
-            //
-            this.btnPrecedent.Location = new System.Drawing.Point(212, 205);
+            // 
+            // btnPrecedent
+            // 
+            this.btnPrecedent.Location = new System.Drawing.Point(207, 205);
             this.btnPrecedent.Name = "btnPrecedent";
-            this.btnPrecedent.Size = new System.Drawing.Size(113, 47);
+            this.btnPrecedent.Size = new System.Drawing.Size(118, 47);
             this.btnPrecedent.TabIndex = 4;
             this.btnPrecedent.Text = "<  Précédent";
             this.btnPrecedent.UseVisualStyleBackColor = true;
             this.btnPrecedent.Click += new System.EventHandler(this.btnPrecedent_Click);
-            //
-            // btnSuivant — aller à l'événement suivant
-            //
+            // 
+            // btnSuivant
+            // 
             this.btnSuivant.Location = new System.Drawing.Point(410, 205);
             this.btnSuivant.Name = "btnSuivant";
             this.btnSuivant.Size = new System.Drawing.Size(106, 47);
@@ -116,9 +114,9 @@
             this.btnSuivant.Text = "Suivant  >";
             this.btnSuivant.UseVisualStyleBackColor = true;
             this.btnSuivant.Click += new System.EventHandler(this.btnSuivant_Click);
-            //
-            // btnTTfin — aller au dernier événement
-            //
+            // 
+            // btnTTfin
+            // 
             this.btnTTfin.Location = new System.Drawing.Point(585, 205);
             this.btnTTfin.Name = "btnTTfin";
             this.btnTTfin.Size = new System.Drawing.Size(110, 47);
@@ -126,9 +124,9 @@
             this.btnTTfin.Text = "Fin  >|";
             this.btnTTfin.UseVisualStyleBackColor = true;
             this.btnTTfin.Click += new System.EventHandler(this.btnTTfin_Click);
-            //
+            // 
             // btnDepenses
-            //
+            // 
             this.btnDepenses.Location = new System.Drawing.Point(31, 379);
             this.btnDepenses.Name = "btnDepenses";
             this.btnDepenses.Size = new System.Drawing.Size(143, 64);
@@ -136,9 +134,9 @@
             this.btnDepenses.Text = "Consulter les dépenses";
             this.btnDepenses.UseVisualStyleBackColor = true;
             this.btnDepenses.Click += new System.EventHandler(this.btnDepenses_Click);
-            //
+            // 
             // btnCapturesAfficher
-            //
+            // 
             this.btnCapturesAfficher.Location = new System.Drawing.Point(301, 379);
             this.btnCapturesAfficher.Name = "btnCapturesAfficher";
             this.btnCapturesAfficher.Size = new System.Drawing.Size(165, 64);
@@ -146,9 +144,9 @@
             this.btnCapturesAfficher.Text = "Afficher l\'avancée des captures";
             this.btnCapturesAfficher.UseVisualStyleBackColor = true;
             this.btnCapturesAfficher.Click += new System.EventHandler(this.btnCapturesAfficher_Click);
-            //
+            // 
             // btnIndics
-            //
+            // 
             this.btnIndics.Location = new System.Drawing.Point(564, 379);
             this.btnIndics.Name = "btnIndics";
             this.btnIndics.Size = new System.Drawing.Size(143, 64);
@@ -156,9 +154,9 @@
             this.btnIndics.Text = "Consulter les contacts";
             this.btnIndics.UseVisualStyleBackColor = true;
             this.btnIndics.Click += new System.EventHandler(this.btnIndics_Click);
-            //
+            // 
             // frmJournal
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 467);
