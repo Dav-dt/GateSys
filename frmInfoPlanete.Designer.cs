@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labelEspece = new System.Windows.Forms.Label();
-            this.lbEspece = new System.Windows.Forms.ListBox();
             this.lbMission = new System.Windows.Forms.ListBox();
             this.labelMission = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -42,17 +41,6 @@
             this.labelEspece.Size = new System.Drawing.Size(84, 13);
             this.labelEspece.TabIndex = 0;
             this.labelEspece.Text = "Espece vivante:";
-            // 
-            // lbEspece
-            // 
-            this.lbEspece.FormattingEnabled = true;
-            this.lbEspece.Items.AddRange(new object[] {
-            ""});
-            this.lbEspece.Location = new System.Drawing.Point(12, 221);
-            this.lbEspece.Name = "lbEspece";
-            this.lbEspece.Size = new System.Drawing.Size(244, 95);
-            this.lbEspece.TabIndex = 1;
-            this.lbEspece.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // lbMission
             // 
@@ -77,10 +65,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 340);
+            this.ClientSize = new System.Drawing.Size(701, 463);
             this.Controls.Add(this.lbMission);
             this.Controls.Add(this.labelMission);
-            this.Controls.Add(this.lbEspece);
             this.Controls.Add(this.labelEspece);
             this.Name = "frmInfoPlanete";
             this.Text = "InfoPlanete";
@@ -93,7 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelEspece;
-        private System.Windows.Forms.ListBox lbEspece;
         private System.Windows.Forms.ListBox lbMission;
         private System.Windows.Forms.Label labelMission;
     }
