@@ -119,13 +119,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             cmbIdDepense.DisplayMember = "libelle";
             cmbIdDepense.ValueMember = "id";
 
+
+            DataRow[] dtObjectifCurr = MesDatas.DsGlobal.Tables["ObjectifCapture"].Select(
+                            $@"numeroMission = '{m_numero}' 
+                           AND nomPlanete = '{m_nomPlanete}'");
             DataTable dtEspeceEnnemi = new DataTable();
             dtEspeceEnnemi.Columns.Add("id", typeof(int));
             dtEspeceEnnemi.Columns.Add("nom", typeof(string));
-            //parcourt de la table ennemi 
-            foreach ( DataRow rowEnnemi in MesDatas.DsGlobal.Tables["Ennemi"].Rows )
+            //parcourt de la table ennemi pour la mission courante
+            foreach ( DataRow rowEnnemi in dtObjectifCurr )
             {
-                int idEspece = Convert.ToInt32(rowEnnemi["idEspece"]);
+                int idEspece = Convert.ToInt32(rowEnnemi["idEspeceEnnemi"]);
                 DataRow[] rowsEspece = MesDatas.DsGlobal.Tables["Espece"].Select($"" +
                     $"id = {idEspece}");
 
@@ -252,7 +256,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         commentaires)
                         VALUES('{m_nomPlanete}', {m_numero}, 
                         '{dtNouvelEvent.Value.ToString("yyyy-MM-dd")}',
-                        {txtNouvelEvent.Text}')";
+                        '{txtNouvelEvent.Text}')";
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
