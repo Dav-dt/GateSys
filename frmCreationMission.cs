@@ -174,5 +174,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             int nbLigne = Convert.ToInt32(cmd.ExecuteScalar());
             return nbLigne> 0;
         }
+
+        private void dtDepart_ValueChanged(object sender, EventArgs e)
+        {
+            dtRetour.MinDate = dtDepart.Value;
+            //date pas avant c logique
+        }
     }
 }

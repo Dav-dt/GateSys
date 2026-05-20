@@ -67,6 +67,12 @@
             this.grpCapture = new System.Windows.Forms.GroupBox();
             this.pnlCapture = new System.Windows.Forms.Panel();
             this.btnJournal = new System.Windows.Forms.Button();
+            this.tabNouvelleCapture = new System.Windows.Forms.TabPage();
+            this.lblCaptureEnnemi = new System.Windows.Forms.Label();
+            this.cmbEnnemiCapture = new System.Windows.Forms.ComboBox();
+            this.btnValiderNouvelleCapture = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNbCapture = new System.Windows.Forms.TextBox();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
@@ -74,6 +80,7 @@
             this.grpFeuilleDeRoute.SuspendLayout();
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
+            this.tabNouvelleCapture.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabCtrlEdition
@@ -81,6 +88,7 @@
             this.tabCtrlEdition.Controls.Add(this.tabNouveauContact);
             this.tabCtrlEdition.Controls.Add(this.tabNouvelleDepense);
             this.tabCtrlEdition.Controls.Add(this.tabNouvelEvenement);
+            this.tabCtrlEdition.Controls.Add(this.tabNouvelleCapture);
             this.tabCtrlEdition.Location = new System.Drawing.Point(530, 10);
             this.tabCtrlEdition.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabCtrlEdition.Name = "tabCtrlEdition";
@@ -494,6 +502,64 @@
             this.btnJournal.UseVisualStyleBackColor = true;
             this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
             // 
+            // tabNouvelleCapture
+            // 
+            this.tabNouvelleCapture.Controls.Add(this.txtNbCapture);
+            this.tabNouvelleCapture.Controls.Add(this.label2);
+            this.tabNouvelleCapture.Controls.Add(this.btnValiderNouvelleCapture);
+            this.tabNouvelleCapture.Controls.Add(this.cmbEnnemiCapture);
+            this.tabNouvelleCapture.Controls.Add(this.lblCaptureEnnemi);
+            this.tabNouvelleCapture.Location = new System.Drawing.Point(4, 31);
+            this.tabNouvelleCapture.Name = "tabNouvelleCapture";
+            this.tabNouvelleCapture.Size = new System.Drawing.Size(424, 613);
+            this.tabNouvelleCapture.TabIndex = 3;
+            this.tabNouvelleCapture.Text = "Nouvelle Capture";
+            this.tabNouvelleCapture.UseVisualStyleBackColor = true;
+            // 
+            // lblCaptureEnnemi
+            // 
+            this.lblCaptureEnnemi.AutoSize = true;
+            this.lblCaptureEnnemi.Location = new System.Drawing.Point(16, 43);
+            this.lblCaptureEnnemi.Name = "lblCaptureEnnemi";
+            this.lblCaptureEnnemi.Size = new System.Drawing.Size(80, 22);
+            this.lblCaptureEnnemi.TabIndex = 0;
+            this.lblCaptureEnnemi.Text = "Ennemi :";
+            // 
+            // cmbEnnemiCapture
+            // 
+            this.cmbEnnemiCapture.FormattingEnabled = true;
+            this.cmbEnnemiCapture.Location = new System.Drawing.Point(131, 43);
+            this.cmbEnnemiCapture.Name = "cmbEnnemiCapture";
+            this.cmbEnnemiCapture.Size = new System.Drawing.Size(250, 30);
+            this.cmbEnnemiCapture.TabIndex = 1;
+            // 
+            // btnValiderNouvelleCapture
+            // 
+            this.btnValiderNouvelleCapture.Location = new System.Drawing.Point(289, 558);
+            this.btnValiderNouvelleCapture.Name = "btnValiderNouvelleCapture";
+            this.btnValiderNouvelleCapture.Size = new System.Drawing.Size(114, 40);
+            this.btnValiderNouvelleCapture.TabIndex = 2;
+            this.btnValiderNouvelleCapture.Text = "Valider";
+            this.btnValiderNouvelleCapture.UseVisualStyleBackColor = true;
+            this.btnValiderNouvelleCapture.Click += new System.EventHandler(this.btnValiderNouvelleCapture_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 22);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre :";
+            // 
+            // txtNbCapture
+            // 
+            this.txtNbCapture.Location = new System.Drawing.Point(131, 105);
+            this.txtNbCapture.Name = "txtNbCapture";
+            this.txtNbCapture.Size = new System.Drawing.Size(100, 28);
+            this.txtNbCapture.TabIndex = 4;
+            this.txtNbCapture.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberOnlyField_KeyPress);
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -524,6 +590,8 @@
             this.grpFeuilleDeRoute.PerformLayout();
             this.grpMembresEquipe.ResumeLayout(false);
             this.grpCapture.ResumeLayout(false);
+            this.tabNouvelleCapture.ResumeLayout(false);
+            this.tabNouvelleCapture.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,5 +638,11 @@
         private System.Windows.Forms.Button btnValiderNouvelEvent;
         private System.Windows.Forms.TextBox txtNouvelEvent;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabNouvelleCapture;
+        private System.Windows.Forms.Button btnValiderNouvelleCapture;
+        private System.Windows.Forms.ComboBox cmbEnnemiCapture;
+        private System.Windows.Forms.Label lblCaptureEnnemi;
+        private System.Windows.Forms.TextBox txtNbCapture;
+        private System.Windows.Forms.Label label2;
     }
 }

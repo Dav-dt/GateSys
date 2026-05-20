@@ -172,6 +172,7 @@
             this.dtDepart.Name = "dtDepart";
             this.dtDepart.Size = new System.Drawing.Size(154, 32);
             this.dtDepart.TabIndex = 9;
+            this.dtDepart.ValueChanged += new System.EventHandler(this.dtDepart_ValueChanged);
             // 
             // lblRetour
             // 

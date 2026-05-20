@@ -38,7 +38,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             $@"Numero = '{m_numero}' AND 
                             NomPlanete = '{m_nomPlanete}'");
 
-            if ( dr.Length == 0 )
+            if (dr.Length == 0)
             {
                 MessageBox.Show("Mission inexistante");
                 this.DialogResult = DialogResult.Cancel;
@@ -63,7 +63,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             m_missionTerminee = MissionTerminee();
 
             int index = 0;
-            foreach ( DataRow row in drMatricules )
+            foreach (DataRow row in drMatricules)
             {
                 string matricule = row["matriculeMembre"].ToString();
 
@@ -85,7 +85,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
                 membre.Location = new Point(posX, posY);
                 pnlMembres.Controls.Add(membre);
-                
+
                 index++;
             }
 
@@ -94,7 +94,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             nomPlanete = '{m_nomPlanete}'");
 
             int posYCapture = 10;
-            foreach ( DataRow row in objectifsCapture )
+            foreach (DataRow row in objectifsCapture)
             {
                 int idEspeceEnnemi = Convert.ToInt32(row["idEspeceEnnemi"]);
                 DataRow[] infosEspeceEnnemi = MesDatas.DsGlobal.Tables["Espece"].Select(
@@ -107,17 +107,40 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 lbl.Location = new Point(10, posYCapture);
 
                 pnlCapture.Controls.Add(lbl);
-                posYCapture += lbl.Height+ 5;
+                posYCapture += lbl.Height + 5;
             }
 
             //Remplissage des cmbs
             cmbINomIndic.DataSource = MesDatas.DsGlobal.Tables["Informateur"];
-            cmbINomIndic.DisplayMember  = "nom";
+            cmbINomIndic.DisplayMember = "nom";
             cmbINomIndic.ValueMember = "idEspeceEnnemi";
 
             cmbIdDepense.DataSource = MesDatas.DsGlobal.Tables["TypeDepense"];
             cmbIdDepense.DisplayMember = "libelle";
             cmbIdDepense.ValueMember = "id";
+
+            DataTable dtEspeceEnnemi = new DataTable();
+            dtEspeceEnnemi.Columns.Add("id", typeof(int));
+            dtEspeceEnnemi.Columns.Add("nom", typeof(string));
+            //parcourt de la table ennemi 
+            foreach ( DataRow rowEnnemi in MesDatas.DsGlobal.Tables["Ennemi"].Rows )
+            {
+                int idEspece = Convert.ToInt32(rowEnnemi["idEspece"]);
+                DataRow[] rowsEspece = MesDatas.DsGlobal.Tables["Espece"].Select($"" +
+                    $"id = {idEspece}");
+
+                // si idEspece existe dans Espece on chope le nom associé
+                if ( rowsEspece.Length > 0 )
+                {
+                    string nomEspece = rowsEspece[0]["nom"].ToString();
+                    dtEspeceEnnemi.Rows.Add(idEspece, nomEspece);
+                }
+            }
+
+            cmbEnnemiCapture.DataSource = dtEspeceEnnemi;
+            cmbEnnemiCapture.DisplayMember = "nom";
+            cmbEnnemiCapture.ValueMember = "id";
+
         }
 
         private int GetMontantDesDepenses()
@@ -126,7 +149,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataRow[] drDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
                             $@"numeroMission = '{m_numero}' AND 
                             nomPlanete = '{m_nomPlanete}'");
-            foreach ( DataRow row in drDepenses )
+            foreach (DataRow row in drDepenses)
             {
                 montant += Convert.ToInt32(row["montant"]);
             }
@@ -140,20 +163,20 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             NomPlanete = '{m_nomPlanete}'");
 
             DateTime dateRetour = Convert.ToDateTime(dr[0]["dateRetour"]);
-            return DateTime.Now >dateRetour;
+            return DateTime.Now > dateRetour;
         }
 
         private void btnValiderIndic_Click(object sender, EventArgs e)
         {
-            if ( m_missionTerminee )
+            if (m_missionTerminee)
             {
                 MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
                 return;
             }
 
-            if ( txtAppreciationIndic.Text == String.Empty ||
+            if (txtAppreciationIndic.Text == String.Empty ||
                  cmbINomIndic.SelectedIndex == -1 ||
-                 txtSoudoiementIndic.Text == String.Empty )
+                 txtSoudoiementIndic.Text == String.Empty)
             {
                 MessageBox.Show("Champs incomplets ou invalides");
                 return;
@@ -165,8 +188,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             row["dateC"] = dtIndic.Value;
             row["sommeVersee"] = Convert.ToInt32(txtSoudoiementIndic.Text);
             row["appreciation"] = txtAppreciationIndic.Text;
-            row["nomCodeInformateur"] = cmbINomIndic.Text;
-            
+            row["nomCodeInformateur"] = cmbINomIndic.SelectedValue.ToString();
+
             MesDatas.DsGlobal.Tables["Contact"].Rows.Add(row);
 
             try
@@ -179,23 +202,23 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         '{cmbINomIndic.SelectedValue}')";
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
-                
+
                 MessageBox.Show("Contact ajouté avec succès !");
             }
-            catch ( SQLiteException ex )
+            catch (SQLiteException ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout du contact : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message);
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout du contact : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message);
             }
 
         }
 
         private void numberOnlyField_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ( !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -237,11 +260,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
             catch (SQLiteException ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " + ex.Message);
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout de l'évènement : " + ex.Message);
             }
         }
 
@@ -252,10 +275,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
                 return;
             }
-            
-            if ( txtMontantDepense.Text == String.Empty ||
+
+            if (txtMontantDepense.Text == String.Empty ||
                     cmbIdDepense.SelectedIndex == -1 ||
-                    txtMotifDepense.Text == String.Empty )
+                    txtMotifDepense.Text == String.Empty)
             {
                 MessageBox.Show("Champs incomplets ou invalides");
                 return;
@@ -286,13 +309,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
                 MessageBox.Show("Dépense ajoutée avec succès !");
             }
-            catch ( SQLiteException ex )
+            catch (SQLiteException ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout de la dépense : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout de la dépense : " + ex.Message);
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout de la dépense : " +ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout de la dépense : " + ex.Message);
             }
         }
 
@@ -302,10 +325,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             $@"numeroMission = '{m_numero}' AND 
                             nomPlanete = '{m_nomPlanete}'");
 
-            if ( drDepenses.Length == 0 )
+            if (drDepenses.Length == 0)
                 return 1;
 
-            return drDepenses.GetLength(0)+ 1; //nb lignes ++;
+            return drDepenses.GetLength(0) + 1; //nb lignes ++;
         }
 
 
@@ -313,6 +336,51 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmJournal frmJournal = new frmJournal(m_nomPlanete, m_numero);
             frmJournal.Show();
+        }
+
+        private void btnValiderNouvelleCapture_Click(object sender, EventArgs e)
+        {
+            if (m_missionTerminee)
+            {
+                MessageBox.Show("Mission terminée, impossible d'ajoute des éléments");
+                return;
+            }
+
+            if (cmbEnnemiCapture.SelectedIndex == -1 ||
+                txtNbCapture.Text == String.Empty)
+            {
+                MessageBox.Show("Champs incomplets ou invalides");
+                return;
+            }
+
+            int idEspeceEnnemi = Convert.ToInt32(cmbEnnemiCapture.SelectedValue);
+
+            DataRow row = MesDatas.DsGlobal.Tables["Capturer"].NewRow();
+            row["nomPlanete"] = m_nomPlanete;
+            row["numeroMission"] = m_numero;
+            row["idEspeceEnnemi"] = idEspeceEnnemi;
+            row["nombre"] = Convert.ToInt32(txtNbCapture.Text);
+
+            MesDatas.DsGlobal.Tables["Capturer"].Rows.Add(row);
+
+            try
+            {
+                string requete = $@"INSERT INTO Capturer(nomPlanete, numeroMission, idEspeceEnnemi,
+                    nombre)
+                    VALUES('{m_nomPlanete}', {m_numero}, {idEspeceEnnemi},
+                    {Convert.ToInt32(txtNbCapture.Text)})";
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Capture ajoutée avec succès !");
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show("Erreur lors de l'ajout de la capture : " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'ajout de la capture : " + ex.Message);
+            }
         }
     }
 }
