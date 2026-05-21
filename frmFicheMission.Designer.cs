@@ -74,6 +74,7 @@
             this.pnlCapture = new System.Windows.Forms.Panel();
             this.btnJournal = new System.Windows.Forms.Button();
             this.picStatutMission = new System.Windows.Forms.PictureBox();
+            this.btnContacterExtra = new System.Windows.Forms.Button();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
@@ -553,13 +554,14 @@
             // 
             // btnJournal
             // 
+            this.btnJournal.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.journal;
+            this.btnJournal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJournal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJournal.Location = new System.Drawing.Point(404, 533);
             this.btnJournal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJournal.Name = "btnJournal";
-            this.btnJournal.Size = new System.Drawing.Size(95, 44);
+            this.btnJournal.Size = new System.Drawing.Size(95, 64);
             this.btnJournal.TabIndex = 8;
-            this.btnJournal.Text = "Journal";
             this.btnJournal.UseVisualStyleBackColor = true;
             this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
             // 
@@ -572,11 +574,23 @@
             this.picStatutMission.TabIndex = 9;
             this.picStatutMission.TabStop = false;
             // 
+            // btnContacterExtra
+            // 
+            this.btnContacterExtra.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.telephone;
+            this.btnContacterExtra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnContacterExtra.Location = new System.Drawing.Point(404, 604);
+            this.btnContacterExtra.Name = "btnContacterExtra";
+            this.btnContacterExtra.Size = new System.Drawing.Size(95, 54);
+            this.btnContacterExtra.TabIndex = 10;
+            this.btnContacterExtra.UseVisualStyleBackColor = true;
+            this.btnContacterExtra.Click += new System.EventHandler(this.btnContacterExtra_Click);
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 679);
+            this.Controls.Add(this.btnContacterExtra);
             this.Controls.Add(this.picStatutMission);
             this.Controls.Add(this.btnJournal);
             this.Controls.Add(this.grpCapture);
@@ -659,5 +673,6 @@
         private System.Windows.Forms.TextBox txtNbCapture;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picStatutMission;
+        private System.Windows.Forms.Button btnContacterExtra;
     }
 }

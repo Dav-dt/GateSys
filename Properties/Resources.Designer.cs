@@ -183,6 +183,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fleche {
+            get {
+                object obj = ResourceManager.GetObject("fleche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gris {
             get {
                 object obj = ResourceManager.GetObject("gris", resourceCulture);
@@ -206,6 +216,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap indic {
             get {
                 object obj = ResourceManager.GetObject("indic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instrument {
+            get {
+                object obj = ResourceManager.GetObject("instrument", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap journal {
+            get {
+                object obj = ResourceManager.GetObject("journal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,6 +466,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap Sohia {
             get {
                 object obj = ResourceManager.GetObject("Sohia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telephone {
+            get {
+                object obj = ResourceManager.GetObject("telephone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

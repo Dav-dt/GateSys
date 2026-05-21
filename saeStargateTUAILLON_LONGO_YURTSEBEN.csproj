@@ -93,6 +93,11 @@
     <Compile Include="control\Alien.Designer.cs">
       <DependentUpon>Alien.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\Negociation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\Negociation.Designer.cs">
+      <DependentUpon>Negociation.cs</DependentUpon>
     <Compile Include="control\NbMissionPlanete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +176,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNegociation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNegociation.Designer.cs">
+      <DependentUpon>frmNegociation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPlanete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +241,9 @@
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="control\Negociation.resx">
+      <DependentUpon>Negociation.cs</DependentUpon>
+     </EmbeddedResource> 
     <EmbeddedResource Include="control\NbMissionPlanete.resx">
       <DependentUpon>NbMissionPlanete.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNegociation.resx">
+      <DependentUpon>frmNegociation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanete.resx">
       <DependentUpon>frmPlanete.cs</DependentUpon>
