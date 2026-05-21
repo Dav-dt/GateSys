@@ -182,5 +182,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             }
         }
+
+        private void btnStat_Click(object sender, EventArgs e)
+        {
+            frmStat stat = new frmStat();
+            stat.ShowDialog();
+        }
     }
 }

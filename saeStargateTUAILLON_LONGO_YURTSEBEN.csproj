@@ -93,11 +93,23 @@
     <Compile Include="control\Alien.Designer.cs">
       <DependentUpon>Alien.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\NbMissionPlanete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\NbMissionPlanete.Designer.cs">
+      <DependentUpon>NbMissionPlanete.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\Planete.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="control\Planete.Designer.cs">
       <DependentUpon>Planete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\PlaneteReduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\PlaneteReduit.Designer.cs">
+      <DependentUpon>PlaneteReduit.cs</DependentUpon>
     </Compile>
     <Compile Include="control\populationPlanete.cs">
       <SubType>UserControl</SubType>
@@ -177,6 +189,12 @@
     <Compile Include="frmSaisieMembresObjectifs.Designer.cs">
       <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStat.Designer.cs">
+      <DependentUpon>frmStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,8 +230,14 @@
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="control\NbMissionPlanete.resx">
+      <DependentUpon>NbMissionPlanete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\Planete.resx">
       <DependentUpon>Planete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\PlaneteReduit.resx">
+      <DependentUpon>PlaneteReduit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\populationPlanete.resx">
       <DependentUpon>populationPlanete.cs</DependentUpon>
@@ -256,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSaisieMembresObjectifs.resx">
       <DependentUpon>frmSaisieMembresObjectifs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStat.resx">
+      <DependentUpon>frmStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
