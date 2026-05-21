@@ -97,8 +97,8 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="control\Negociation.Designer.cs">
-	</Compile>
       <DependentUpon>Negociation.cs</DependentUpon>
+</Compile>
     <Compile Include="control\NbMissionPlanete.cs">
       <SubType>UserControl</SubType>
     </Compile>
