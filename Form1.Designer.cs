@@ -34,6 +34,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.pnlAffichageMissions = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnStat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,11 +103,23 @@
             this.picLogo.TabIndex = 9;
             this.picLogo.TabStop = false;
             // 
+            // btnStat
+            // 
+            this.btnStat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStat.Location = new System.Drawing.Point(50, 461);
+            this.btnStat.Name = "btnStat";
+            this.btnStat.Size = new System.Drawing.Size(192, 58);
+            this.btnStat.TabIndex = 10;
+            this.btnStat.Text = "Statistiques";
+            this.btnStat.UseVisualStyleBackColor = true;
+            this.btnStat.Click += new System.EventHandler(this.btnStat_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.btnStat);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.pnlAffichageMissions);
             this.Controls.Add(this.btnQuitter);
@@ -130,6 +143,7 @@
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Panel pnlAffichageMissions;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnStat;
     }
 }
 

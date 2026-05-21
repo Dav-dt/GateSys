@@ -98,6 +98,11 @@
     </Compile>
     <Compile Include="control\Negociation.Designer.cs">
       <DependentUpon>Negociation.cs</DependentUpon>
+    <Compile Include="control\NbMissionPlanete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\NbMissionPlanete.Designer.cs">
+      <DependentUpon>NbMissionPlanete.cs</DependentUpon>
     </Compile>
     <Compile Include="control\Planete.cs">
       <SubType>UserControl</SubType>
@@ -238,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Negociation.resx">
       <DependentUpon>Negociation.cs</DependentUpon>
+     </EmbeddedResource> 
+    <EmbeddedResource Include="control\NbMissionPlanete.resx">
+      <DependentUpon>NbMissionPlanete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Planete.resx">
       <DependentUpon>Planete.cs</DependentUpon>
