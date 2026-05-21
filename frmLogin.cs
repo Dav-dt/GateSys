@@ -17,6 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmLogin()
         {
             InitializeComponent();
+            Style.InitControles(this);
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)

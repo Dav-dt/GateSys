@@ -28,6 +28,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             afficherMissionsPanel();
             btnNouvellesMissions.Select();//plus beau
 
+            Style.InitControles(this);
+
         }
 
         private void btnTableauDeBord_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         }
 
         private void btnNouvellesMissions_Click(object sender, EventArgs e)
-        {
+        { //evite de retaper le mot de passe a chaque fois
             if ( !m_hasConnectedOnce )
             {
                 frmLogin frmLogin = new frmLogin();
@@ -64,8 +66,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     if ( frmS.DialogResult == DialogResult.OK )
                     {
                         afficherMissionsPanel(); //rafraichir
+                        Style.InitControles(this);
+                        frmChargement frmChargement = new frmChargement();
+                        frmChargement.Show();
+                        Application.DoEvents();
                         MessageBox.Show("Mission créée et objectifs saisis avec succès !" +
                             "Vous pouvez consulter la mission dans le tableau de bord");
+                        frmChargement.Close();
                         MettreAJourDs(MesDatas.DsGlobal);
 
                     }
@@ -75,15 +82,25 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnRaces_Click(object sender, EventArgs e)
         {
+            frmChargement frmChargement = new frmChargement();
+            frmChargement.Show();
+            Application.DoEvents(); //obligé sinon la progess bar se remplie que apres
+            
             frmRace frmRace = new frmRace();
-            frmRace.ShowDialog();
+            frmRace.Show();
+            frmChargement.Close();
 
         }
 
         private void btnInfosPlanetes_Click(object sender, EventArgs e)
         {
+            frmChargement frmChargement = new frmChargement();
+            frmChargement.Show();
+            Application.DoEvents();
+
             frmPlanete frmPlanete = new frmPlanete();
-            frmPlanete.ShowDialog();
+            frmPlanete.Show();
+            frmChargement.Close();
 
         }
 
@@ -133,24 +150,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             this.Close();
 
-        }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            Form test = new frmTest();
-            test.Show();
-        }
-
-        private void btnTestMembre_Click(object sender, EventArgs e)
-        {
-            frmSaisieMembresObjectifs frmSaisieMembresObjectifs = new frmSaisieMembresObjectifs();
-            frmSaisieMembresObjectifs.ShowDialog();
-        }
-
-        private void btnTestFiche_Click(object sender, EventArgs e)
-        {
-            frmFicheMission frmFicheMission = new frmFicheMission("Sckxyss", 1);
-            frmFicheMission.ShowDialog();
         }
 
         private void afficherMissionsPanel()

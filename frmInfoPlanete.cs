@@ -23,6 +23,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmInfoPlanete(string non, string planete, int temperature, double gravite, int databaz)
         {
             InitializeComponent();
+            Style.InitControles(this);
             Planete plt = new Planete(non, planete, temperature, gravite, databaz, false);
             this.Controls.Add(plt);
             nomplanete = planete;

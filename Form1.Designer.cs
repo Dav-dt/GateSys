@@ -33,14 +33,16 @@
             this.btnNouvellesMissions = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.pnlAffichageMissions = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInfosPlanetes
             // 
             this.btnInfosPlanetes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfosPlanetes.Location = new System.Drawing.Point(34, 451);
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(50, 381);
             this.btnInfosPlanetes.Name = "btnInfosPlanetes";
-            this.btnInfosPlanetes.Size = new System.Drawing.Size(198, 47);
+            this.btnInfosPlanetes.Size = new System.Drawing.Size(192, 58);
             this.btnInfosPlanetes.TabIndex = 0;
             this.btnInfosPlanetes.Text = "Infos planetes";
             this.btnInfosPlanetes.UseVisualStyleBackColor = true;
@@ -49,9 +51,9 @@
             // btnRaces
             // 
             this.btnRaces.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRaces.Location = new System.Drawing.Point(34, 384);
+            this.btnRaces.Location = new System.Drawing.Point(50, 298);
             this.btnRaces.Name = "btnRaces";
-            this.btnRaces.Size = new System.Drawing.Size(198, 44);
+            this.btnRaces.Size = new System.Drawing.Size(192, 55);
             this.btnRaces.TabIndex = 1;
             this.btnRaces.Text = "Races";
             this.btnRaces.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@
             // btnNouvellesMissions
             // 
             this.btnNouvellesMissions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNouvellesMissions.Location = new System.Drawing.Point(34, 292);
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(50, 193);
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
-            this.btnNouvellesMissions.Size = new System.Drawing.Size(198, 66);
+            this.btnNouvellesMissions.Size = new System.Drawing.Size(192, 77);
             this.btnNouvellesMissions.TabIndex = 2;
             this.btnNouvellesMissions.Text = "Nouvelle Mission";
             this.btnNouvellesMissions.UseVisualStyleBackColor = true;
@@ -71,9 +73,9 @@
             // btnQuitter
             // 
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuitter.Location = new System.Drawing.Point(44, 504);
+            this.btnQuitter.Location = new System.Drawing.Point(19, 525);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(175, 37);
+            this.btnQuitter.Size = new System.Drawing.Size(124, 48);
             this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -89,11 +91,23 @@
             this.pnlAffichageMissions.Size = new System.Drawing.Size(833, 555);
             this.pnlAffichageMissions.TabIndex = 8;
             // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.logo;
+            this.picLogo.InitialImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(19, 33);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(268, 102);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 9;
+            this.picLogo.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.pnlAffichageMissions);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnNouvellesMissions);
@@ -102,7 +116,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "Gestion Interstellaire";
+            this.Text = "gateSys Beta";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,6 +129,7 @@
         private System.Windows.Forms.Button btnNouvellesMissions;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Panel pnlAffichageMissions;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 
