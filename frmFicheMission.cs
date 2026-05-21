@@ -392,5 +392,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 MessageBox.Show("Erreur lors de l'ajout de la capture : " + ex.Message);
             }
         }
+
+        private void btnContacterExtra_Click(object sender, EventArgs e)
+        {
+            frmNegociation frmNegociation = new frmNegociation(m_nomPlanete, m_numero);
+            frmNegociation.Show();
+        }
     }
 }
