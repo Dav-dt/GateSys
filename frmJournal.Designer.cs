@@ -53,7 +53,7 @@
             this.grpEventsJournal.Controls.Add(this.btnTTfin);
             this.grpEventsJournal.Location = new System.Drawing.Point(12, 28);
             this.grpEventsJournal.Name = "grpEventsJournal";
-            this.grpEventsJournal.Size = new System.Drawing.Size(712, 293);
+            this.grpEventsJournal.Size = new System.Drawing.Size(712, 338);
             this.grpEventsJournal.TabIndex = 0;
             this.grpEventsJournal.TabStop = false;
             this.grpEventsJournal.Text = "Évènements du journal";
@@ -61,9 +61,9 @@
             // lblCompteur
             // 
             this.lblCompteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCompteur.Location = new System.Drawing.Point(15, 55);
+            this.lblCompteur.Location = new System.Drawing.Point(15, 51);
             this.lblCompteur.Name = "lblCompteur";
-            this.lblCompteur.Size = new System.Drawing.Size(220, 26);
+            this.lblCompteur.Size = new System.Drawing.Size(226, 39);
             this.lblCompteur.TabIndex = 6;
             this.lblCompteur.Text = "Évènement - / -";
             // 
@@ -72,25 +72,25 @@
             this.dtEventJournal.CustomFormat = "dd/MM/yyyy";
             this.dtEventJournal.Enabled = false;
             this.dtEventJournal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEventJournal.Location = new System.Drawing.Point(470, 55);
+            this.dtEventJournal.Location = new System.Drawing.Point(470, 25);
             this.dtEventJournal.Name = "dtEventJournal";
             this.dtEventJournal.Size = new System.Drawing.Size(200, 26);
             this.dtEventJournal.TabIndex = 0;
             // 
             // lblEventJournal
             // 
-            this.lblEventJournal.Location = new System.Drawing.Point(15, 100);
+            this.lblEventJournal.Location = new System.Drawing.Point(6, 90);
             this.lblEventJournal.Name = "lblEventJournal";
-            this.lblEventJournal.Size = new System.Drawing.Size(680, 90);
+            this.lblEventJournal.Size = new System.Drawing.Size(700, 145);
             this.lblEventJournal.TabIndex = 1;
             this.lblEventJournal.Text = "Aucun événement trouvé";
             // 
             // btnTTdebut
             // 
             this.btnTTdebut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTdebut.Location = new System.Drawing.Point(19, 205);
+            this.btnTTdebut.Location = new System.Drawing.Point(5, 238);
             this.btnTTdebut.Name = "btnTTdebut";
-            this.btnTTdebut.Size = new System.Drawing.Size(101, 47);
+            this.btnTTdebut.Size = new System.Drawing.Size(126, 85);
             this.btnTTdebut.TabIndex = 2;
             this.btnTTdebut.Text = "|<  Début";
             this.btnTTdebut.UseVisualStyleBackColor = true;
@@ -99,9 +99,9 @@
             // btnPrecedent
             // 
             this.btnPrecedent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrecedent.Location = new System.Drawing.Point(207, 205);
+            this.btnPrecedent.Location = new System.Drawing.Point(193, 238);
             this.btnPrecedent.Name = "btnPrecedent";
-            this.btnPrecedent.Size = new System.Drawing.Size(118, 47);
+            this.btnPrecedent.Size = new System.Drawing.Size(143, 85);
             this.btnPrecedent.TabIndex = 4;
             this.btnPrecedent.Text = "<  Précédent";
             this.btnPrecedent.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // btnSuivant
             // 
             this.btnSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuivant.Location = new System.Drawing.Point(410, 205);
+            this.btnSuivant.Location = new System.Drawing.Point(396, 238);
             this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(106, 47);
+            this.btnSuivant.Size = new System.Drawing.Size(131, 85);
             this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant  >";
             this.btnSuivant.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // btnTTfin
             // 
             this.btnTTfin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTfin.Location = new System.Drawing.Point(585, 205);
+            this.btnTTfin.Location = new System.Drawing.Point(571, 238);
             this.btnTTfin.Name = "btnTTfin";
-            this.btnTTfin.Size = new System.Drawing.Size(110, 47);
+            this.btnTTfin.Size = new System.Drawing.Size(135, 85);
             this.btnTTfin.TabIndex = 3;
             this.btnTTfin.Text = "Fin  >|";
             this.btnTTfin.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // btnDepenses
             // 
             this.btnDepenses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDepenses.Location = new System.Drawing.Point(31, 379);
+            this.btnDepenses.Location = new System.Drawing.Point(23, 372);
             this.btnDepenses.Name = "btnDepenses";
-            this.btnDepenses.Size = new System.Drawing.Size(143, 64);
+            this.btnDepenses.Size = new System.Drawing.Size(190, 100);
             this.btnDepenses.TabIndex = 1;
             this.btnDepenses.Text = "Consulter les dépenses";
             this.btnDepenses.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@
             // btnCapturesAfficher
             // 
             this.btnCapturesAfficher.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapturesAfficher.Location = new System.Drawing.Point(301, 379);
+            this.btnCapturesAfficher.Location = new System.Drawing.Point(516, 372);
             this.btnCapturesAfficher.Name = "btnCapturesAfficher";
-            this.btnCapturesAfficher.Size = new System.Drawing.Size(165, 64);
+            this.btnCapturesAfficher.Size = new System.Drawing.Size(202, 100);
             this.btnCapturesAfficher.TabIndex = 3;
             this.btnCapturesAfficher.Text = "Afficher l\'avancée des captures";
             this.btnCapturesAfficher.UseVisualStyleBackColor = true;
@@ -154,9 +154,9 @@
             // btnIndics
             // 
             this.btnIndics.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIndics.Location = new System.Drawing.Point(564, 379);
+            this.btnIndics.Location = new System.Drawing.Point(279, 375);
             this.btnIndics.Name = "btnIndics";
-            this.btnIndics.Size = new System.Drawing.Size(143, 64);
+            this.btnIndics.Size = new System.Drawing.Size(202, 95);
             this.btnIndics.TabIndex = 2;
             this.btnIndics.Text = "Consulter les contacts";
             this.btnIndics.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 467);
+            this.ClientSize = new System.Drawing.Size(736, 484);
             this.Controls.Add(this.btnCapturesAfficher);
             this.Controls.Add(this.btnIndics);
             this.Controls.Add(this.btnDepenses);

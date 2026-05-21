@@ -23,7 +23,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmInfoPlanete(string non, string planete, int temperature, double gravite, int databaz)
         {
             InitializeComponent();
-            Style.InitControles(this);
             Planete plt = new Planete(non, planete, temperature, gravite, databaz, false);
             this.Controls.Add(plt);
             nomplanete = planete;
@@ -37,7 +36,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void frmInfoPlanete_Load(object sender, EventArgs e)
         {
             Dictionary<string, int> dic = new Dictionary<string, int>();
-            Dictionary<string,Color> color = new Dictionary<string, Color>();
+            Dictionary<string, Color> color = new Dictionary<string, Color>();
 
             if (!ds.Relations.Contains("relHabiterEspece"))
             {
@@ -53,11 +52,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     DataRow espece = ligne.GetParentRow("relHabiterEspece");
                     ;
 
-                    
+
                     dic.Add(espece["nom"].ToString(), Convert.ToInt32(ligne["pourcentage"]));
                     color.Add(espece["nom"].ToString(), getCouleur(Convert.ToInt32(espece["id"])));
                 }
-                
+
 
             }
             else
@@ -73,6 +72,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 foreach (DataRow ligne in mission)
                 {
                     lbMission.Items.Add(ligne["nomPlanete"].ToString() + "-" + ligne["numero"].ToString());
+                    lbMission.DoubleClick += new System.EventHandler(ouvrirFicheMission);
+                    //ouvrir direct la fiche
                 }
             }
             else
@@ -80,10 +81,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 lbMission.Items.Add("Aucune mission n'est prévue pour cette planète.");
             }
             //Dictionary<string, int> dic = new Dictionary<string, int> { { "test", 100 }, { "test2",20} };
-            populationPlanete pl = new populationPlanete(dic,color);
+            populationPlanete pl = new populationPlanete(dic, color);
             pl.Top = 220;
             pl.Left = 10;
             this.Controls.Add(pl);
+            Style.InitControles(this);
+
 
         }
 
@@ -99,9 +102,24 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return Color.Red;
             }
         }
-        
 
-     }
+        private void ouvrirFicheMission(object sender, EventArgs e)
+        {
+            if ( sender is ListBox lb && lb.SelectedItem != null &&
+                lb.SelectedIndex != -1 && lb.SelectedItem != String.Empty )
+            {
+                string nomPlanete = lb.SelectedItem.ToString().Split('-')[0];
+                int numeroMission = Convert.ToInt32(lb.SelectedItem.
+                    ToString().Split('-')[1]);
 
-   }
+
+                frmFicheMission frmFicheMission = new frmFicheMission(nomPlanete, numeroMission);
+                frmFicheMission.Show();
+            }
+
+
+        }
+
+    }
+}
     

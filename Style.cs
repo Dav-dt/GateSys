@@ -22,7 +22,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private static Color m_couleurSecondaire = Color.FromArgb(45, 56, 76);
         private static Color m_couleurTexte = Color.FromArgb(243, 214, 144);
         private static Color m_couleurTitre = Color.FromArgb(253, 128, 02);
-        
+        private static Color m_survolage = Color.FromArgb(67, 72, 102);
+
         // appliquer un style spécifique a tous les cotrls
         public static void InitControles(Form frm)
         {
@@ -58,6 +59,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
                 btn.Cursor = Cursors.Hand;
+                btn.Font = new Font(font.FontFamily,
+                font.Size, FontStyle.Bold);
+
+                btn.MouseEnter += new EventHandler(survolBouton);
+                btn.MouseLeave += new EventHandler(quitterSurvolBouton);
             }
             else if ( parent is Label lbl )
             {
@@ -96,9 +102,36 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 
             }
 
-            foreach (Control child in parent.Controls)
+            else if ( parent is ListBox lst )
             {
-                ApplyStyleRecursive(child, font);
+                foreach ( String item in lst.Items )
+                {
+                    lst.BackColor = m_couleurSecondaire;
+                    lst.ForeColor = m_couleurTexte;
+                }
+            }
+
+                //a ajouter : le tab control, datagrid view
+
+                foreach (Control child in parent.Controls)
+                {
+                    ApplyStyleRecursive(child, font);
+                }
+        }
+
+        private static void survolBouton(object sender, EventArgs e)
+        {
+            if ( sender is Button btn )
+            { btn.BackColor = m_survolage;
+                btn.Size = new Size(btn.Size.Width +2, btn.Size.Height +2);
+            }        
+        }
+
+        private static void quitterSurvolBouton(object sender, EventArgs e)
+        {
+            if ( sender is Button btn )
+            { btn.BackColor = m_couleurSecondaire;
+                btn.Size = new Size(btn.Size.Width-2, btn.Size.Height-2);
             }
         }
     }

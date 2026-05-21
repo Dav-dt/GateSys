@@ -13,6 +13,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmJournal(string nomPlanete, int numeroMission)
         {
             InitializeComponent();
+            Style.InitControles(this);
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;
         }
