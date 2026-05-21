@@ -44,7 +44,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private static void ApplyStyleRecursive(Control parent, Font font)
         {
-            parent.Font = font;
+            if (!(parent is RichTextBox))
+            {
+                parent.Font = font;
+            }
             parent.BackColor = m_couleurPrimaire;
 
             if ( parent is Button btn )
@@ -83,6 +86,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 grp.ForeColor = m_couleurTitre;
                 grp.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);
+            }
+            else if (parent is CheckBox chk)
+            {
+                chk.ForeColor = m_couleurTexte;
+                chk.UseCompatibleTextRendering = true;
+                chk.Font = new Font(font.FontFamily,
+                    font.Size, FontStyle.Bold);
+                
             }
 
             foreach (Control child in parent.Controls)

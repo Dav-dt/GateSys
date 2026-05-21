@@ -87,9 +87,8 @@
             this.lbOutil.AutoSize = true;
             this.lbOutil.Location = new System.Drawing.Point(182, 151);
             this.lbOutil.Name = "lbOutil";
-            this.lbOutil.Size = new System.Drawing.Size(35, 13);
+            this.lbOutil.Size = new System.Drawing.Size(0, 13);
             this.lbOutil.TabIndex = 5;
-            this.lbOutil.Text = "label2";
             // 
             // Alien
             // 

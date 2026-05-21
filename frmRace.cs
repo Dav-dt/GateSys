@@ -30,6 +30,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 cboCouleur.Items.Add(row["couleur"]);
             }
+            Style.InitControles(this);
         }
 
         private void ajoutAlien()

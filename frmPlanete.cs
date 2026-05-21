@@ -16,7 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmPlanete()
         {
             InitializeComponent();
-            Style.InitControles(this);
+            //Style.InitControles(this);
         }
 
         private void frmPlanete_Load(object sender, EventArgs e)
@@ -79,6 +79,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
                 this.Controls.Add(pl);
             }
+            Style.InitControles(this);
         }
     }
 }
