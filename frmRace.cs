@@ -16,6 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmRace()
         {
             InitializeComponent();
+            Style.InitControles(this);
         }
 
         private void frmRace_Load(object sender, EventArgs e)

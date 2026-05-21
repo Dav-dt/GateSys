@@ -16,6 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmPlanete()
         {
             InitializeComponent();
+            Style.InitControles(this);
         }
 
         private void frmPlanete_Load(object sender, EventArgs e)

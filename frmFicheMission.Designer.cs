@@ -73,6 +73,7 @@
             this.grpCapture = new System.Windows.Forms.GroupBox();
             this.pnlCapture = new System.Windows.Forms.Panel();
             this.btnJournal = new System.Windows.Forms.Button();
+            this.picStatutMission = new System.Windows.Forms.PictureBox();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
@@ -81,6 +82,7 @@
             this.grpFeuilleDeRoute.SuspendLayout();
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStatutMission)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCtrlEdition
@@ -561,11 +563,21 @@
             this.btnJournal.UseVisualStyleBackColor = true;
             this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
             // 
+            // picStatutMission
+            // 
+            this.picStatutMission.Location = new System.Drawing.Point(446, 12);
+            this.picStatutMission.Name = "picStatutMission";
+            this.picStatutMission.Size = new System.Drawing.Size(70, 68);
+            this.picStatutMission.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picStatutMission.TabIndex = 9;
+            this.picStatutMission.TabStop = false;
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 679);
+            this.Controls.Add(this.picStatutMission);
             this.Controls.Add(this.btnJournal);
             this.Controls.Add(this.grpCapture);
             this.Controls.Add(this.grpMembresEquipe);
@@ -593,6 +605,7 @@
             this.grpFeuilleDeRoute.PerformLayout();
             this.grpMembresEquipe.ResumeLayout(false);
             this.grpCapture.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picStatutMission)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,5 +658,6 @@
         private System.Windows.Forms.Label lblCaptureEnnemi;
         private System.Windows.Forms.TextBox txtNbCapture;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picStatutMission;
     }
 }

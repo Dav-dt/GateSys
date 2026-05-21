@@ -40,6 +40,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             txtNbMembres.KeyPress += onlyNumbers_KeyPress;
             txtObjectifQDB.KeyPress += onlyNumbers_KeyPress;
 
+            Style.InitControles(this);
         }
 
         private void frmCreationMission_Load(object sender, EventArgs e)

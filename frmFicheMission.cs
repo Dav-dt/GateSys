@@ -27,6 +27,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmFicheMission(string nomPlanete, int numero)
         {
             InitializeComponent();
+            Style.InitControles(this);
             m_nomPlanete = nomPlanete;
             m_numero = numero;
         }
@@ -61,6 +62,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             NomPlanete = '{m_nomPlanete}'");
 
             m_missionTerminee = MissionTerminee();
+
+            if ( m_missionTerminee )
+                picStatutMission.Image = Properties.Resources.finie;
+            else
+                picStatutMission.Image = Properties.Resources.enCours;
 
             int index = 0;
             foreach (DataRow row in drMatricules)
