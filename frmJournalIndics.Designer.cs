@@ -53,7 +53,7 @@
             // llblTotalSomme
             // 
             this.llblTotalSomme.AutoSize = true;
-            this.llblTotalSomme.Location = new System.Drawing.Point(294, 544);
+            this.llblTotalSomme.Location = new System.Drawing.Point(383, 544);
             this.llblTotalSomme.Name = "llblTotalSomme";
             this.llblTotalSomme.Size = new System.Drawing.Size(51, 20);
             this.llblTotalSomme.TabIndex = 2;

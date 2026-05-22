@@ -53,6 +53,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 totalVerse += Convert.ToInt32(dr["sommeVersee"]);
             }
             llblTotalSomme.Text= $"{totalVerse} $DG";
+
+            Style.InitControles(this);
         }
     }
 }

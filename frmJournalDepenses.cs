@@ -52,6 +52,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 totalDepense += Convert.ToInt32(row["montant"]);
             }
             lblTotal.Text = totalDepense + " $DG";
+            Style.InitControles(this);
         }
     }
 }

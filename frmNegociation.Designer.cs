@@ -49,7 +49,7 @@
             this.pnlNegoc.AutoScroll = true;
             this.pnlNegoc.Location = new System.Drawing.Point(23, 40);
             this.pnlNegoc.Name = "pnlNegoc";
-            this.pnlNegoc.Size = new System.Drawing.Size(837, 669);
+            this.pnlNegoc.Size = new System.Drawing.Size(928, 669);
             this.pnlNegoc.TabIndex = 0;
             // 
             // grpNegoc
@@ -150,6 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1450, 760);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpNegoc);
+            this.MinimumSize = new System.Drawing.Size(1472, 816);
             this.Name = "frmNegociation";
             this.Text = "frmNegociation";
             this.Load += new System.EventHandler(this.frmNegociation_Load);

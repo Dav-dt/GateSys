@@ -59,10 +59,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             //remplissage Choix chef mission
 
             SQLiteCommand cmd2 = new SQLiteCommand(@"
-                SELECT matricule, nom, prenom, grade
-                FROM Membre mb JOIN Militaire m 
-                ON mb.matricule = m.matriculeMembre", 
-                    Connexion.Connec);
+                    SELECT matricule, nom, prenom, grade
+                    FROM Membre mb JOIN Militaire m 
+                    ON mb.matricule = m.matriculeMembre
+                    WHERE NOT EXISTS (
+                        SELECT mis.matriculeChef FROM Mission mis
+                        WHERE mis.matriculeChef = m.matriculeMembre)",
+
+                    Connexion.Connec); //seulement les disponibles
             
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd2);
             DataTable dt = new DataTable();
