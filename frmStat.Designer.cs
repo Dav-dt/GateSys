@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flpBudget = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flpBudget
+            // 
+            this.flpBudget.AutoScroll = true;
+            this.flpBudget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpBudget.Location = new System.Drawing.Point(957, 10);
+            this.flpBudget.Name = "flpBudget";
+            this.flpBudget.Size = new System.Drawing.Size(566, 515);
+            this.flpBudget.TabIndex = 0;
             // 
             // frmStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1547, 729);
+            this.Controls.Add(this.flpBudget);
             this.Name = "frmStat";
             this.Text = "frmStat";
             this.Load += new System.EventHandler(this.frmStat_Load);
@@ -43,5 +54,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flpBudget;
     }
 }

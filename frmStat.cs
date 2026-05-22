@@ -20,13 +20,24 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmStat_Load(object sender, EventArgs e)
         {
-            //DataTable dt = new Statistique().getMissionPlanete();
-            //NbMissionPlanete nbMission = new NbMissionPlanete(dt);
-            //nbMission.Top = 10;
-            //nbMission.Left = 10;
-            //this.Controls.Add(nbMission);
-            BarBudget br = new BarBudget(100, 80);
-            this.Controls.Add(br);
+            DataTable dt = new Statistique().getMissionPlanete();
+            NbMissionPlanete nbMission = new NbMissionPlanete(dt);
+            nbMission.Top = 10;
+            nbMission.Left = 10;
+            this.Controls.Add(nbMission);
+
+            DataTable d2 = new Statistique().DatagetBudget();
+            foreach(DataRow dr in d2.Rows)
+            {
+                DataTable budgetDetail = new Statistique().getBudgetDetail(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]));
+                BudgetMIssionStat bd = new BudgetMIssionStat(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]), Convert.ToInt32(dr["budget"]), Convert.ToInt32(dr["BudgetActuel"]),budgetDetail);
+                flpBudget.Controls.Add(bd);
+
+            }
+
+            
+
+           
         }
     }
 }

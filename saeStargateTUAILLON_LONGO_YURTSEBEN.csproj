@@ -63,6 +63,12 @@
     <Compile Include="control\BarBudget.Designer.cs">
       <DependentUpon>BarBudget.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\BudgetMIssionStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BudgetMIssionStat.Designer.cs">
+      <DependentUpon>BudgetMIssionStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\ButtonBack.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\BarBudget.resx">
       <DependentUpon>BarBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\BudgetMIssionStat.resx">
+      <DependentUpon>BudgetMIssionStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\ButtonBack.resx">
       <DependentUpon>ButtonBack.cs</DependentUpon>
