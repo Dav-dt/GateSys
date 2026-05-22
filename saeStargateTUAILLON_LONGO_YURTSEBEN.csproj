@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="control\BarBudget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BarBudget.Designer.cs">
+      <DependentUpon>BarBudget.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\ButtonBack.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,7 +104,7 @@
     </Compile>
     <Compile Include="control\Negociation.Designer.cs">
       <DependentUpon>Negociation.cs</DependentUpon>
-</Compile>
+    </Compile>
     <Compile Include="control\NbMissionPlanete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="control\BarBudget.resx">
+      <DependentUpon>BarBudget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\ButtonBack.resx">
       <DependentUpon>ButtonBack.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,7 +253,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Negociation.resx">
       <DependentUpon>Negociation.cs</DependentUpon>
-     </EmbeddedResource> 
+    </EmbeddedResource>
     <EmbeddedResource Include="control\NbMissionPlanete.resx">
       <DependentUpon>NbMissionPlanete.cs</DependentUpon>
     </EmbeddedResource>

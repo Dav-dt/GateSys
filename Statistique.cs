@@ -21,6 +21,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
+            
         }
 
         public DataTable getColege(int id)
