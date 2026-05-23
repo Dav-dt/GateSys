@@ -30,10 +30,15 @@
         {
             this.flpBudget = new System.Windows.Forms.FlowLayoutPanel();
             this.grpCollegue = new System.Windows.Forms.GroupBox();
-            this.cboCollegue = new System.Windows.Forms.ComboBox();
-            this.btnValider = new System.Windows.Forms.Button();
             this.flpCollegue = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.cboCollegue = new System.Windows.Forms.ComboBox();
+            this.cboMission = new System.Windows.Forms.ComboBox();
+            this.btnValiderInofrmateur = new System.Windows.Forms.Button();
+            this.flpInformteur = new System.Windows.Forms.FlowLayoutPanel();
+            this.gbInformateur = new System.Windows.Forms.GroupBox();
             this.grpCollegue.SuspendLayout();
+            this.gbInformateur.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpBudget
@@ -57,13 +62,14 @@
             this.grpCollegue.TabStop = false;
             this.grpCollegue.Text = "Collègue(s)";
             // 
-            // cboCollegue
+            // flpCollegue
             // 
-            this.cboCollegue.FormattingEnabled = true;
-            this.cboCollegue.Location = new System.Drawing.Point(10, 21);
-            this.cboCollegue.Name = "cboCollegue";
-            this.cboCollegue.Size = new System.Drawing.Size(140, 21);
-            this.cboCollegue.TabIndex = 0;
+            this.flpCollegue.AutoScroll = true;
+            this.flpCollegue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpCollegue.Location = new System.Drawing.Point(19, 83);
+            this.flpCollegue.Name = "flpCollegue";
+            this.flpCollegue.Size = new System.Drawing.Size(606, 269);
+            this.flpCollegue.TabIndex = 2;
             // 
             // btnValider
             // 
@@ -75,14 +81,52 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
-            // flpCollegue
+            // cboCollegue
             // 
-            this.flpCollegue.AutoScroll = true;
-            this.flpCollegue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpCollegue.Location = new System.Drawing.Point(19, 83);
-            this.flpCollegue.Name = "flpCollegue";
-            this.flpCollegue.Size = new System.Drawing.Size(606, 269);
-            this.flpCollegue.TabIndex = 2;
+            this.cboCollegue.FormattingEnabled = true;
+            this.cboCollegue.Location = new System.Drawing.Point(10, 21);
+            this.cboCollegue.Name = "cboCollegue";
+            this.cboCollegue.Size = new System.Drawing.Size(140, 21);
+            this.cboCollegue.TabIndex = 0;
+            // 
+            // cboMission
+            // 
+            this.cboMission.FormattingEnabled = true;
+            this.cboMission.Location = new System.Drawing.Point(10, 21);
+            this.cboMission.Name = "cboMission";
+            this.cboMission.Size = new System.Drawing.Size(140, 21);
+            this.cboMission.TabIndex = 0;
+            // 
+            // btnValiderInofrmateur
+            // 
+            this.btnValiderInofrmateur.Location = new System.Drawing.Point(233, 20);
+            this.btnValiderInofrmateur.Name = "btnValiderInofrmateur";
+            this.btnValiderInofrmateur.Size = new System.Drawing.Size(148, 21);
+            this.btnValiderInofrmateur.TabIndex = 1;
+            this.btnValiderInofrmateur.Text = "Valider";
+            this.btnValiderInofrmateur.UseVisualStyleBackColor = true;
+            this.btnValiderInofrmateur.Click += new System.EventHandler(this.btnValiderInofrmateur_Click);
+            // 
+            // flpInformteur
+            // 
+            this.flpInformteur.AutoScroll = true;
+            this.flpInformteur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpInformteur.Location = new System.Drawing.Point(19, 83);
+            this.flpInformteur.Name = "flpInformteur";
+            this.flpInformteur.Size = new System.Drawing.Size(606, 269);
+            this.flpInformteur.TabIndex = 2;
+            // 
+            // gbInformateur
+            // 
+            this.gbInformateur.Controls.Add(this.flpInformteur);
+            this.gbInformateur.Controls.Add(this.btnValiderInofrmateur);
+            this.gbInformateur.Controls.Add(this.cboMission);
+            this.gbInformateur.Location = new System.Drawing.Point(737, 549);
+            this.gbInformateur.Name = "gbInformateur";
+            this.gbInformateur.Size = new System.Drawing.Size(646, 370);
+            this.gbInformateur.TabIndex = 3;
+            this.gbInformateur.TabStop = false;
+            this.gbInformateur.Text = "Informateur(s) moins payé(s)";
             // 
             // frmStat
             // 
@@ -90,12 +134,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1547, 952);
+            this.Controls.Add(this.gbInformateur);
             this.Controls.Add(this.grpCollegue);
             this.Controls.Add(this.flpBudget);
             this.Name = "frmStat";
             this.Text = "frmStat";
             this.Load += new System.EventHandler(this.frmStat_Load);
             this.grpCollegue.ResumeLayout(false);
+            this.gbInformateur.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -107,5 +153,9 @@
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.ComboBox cboCollegue;
         private System.Windows.Forms.FlowLayoutPanel flpCollegue;
+        private System.Windows.Forms.ComboBox cboMission;
+        private System.Windows.Forms.Button btnValiderInofrmateur;
+        private System.Windows.Forms.FlowLayoutPanel flpInformteur;
+        private System.Windows.Forms.GroupBox gbInformateur;
     }
 }

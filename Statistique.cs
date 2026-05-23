@@ -111,7 +111,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         }
         public DataTable getInformateurMoins(string nom,int id)
         {
-            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue
+            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue,E.couleur
                                 FROM Contact C
                                 INNER JOIN Informateur I ON C.nomCodeInformateur = I.nomCode
                                 INNER JOIN Espece E ON I.idEspeceEnnemi = E.id

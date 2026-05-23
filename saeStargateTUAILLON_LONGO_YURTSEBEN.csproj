@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="control\AlienReduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\AlienReduit.Designer.cs">
+      <DependentUpon>AlienReduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\BarBudget.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     <Compile Include="Style.cs" />
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\AlienReduit.resx">
+      <DependentUpon>AlienReduit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\BarBudget.resx">
       <DependentUpon>BarBudget.cs</DependentUpon>
