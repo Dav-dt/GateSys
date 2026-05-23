@@ -154,6 +154,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void afficherMissionsPanel()
         {
+            pnlAffichageMissions.Controls.Clear();
             SQLiteCommand cmd = new SQLiteCommand(
                 "SELECT * FROM Mission", Connexion.Connec);
             SQLiteDataReader reader = cmd.ExecuteReader();
