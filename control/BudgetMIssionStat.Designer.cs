@@ -51,7 +51,7 @@
             this.dgDepense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDepense.Location = new System.Drawing.Point(23, 174);
             this.dgDepense.Name = "dgDepense";
-            this.dgDepense.Size = new System.Drawing.Size(486, 245);
+            this.dgDepense.Size = new System.Drawing.Size(486, 118);
             this.dgDepense.TabIndex = 1;
             // 
             // lblMission
@@ -72,7 +72,7 @@
             this.Controls.Add(this.dgDepense);
             this.Controls.Add(this.pbPlanete);
             this.Name = "BudgetMIssionStat";
-            this.Size = new System.Drawing.Size(540, 435);
+            this.Size = new System.Drawing.Size(540, 317);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepense)).EndInit();
             this.ResumeLayout(false);

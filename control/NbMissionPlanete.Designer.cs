@@ -36,7 +36,7 @@
             this.flpPlanete.AutoScroll = true;
             this.flpPlanete.Location = new System.Drawing.Point(21, 19);
             this.flpPlanete.Name = "flpPlanete";
-            this.flpPlanete.Size = new System.Drawing.Size(713, 446);
+            this.flpPlanete.Size = new System.Drawing.Size(713, 345);
             this.flpPlanete.TabIndex = 0;
             // 
             // NbMissionPlanete
@@ -45,7 +45,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.flpPlanete);
             this.Name = "NbMissionPlanete";
-            this.Size = new System.Drawing.Size(750, 480);
+            this.Size = new System.Drawing.Size(750, 384);
             this.ResumeLayout(false);
 
         }

@@ -47,7 +47,7 @@
             this.flpBudget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpBudget.Location = new System.Drawing.Point(858, 12);
             this.flpBudget.Name = "flpBudget";
-            this.flpBudget.Size = new System.Drawing.Size(566, 478);
+            this.flpBudget.Size = new System.Drawing.Size(566, 354);
             this.flpBudget.TabIndex = 0;
             // 
             // grpCollegue
@@ -57,7 +57,7 @@
             this.grpCollegue.Controls.Add(this.cboCollegue);
             this.grpCollegue.Location = new System.Drawing.Point(6, 549);
             this.grpCollegue.Name = "grpCollegue";
-            this.grpCollegue.Size = new System.Drawing.Size(646, 370);
+            this.grpCollegue.Size = new System.Drawing.Size(431, 370);
             this.grpCollegue.TabIndex = 1;
             this.grpCollegue.TabStop = false;
             this.grpCollegue.Text = "Collègue(s)";
@@ -66,9 +66,9 @@
             // 
             this.flpCollegue.AutoScroll = true;
             this.flpCollegue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpCollegue.Location = new System.Drawing.Point(19, 83);
+            this.flpCollegue.Location = new System.Drawing.Point(19, 62);
             this.flpCollegue.Name = "flpCollegue";
-            this.flpCollegue.Size = new System.Drawing.Size(606, 269);
+            this.flpCollegue.Size = new System.Drawing.Size(362, 290);
             this.flpCollegue.TabIndex = 2;
             // 
             // btnValider
@@ -111,9 +111,9 @@
             // 
             this.flpInformteur.AutoScroll = true;
             this.flpInformteur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpInformteur.Location = new System.Drawing.Point(19, 83);
+            this.flpInformteur.Location = new System.Drawing.Point(19, 62);
             this.flpInformteur.Name = "flpInformteur";
-            this.flpInformteur.Size = new System.Drawing.Size(606, 269);
+            this.flpInformteur.Size = new System.Drawing.Size(362, 290);
             this.flpInformteur.TabIndex = 2;
             // 
             // gbInformateur
@@ -121,9 +121,9 @@
             this.gbInformateur.Controls.Add(this.flpInformteur);
             this.gbInformateur.Controls.Add(this.btnValiderInofrmateur);
             this.gbInformateur.Controls.Add(this.cboMission);
-            this.gbInformateur.Location = new System.Drawing.Point(737, 549);
+            this.gbInformateur.Location = new System.Drawing.Point(499, 549);
             this.gbInformateur.Name = "gbInformateur";
-            this.gbInformateur.Size = new System.Drawing.Size(646, 370);
+            this.gbInformateur.Size = new System.Drawing.Size(412, 370);
             this.gbInformateur.TabIndex = 3;
             this.gbInformateur.TabStop = false;
             this.gbInformateur.Text = "Informateur(s) moins payé(s)";
