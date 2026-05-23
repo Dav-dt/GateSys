@@ -38,7 +38,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             cboCollegue.DataSource = dtMenbre;
             cboCollegue.DisplayMember = dtMenbre.Columns["nom"].ToString();
             cboCollegue.ValueMember = dtMenbre.Columns["matricule"].ToString();
-       
+
+            DataTable dtMission = new Statistique().getNomMission();
+            cboMission.DataSource = dtMission;
+            cboMission.DisplayMember = "nomMission";
+            cboMission.ValueMember = "nomMission";
+
         }
 
         private void btnValider_Click(object sender, EventArgs e)
@@ -71,6 +76,27 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     }
                 }
             }
+        }
+
+        private void btnValiderInofrmateur_Click(object sender, EventArgs e)
+        {
+            flpInformteur.Controls.Clear();
+            string mission = cboMission.SelectedValue.ToString();
+            string[] splitMission = mission.Split('-');
+            DataTable dtInformateur = new Statistique().getInformateurMoins(splitMission[0], Convert.ToInt32(splitMission[1]));
+            if(dtInformateur.Rows.Count == 0)
+            {
+                Label lbl = new Label();
+                lbl.Text = "Aucun informtaeur";
+                lbl.AutoSize = true;
+                flpInformteur.Controls.Add(lbl);
+            }
+            foreach(DataRow dr in dtInformateur.Rows)
+            {
+                AlienReduit ar = new AlienReduit(dr["couleur"].ToString(), dr["nomCode"].ToString(), dr["especeOrigine"].ToString(), Convert.ToInt32(dr["sommeTotaleRecue"]));
+                flpInformteur.Controls.Add(ar);
+            }
+
         }
     }
 }

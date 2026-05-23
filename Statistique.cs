@@ -87,7 +87,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         public DataTable getDepenseMax()
         {
-            string request = $@"select d.nomPlanete||'-'||d.numeroMission||' '||d.montant||'$ '||d.motif as recap,b.nom,b.prenom
+            string request = $@"select d.nomPlanete||'-'||d.numeroMission as Mission,d.dateD||' '||d.montant||'$ '||d.motif as recap,b.nom,b.prenom
                                 from Depense d 
                                 join Mission m on  d.nomPlanete = m.nomPlanete and d.numeroMission = m.numero
                                 join Membre b on m.matriculeChef = b.matricule
@@ -111,7 +111,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         }
         public DataTable getInformateurMoins(string nom,int id)
         {
-            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue
+            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue,E.couleur
                                 FROM Contact C
                                 INNER JOIN Informateur I ON C.nomCodeInformateur = I.nomCode
                                 INNER JOIN Espece E ON I.idEspeceEnnemi = E.id
