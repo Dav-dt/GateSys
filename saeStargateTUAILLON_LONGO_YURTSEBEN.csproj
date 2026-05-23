@@ -93,6 +93,18 @@
     <Compile Include="control\Depense.Designer.cs">
       <DependentUpon>Depense.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\DepenseMax.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\DepenseMax.Designer.cs">
+      <DependentUpon>DepenseMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\DepenseMaxList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\DepenseMaxList.Designer.cs">
+      <DependentUpon>DepenseMaxList.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\Indic.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -265,6 +277,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Depense.resx">
       <DependentUpon>Depense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\DepenseMax.resx">
+      <DependentUpon>DepenseMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\DepenseMaxList.resx">
+      <DependentUpon>DepenseMaxList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Indic.resx">
       <DependentUpon>Indic.cs</DependentUpon>
