@@ -44,6 +44,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             cboMission.DisplayMember = "nomMission";
             cboMission.ValueMember = "nomMission";
 
+            DataTable dtDepense = new Statistique().getDepenseMax();
+            DepenseMaxList dml = new DepenseMaxList(dtDepense);
+
+            gbDepenseMax.Controls.Add(dml);
+            dml.Top += 15;
+            dml.Left += 10;
+
         }
 
         private void btnValider_Click(object sender, EventArgs e)

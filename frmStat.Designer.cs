@@ -37,6 +37,7 @@
             this.btnValiderInofrmateur = new System.Windows.Forms.Button();
             this.flpInformteur = new System.Windows.Forms.FlowLayoutPanel();
             this.gbInformateur = new System.Windows.Forms.GroupBox();
+            this.gbDepenseMax = new System.Windows.Forms.GroupBox();
             this.grpCollegue.SuspendLayout();
             this.gbInformateur.SuspendLayout();
             this.SuspendLayout();
@@ -128,12 +129,22 @@
             this.gbInformateur.TabStop = false;
             this.gbInformateur.Text = "Informateur(s) moins payé(s)";
             // 
+            // gbDepenseMax
+            // 
+            this.gbDepenseMax.Location = new System.Drawing.Point(936, 545);
+            this.gbDepenseMax.Name = "gbDepenseMax";
+            this.gbDepenseMax.Size = new System.Drawing.Size(513, 373);
+            this.gbDepenseMax.TabIndex = 4;
+            this.gbDepenseMax.TabStop = false;
+            this.gbDepenseMax.Text = "Dépense Max";
+            // 
             // frmStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1547, 952);
+            this.Controls.Add(this.gbDepenseMax);
             this.Controls.Add(this.gbInformateur);
             this.Controls.Add(this.grpCollegue);
             this.Controls.Add(this.flpBudget);
@@ -157,5 +168,6 @@
         private System.Windows.Forms.Button btnValiderInofrmateur;
         private System.Windows.Forms.FlowLayoutPanel flpInformteur;
         private System.Windows.Forms.GroupBox gbInformateur;
+        private System.Windows.Forms.GroupBox gbDepenseMax;
     }
 }
