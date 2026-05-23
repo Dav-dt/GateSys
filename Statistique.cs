@@ -14,7 +14,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         public DataTable getMenbre()
         {
-            string request = $@"select nom||' '||prenom,matricule
+            string request = $@"select nom||' '||prenom as nom,matricule
                                 from Membre";
             SQLiteCommand cmd = new SQLiteCommand(request, connection);
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
@@ -24,7 +24,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             
         }
 
-        public DataTable getColege(int id)
+        public DataTable getColege(string id)
         {
             string request = $@"SELECT M.nom, M.prenom, 'Militaire' AS Type
                                 FROM Composer C1

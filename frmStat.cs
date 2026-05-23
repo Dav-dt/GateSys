@@ -34,10 +34,43 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 flpBudget.Controls.Add(bd);
 
             }
+            DataTable dtMenbre = new Statistique().getMenbre();
+            cboCollegue.DataSource = dtMenbre;
+            cboCollegue.DisplayMember = dtMenbre.Columns["nom"].ToString();
+            cboCollegue.ValueMember = dtMenbre.Columns["matricule"].ToString();
+       
+        }
 
-            
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            flpCollegue.Controls.Clear();
+            string id = cboCollegue.SelectedValue.ToString();
 
-           
+            DataTable dtcolegue = new Statistique().getColege(id);
+            if (dtcolegue.Rows.Count == 0)
+            {
+                Label lbl = new Label();
+                lbl.Text = "Cette personne a travailler avec aucun Menbre";
+                lbl.AutoSize = true;
+                flpCollegue.Controls.Add(lbl);
+            }
+            else
+            {
+                foreach (DataRow dr in dtcolegue.Rows)
+                {
+                    if (dr["Type"].ToString() == "Militaire")
+                    {
+                        Membre mb = new Membre(dr["nom"].ToString(), dr["prenom"].ToString(), true);
+                        flpCollegue.Controls.Add(mb);
+                    }
+                    else
+                    {
+                        Membre mb = new Membre(dr["nom"].ToString(), dr["prenom"].ToString(), false);
+                        flpCollegue.Controls.Add(mb);
+
+                    }
+                }
+            }
         }
     }
 }
