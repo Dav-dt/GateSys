@@ -25,6 +25,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             //chargement initial de la toute la bdd
             List<string> tables = ChargerBddDansDs(MesDatas.DsGlobal);
             pnlAffichageMissions.AutoScroll = true;
+            cmbFiltre.Items.Add("Toutes");
+            cmbFiltre.Items.Add("Terminées");
+            cmbFiltre.Items.Add("En cours");
+            cmbFiltre.SelectedItem = "Toutes";
             afficherMissionsPanel();
             btnNouvellesMissions.Select();//plus beau
 
@@ -181,12 +185,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 pnlAffichageMissions.Controls.Add(mission);
 
             }
+            Style.InitControles(this);
         }
 
         private void btnStat_Click(object sender, EventArgs e)
         {
             frmStat stat = new frmStat();
             stat.ShowDialog();
+        }
+
+        private void cmbFiltre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            afficherMissionsPanel();
         }
     }
 }
