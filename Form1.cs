@@ -157,7 +157,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             SQLiteCommand cmd = new SQLiteCommand(
                 "SELECT * FROM Mission", Connexion.Connec);
             SQLiteDataReader reader = cmd.ExecuteReader();
-
+            
+           
             int positionY = 0;
             while ( reader.Read() )
             {
