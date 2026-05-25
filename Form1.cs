@@ -159,8 +159,22 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void afficherMissionsPanel()
         {
             pnlAffichageMissions.Controls.Clear();
-            SQLiteCommand cmd = new SQLiteCommand(
-                "SELECT * FROM Mission", Connexion.Connec);
+            SQLiteCommand cmd = new SQLiteCommand(Connexion.Connec);
+            string mtn = DateTime.Now.ToString("yyyy-MM-dd");
+
+            switch ( cmbFiltre.SelectedItem.ToString() )
+            {
+                case "Terminées":
+                    cmd.CommandText = $@"SELECT * FROM Mission WHERE dateRetour <'{mtn}'";
+                    break;
+                case "En cours":
+                    cmd.CommandText = $@"SELECT * FROM Mission WHERE dateDepart <='{mtn}' 
+                                        AND dateRetour >='{mtn}'";
+                    break;
+                default:
+                    cmd.CommandText = @"SELECT * FROM Mission";
+                    break;
+            }
             SQLiteDataReader reader = cmd.ExecuteReader();
 
             int positionY = 0;
