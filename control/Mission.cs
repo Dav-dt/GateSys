@@ -61,8 +61,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 case "Neptune":
                     pbPlanete.Image = Properties.Resources.neptune;
                     break;
-                case "La 9ème Planète":
-                    pbPlanete.Image = Properties.Resources.pengu;
+                case "La 9ème planète":
+                    pbPlanete.Image = Properties.Resources._9planete;
                     break;
 
                 case "Kobaia":

@@ -206,8 +206,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnStat_Click(object sender, EventArgs e)
         {
+            frmChargement frmChargement = new frmChargement();
+            frmChargement.Show();
+            Application.DoEvents();
+
             frmStat stat = new frmStat();
             stat.ShowDialog();
+            frmChargement.Close();
         }
 
         private void cmbFiltre_SelectedIndexChanged(object sender, EventArgs e)
