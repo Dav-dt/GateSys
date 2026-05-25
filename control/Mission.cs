@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -113,49 +113,224 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
         private void btnGenererPdf_Click(object sender, EventArgs e)
         {
-            // Création de la boite dialogue 
+            // boite dialogue
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "PDF|*.pdf";
-            sfd.FileName = " Rapport_" + m_nomPlanete + "_" + m_numMission + ".pdf";
+            sfd.FileName = "Rapport_" + m_nomPlanete + "_" + m_numMission + ".pdf";
 
-            // Annule on fait retour 
+            // Annule on fait retour
             if (sfd.ShowDialog() != DialogResult.OK)
                 return;
 
-            // Crée un doc pdf en format A4
+            // Crée pdf 
             Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
             PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
             doc.Open();
 
-            // Taille du pdf 
-            iTextSharp.text.Font fontTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
-            iTextSharp.text.Font fontGras = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
-            iTextSharp.text.Font fontNormal = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11);
+            // Taille 
+            iTextSharp.text.Font fontTitre     = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            iTextSharp.text.Font fontSousTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
+            iTextSharp.text.Font fontNormal    = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextSharp.text.Font fontGras      = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
 
-            // Récuperations des infos de la mission ( DataSet )
+            // Récuperations  infos 
             DataRow[] drMission = MesDatas.DsGlobal.Tables["Mission"].Select(
-                "numéro = " + m_numMission + " Et nomPlanète = ' " + m_nomPlanete + " ' ");
+                $"numero = {m_numMission} AND nomPlanete = '{m_nomPlanete}'");
 
-            // Titre rapport 
-            doc.Add(new Paragraph(" Rapport de mission : " + m_nomPlanete + " _ " + m_numMission, fontTitre));
+            if (drMission.Length == 0)
+            {
+                MessageBox.Show("Mission introuvable.");
+                doc.Close();
+                return;
+            }
+
+            DataRow mission = drMission[0];
+
+            // Chef de Mission
+            string matriculeChef = mission["matriculeChef"].ToString();
+            DataRow[] drChef = MesDatas.DsGlobal.Tables["Membre"].Select(
+                $"matricule = '{matriculeChef}'");
+            string nomChef = drChef.Length > 0
+                ? drChef[0]["nom"] + " " + drChef[0]["prenom"]
+                : "Inconnu";
+
+            // Budget
+            int budgetInitial = Convert.ToInt32(mission["budget"]);
+            DataRow[] drToutesDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}");
+            int totalDepenses = 0;
+            foreach (DataRow dep in drToutesDepenses)
+                totalDepenses += Convert.ToInt32(dep["montant"]);
+            int budgetRestant = budgetInitial - totalDepenses;
+
+            // Titre rapport
+            doc.Add(new Paragraph("Rapport de mission", fontTitre));
+            doc.Add(new Paragraph(m_nomPlanete + " - " + m_numMission, fontTitre));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
 
-            // La Date 
-            doc.Add(new Paragraph("Date de départ : " + drMission[0]["dateDepart"], fontNormal));
-            doc.Add(new Paragraph("Date de retour prévue : " + drMission[0]["dateRetour"], fontNormal));
+            // La Date
+            doc.Add(new Paragraph("Date de départ : " + mission["dateDepart"], fontNormal));
+            doc.Add(new Paragraph("Date de retour prévue : " + mission["dateRetour"], fontNormal));
+            doc.Add(new Paragraph("Responsable : " + nomChef, fontNormal));
+            doc.Add(new Paragraph("Budget initial : " + budgetInitial + " $DG", fontNormal));
+            doc.Add(new Paragraph("Budget restant : " + budgetRestant + " $DG", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Feuille de route :", fontGras));
+            doc.Add(new Paragraph(mission["feuilleDeRoute"].ToString(), fontNormal));
+            doc.Add(new Paragraph(" "));
 
-            // Chef de Mission 
-            DataRow[] drchef = MesDatas.DsGlobal.Tables["Membres"].Select
-                ("matricule = ' " + drMission[0]["matriculeChef"] + " ' ");
-            doc.Add(new Paragraph("Responsable : " + drchef[0]["nom"] + " " + drchef[0]["prenom"], fontNormal));
+            // Liste  membres
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Liste des membres", fontSousTitre));
+            doc.Add(new Paragraph(" "));
 
-            // Budget 
-            int budgetInitial = Convert.ToInt32(drMission[0]["Budget"]);
-            doc.Add(new Paragraph("Budget initial :  " + budgetInitial + "€", fontNormal));
+            DataRow[] drComposer = MesDatas.DsGlobal.Tables["Composer"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}");
 
+            foreach (DataRow rowComposer in drComposer)
+            {
+                string mat = rowComposer["matriculeMembre"].ToString();
+                DataRow[] drInfo = MesDatas.DsGlobal.Tables["Membre"].Select(
+                    $"matricule = '{mat}'");
 
+                if (drInfo.Length > 0)
+                {
+                    string nomMembre = drInfo[0]["nom"] + " " + drInfo[0]["prenom"];
+                    
+                    string type = mat.StartsWith("M") ? "Militaire" : "Civil";
+                    doc.Add(new Paragraph("  --> " + nomMembre + " (" + type + ")", fontNormal));
+                }
+            }
+            doc.Add(new Paragraph(" "));
 
+            // Journal de bord
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Journal de bord", fontSousTitre));
+            doc.Add(new Paragraph(" "));
 
+            DataRow[] drJournal = MesDatas.DsGlobal.Tables["JournalDeBord"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numero = {m_numMission}", "dateJ ASC");
+
+            if (drJournal.Length == 0)
+            {
+                doc.Add(new Paragraph("Aucun événement enregistré.", fontNormal));
+            }
+            else
+            {
+                foreach (DataRow ev in drJournal)
+                {
+                    string date = Convert.ToDateTime(ev["dateJ"]).ToString("dd/MM/yyyy");
+                    doc.Add(new Paragraph("  Le " + date + " --> " + ev["commentaires"], fontNormal));
+                }
+            }
+            doc.Add(new Paragraph(" "));
+
+            // Dépenses effectuées
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Dépenses effectuées", fontSousTitre));
+            doc.Add(new Paragraph(" "));
+
+            DataRow[] drDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}", "dateD ASC");
+
+            if (drDepenses.Length == 0)
+            {
+                doc.Add(new Paragraph("Aucune dépense enregistrée.", fontNormal));
+            }
+            else
+            {
+                int compteur = 1;
+                foreach (DataRow dep in drDepenses)
+                {
+                    string date = Convert.ToDateTime(dep["dateD"]).ToString("dd/MM/yyyy");
+                    doc.Add(new Paragraph(
+                        "  " + compteur + ") le " + date + " : " + dep["motif"] + " -> " + dep["montant"] + " $DG",
+                        fontNormal));
+                    compteur++;
+                }
+                doc.Add(new Paragraph("  Total : " + totalDepenses + " $DG", fontGras));
+            }
+            doc.Add(new Paragraph(" "));
+
+            // Contacts informateurs
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Contacts avec les informateurs", fontSousTitre));
+            doc.Add(new Paragraph(" "));
+
+            DataRow[] drContacts = MesDatas.DsGlobal.Tables["Contact"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}", "dateC ASC");
+
+            if (drContacts.Length == 0)
+            {
+                doc.Add(new Paragraph("Aucun contact enregistré.", fontNormal));
+            }
+            else
+            {
+                int totalVerse = 0;
+                foreach (DataRow contact in drContacts)
+                {
+                    string date = Convert.ToDateTime(contact["dateC"]).ToString("dd/MM/yyyy");
+                    int somme = Convert.ToInt32(contact["sommeVersee"]);
+                    doc.Add(new Paragraph(
+                        "  Le " + date + " : " + contact["nomCodeInformateur"]
+                        + " -> " + somme + " $DG (" + contact["appreciation"] + ")",
+                        fontNormal));
+                    totalVerse += somme;
+                }
+                doc.Add(new Paragraph("  Total versé : " + totalVerse + " $DG", fontGras));
+            }
+            doc.Add(new Paragraph(" "));
+
+            // Bilan captures
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Bilan des captures", fontSousTitre));
+            doc.Add(new Paragraph(" "));
+
+            DataRow[] drObjectifs = MesDatas.DsGlobal.Tables["ObjectifCapture"].Select(
+                $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}");
+
+            if (drObjectifs.Length == 0)
+            {
+                doc.Add(new Paragraph("Aucun objectif de capture défini.", fontNormal));
+            }
+            else
+            {
+                doc.Add(new Paragraph("  Espèce | Objectif | Réalisé | Taux", fontGras));
+
+                foreach (DataRow obj in drObjectifs)
+                {
+                    int idEspece = Convert.ToInt32(obj["idEspeceEnnemi"]);
+                    int objectif = Convert.ToInt32(obj["objectif"]);
+
+                    // nom de l'espèce
+                    DataRow[] drEspece = MesDatas.DsGlobal.Tables["Espece"].Select($"id = {idEspece}");
+                    string nomEspece = drEspece.Length > 0 ? drEspece[0]["nom"].ToString() : "?";
+
+                    // nombre réel de captures
+                    DataRow[] drCaptures = MesDatas.DsGlobal.Tables["Capturer"].Select(
+                        $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission} AND idEspeceEnnemi = {idEspece}");
+                    int nombreReel = drCaptures.Length > 0 ? Convert.ToInt32(drCaptures[0]["nombre"]) : 0;
+
+                    // taux de réussite en %
+                    int taux = objectif > 0 ? (int)((double)nombreReel / objectif * 100) : 0;
+
+                    doc.Add(new Paragraph(
+                        "  " + nomEspece + " | " + objectif + " | " + nombreReel + " | " + taux + " %",
+                        fontNormal));
+                }
+            }
+
+            // fermeture obligatoire sinon le PDF est corrompu
+            doc.Close();
+
+            MessageBox.Show("PDF généré avec succès !\n" + sfd.FileName);
         }
     }
 }
