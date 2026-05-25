@@ -63,6 +63,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="control\AlienReduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\AlienReduit.Designer.cs">
+      <DependentUpon>AlienReduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\BarBudget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BarBudget.Designer.cs">
+      <DependentUpon>BarBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\BudgetMIssionStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\BudgetMIssionStat.Designer.cs">
+      <DependentUpon>BudgetMIssionStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\ButtonBack.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +92,18 @@
     </Compile>
     <Compile Include="control\Depense.Designer.cs">
       <DependentUpon>Depense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\DepenseMax.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\DepenseMax.Designer.cs">
+      <DependentUpon>DepenseMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\DepenseMaxList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\DepenseMaxList.Designer.cs">
+      <DependentUpon>DepenseMaxList.cs</DependentUpon>
     </Compile>
     <Compile Include="control\Indic.cs">
       <SubType>UserControl</SubType>
@@ -233,11 +263,26 @@
     <EmbeddedResource Include="control\Alien.resx">
       <DependentUpon>Alien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="control\AlienReduit.resx">
+      <DependentUpon>AlienReduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\BarBudget.resx">
+      <DependentUpon>BarBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\BudgetMIssionStat.resx">
+      <DependentUpon>BudgetMIssionStat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\ButtonBack.resx">
       <DependentUpon>ButtonBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Depense.resx">
       <DependentUpon>Depense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\DepenseMax.resx">
+      <DependentUpon>DepenseMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\DepenseMaxList.resx">
+      <DependentUpon>DepenseMaxList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Indic.resx">
       <DependentUpon>Indic.cs</DependentUpon>

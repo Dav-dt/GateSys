@@ -25,6 +25,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             //chargement initial de la toute la bdd
             List<string> tables = ChargerBddDansDs(MesDatas.DsGlobal);
             pnlAffichageMissions.AutoScroll = true;
+            cmbFiltre.Items.Add("Toutes");
+            cmbFiltre.Items.Add("Terminées");
+            cmbFiltre.Items.Add("En cours");
+            cmbFiltre.SelectedItem = "Toutes";
             afficherMissionsPanel();
             btnNouvellesMissions.Select();//plus beau
 
@@ -154,8 +158,23 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void afficherMissionsPanel()
         {
-            SQLiteCommand cmd = new SQLiteCommand(
-                "SELECT * FROM Mission", Connexion.Connec);
+            pnlAffichageMissions.Controls.Clear();
+            SQLiteCommand cmd = new SQLiteCommand(Connexion.Connec);
+            string mtn = DateTime.Now.ToString("yyyy-MM-dd");
+
+            switch ( cmbFiltre.SelectedItem.ToString() )
+            {
+                case "Terminées":
+                    cmd.CommandText = $@"SELECT * FROM Mission WHERE dateRetour <'{mtn}'";
+                    break;
+                case "En cours":
+                    cmd.CommandText = $@"SELECT * FROM Mission WHERE dateDepart <='{mtn}' 
+                                        AND dateRetour >='{mtn}'";
+                    break;
+                default:
+                    cmd.CommandText = @"SELECT * FROM Mission";
+                    break;
+            }
             SQLiteDataReader reader = cmd.ExecuteReader();
             
            
@@ -182,12 +201,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 pnlAffichageMissions.Controls.Add(mission);
 
             }
+            Style.InitControles(this);
         }
 
         private void btnStat_Click(object sender, EventArgs e)
         {
             frmStat stat = new frmStat();
             stat.ShowDialog();
+        }
+
+        private void cmbFiltre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            afficherMissionsPanel();
         }
     }
 }

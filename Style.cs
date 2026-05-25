@@ -51,7 +51,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
             parent.BackColor = m_couleurPrimaire;
 
-            if ( parent is Button btn )
+            if (parent is Button btn)
             {
                 btn.UseCompatibleTextRendering = true;
                 btn.BackColor = m_couleurSecondaire;
@@ -65,33 +65,40 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 btn.MouseEnter += new EventHandler(survolBouton);
                 btn.MouseLeave += new EventHandler(quitterSurvolBouton);
             }
-            else if ( parent is Label lbl )
+            else if (parent is Label lbl)
             {
                 lbl.ForeColor = m_couleurTexte;
                 lbl.UseCompatibleTextRendering = true;
                 lbl.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);
             }
-            else if ( parent is TextBox txt)
+            else if (parent is TextBox txt)
             {
                 txt.BackColor = m_couleurSecondaire;
                 txt.ForeColor = m_couleurTexte;
                 txt.BorderStyle = BorderStyle.FixedSingle;
+                txt.Font = new Font(font.FontFamily, font.Size, FontStyle.Bold);
             }
-            else if ( parent is ComboBox cmb)
+            else if (parent is ComboBox cmb)
             {
                 cmb.BackColor = m_couleurSecondaire;
                 cmb.ForeColor = m_couleurTexte;
             }
-            else if ( parent is Panel pnl )
+            else if (parent is Panel pnl)
             {
 
             }
-            else if ( parent is GroupBox grp )
+            else if (parent is GroupBox grp)
             {
+                grp.UseCompatibleTextRendering = true;
                 grp.ForeColor = m_couleurTitre;
                 grp.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);
+
+                foreach ( Control c in grp.Controls)
+                {
+                    c.ForeColor = m_couleurTexte;
+                }
             }
             else if (parent is CheckBox chk)
             {
@@ -99,21 +106,62 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 chk.UseCompatibleTextRendering = true;
                 chk.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);
-                
+
             }
 
-            else if ( parent is ListBox lst )
+            else if (parent is ListBox lst)
             {
-                foreach ( String item in lst.Items )
+                foreach (String item in lst.Items)
                 {
                     lst.BackColor = m_couleurSecondaire;
                     lst.ForeColor = m_couleurTexte;
                 }
             }
 
-                //a ajouter : le tab control, datagrid view
+            else if (parent is DataGridView dgv)
+            {
+                dgv.BackgroundColor = m_couleurSecondaire;
+                /*
+                 * dtCapture.Columns.Add("Nom de l'espèce", typeof(string));
+            dtCapture.Columns.Add("Objectif Initial", typeof(int));
+            dtCapture.Columns.Add("Nombre de captures réalisées", typeof(int));
+            dtCapture.Columns.Add("Taux de réussite", typeof(int));
+                 */
 
-                foreach (Control child in parent.Controls)
+                Font dgvFont = new Font(font.FontFamily, font.Size, FontStyle.Bold);
+                dgv.Font = dgvFont;
+                dgv.DefaultCellStyle.Font = dgvFont;
+                dgv.ColumnHeadersDefaultCellStyle.Font = dgvFont;
+
+                dgv.DefaultCellStyle.ForeColor = m_couleurTexte;
+
+                dgv.EnableHeadersVisualStyles = false;
+                dgv.ColumnHeadersDefaultCellStyle.BackColor = m_couleurTitre;
+
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    row.DefaultCellStyle.BackColor = m_couleurSecondaire;
+                    row.DefaultCellStyle.Font = dgvFont;
+                }
+            }
+
+            else if  ( parent is DateTimePicker dt )
+            {
+                //marche pas du tout
+                Font dtFont = new Font(font.FontFamily, font.Size, FontStyle.Bold);
+                dt.Font = dtFont;
+                dt.CalendarFont = dtFont;
+                dt.CalendarForeColor = m_couleurTitre;
+                dt.CalendarTrailingForeColor = m_couleurTexte;
+                dt.CalendarTitleBackColor = m_couleurTitre;
+                dt.CalendarMonthBackground = m_couleurTitre;
+                dt.CalendarTitleBackColor = m_couleurSecondaire;
+
+            }
+
+            //a ajouter : le tab control
+
+            foreach (Control child in parent.Controls)
                 {
                     ApplyStyleRecursive(child, font);
                 }

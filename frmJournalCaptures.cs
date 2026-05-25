@@ -33,7 +33,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             string nomTable = $"BilanCapture{m_nomPlanete}-{m_numeroMission}";
 
             //verif si la table existe deja
-            if ( MesDatas.DsGlobal.Tables.Contains(nomTable) )
+            if (MesDatas.DsGlobal.Tables.Contains(nomTable))
                 MesDatas.DsGlobal.Tables.Remove(nomTable);
 
             DataTable dtCapture = MesDatas.DsGlobal.Tables.Add(nomTable);
@@ -56,39 +56,41 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             Dictionary<int, List<int>> infosCaptures =
                 new Dictionary<int, List<int>>();
 
-            foreach ( DataRow dr in drObjectifs )
+            foreach (DataRow dr in drObjectifs)
             {
                 int objectifDeCapture = Convert.ToInt32(dr["objectif"]);
                 infosCaptures.Add(Convert.ToInt32(dr["idEspeceEnnemi"]),
-                    new List<int>{objectifDeCapture });
+                    new List<int> { objectifDeCapture });
             }
 
-            foreach ( DataRow dr in drCaptures )
+            foreach (DataRow dr in drCaptures)
             {
                 int idEspece = Convert.ToInt32(dr["idEspeceEnnemi"]);
                 int nombreReel = Convert.ToInt32(dr["nombre"]);
                 infosCaptures[idEspece].Add(nombreReel);
             }
 
-            foreach ( int idEspece in infosCaptures.Keys )
+            foreach (int idEspece in infosCaptures.Keys)
             {
                 DataRow[] drEspece = MesDatas.DsGlobal.Tables["Espece"].Select(
                     $"id = {idEspece}");
                 string nomEspece = drEspece[0]["nom"].ToString();
-                
+
                 int objectifInitial = infosCaptures[idEspece][0];
-                
+
                 //verifier que ya une valeur
-                int nombreReel = infosCaptures[idEspece].Count > 1 ? 
+                int nombreReel = infosCaptures[idEspece].Count > 1 ?
                     infosCaptures[idEspece][1] : 0;
 
-                int tauxReussite = objectifInitial > 0 ? 
-                    (int)((double)nombreReel/objectifInitial * 100) : 0;
-                
+                int tauxReussite = objectifInitial > 0 ?
+                    (int)((double)nombreReel / objectifInitial * 100) : 0;
+
                 dtCapture.Rows.Add(nomEspece, objectifInitial, nombreReel, tauxReussite);
             }
 
             dgvCapture.DataSource = dtCapture;
+
+            Style.InitControles(this);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 {
-    partial class NbMissionPlanete
+    partial class DepenseMaxList
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpPlanete = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpDepense = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flpPlanete
+            // flpDepense
             // 
-            this.flpPlanete.AutoScroll = true;
-            this.flpPlanete.Location = new System.Drawing.Point(21, 19);
-            this.flpPlanete.Name = "flpPlanete";
-            this.flpPlanete.Size = new System.Drawing.Size(713, 345);
-            this.flpPlanete.TabIndex = 0;
+            this.flpDepense.AutoScroll = true;
+            this.flpDepense.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpDepense.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDepense.Location = new System.Drawing.Point(0, 0);
+            this.flpDepense.Name = "flpDepense";
+            this.flpDepense.Size = new System.Drawing.Size(493, 346);
+            this.flpDepense.TabIndex = 0;
             // 
-            // NbMissionPlanete
+            // DepenseMaxList
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.flpPlanete);
-            this.Name = "NbMissionPlanete";
-            this.Size = new System.Drawing.Size(750, 384);
+            this.Controls.Add(this.flpDepense);
+            this.Name = "DepenseMaxList";
+            this.Size = new System.Drawing.Size(493, 346);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flpPlanete;
+        private System.Windows.Forms.FlowLayoutPanel flpDepense;
     }
 }

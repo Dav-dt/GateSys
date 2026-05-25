@@ -14,16 +14,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         public DataTable getMenbre()
         {
-            string request = $@"select nom||' '||prenom,matricule
+            string request = $@"select nom||' '||prenom as nom,matricule
                                 from Membre";
             SQLiteCommand cmd = new SQLiteCommand(request, connection);
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
+            
         }
 
-        public DataTable getColege(int id)
+        public DataTable getColege(string id)
         {
             string request = $@"SELECT M.nom, M.prenom, 'Militaire' AS Type
                                 FROM Composer C1
@@ -65,7 +66,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                             M.budget,
                             M.budget - (SELECT SUM(montant) FROM Depense D WHERE D.nomPlanete = M.nomPlanete AND D.numeroMission = M.numero) AS BudgetActuel
                             FROM Mission M
-                            WHERE (SELECT COUNT(*) FROM Composer C WHERE C.nomPlanete = M.nomPlanete AND C.numeroMission = M.numero) > 10;";
+                            WHERE (SELECT COUNT(*) FROM Composer C WHERE C.nomPlanete = M.nomPlanete AND C.numeroMission = M.numero) > 1;";
             SQLiteCommand cmd = new SQLiteCommand(request, connection);
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -86,7 +87,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         public DataTable getDepenseMax()
         {
-            string request = $@"select d.nomPlanete||'-'||d.numeroMission||' '||d.montant||'$ '||d.motif as recap,b.nom,b.prenom
+            string request = $@"select d.nomPlanete||'-'||d.numeroMission as Mission,d.dateD||' '||d.montant||'$ '||d.motif as recap,b.nom,b.prenom
                                 from Depense d 
                                 join Mission m on  d.nomPlanete = m.nomPlanete and d.numeroMission = m.numero
                                 join Membre b on m.matriculeChef = b.matricule
@@ -110,7 +111,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         }
         public DataTable getInformateurMoins(string nom,int id)
         {
-            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue
+            string request = $@"SELECT I.nomCode, E.nom AS especeOrigine, SUM(C.sommeVersee) AS sommeTotaleRecue,E.couleur
                                 FROM Contact C
                                 INNER JOIN Informateur I ON C.nomCodeInformateur = I.nomCode
                                 INNER JOIN Espece E ON I.idEspeceEnnemi = E.id

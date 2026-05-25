@@ -35,6 +35,8 @@
             this.pnlAffichageMissions = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnStat = new System.Windows.Forms.Button();
+            this.cmbFiltre = new System.Windows.Forms.ComboBox();
+            this.lblTbb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,9 +89,9 @@
             this.pnlAffichageMissions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAffichageMissions.Location = new System.Drawing.Point(293, 18);
+            this.pnlAffichageMissions.Location = new System.Drawing.Point(293, 65);
             this.pnlAffichageMissions.Name = "pnlAffichageMissions";
-            this.pnlAffichageMissions.Size = new System.Drawing.Size(833, 555);
+            this.pnlAffichageMissions.Size = new System.Drawing.Size(833, 508);
             this.pnlAffichageMissions.TabIndex = 8;
             // 
             // picLogo
@@ -114,11 +116,32 @@
             this.btnStat.UseVisualStyleBackColor = true;
             this.btnStat.Click += new System.EventHandler(this.btnStat_Click);
             // 
+            // cmbFiltre
+            // 
+            this.cmbFiltre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltre.FormattingEnabled = true;
+            this.cmbFiltre.Location = new System.Drawing.Point(962, 12);
+            this.cmbFiltre.Name = "cmbFiltre";
+            this.cmbFiltre.Size = new System.Drawing.Size(164, 34);
+            this.cmbFiltre.TabIndex = 11;
+            this.cmbFiltre.SelectedIndexChanged += new System.EventHandler(this.cmbFiltre_SelectedIndexChanged);
+            // 
+            // lblTbb
+            // 
+            this.lblTbb.AutoSize = true;
+            this.lblTbb.Location = new System.Drawing.Point(294, 25);
+            this.lblTbb.Name = "lblTbb";
+            this.lblTbb.Size = new System.Drawing.Size(168, 26);
+            this.lblTbb.TabIndex = 12;
+            this.lblTbb.Text = "Tableau de bord";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
+            this.Controls.Add(this.lblTbb);
+            this.Controls.Add(this.cmbFiltre);
             this.Controls.Add(this.btnStat);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.pnlAffichageMissions);
@@ -132,6 +155,7 @@
             this.Text = "gateSys Beta";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,6 +168,8 @@
         private System.Windows.Forms.Panel pnlAffichageMissions;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnStat;
+        private System.Windows.Forms.ComboBox cmbFiltre;
+        private System.Windows.Forms.Label lblTbb;
     }
 }
 

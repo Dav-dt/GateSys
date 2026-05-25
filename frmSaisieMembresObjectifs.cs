@@ -79,13 +79,22 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 MessageBox.Show("Erreur lors du chargement");
             }
 
+            Style.InitControles(this);
+
         }
 
         private void btnValiderTout_Click(object sender, EventArgs e)
         {
             //debut des inserts
 
-            if ( lstMembres.Items.Count == 0 || lstCapture.Items.Count == 0)
+            //cas ou ya juste le capitaine et pas dautres membres
+            if ( lstMembres.Items.Count == 0 && m_nbMembres != 0 )
+            {
+                MessageBox.Show("Veuillez entrer des informations valides");
+                return;
+            }
+
+            if ( lstCapture.Items.Count == 0 )
             {
                 MessageBox.Show("Veuillez entrer des informations valides");
                 return;
@@ -166,6 +175,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             lstMembres.Items.Add(cmbMembres.Text);
             m_idsMembres.Add(cmbMembres.SelectedValue.ToString());
 
+            Style.InitControles(this);
+
         }
 
         private void btnAjouterCapture_Click(object sender, EventArgs e)
@@ -185,6 +196,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             lstCapture.Items.Add(cmbCapture.Text + " -> " + nbCapture);
             m_captures.Add(idEspece, nbCapture);
+
+            Style.InitControles(this);
         }
 
         private void frmSaisieMembresObjectifs_FormClosing(object sender, FormClosingEventArgs e)

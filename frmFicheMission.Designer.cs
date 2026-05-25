@@ -75,6 +75,8 @@
             this.btnJournal = new System.Windows.Forms.Button();
             this.picStatutMission = new System.Windows.Forms.PictureBox();
             this.btnContacterExtra = new System.Windows.Forms.Button();
+            this.lblDG = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
@@ -101,6 +103,7 @@
             // 
             // tabNouveauContact
             // 
+            this.tabNouveauContact.Controls.Add(this.lblDG);
             this.tabNouveauContact.Controls.Add(this.btnValiderIndic);
             this.tabNouveauContact.Controls.Add(this.cmbINomIndic);
             this.tabNouveauContact.Controls.Add(this.lblNomIndic);
@@ -209,6 +212,7 @@
             // 
             // tabNouvelleDepense
             // 
+            this.tabNouvelleDepense.Controls.Add(this.label3);
             this.tabNouvelleDepense.Controls.Add(this.btnValiderDepense);
             this.tabNouvelleDepense.Controls.Add(this.cmbIdDepense);
             this.tabNouvelleDepense.Controls.Add(this.lblIdDepense);
@@ -585,6 +589,24 @@
             this.btnContacterExtra.UseVisualStyleBackColor = true;
             this.btnContacterExtra.Click += new System.EventHandler(this.btnContacterExtra_Click);
             // 
+            // lblDG
+            // 
+            this.lblDG.AutoSize = true;
+            this.lblDG.Location = new System.Drawing.Point(359, 100);
+            this.lblDG.Name = "lblDG";
+            this.lblDG.Size = new System.Drawing.Size(47, 22);
+            this.lblDG.TabIndex = 9;
+            this.lblDG.Text = "$DG";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(354, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 22);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "$DG";
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -674,5 +696,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picStatutMission;
         private System.Windows.Forms.Button btnContacterExtra;
+        private System.Windows.Forms.Label lblDG;
+        private System.Windows.Forms.Label label3;
     }
 }
