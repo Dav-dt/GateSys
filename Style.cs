@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
@@ -22,7 +23,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private static Color m_couleurSecondaire = Color.FromArgb(45, 56, 76);
         private static Color m_couleurTexte = Color.FromArgb(243, 214, 144);
         private static Color m_couleurTitre = Color.FromArgb(253, 128, 02);
-        private static Color m_survolage = Color.FromArgb(67, 72, 102);
+        private static Color m_survolage = Color.FromArgb(90, 75, 40);
 
         // appliquer un style spécifique a tous les cotrls
         public static void InitControles(Form frm)

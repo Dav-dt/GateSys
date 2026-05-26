@@ -42,7 +42,7 @@
             // lblTitreLogin
             // 
             this.lblTitreLogin.AutoSize = true;
-            this.lblTitreLogin.Location = new System.Drawing.Point(233, 9);
+            this.lblTitreLogin.Location = new System.Drawing.Point(177, 21);
             this.lblTitreLogin.Name = "lblTitreLogin";
             this.lblTitreLogin.Size = new System.Drawing.Size(204, 26);
             this.lblTitreLogin.TabIndex = 0;
@@ -51,7 +51,7 @@
             // lblDetailsLogin
             // 
             this.lblDetailsLogin.AutoSize = true;
-            this.lblDetailsLogin.Location = new System.Drawing.Point(111, 135);
+            this.lblDetailsLogin.Location = new System.Drawing.Point(61, 134);
             this.lblDetailsLogin.Name = "lblDetailsLogin";
             this.lblDetailsLogin.Size = new System.Drawing.Size(460, 26);
             this.lblDetailsLogin.TabIndex = 1;
@@ -60,7 +60,7 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(116, 265);
+            this.lblLogin.Location = new System.Drawing.Point(23, 265);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(186, 26);
             this.lblLogin.TabIndex = 2;
@@ -69,7 +69,7 @@
             // lblMdp
             // 
             this.lblMdp.AutoSize = true;
-            this.lblMdp.Location = new System.Drawing.Point(111, 360);
+            this.lblMdp.Location = new System.Drawing.Point(18, 360);
             this.lblMdp.Name = "lblMdp";
             this.lblMdp.Size = new System.Drawing.Size(154, 26);
             this.lblMdp.TabIndex = 3;
@@ -77,14 +77,14 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(350, 264);
+            this.txtLogin.Location = new System.Drawing.Point(257, 264);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(221, 32);
             this.txtLogin.TabIndex = 4;
             // 
             // txtMdp
             // 
-            this.txtMdp.Location = new System.Drawing.Point(350, 354);
+            this.txtMdp.Location = new System.Drawing.Point(257, 354);
             this.txtMdp.Name = "txtMdp";
             this.txtMdp.PasswordChar = '●';
             this.txtMdp.Size = new System.Drawing.Size(221, 32);
@@ -95,7 +95,7 @@
             // btnConfirmer
             // 
             this.btnConfirmer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmer.Location = new System.Drawing.Point(494, 482);
+            this.btnConfirmer.Location = new System.Drawing.Point(222, 443);
             this.btnConfirmer.Name = "btnConfirmer";
             this.btnConfirmer.Size = new System.Drawing.Size(159, 48);
             this.btnConfirmer.TabIndex = 6;
@@ -106,7 +106,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAnnuler.Location = new System.Drawing.Point(294, 482);
+            this.btnAnnuler.Location = new System.Drawing.Point(401, 443);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(159, 48);
             this.btnAnnuler.TabIndex = 7;
@@ -117,7 +117,7 @@
             // btnAfficherMdp
             // 
             this.btnAfficherMdp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAfficherMdp.Location = new System.Drawing.Point(598, 354);
+            this.btnAfficherMdp.Location = new System.Drawing.Point(505, 354);
             this.btnAfficherMdp.Name = "btnAfficherMdp";
             this.btnAfficherMdp.Size = new System.Drawing.Size(55, 32);
             this.btnAfficherMdp.TabIndex = 8;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 559);
+            this.ClientSize = new System.Drawing.Size(572, 505);
             this.Controls.Add(this.btnAfficherMdp);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnConfirmer);
