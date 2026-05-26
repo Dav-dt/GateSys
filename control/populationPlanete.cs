@@ -40,11 +40,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                     rtb.Text = item + ": ";
                     if(dict[item] / 10 <= 0)
                     {
-                        rtb.Text += "👤";
+                        rtb.Text += "|";
                     }
                     for (int i = 0; i < dict[item] / 10; i++)
                     {
-                        rtb.Text += "👤";
+                        rtb.Text += "| ";
                     }
 
                     rtb.Top = x;

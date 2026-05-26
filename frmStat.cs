@@ -16,6 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmStat()
         {
             InitializeComponent();
+            //Style.InitControles(this);  il faut le a la main sinon ce sera trop dure a tout fix 
         }
 
         private void frmStat_Load(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             gbDepenseMax.Controls.Add(dml);
             dml.Top += 15;
             dml.Left += 10;
+            
 
         }
 

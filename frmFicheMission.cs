@@ -83,8 +83,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 Membre membre = new Membre(nom, prenom, estMilitaire);
                 //membre.Width = (pnlMembres.ClientSize.Width - 30) / 2;
 
-                int colonne = index % 3;
-                int ligne = index / 3;
+                int colonne = index % 4;
+                int ligne = index / 4;
 
                 int posX = 30 + colonne * (membre.Width + 10);
                 int posY = 5 + ligne * (membre.Height + 5);
