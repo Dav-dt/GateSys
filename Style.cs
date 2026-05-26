@@ -73,6 +73,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
                 btn.Cursor = Cursors.Hand;
+                btn.UseCompatibleTextRendering = true;
                 btn.Font = new Font(font.FontFamily, font.Size, FontStyle.Bold);
             }
              
