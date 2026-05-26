@@ -43,7 +43,7 @@
             // btnInfosPlanetes
             // 
             this.btnInfosPlanetes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfosPlanetes.Location = new System.Drawing.Point(50, 381);
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(50, 345);
             this.btnInfosPlanetes.Name = "btnInfosPlanetes";
             this.btnInfosPlanetes.Size = new System.Drawing.Size(192, 58);
             this.btnInfosPlanetes.TabIndex = 0;
@@ -54,7 +54,7 @@
             // btnRaces
             // 
             this.btnRaces.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRaces.Location = new System.Drawing.Point(50, 298);
+            this.btnRaces.Location = new System.Drawing.Point(50, 260);
             this.btnRaces.Name = "btnRaces";
             this.btnRaces.Size = new System.Drawing.Size(192, 55);
             this.btnRaces.TabIndex = 1;
@@ -65,7 +65,7 @@
             // btnNouvellesMissions
             // 
             this.btnNouvellesMissions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNouvellesMissions.Location = new System.Drawing.Point(50, 193);
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(50, 159);
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
             this.btnNouvellesMissions.Size = new System.Drawing.Size(192, 77);
             this.btnNouvellesMissions.TabIndex = 2;
@@ -76,7 +76,7 @@
             // btnQuitter
             // 
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuitter.Location = new System.Drawing.Point(19, 525);
+            this.btnQuitter.Location = new System.Drawing.Point(79, 525);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(124, 48);
             this.btnQuitter.TabIndex = 4;
@@ -108,7 +108,7 @@
             // btnStat
             // 
             this.btnStat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStat.Location = new System.Drawing.Point(50, 461);
+            this.btnStat.Location = new System.Drawing.Point(50, 430);
             this.btnStat.Name = "btnStat";
             this.btnStat.Size = new System.Drawing.Size(192, 58);
             this.btnStat.TabIndex = 10;
@@ -122,7 +122,7 @@
             this.cmbFiltre.FormattingEnabled = true;
             this.cmbFiltre.Location = new System.Drawing.Point(962, 12);
             this.cmbFiltre.Name = "cmbFiltre";
-            this.cmbFiltre.Size = new System.Drawing.Size(164, 34);
+            this.cmbFiltre.Size = new System.Drawing.Size(164, 26);
             this.cmbFiltre.TabIndex = 11;
             this.cmbFiltre.SelectedIndexChanged += new System.EventHandler(this.cmbFiltre_SelectedIndexChanged);
             // 
@@ -131,13 +131,13 @@
             this.lblTbb.AutoSize = true;
             this.lblTbb.Location = new System.Drawing.Point(294, 25);
             this.lblTbb.Name = "lblTbb";
-            this.lblTbb.Size = new System.Drawing.Size(168, 26);
+            this.lblTbb.Size = new System.Drawing.Size(114, 18);
             this.lblTbb.TabIndex = 12;
             this.lblTbb.Text = "Tableau de bord";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 585);
             this.Controls.Add(this.lblTbb);

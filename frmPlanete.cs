@@ -67,7 +67,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 i++;
                 if (i % 3 == 0)
                 {
-                    top += 180;
+                    top += 200;
                     left = 10;
                 }
                 else

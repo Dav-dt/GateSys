@@ -40,13 +40,14 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.grpFiltre.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpRace
             // 
             this.flpRace.AutoScroll = true;
-            this.flpRace.Location = new System.Drawing.Point(23, 18);
+            this.flpRace.Location = new System.Drawing.Point(23, 163);
             this.flpRace.Name = "flpRace";
             this.flpRace.Size = new System.Drawing.Size(784, 425);
             this.flpRace.TabIndex = 0;
@@ -61,7 +62,7 @@
             this.grpFiltre.Controls.Add(this.txtNom);
             this.grpFiltre.Controls.Add(this.lblCouleur);
             this.grpFiltre.Controls.Add(this.lblNom);
-            this.grpFiltre.Location = new System.Drawing.Point(33, 473);
+            this.grpFiltre.Location = new System.Drawing.Point(23, 12);
             this.grpFiltre.Name = "grpFiltre";
             this.grpFiltre.Size = new System.Drawing.Size(773, 132);
             this.grpFiltre.TabIndex = 1;
@@ -119,14 +120,14 @@
             // cboCouleur
             // 
             this.cboCouleur.FormattingEnabled = true;
-            this.cboCouleur.Location = new System.Drawing.Point(57, 66);
+            this.cboCouleur.Location = new System.Drawing.Point(66, 71);
             this.cboCouleur.Name = "cboCouleur";
             this.cboCouleur.Size = new System.Drawing.Size(148, 21);
             this.cboCouleur.TabIndex = 3;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(57, 30);
+            this.txtNom.Location = new System.Drawing.Point(66, 27);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(143, 20);
             this.txtNom.TabIndex = 2;
@@ -149,11 +150,20 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom";
             // 
+            // buttonBack1
+            // 
+            this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
+            this.buttonBack1.Location = new System.Drawing.Point(716, 608);
+            this.buttonBack1.Name = "buttonBack1";
+            this.buttonBack1.Size = new System.Drawing.Size(91, 59);
+            this.buttonBack1.TabIndex = 2;
+            // 
             // frmRace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 638);
+            this.ClientSize = new System.Drawing.Size(831, 679);
+            this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.grpFiltre);
             this.Controls.Add(this.flpRace);
             this.Name = "frmRace";
@@ -179,5 +189,6 @@
         private System.Windows.Forms.RadioButton rbTous;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.RadioButton rbEnnemi;
+        private control.ButtonBack buttonBack1;
     }
 }

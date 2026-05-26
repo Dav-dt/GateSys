@@ -15,6 +15,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         public ButtonBack()
         {
             InitializeComponent();
+            BackColor = Color.FromArgb(21, 19, 30);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

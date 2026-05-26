@@ -38,6 +38,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             frm.Icon = Properties.Resources.imgIco;
             frm.AutoScaleMode = AutoScaleMode.None;
             frm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
+
 
             frm.MaximizeBox = false; //enleber le plein ecran
             //appel de la fonction pour appliquer style a tous les ctrl
@@ -54,18 +56,27 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             if (parent is Button btn)
             {
-                btn.UseCompatibleTextRendering = true;
-                btn.BackColor = m_couleurSecondaire;
+                if (btn.Image != null || btn.BackgroundImage != null)
+                {
+                    btn.BackColor = Color.Transparent; 
+ 
+                }
+                else
+                {
+                    // Bouton classique
+                    btn.BackColor = m_couleurSecondaire;
+                    btn.MouseEnter += new EventHandler(survolBouton);
+                    btn.MouseLeave += new EventHandler(quitterSurvolBouton);
+                }
+
                 btn.ForeColor = m_couleurTexte;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
                 btn.Cursor = Cursors.Hand;
-                btn.Font = new Font(font.FontFamily,
-                font.Size, FontStyle.Bold);
-
-                btn.MouseEnter += new EventHandler(survolBouton);
-                btn.MouseLeave += new EventHandler(quitterSurvolBouton);
+                btn.Font = new Font(font.FontFamily, font.Size, FontStyle.Bold);
             }
+             
+        
             else if (parent is Label lbl)
             {
                 lbl.ForeColor = m_couleurTexte;

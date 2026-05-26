@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "populationPlanete";
-            this.Size = new System.Drawing.Size(257, 186);
+            this.Size = new System.Drawing.Size(300, 186);
             this.ResumeLayout(false);
 
         }
