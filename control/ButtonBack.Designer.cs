@@ -34,10 +34,10 @@
             // btnBack
             // 
             this.btnBack.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.back;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.Location = new System.Drawing.Point(-37, -14);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(76, 70);
+            this.btnBack.Size = new System.Drawing.Size(132, 88);
             this.btnBack.TabIndex = 0;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.btnBack);
             this.Name = "ButtonBack";
-            this.Size = new System.Drawing.Size(76, 68);
+            this.Size = new System.Drawing.Size(57, 59);
             this.ResumeLayout(false);
 
         }

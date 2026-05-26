@@ -64,9 +64,9 @@
             // 
             // buttonBack1
             // 
-            this.buttonBack1.Location = new System.Drawing.Point(607, 378);
+            this.buttonBack1.Location = new System.Drawing.Point(612, 391);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(82, 73);
+            this.buttonBack1.Size = new System.Drawing.Size(59, 60);
             this.buttonBack1.TabIndex = 4;
             // 
             // frmInfoPlanete
