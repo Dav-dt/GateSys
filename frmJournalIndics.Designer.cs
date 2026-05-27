@@ -31,6 +31,7 @@
             this.pnlIndics = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.llblTotalSomme = new System.Windows.Forms.Label();
+            this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.SuspendLayout();
             // 
             // pnlIndics
@@ -59,11 +60,20 @@
             this.llblTotalSomme.TabIndex = 2;
             this.llblTotalSomme.Text = "label2";
             // 
+            // buttonBack1
+            // 
+            this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
+            this.buttonBack1.Location = new System.Drawing.Point(893, 495);
+            this.buttonBack1.Name = "buttonBack1";
+            this.buttonBack1.Size = new System.Drawing.Size(57, 59);
+            this.buttonBack1.TabIndex = 3;
+            // 
             // frmJournalIndics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 595);
+            this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.llblTotalSomme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlIndics);
@@ -80,5 +90,6 @@
         private System.Windows.Forms.Panel pnlIndics;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label llblTotalSomme;
+        private control.ButtonBack buttonBack1;
     }
 }

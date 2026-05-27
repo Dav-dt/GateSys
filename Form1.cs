@@ -211,7 +211,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             Application.DoEvents();
 
             frmStat stat = new frmStat();
-            stat.ShowDialog();
+            stat.Show();
             frmChargement.Close();
         }
 
