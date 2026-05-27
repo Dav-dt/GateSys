@@ -1,12 +1,9 @@
 ﻿using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Text;
+using System.IO;
 using System.Windows.Forms;
 
 namespace saeStargateTUAILLON_LONGO_YURTSEBEN
@@ -17,24 +14,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             InitializeComponent();
             //Style.InitControles(this);  il faut le a la main sinon ce sera trop dure a tout fix 
+            string path = Path.Combine(Application.StartupPath,
+                "fonts", "Saira_Condensed-Regular.ttf");
+
+            m_privateFontCollection.AddFontFile(path);
         }
+        private static PrivateFontCollection m_privateFontCollection =
+            new PrivateFontCollection();
+        private static Font m_font;
+
 
         private void frmStat_Load(object sender, EventArgs e)
         {
+
             DataTable dt = new Statistique().getMissionPlanete();
             NbMissionPlanete nbMission = new NbMissionPlanete(dt);
-            nbMission.Top = 10;
+            nbMission.Top = 20;
             nbMission.Left = 10;
-            this.Controls.Add(nbMission);
+            grpMissionPlanete.Controls.Add(nbMission);
 
-            DataTable d2 = new Statistique().DatagetBudget();
-            foreach(DataRow dr in d2.Rows)
-            {
-                DataTable budgetDetail = new Statistique().getBudgetDetail(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]));
-                BudgetMIssionStat bd = new BudgetMIssionStat(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]), Convert.ToInt32(dr["budget"]), Convert.ToInt32(dr["BudgetActuel"]),budgetDetail);
-                flpBudget.Controls.Add(bd);
 
-            }
             DataTable dtMenbre = new Statistique().getMenbre();
             cboCollegue.DataSource = dtMenbre;
             cboCollegue.DisplayMember = dtMenbre.Columns["nom"].ToString();
@@ -45,13 +44,41 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             cboMission.DisplayMember = "nomMission";
             cboMission.ValueMember = "nomMission";
 
+
+            //Style.InitControles(this);
+            DataTable d2 = new Statistique().DatagetBudget();
+            foreach (DataRow dr in d2.Rows)
+            {
+                DataTable budgetDetail = new Statistique().getBudgetDetail(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]));
+                BudgetMIssionStat bd = new BudgetMIssionStat(dr["nomPlanete"].ToString(), Convert.ToInt32(dr["numero"]), Convert.ToInt32(dr["budget"]), Convert.ToInt32(dr["BudgetActuel"]), budgetDetail);
+                flpBudget.Controls.Add(bd);
+
+            }
             DataTable dtDepense = new Statistique().getDepenseMax();
             DepenseMaxList dml = new DepenseMaxList(dtDepense);
 
             gbDepenseMax.Controls.Add(dml);
-            dml.Top += 15;
+            dml.Top += 20;
             dml.Left += 10;
-            
+
+            //Style(grpBudget);
+            Style.InitControles(this);
+
+
+
+
+        }
+
+        private void InitStyle(GroupBox grp)
+        {
+            this.BackColor = Color.FromArgb(21, 19, 30);
+
+            grp.ForeColor = Color.FromArgb(253, 128, 02);
+            grp.UseCompatibleTextRendering = true;
+            grp.Font = new Font(m_privateFontCollection.Families[0],
+            11, FontStyle.Regular);
+
+
 
         }
 
@@ -93,14 +120,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             string mission = cboMission.SelectedValue.ToString();
             string[] splitMission = mission.Split('-');
             DataTable dtInformateur = new Statistique().getInformateurMoins(splitMission[0], Convert.ToInt32(splitMission[1]));
-            if(dtInformateur.Rows.Count == 0)
+            if (dtInformateur.Rows.Count == 0)
             {
                 Label lbl = new Label();
                 lbl.Text = "Aucun informtaeur";
                 lbl.AutoSize = true;
                 flpInformteur.Controls.Add(lbl);
             }
-            foreach(DataRow dr in dtInformateur.Rows)
+            foreach (DataRow dr in dtInformateur.Rows)
             {
                 AlienReduit ar = new AlienReduit(dr["couleur"].ToString(), dr["nomCode"].ToString(), dr["especeOrigine"].ToString(), Convert.ToInt32(dr["sommeTotaleRecue"]));
                 flpInformteur.Controls.Add(ar);

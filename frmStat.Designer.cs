@@ -38,15 +38,18 @@
             this.flpInformteur = new System.Windows.Forms.FlowLayoutPanel();
             this.gbInformateur = new System.Windows.Forms.GroupBox();
             this.gbDepenseMax = new System.Windows.Forms.GroupBox();
+            this.grpMissionPlanete = new System.Windows.Forms.GroupBox();
+            this.grpBudget = new System.Windows.Forms.GroupBox();
             this.grpCollegue.SuspendLayout();
             this.gbInformateur.SuspendLayout();
+            this.grpBudget.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpBudget
             // 
             this.flpBudget.AutoScroll = true;
             this.flpBudget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpBudget.Location = new System.Drawing.Point(858, 12);
+            this.flpBudget.Location = new System.Drawing.Point(39, 32);
             this.flpBudget.Name = "flpBudget";
             this.flpBudget.Size = new System.Drawing.Size(566, 354);
             this.flpBudget.TabIndex = 0;
@@ -84,6 +87,7 @@
             // 
             // cboCollegue
             // 
+            this.cboCollegue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCollegue.FormattingEnabled = true;
             this.cboCollegue.Location = new System.Drawing.Point(10, 21);
             this.cboCollegue.Name = "cboCollegue";
@@ -92,6 +96,7 @@
             // 
             // cboMission
             // 
+            this.cboMission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMission.FormattingEnabled = true;
             this.cboMission.Location = new System.Drawing.Point(10, 21);
             this.cboMission.Name = "cboMission";
@@ -138,21 +143,42 @@
             this.gbDepenseMax.TabStop = false;
             this.gbDepenseMax.Text = "Dépense Max";
             // 
+            // grpMissionPlanete
+            // 
+            this.grpMissionPlanete.Location = new System.Drawing.Point(13, 10);
+            this.grpMissionPlanete.Name = "grpMissionPlanete";
+            this.grpMissionPlanete.Size = new System.Drawing.Size(780, 413);
+            this.grpMissionPlanete.TabIndex = 5;
+            this.grpMissionPlanete.TabStop = false;
+            this.grpMissionPlanete.Text = "Mission par Planete";
+            // 
+            // grpBudget
+            // 
+            this.grpBudget.Controls.Add(this.flpBudget);
+            this.grpBudget.Location = new System.Drawing.Point(819, 7);
+            this.grpBudget.Name = "grpBudget";
+            this.grpBudget.Size = new System.Drawing.Size(640, 415);
+            this.grpBudget.TabIndex = 6;
+            this.grpBudget.TabStop = false;
+            this.grpBudget.Text = "Budget par mission";
+            // 
             // frmStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1547, 952);
+            this.Controls.Add(this.grpBudget);
+            this.Controls.Add(this.grpMissionPlanete);
             this.Controls.Add(this.gbDepenseMax);
             this.Controls.Add(this.gbInformateur);
             this.Controls.Add(this.grpCollegue);
-            this.Controls.Add(this.flpBudget);
             this.Name = "frmStat";
             this.Text = "frmStat";
             this.Load += new System.EventHandler(this.frmStat_Load);
             this.grpCollegue.ResumeLayout(false);
             this.gbInformateur.ResumeLayout(false);
+            this.grpBudget.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -169,5 +195,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpInformteur;
         private System.Windows.Forms.GroupBox gbInformateur;
         private System.Windows.Forms.GroupBox gbDepenseMax;
+        private System.Windows.Forms.GroupBox grpMissionPlanete;
+        private System.Windows.Forms.GroupBox grpBudget;
     }
 }

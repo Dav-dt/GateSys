@@ -112,7 +112,6 @@
             // Planete
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.chkDatabaz);
             this.Controls.Add(this.lblGravite);
@@ -120,7 +119,7 @@
             this.Controls.Add(this.lblPlanete);
             this.Controls.Add(this.pbPlanete);
             this.Name = "Planete";
-            this.Size = new System.Drawing.Size(371, 188);
+            this.Size = new System.Drawing.Size(373, 198);
             this.Load += new System.EventHandler(this.Planete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
