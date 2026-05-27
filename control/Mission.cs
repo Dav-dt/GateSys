@@ -332,5 +332,28 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
             MessageBox.Show("PDF généré avec succès !\n" + sfd.FileName);
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            // Définir la couleur et l'épaisseur du pinceau
+            Color couleurBordure = Color.FromArgb(243, 214, 144);
+            int epaisseurBordure = 2;
+
+            // Créer le "stylo" (Pen)
+            using (Pen pen = new Pen(couleurBordure, epaisseurBordure))
+            {
+                // On ajuste légèrement le rectangle pour que la bordure ne soit pas coupée par les bords du contrôle
+                System.Drawing.Rectangle rect = new System.Drawing.Rectangle(
+                    epaisseurBordure / 2,
+                    epaisseurBordure / 2,
+                    this.Width - epaisseurBordure,
+                    this.Height - epaisseurBordure
+                );
+
+                // On dessine le rectangle sur le UserControl
+                e.Graphics.DrawRectangle(pen, rect);
+            }
+        }
     }
 }

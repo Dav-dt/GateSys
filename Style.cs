@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
@@ -19,7 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             new PrivateFontCollection();
         private static Font m_font;
 
-        private static Color m_couleurPrimaire  = Color.FromArgb(21, 19, 30);
+        private static Color m_couleurPrimaire = Color.FromArgb(21, 19, 30);
         private static Color m_couleurSecondaire = Color.FromArgb(45, 56, 76);
         private static Color m_couleurTexte = Color.FromArgb(243, 214, 144);
         private static Color m_couleurTitre = Color.FromArgb(253, 128, 02);
@@ -32,13 +30,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 "fonts", "Saira_Condensed-Regular.ttf");
 
             m_privateFontCollection.AddFontFile(path);
-            m_font = new Font(m_privateFontCollection.Families[0], 
+            m_font = new Font(m_privateFontCollection.Families[0],
                 13, FontStyle.Regular);
 
             frm.Icon = Properties.Resources.imgIco;
             frm.AutoScaleMode = AutoScaleMode.None;
             frm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            
+
 
 
             frm.MaximizeBox = false; //enleber le plein ecran
@@ -58,8 +56,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 if (btn.Image != null || btn.BackgroundImage != null)
                 {
-                    btn.BackColor = Color.Transparent; 
- 
+                    btn.BackColor = Color.Transparent;
+
                 }
                 else
                 {
@@ -76,8 +74,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 btn.UseCompatibleTextRendering = true;
                 btn.Font = new Font(font.FontFamily, font.Size, FontStyle.Bold);
             }
-             
-        
+
+
             else if (parent is Label lbl)
             {
                 lbl.ForeColor = m_couleurTexte;
@@ -108,7 +106,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 grp.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);
 
-                foreach ( Control c in grp.Controls)
+                foreach (Control c in grp.Controls)
                 {
                     c.ForeColor = m_couleurTexte;
                 }
@@ -158,7 +156,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 }
             }
 
-            else if  ( parent is DateTimePicker dt )
+            else if (parent is DateTimePicker dt)
             {
                 //marche pas du tout
                 Font dtFont = new Font(font.FontFamily, font.Size, FontStyle.Bold);
@@ -175,24 +173,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             //a ajouter : le tab control
 
             foreach (Control child in parent.Controls)
-                {
-                    ApplyStyleRecursive(child, font);
-                }
+            {
+                ApplyStyleRecursive(child, font);
+            }
         }
 
         private static void survolBouton(object sender, EventArgs e)
         {
-            if ( sender is Button btn )
-            { btn.BackColor = m_survolage;
-                btn.Size = new Size(btn.Size.Width +2, btn.Size.Height +2);
-            }        
+            if (sender is Button btn)
+            {
+                btn.BackColor = m_survolage;
+                btn.Size = new Size(btn.Size.Width + 2, btn.Size.Height + 2);
+            }
         }
 
         private static void quitterSurvolBouton(object sender, EventArgs e)
         {
-            if ( sender is Button btn )
-            { btn.BackColor = m_couleurSecondaire;
-                btn.Size = new Size(btn.Size.Width-2, btn.Size.Height-2);
+            if (sender is Button btn)
+            {
+                btn.BackColor = m_couleurSecondaire;
+                btn.Size = new Size(btn.Size.Width - 2, btn.Size.Height - 2);
             }
         }
     }
