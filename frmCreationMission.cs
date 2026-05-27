@@ -139,9 +139,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
                     '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
-                    {txtBudget.Text})";
+                    {txtBudget.Text})".Replace("'", "''");
 
-                    SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                     cmd.ExecuteNonQuery();
 
                     //insérer le chef aussi dans composer

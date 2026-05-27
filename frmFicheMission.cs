@@ -119,7 +119,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             //Remplissage des cmbs
             cmbINomIndic.DataSource = MesDatas.DsGlobal.Tables["Informateur"];
             cmbINomIndic.DisplayMember = "nom";
-            cmbINomIndic.ValueMember = "idEspeceEnnemi";
+            cmbINomIndic.ValueMember = "nomCode";
 
             cmbIdDepense.DataSource = MesDatas.DsGlobal.Tables["TypeDepense"];
             cmbIdDepense.DisplayMember = "libelle";
@@ -188,7 +188,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                  cmbINomIndic.SelectedIndex == -1 ||
                  txtSoudoiementIndic.Text == String.Empty)
             {
-                MessageBox.Show("Champs incomplets ou invalides");
+                MessageBox.Show("Champs incomplets ou invalides",
+                                "Erreur", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                 return;
             }
 
@@ -209,19 +211,25 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         VALUES('{m_nomPlanete}', {m_numero}, 
                         '{dtIndic.Value.ToString("yyyy-MM-dd")}', 
                         {Convert.ToInt32(txtSoudoiementIndic.Text)}, '{txtAppreciationIndic.Text}', 
-                        '{cmbINomIndic.SelectedValue}')";
+                        '{cmbINomIndic.SelectedValue}')".Replace("'", "''");
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Contact ajouté avec succès !");
+                MessageBox.Show("Contact ajouté avec succès !",
+                                "Succès", MessageBoxButtons.OK,
+                                MessageBoxIcon.None);
             }
             catch (SQLiteException ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message,
+                                "Erreur", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'ajout du contact : " + ex.Message,
+                                "Erreur", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
 
         }
@@ -262,7 +270,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         commentaires)
                         VALUES('{m_nomPlanete}', {m_numero}, 
                         '{dtNouvelEvent.Value.ToString("yyyy-MM-dd")}',
-                        '{txtNouvelEvent.Text}')";
+                        '{txtNouvelEvent.Text}')".Replace("'", "''");
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
@@ -312,7 +320,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     VALUES('{m_nomPlanete}', {m_numero}, {prochainId},
                     '{dtDepense.Value.ToString("yyyy-MM-dd")}', 
                         {Convert.ToInt32(txtMontantDepense.Text)},'{txtMotifDepense.Text}', 
-                        {cmbIdDepense.SelectedValue})";
+                        {cmbIdDepense.SelectedValue})".Replace("'", "''");
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
