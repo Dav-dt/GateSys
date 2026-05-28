@@ -128,10 +128,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             doc.Open();
 
             // Taille 
-            iTextSharp.text.Font fontTitre     = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            iTextSharp.text.Font fontTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
             iTextSharp.text.Font fontSousTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
-            iTextSharp.text.Font fontNormal    = FontFactory.GetFont(FontFactory.HELVETICA, 10);
-            iTextSharp.text.Font fontGras      = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
+            iTextSharp.text.Font fontNormal = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextSharp.text.Font fontGras = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
 
             // Récuperations  infos 
             DataRow[] drMission = MesDatas.DsGlobal.Tables["Mission"].Select(
@@ -309,16 +309,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                     int idEspece = Convert.ToInt32(obj["idEspeceEnnemi"]);
                     int objectif = Convert.ToInt32(obj["objectif"]);
 
-                    // nom de l'espèce
                     DataRow[] drEspece = MesDatas.DsGlobal.Tables["Espece"].Select($"id = {idEspece}");
                     string nomEspece = drEspece.Length > 0 ? drEspece[0]["nom"].ToString() : "?";
 
-                    // nombre réel de captures
                     DataRow[] drCaptures = MesDatas.DsGlobal.Tables["Capturer"].Select(
                         $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission} AND idEspeceEnnemi = {idEspece}");
                     int nombreReel = drCaptures.Length > 0 ? Convert.ToInt32(drCaptures[0]["nombre"]) : 0;
 
-                    // taux de réussite en %
                     int taux = objectif > 0 ? (int)((double)nombreReel / objectif * 100) : 0;
 
                     doc.Add(new Paragraph(
@@ -326,10 +323,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                         fontNormal));
                 }
             }
-
-            // fermeture obligatoire sinon le PDF est corrompu
             doc.Close();
-
             MessageBox.Show("PDF généré avec succès !\n" + sfd.FileName);
         }
         protected override void OnPaint(PaintEventArgs e)
