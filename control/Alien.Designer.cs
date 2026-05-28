@@ -41,7 +41,7 @@
             // 
             this.pbAlien.Location = new System.Drawing.Point(18, 16);
             this.pbAlien.Name = "pbAlien";
-            this.pbAlien.Size = new System.Drawing.Size(144, 148);
+            this.pbAlien.Size = new System.Drawing.Size(134, 135);
             this.pbAlien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAlien.TabIndex = 0;
             this.pbAlien.TabStop = false;
@@ -78,16 +78,14 @@
             this.lbDegre.AutoSize = true;
             this.lbDegre.Location = new System.Drawing.Point(181, 49);
             this.lbDegre.Name = "lbDegre";
-            this.lbDegre.Size = new System.Drawing.Size(35, 13);
+            this.lbDegre.Size = new System.Drawing.Size(0, 13);
             this.lbDegre.TabIndex = 4;
-            this.lbDegre.Text = "label1";
             // 
             // lbOutil
             // 
-            this.lbOutil.AutoSize = true;
-            this.lbOutil.Location = new System.Drawing.Point(182, 151);
+            this.lbOutil.Location = new System.Drawing.Point(181, 137);
             this.lbOutil.Name = "lbOutil";
-            this.lbOutil.Size = new System.Drawing.Size(0, 13);
+            this.lbOutil.Size = new System.Drawing.Size(165, 56);
             this.lbOutil.TabIndex = 5;
             // 
             // Alien
@@ -101,7 +99,7 @@
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pbAlien);
             this.Name = "Alien";
-            this.Size = new System.Drawing.Size(366, 187);
+            this.Size = new System.Drawing.Size(366, 212);
             ((System.ComponentModel.ISupportInitialize)(this.pbAlien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
