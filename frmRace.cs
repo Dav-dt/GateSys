@@ -27,6 +27,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataSet ds = MesDatas.DsGlobal;
             DataTable dt = ds.Tables["Espece"];
             DataTable couleur = dt.DefaultView.ToTable(true, "couleur");
+            cboCouleur.Items.Add("Tous");
             foreach (DataRow row in couleur.Rows)
             {
                 cboCouleur.Items.Add(row["couleur"]);
@@ -148,6 +149,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 }
             }
             Style.InitControles(this);
+        }
+
+        private void cboCouleur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
