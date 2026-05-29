@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +34,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             btnNouvellesMissions.Select();//plus beau
 
             Style.InitControles(this);
+            menuBar1.BringToFront();
 
         }
 

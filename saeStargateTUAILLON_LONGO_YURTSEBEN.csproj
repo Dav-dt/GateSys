@@ -117,6 +117,12 @@
     <Compile Include="control\Membre.Designer.cs">
       <DependentUpon>Membre.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\menuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\menuBar.Designer.cs">
+      <DependentUpon>menuBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\Mission.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\menuBar.resx">
+      <DependentUpon>menuBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\Mission.resx">
       <DependentUpon>Mission.cs</DependentUpon>
