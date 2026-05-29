@@ -1,4 +1,5 @@
-﻿using System;
+﻿using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
+using System;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -35,11 +36,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             frm.Icon = Properties.Resources.imgIco;
             frm.AutoScaleMode = AutoScaleMode.None;
-            frm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            frm.FormBorderStyle = FormBorderStyle.None;
 
 
 
             frm.MaximizeBox = false; //enleber le plein ecran
+            frm.ControlBox = false;
             //appel de la fonction pour appliquer style a tous les ctrl
             ApplyStyleRecursive(frm, m_font);
         }
@@ -74,7 +76,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 btn.UseCompatibleTextRendering = true;
                 btn.Font = new Font(font.FontFamily, font.Size, FontStyle.Bold);
             }
-
+            else if ( parent is menuBar mb)
+            {
+                return;
+            }
 
             else if (parent is Label lbl)
             {
@@ -178,7 +183,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
         }
 
-        private static void survolBouton(object sender, EventArgs e)
+        public static void survolBouton(object sender, EventArgs e)
         {
             if (sender is Button btn)
             {
@@ -187,7 +192,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
         }
 
-        private static void quitterSurvolBouton(object sender, EventArgs e)
+        public static void quitterSurvolBouton(object sender, EventArgs e)
         {
             if (sender is Button btn)
             {
