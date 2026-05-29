@@ -371,4 +371,4 @@ FodyWeavers.xsd
 /Resources/violet.png
 /control/DepenseMax.Designer.cs
 /control
-/Resources
+#/Resources
