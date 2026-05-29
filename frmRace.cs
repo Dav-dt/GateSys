@@ -17,6 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             InitializeComponent();
             Style.InitControles(this);
+
         }
 
         private void frmRace_Load(object sender, EventArgs e)
@@ -26,6 +27,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             DataSet ds = MesDatas.DsGlobal;
             DataTable dt = ds.Tables["Espece"];
             DataTable couleur = dt.DefaultView.ToTable(true, "couleur");
+            cboCouleur.Items.Add("Tous");
             foreach (DataRow row in couleur.Rows)
             {
                 cboCouleur.Items.Add(row["couleur"]);
@@ -90,7 +92,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         flpRace.Controls.Remove(al);
                     }
                 }
+           
             }
+            Style.InitControles(this);
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -113,6 +117,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     flpRace.Controls.Add(al);
                 }
             }
+            Style.InitControles(this);
 
         }
 
@@ -120,6 +125,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             Clear();
             ajoutAlien();
+            Style.InitControles(this);
         }
 
         private void rbAllie_CheckedChanged(object sender, EventArgs e)
@@ -142,6 +148,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     flpRace.Controls.Add(al);
                 }
             }
+            Style.InitControles(this);
+        }
+
+        private void cboCouleur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

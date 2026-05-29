@@ -82,7 +82,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
             //Dictionary<string, int> dic = new Dictionary<string, int> { { "test", 100 }, { "test2",20} };
             populationPlanete pl = new populationPlanete(dic, color);
-            pl.Top = 145;
+            pl.Top = 175;
             pl.Left = 10;
             this.Controls.Add(pl);
             Style.InitControles(this);

@@ -37,7 +37,7 @@
             // labelEspece
             // 
             this.labelEspece.AutoSize = true;
-            this.labelEspece.Location = new System.Drawing.Point(9, 196);
+            this.labelEspece.Location = new System.Drawing.Point(12, 221);
             this.labelEspece.Name = "labelEspece";
             this.labelEspece.Size = new System.Drawing.Size(84, 13);
             this.labelEspece.TabIndex = 0;
@@ -48,15 +48,15 @@
             this.lbMission.FormattingEnabled = true;
             this.lbMission.Items.AddRange(new object[] {
             ""});
-            this.lbMission.Location = new System.Drawing.Point(427, 221);
+            this.lbMission.Location = new System.Drawing.Point(331, 251);
             this.lbMission.Name = "lbMission";
-            this.lbMission.Size = new System.Drawing.Size(244, 95);
+            this.lbMission.Size = new System.Drawing.Size(340, 134);
             this.lbMission.TabIndex = 3;
             // 
             // labelMission
             // 
             this.labelMission.AutoSize = true;
-            this.labelMission.Location = new System.Drawing.Point(424, 196);
+            this.labelMission.Location = new System.Drawing.Point(328, 221);
             this.labelMission.Name = "labelMission";
             this.labelMission.Size = new System.Drawing.Size(45, 13);
             this.labelMission.TabIndex = 2;
@@ -64,6 +64,7 @@
             // 
             // buttonBack1
             // 
+            this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.buttonBack1.Location = new System.Drawing.Point(612, 391);
             this.buttonBack1.Name = "buttonBack1";
             this.buttonBack1.Size = new System.Drawing.Size(59, 60);

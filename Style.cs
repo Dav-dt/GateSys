@@ -83,7 +83,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             else if (parent is Label lbl)
             {
-                lbl.ForeColor = m_couleurTexte;
+
+                if (lbl.ForeColor == SystemColors.ControlText || lbl.ForeColor == Color.Black || lbl.ForeColor.IsEmpty)
+                {
+                    lbl.ForeColor = m_couleurTexte;
+                }
+
                 lbl.UseCompatibleTextRendering = true;
                 lbl.Font = new Font(font.FontFamily,
                     font.Size, FontStyle.Bold);

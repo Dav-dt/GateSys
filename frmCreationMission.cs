@@ -134,12 +134,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             try
                 {
-                    string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
+                string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
                     dateDepart, dateRetour, matriculeChef, feuilleDeRoute,objectifDatabaz,budget)
                     VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
                     '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
-                    {txtBudget.Text})".Replace("'", "''");
+                    {txtBudget.Text})";
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                     cmd.ExecuteNonQuery();

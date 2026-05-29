@@ -133,6 +133,7 @@
             this.cboCouleur.Name = "cboCouleur";
             this.cboCouleur.Size = new System.Drawing.Size(220, 28);
             this.cboCouleur.TabIndex = 3;
+            this.cboCouleur.SelectedIndexChanged += new System.EventHandler(this.cboCouleur_SelectedIndexChanged);
             // 
             // txtNom
             // 
