@@ -50,16 +50,16 @@
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(718, 427);
+            this.buttonBack1.Location = new System.Drawing.Point(720, 427);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(77, 59);
+            this.buttonBack1.Size = new System.Drawing.Size(92, 74);
             this.buttonBack1.TabIndex = 1;
             // 
             // frmJournalCaptures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 499);
+            this.ClientSize = new System.Drawing.Size(848, 532);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.dgvCapture);
             this.Name = "frmJournalCaptures";

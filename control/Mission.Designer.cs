@@ -32,12 +32,16 @@
             this.lblNomCapitaine = new System.Windows.Forms.Label();
             this.lblDateDepart = new System.Windows.Forms.Label();
             this.lblDateFin = new System.Windows.Forms.Label();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.pbPlanete = new System.Windows.Forms.PictureBox();
-            this.btnGenererPdf = new System.Windows.Forms.Button();
             this.lblbudget = new System.Windows.Forms.Label();
             this.lblBudgetText = new System.Windows.Forms.Label();
+            this.picDep = new System.Windows.Forms.PictureBox();
+            this.btnGenererPdf = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.pbPlanete = new System.Windows.Forms.PictureBox();
+            this.picRet = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomMission
@@ -81,6 +85,49 @@
             this.lblDateFin.TabIndex = 5;
             this.lblDateFin.Text = "label1";
             // 
+            // lblbudget
+            // 
+            this.lblbudget.AutoSize = true;
+            this.lblbudget.Location = new System.Drawing.Point(396, 169);
+            this.lblbudget.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblbudget.Name = "lblbudget";
+            this.lblbudget.Size = new System.Drawing.Size(69, 20);
+            this.lblbudget.TabIndex = 2;
+            this.lblbudget.Text = "Budget: ";
+            // 
+            // lblBudgetText
+            // 
+            this.lblBudgetText.AutoSize = true;
+            this.lblBudgetText.Location = new System.Drawing.Point(473, 175);
+            this.lblBudgetText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBudgetText.Name = "lblBudgetText";
+            this.lblBudgetText.Size = new System.Drawing.Size(0, 20);
+            this.lblBudgetText.TabIndex = 3;
+            // 
+            // picDep
+            // 
+            this.picDep.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.fuseeBetter;
+            this.picDep.Location = new System.Drawing.Point(227, 97);
+            this.picDep.Name = "picDep";
+            this.picDep.Size = new System.Drawing.Size(25, 28);
+            this.picDep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDep.TabIndex = 9;
+            this.picDep.TabStop = false;
+            // 
+            // btnGenererPdf
+            // 
+            this.btnGenererPdf.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.pdfAdobe;
+            this.btnGenererPdf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenererPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenererPdf.Location = new System.Drawing.Point(498, 69);
+            this.btnGenererPdf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGenererPdf.Name = "btnGenererPdf";
+            this.btnGenererPdf.Size = new System.Drawing.Size(84, 77);
+            this.btnGenererPdf.TabIndex = 8;
+            this.btnGenererPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGenererPdf.UseVisualStyleBackColor = true;
+            this.btnGenererPdf.Click += new System.EventHandler(this.btnGenererPdf_Click);
+            // 
             // btnInfo
             // 
             this.btnInfo.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.detailLogo;
@@ -104,44 +151,23 @@
             this.pbPlanete.TabIndex = 6;
             this.pbPlanete.TabStop = false;
             // 
-            // btnGenererPdf
+            // picRet
             // 
-            this.btnGenererPdf.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.pdfAdobe;
-            this.btnGenererPdf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenererPdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenererPdf.Location = new System.Drawing.Point(498, 69);
-            this.btnGenererPdf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGenererPdf.Name = "btnGenererPdf";
-            this.btnGenererPdf.Size = new System.Drawing.Size(84, 77);
-            this.btnGenererPdf.TabIndex = 8;
-            this.btnGenererPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGenererPdf.UseVisualStyleBackColor = true;
-            this.btnGenererPdf.Click += new System.EventHandler(this.btnGenererPdf_Click);
-            // 
-            // lblbudget
-            // 
-            this.lblbudget.AutoSize = true;
-            this.lblbudget.Location = new System.Drawing.Point(396, 169);
-            this.lblbudget.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblbudget.Name = "lblbudget";
-            this.lblbudget.Size = new System.Drawing.Size(69, 20);
-            this.lblbudget.TabIndex = 2;
-            this.lblbudget.Text = "Budget: ";
-            // 
-            // lblBudgetText
-            // 
-            this.lblBudgetText.AutoSize = true;
-            this.lblBudgetText.Location = new System.Drawing.Point(473, 175);
-            this.lblBudgetText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBudgetText.Name = "lblBudgetText";
-            this.lblBudgetText.Size = new System.Drawing.Size(0, 20);
-            this.lblBudgetText.TabIndex = 3;
+            this.picRet.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.drapeau;
+            this.picRet.Location = new System.Drawing.Point(374, 97);
+            this.picRet.Name = "picRet";
+            this.picRet.Size = new System.Drawing.Size(25, 28);
+            this.picRet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRet.TabIndex = 10;
+            this.picRet.TabStop = false;
             // 
             // Mission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.picRet);
+            this.Controls.Add(this.picDep);
             this.Controls.Add(this.btnGenererPdf);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.pbPlanete);
@@ -155,7 +181,9 @@
             this.Name = "Mission";
             this.Size = new System.Drawing.Size(724, 206);
             this.Load += new System.EventHandler(this.Mission_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picDep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +200,7 @@
         private System.Windows.Forms.Button btnGenererPdf;
         private System.Windows.Forms.Label lblbudget;
         private System.Windows.Forms.Label lblBudgetText;
+        private System.Windows.Forms.PictureBox picDep;
+        private System.Windows.Forms.PictureBox picRet;
     }
 }

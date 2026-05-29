@@ -143,6 +143,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drapeau {
+            get {
+                object obj = ResourceManager.GetObject("drapeau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap droiPassage {
             get {
                 object obj = ResourceManager.GetObject("droiPassage", resourceCulture);
@@ -196,6 +206,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.Properties {
         internal static System.Drawing.Bitmap fleche {
             get {
                 object obj = ResourceManager.GetObject("fleche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecheBetter {
+            get {
+                object obj = ResourceManager.GetObject("flecheBetter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fuseeBetter {
+            get {
+                object obj = ResourceManager.GetObject("fuseeBetter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
