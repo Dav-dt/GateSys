@@ -127,10 +127,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             doc.Open();
 
             // La polices choisie
-            iTextSharp.text.Font fontTitre     = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            iTextSharp.text.Font fontTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
             iTextSharp.text.Font fontSousTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
-            iTextSharp.text.Font fontNormal    = FontFactory.GetFont(FontFactory.HELVETICA, 10);
-            iTextSharp.text.Font fontGras      = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
+            iTextSharp.text.Font fontNormal = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextSharp.text.Font fontGras = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
 
             // Récupe donnée mission 
             DataRow[] drMission = MesDatas.DsGlobal.Tables["Mission"].Select(
@@ -193,11 +193,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             // Les infos générales 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
-            doc.Add(new Paragraph("Date de départ : "      + mission["dateDepart"],  fontNormal));
+            doc.Add(new Paragraph("Date de départ : " + mission["dateDepart"], fontNormal));
             doc.Add(new Paragraph("Date de retour prévue : " + mission["dateRetour"], fontNormal));
-            doc.Add(new Paragraph("Responsable : "         + nomChef,                fontNormal));
-            doc.Add(new Paragraph("Budget initial : "      + budgetInitial + " $DG", fontNormal));
-            doc.Add(new Paragraph("Budget restant : "      + budgetRestant + " $DG", fontNormal));
+            doc.Add(new Paragraph("Responsable : " + nomChef, fontNormal));
+            doc.Add(new Paragraph("Budget initial : " + budgetInitial + " $DG", fontNormal));
+            doc.Add(new Paragraph("Budget restant : " + budgetRestant + " $DG", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Feuille de route :", fontGras));
             doc.Add(new Paragraph(mission["feuilleDeRoute"].ToString(), fontNormal));
@@ -270,16 +270,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 tableDepenses.SetWidths(new float[] { 2f, 5f, 2f });
 
                 
-                tableDepenses.AddCell(new PdfPCell(new Phrase("Date",    fontGras)));
-                tableDepenses.AddCell(new PdfPCell(new Phrase("Motif",   fontGras)));
+                tableDepenses.AddCell(new PdfPCell(new Phrase("Date", fontGras)));
+                tableDepenses.AddCell(new PdfPCell(new Phrase("Motif", fontGras)));
                 tableDepenses.AddCell(new PdfPCell(new Phrase("Montant", fontGras)));
 
                 foreach (DataRow dep in drDepenses)
                 {
                     string date = Convert.ToDateTime(dep["dateD"]).ToString("dd/MM/yyyy");
-                    tableDepenses.AddCell(new PdfPCell(new Phrase(date,                      fontNormal)));
-                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["motif"].ToString(),   fontNormal)));
-                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["montant"] + " $DG",   fontNormal)));
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(date, fontNormal)));
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["motif"].ToString(), fontNormal)));
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["montant"] + " $DG", fontNormal)));
                 }
 
                 doc.Add(tableDepenses);
@@ -340,10 +340,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 tableCaptures.SetWidths(new float[] { 3f, 2f, 2f, 2f });
 
                
-                tableCaptures.AddCell(new PdfPCell(new Phrase("Espèce",   fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Espèce", fontGras)));
                 tableCaptures.AddCell(new PdfPCell(new Phrase("Objectif", fontGras)));
-                tableCaptures.AddCell(new PdfPCell(new Phrase("Réalisé",  fontGras)));
-                tableCaptures.AddCell(new PdfPCell(new Phrase("Taux",     fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Réalisé", fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Taux", fontGras)));
 
                 
                 foreach (DataRow obj in drObjectifs)
@@ -360,10 +360,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
                     int taux = objectif > 0 ? (int)((double)nombreReel / objectif * 100) : 0;
 
-                    tableCaptures.AddCell(new PdfPCell(new Phrase(nomEspece,             fontNormal)));
-                    tableCaptures.AddCell(new PdfPCell(new Phrase(objectif.ToString(),   fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(nomEspece, fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(objectif.ToString(), fontNormal)));
                     tableCaptures.AddCell(new PdfPCell(new Phrase(nombreReel.ToString(), fontNormal)));
-                    tableCaptures.AddCell(new PdfPCell(new Phrase(taux + " %",           fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(taux + " %", fontNormal)));
                 }
 
                 doc.Add(tableCaptures);
