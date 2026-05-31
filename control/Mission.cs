@@ -113,27 +113,26 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
         private void btnGenererPdf_Click(object sender, EventArgs e)
         {
-            // boite dialogue
+            // la boite de dialogue ou on pourra sauvegarder 
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "PDF|*.pdf";
             sfd.FileName = "Rapport_" + m_nomPlanete + "_" + m_numMission + ".pdf";
 
-            // Annule on fait retour
             if (sfd.ShowDialog() != DialogResult.OK)
                 return;
 
-            // Crée pdf 
+            // Créer PDf 
             Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
             PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
             doc.Open();
 
-            // Taille 
-            iTextSharp.text.Font fontTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            // La polices choisie
+            iTextSharp.text.Font fontTitre     = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
             iTextSharp.text.Font fontSousTitre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
-            iTextSharp.text.Font fontNormal = FontFactory.GetFont(FontFactory.HELVETICA, 10);
-            iTextSharp.text.Font fontGras = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
+            iTextSharp.text.Font fontNormal    = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextSharp.text.Font fontGras      = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
 
-            // Récuperations  infos 
+            // Récupe donnée mission 
             DataRow[] drMission = MesDatas.DsGlobal.Tables["Mission"].Select(
                 $"numero = {m_numMission} AND nomPlanete = '{m_nomPlanete}'");
 
@@ -146,15 +145,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
             DataRow mission = drMission[0];
 
-            // Chef de Mission
+            // Chef de mission
             string matriculeChef = mission["matriculeChef"].ToString();
-            DataRow[] drChef = MesDatas.DsGlobal.Tables["Membre"].Select(
-                $"matricule = '{matriculeChef}'");
-            string nomChef = drChef.Length > 0
-                ? drChef[0]["nom"] + " " + drChef[0]["prenom"]
-                : "Inconnu";
+            DataRow[] drChef = MesDatas.DsGlobal.Tables["Membre"].Select($"matricule = '{matriculeChef}'");
+            string nomChef = drChef.Length > 0 ? drChef[0]["nom"] + " " + drChef[0]["prenom"] : "Inconnu";
 
-            // Budget
+            // Calcul du budget restant
             int budgetInitial = Convert.ToInt32(mission["budget"]);
             DataRow[] drToutesDepenses = MesDatas.DsGlobal.Tables["Depense"].Select(
                 $"nomPlanete = '{m_nomPlanete}' AND numeroMission = {m_numMission}");
@@ -163,25 +159,51 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 totalDepenses += Convert.ToInt32(dep["montant"]);
             int budgetRestant = budgetInitial - totalDepenses;
 
-            // Titre rapport
-            doc.Add(new Paragraph("Rapport de mission", fontTitre));
-            doc.Add(new Paragraph(m_nomPlanete + " - " + m_numMission, fontTitre));
-            doc.Add(new Paragraph(" "));
-            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            
+            // Titre placer a gauche et le Logo a droite
+            iTextSharp.text.Image logo;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                Properties.Resources.logo.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                logo = iTextSharp.text.Image.GetInstance(ms.ToArray());
+            }
+            logo.ScaleToFit(60, 60);
+
+            // Tableau avec 2 colone pour le titre a gauche et le logo a droite 
+            PdfPTable tableEntete = new PdfPTable(2);
+            tableEntete.WidthPercentage = 100;
+            tableEntete.SetWidths(new float[] { 4f, 1f });
+
+            
+            PdfPCell cellTitre = new PdfPCell();
+            cellTitre.Border = PdfPCell.NO_BORDER;
+            cellTitre.AddElement(new Paragraph("Rapport de mission", fontTitre));
+            cellTitre.AddElement(new Paragraph(m_nomPlanete + " - Mission n°" + m_numMission, fontSousTitre));
+            tableEntete.AddCell(cellTitre);
+
+            
+            PdfPCell cellLogo = new PdfPCell(logo, true);
+            cellLogo.Border = PdfPCell.NO_BORDER;
+            cellLogo.HorizontalAlignment = Element.ALIGN_RIGHT;
+            tableEntete.AddCell(cellLogo);
+
+            doc.Add(tableEntete);
             doc.Add(new Paragraph(" "));
 
-            // La Date
-            doc.Add(new Paragraph("Date de départ : " + mission["dateDepart"], fontNormal));
+            // Les infos générales 
+            doc.Add(new Paragraph("------------------------------------------------", fontNormal));
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph("Date de départ : "      + mission["dateDepart"],  fontNormal));
             doc.Add(new Paragraph("Date de retour prévue : " + mission["dateRetour"], fontNormal));
-            doc.Add(new Paragraph("Responsable : " + nomChef, fontNormal));
-            doc.Add(new Paragraph("Budget initial : " + budgetInitial + " $DG", fontNormal));
-            doc.Add(new Paragraph("Budget restant : " + budgetRestant + " $DG", fontNormal));
+            doc.Add(new Paragraph("Responsable : "         + nomChef,                fontNormal));
+            doc.Add(new Paragraph("Budget initial : "      + budgetInitial + " $DG", fontNormal));
+            doc.Add(new Paragraph("Budget restant : "      + budgetRestant + " $DG", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Feuille de route :", fontGras));
             doc.Add(new Paragraph(mission["feuilleDeRoute"].ToString(), fontNormal));
             doc.Add(new Paragraph(" "));
 
-            // Liste  membres
+            // La liste des membres 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Liste des membres", fontSousTitre));
@@ -193,20 +215,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             foreach (DataRow rowComposer in drComposer)
             {
                 string mat = rowComposer["matriculeMembre"].ToString();
-                DataRow[] drInfo = MesDatas.DsGlobal.Tables["Membre"].Select(
-                    $"matricule = '{mat}'");
-
+                DataRow[] drInfo = MesDatas.DsGlobal.Tables["Membre"].Select($"matricule = '{mat}'");
                 if (drInfo.Length > 0)
                 {
                     string nomMembre = drInfo[0]["nom"] + " " + drInfo[0]["prenom"];
-                    
                     string type = mat.StartsWith("M") ? "Militaire" : "Civil";
                     doc.Add(new Paragraph("  --> " + nomMembre + " (" + type + ")", fontNormal));
                 }
             }
             doc.Add(new Paragraph(" "));
 
-            // Journal de bord
+            // le journale de bord 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Journal de bord", fontSousTitre));
@@ -229,7 +248,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
             doc.Add(new Paragraph(" "));
 
-            // Dépenses effectuées
+            // les dépense 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Dépenses effectuées", fontSousTitre));
@@ -244,20 +263,32 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
             else
             {
-                int compteur = 1;
+                // Tableau 3 colonnes : Date | Motif | Montant
+                // Tableau 3 colonne avec data , motif et montant 
+                PdfPTable tableDepenses = new PdfPTable(3);
+                tableDepenses.WidthPercentage = 100;
+                tableDepenses.SetWidths(new float[] { 2f, 5f, 2f });
+
+                
+                tableDepenses.AddCell(new PdfPCell(new Phrase("Date",    fontGras)));
+                tableDepenses.AddCell(new PdfPCell(new Phrase("Motif",   fontGras)));
+                tableDepenses.AddCell(new PdfPCell(new Phrase("Montant", fontGras)));
+
                 foreach (DataRow dep in drDepenses)
                 {
                     string date = Convert.ToDateTime(dep["dateD"]).ToString("dd/MM/yyyy");
-                    doc.Add(new Paragraph(
-                        "  " + compteur + ") le " + date + " : " + dep["motif"] + " -> " + dep["montant"] + " $DG",
-                        fontNormal));
-                    compteur++;
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(date,                      fontNormal)));
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["motif"].ToString(),   fontNormal)));
+                    tableDepenses.AddCell(new PdfPCell(new Phrase(dep["montant"] + " $DG",   fontNormal)));
                 }
-                doc.Add(new Paragraph("  Total : " + totalDepenses + " $DG", fontGras));
+
+                doc.Add(tableDepenses);
+                doc.Add(new Paragraph(" "));
+                doc.Add(new Paragraph("Total : " + totalDepenses + " $DG", fontGras));
             }
             doc.Add(new Paragraph(" "));
 
-            // Contacts informateurs
+            // contact informateur 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Contacts avec les informateurs", fontSousTitre));
@@ -283,11 +314,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                         fontNormal));
                     totalVerse += somme;
                 }
-                doc.Add(new Paragraph("  Total versé : " + totalVerse + " $DG", fontGras));
+                doc.Add(new Paragraph("Total versé : " + totalVerse + " $DG", fontGras));
             }
             doc.Add(new Paragraph(" "));
 
-            // Bilan captures
+            // le bilan des captures 
             doc.Add(new Paragraph("------------------------------------------------", fontNormal));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph("Bilan des captures", fontSousTitre));
@@ -302,8 +333,19 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             }
             else
             {
-                doc.Add(new Paragraph("  Espèce | Objectif | Réalisé | Taux", fontGras));
+               
+                // Tableau de 4 colonnes espèce, objetcif, réaliser et taux 
+                PdfPTable tableCaptures = new PdfPTable(4);
+                tableCaptures.WidthPercentage = 100;
+                tableCaptures.SetWidths(new float[] { 3f, 2f, 2f, 2f });
 
+               
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Espèce",   fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Objectif", fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Réalisé",  fontGras)));
+                tableCaptures.AddCell(new PdfPCell(new Phrase("Taux",     fontGras)));
+
+                
                 foreach (DataRow obj in drObjectifs)
                 {
                     int idEspece = Convert.ToInt32(obj["idEspeceEnnemi"]);
@@ -318,11 +360,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
                     int taux = objectif > 0 ? (int)((double)nombreReel / objectif * 100) : 0;
 
-                    doc.Add(new Paragraph(
-                        "  " + nomEspece + " | " + objectif + " | " + nombreReel + " | " + taux + " %",
-                        fontNormal));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(nomEspece,             fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(objectif.ToString(),   fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(nombreReel.ToString(), fontNormal)));
+                    tableCaptures.AddCell(new PdfPCell(new Phrase(taux + " %",           fontNormal)));
                 }
+
+                doc.Add(tableCaptures);
             }
+
             doc.Close();
             MessageBox.Show("PDF généré avec succès !\n" + sfd.FileName);
         }
@@ -330,14 +376,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
         {
             base.OnPaint(e);
 
-            // Définir la couleur et l'épaisseur du pinceau
+            
             Color couleurBordure = Color.FromArgb(243, 214, 144);
             int epaisseurBordure = 2;
 
-            // Créer le "stylo" (Pen)
             using (Pen pen = new Pen(couleurBordure, epaisseurBordure))
             {
-                // On ajuste légèrement le rectangle pour que la bordure ne soit pas coupée par les bords du contrôle
+               
                 System.Drawing.Rectangle rect = new System.Drawing.Rectangle(
                     epaisseurBordure / 2,
                     epaisseurBordure / 2,
@@ -345,7 +390,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                     this.Height - epaisseurBordure
                 );
 
-                // On dessine le rectangle sur le UserControl
                 e.Graphics.DrawRectangle(pen, rect);
             }
         }
