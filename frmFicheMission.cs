@@ -30,10 +30,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             Style.InitControles(this);
             m_nomPlanete = nomPlanete;
             m_numero = numero;
+
+            tabCtrlEdition.Appearance = TabAppearance.Buttons;
+            tabCtrlEdition.ItemSize = new Size(1, 1);
+            tabCtrlEdition.SizeMode = TabSizeMode.Fixed;
         }
 
         private void frmFicheMission_Load(object sender, EventArgs e)
         {
+            
             //verifier que la mission existe
             DataRow[] dr = MesDatas.DsGlobal.Tables["Mission"].Select(
                             $@"Numero = '{m_numero}' AND 
@@ -405,6 +410,27 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             frmNegociation frmNegociation = new frmNegociation(m_nomPlanete, m_numero);
             frmNegociation.Show();
+        }
+
+        private void btnPlusContact_Click(object sender, EventArgs e)
+        {
+            tabCtrlEdition.SelectedTab = tabNouveauContact;
+        }
+
+        private void btnPlusDepense_Click(object sender, EventArgs e)
+        {
+            tabCtrlEdition.SelectedTab = tabNouvelleDepense;
+
+        }
+
+        private void btnPlusEvent_Click(object sender, EventArgs e)
+        {
+            tabCtrlEdition.SelectedTab = tabNouvelEvenement;
+        }
+
+        private void btnPlusCapture_Click(object sender, EventArgs e)
+        {
+            tabCtrlEdition.SelectedTab = tabNouvelleCapture;
         }
     }
 }

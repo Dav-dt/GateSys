@@ -77,6 +77,11 @@
             this.btnJournal = new System.Windows.Forms.Button();
             this.picStatutMission = new System.Windows.Forms.PictureBox();
             this.btnContacterExtra = new System.Windows.Forms.Button();
+            this.btnPlusContact = new System.Windows.Forms.Button();
+            this.btnPlusDepense = new System.Windows.Forms.Button();
+            this.btnPlusEvent = new System.Windows.Forms.Button();
+            this.btnPlusCapture = new System.Windows.Forms.Button();
+            this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
@@ -95,11 +100,11 @@
             this.tabCtrlEdition.Controls.Add(this.tabNouvelleDepense);
             this.tabCtrlEdition.Controls.Add(this.tabNouvelEvenement);
             this.tabCtrlEdition.Controls.Add(this.tabNouvelleCapture);
-            this.tabCtrlEdition.Location = new System.Drawing.Point(613, 18);
+            this.tabCtrlEdition.Location = new System.Drawing.Point(613, 131);
             this.tabCtrlEdition.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabCtrlEdition.Name = "tabCtrlEdition";
             this.tabCtrlEdition.SelectedIndex = 0;
-            this.tabCtrlEdition.Size = new System.Drawing.Size(432, 648);
+            this.tabCtrlEdition.Size = new System.Drawing.Size(453, 553);
             this.tabCtrlEdition.TabIndex = 0;
             // 
             // tabNouveauContact
@@ -114,11 +119,11 @@
             this.tabNouveauContact.Controls.Add(this.lblSommeIndic);
             this.tabNouveauContact.Controls.Add(this.dtIndic);
             this.tabNouveauContact.Controls.Add(this.lblDateIndic);
-            this.tabNouveauContact.Location = new System.Drawing.Point(4, 24);
+            this.tabNouveauContact.Location = new System.Drawing.Point(4, 31);
             this.tabNouveauContact.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouveauContact.Name = "tabNouveauContact";
             this.tabNouveauContact.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabNouveauContact.Size = new System.Drawing.Size(424, 620);
+            this.tabNouveauContact.Size = new System.Drawing.Size(445, 518);
             this.tabNouveauContact.TabIndex = 0;
             this.tabNouveauContact.Text = "Nouveau contact";
             this.tabNouveauContact.UseVisualStyleBackColor = true;
@@ -128,14 +133,14 @@
             this.lblDG.AutoSize = true;
             this.lblDG.Location = new System.Drawing.Point(359, 100);
             this.lblDG.Name = "lblDG";
-            this.lblDG.Size = new System.Drawing.Size(32, 15);
+            this.lblDG.Size = new System.Drawing.Size(47, 22);
             this.lblDG.TabIndex = 9;
             this.lblDG.Text = "$DG";
             // 
             // btnValiderIndic
             // 
             this.btnValiderIndic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValiderIndic.Location = new System.Drawing.Point(294, 547);
+            this.btnValiderIndic.Location = new System.Drawing.Point(305, 461);
             this.btnValiderIndic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnValiderIndic.Name = "btnValiderIndic";
             this.btnValiderIndic.Size = new System.Drawing.Size(112, 51);
@@ -148,19 +153,19 @@
             // 
             this.cmbINomIndic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbINomIndic.FormattingEnabled = true;
-            this.cmbINomIndic.Location = new System.Drawing.Point(136, 443);
+            this.cmbINomIndic.Location = new System.Drawing.Point(133, 425);
             this.cmbINomIndic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbINomIndic.Name = "cmbINomIndic";
-            this.cmbINomIndic.Size = new System.Drawing.Size(248, 23);
+            this.cmbINomIndic.Size = new System.Drawing.Size(248, 30);
             this.cmbINomIndic.TabIndex = 7;
             // 
             // lblNomIndic
             // 
             this.lblNomIndic.AutoSize = true;
-            this.lblNomIndic.Location = new System.Drawing.Point(16, 445);
+            this.lblNomIndic.Location = new System.Drawing.Point(12, 425);
             this.lblNomIndic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomIndic.Name = "lblNomIndic";
-            this.lblNomIndic.Size = new System.Drawing.Size(70, 15);
+            this.lblNomIndic.Size = new System.Drawing.Size(100, 22);
             this.lblNomIndic.TabIndex = 6;
             this.lblNomIndic.Text = "Informateur";
             // 
@@ -179,16 +184,16 @@
             this.lblAppreciationIndic.Location = new System.Drawing.Point(12, 172);
             this.lblAppreciationIndic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAppreciationIndic.Name = "lblAppreciationIndic";
-            this.lblAppreciationIndic.Size = new System.Drawing.Size(75, 15);
+            this.lblAppreciationIndic.Size = new System.Drawing.Size(110, 22);
             this.lblAppreciationIndic.TabIndex = 4;
             this.lblAppreciationIndic.Text = "Appréciation";
             // 
             // txtSoudoiementIndic
             // 
-            this.txtSoudoiementIndic.Location = new System.Drawing.Point(226, 97);
+            this.txtSoudoiementIndic.Location = new System.Drawing.Point(220, 100);
             this.txtSoudoiementIndic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSoudoiementIndic.Name = "txtSoudoiementIndic";
-            this.txtSoudoiementIndic.Size = new System.Drawing.Size(84, 21);
+            this.txtSoudoiementIndic.Size = new System.Drawing.Size(116, 28);
             this.txtSoudoiementIndic.TabIndex = 3;
             this.txtSoudoiementIndic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberOnlyField_KeyPress);
             // 
@@ -198,16 +203,16 @@
             this.lblSommeIndic.Location = new System.Drawing.Point(12, 97);
             this.lblSommeIndic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSommeIndic.Name = "lblSommeIndic";
-            this.lblSommeIndic.Size = new System.Drawing.Size(128, 15);
+            this.lblSommeIndic.Size = new System.Drawing.Size(180, 22);
             this.lblSommeIndic.TabIndex = 2;
             this.lblSommeIndic.Text = "Somme Soudoiement";
             // 
             // dtIndic
             // 
-            this.dtIndic.Location = new System.Drawing.Point(126, 33);
+            this.dtIndic.Location = new System.Drawing.Point(99, 33);
             this.dtIndic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtIndic.Name = "dtIndic";
-            this.dtIndic.Size = new System.Drawing.Size(258, 21);
+            this.dtIndic.Size = new System.Drawing.Size(318, 28);
             this.dtIndic.TabIndex = 1;
             // 
             // lblDateIndic
@@ -216,7 +221,7 @@
             this.lblDateIndic.Location = new System.Drawing.Point(22, 33);
             this.lblDateIndic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateIndic.Name = "lblDateIndic";
-            this.lblDateIndic.Size = new System.Drawing.Size(33, 15);
+            this.lblDateIndic.Size = new System.Drawing.Size(48, 22);
             this.lblDateIndic.TabIndex = 0;
             this.lblDateIndic.Text = "Date";
             // 
@@ -232,11 +237,11 @@
             this.tabNouvelleDepense.Controls.Add(this.lblDepense);
             this.tabNouvelleDepense.Controls.Add(this.dtDepense);
             this.tabNouvelleDepense.Controls.Add(this.lblDtDepense);
-            this.tabNouvelleDepense.Location = new System.Drawing.Point(4, 24);
+            this.tabNouvelleDepense.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelleDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouvelleDepense.Name = "tabNouvelleDepense";
             this.tabNouvelleDepense.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabNouvelleDepense.Size = new System.Drawing.Size(424, 620);
+            this.tabNouvelleDepense.Size = new System.Drawing.Size(445, 528);
             this.tabNouvelleDepense.TabIndex = 1;
             this.tabNouvelleDepense.Text = "NouvelleDepense";
             this.tabNouvelleDepense.UseVisualStyleBackColor = true;
@@ -246,14 +251,14 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(354, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 15);
+            this.label3.Size = new System.Drawing.Size(47, 22);
             this.label3.TabIndex = 18;
             this.label3.Text = "$DG";
             // 
             // btnValiderDepense
             // 
             this.btnValiderDepense.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValiderDepense.Location = new System.Drawing.Point(298, 539);
+            this.btnValiderDepense.Location = new System.Drawing.Point(320, 468);
             this.btnValiderDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnValiderDepense.Name = "btnValiderDepense";
             this.btnValiderDepense.Size = new System.Drawing.Size(112, 51);
@@ -269,7 +274,7 @@
             this.cmbIdDepense.Location = new System.Drawing.Point(139, 434);
             this.cmbIdDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbIdDepense.Name = "cmbIdDepense";
-            this.cmbIdDepense.Size = new System.Drawing.Size(248, 23);
+            this.cmbIdDepense.Size = new System.Drawing.Size(248, 30);
             this.cmbIdDepense.TabIndex = 16;
             // 
             // lblIdDepense
@@ -278,7 +283,7 @@
             this.lblIdDepense.Location = new System.Drawing.Point(19, 436);
             this.lblIdDepense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdDepense.Name = "lblIdDepense";
-            this.lblIdDepense.Size = new System.Drawing.Size(84, 15);
+            this.lblIdDepense.Size = new System.Drawing.Size(125, 22);
             this.lblIdDepense.TabIndex = 15;
             this.lblIdDepense.Text = "Type dépense";
             // 
@@ -297,16 +302,16 @@
             this.lblMotifDepense.Location = new System.Drawing.Point(15, 164);
             this.lblMotifDepense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMotifDepense.Name = "lblMotifDepense";
-            this.lblMotifDepense.Size = new System.Drawing.Size(87, 15);
+            this.lblMotifDepense.Size = new System.Drawing.Size(125, 22);
             this.lblMotifDepense.TabIndex = 13;
             this.lblMotifDepense.Text = "Motif Dépense";
             // 
             // txtMontantDepense
             // 
-            this.txtMontantDepense.Location = new System.Drawing.Point(229, 88);
+            this.txtMontantDepense.Location = new System.Drawing.Point(185, 85);
             this.txtMontantDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMontantDepense.Name = "txtMontantDepense";
-            this.txtMontantDepense.Size = new System.Drawing.Size(84, 21);
+            this.txtMontantDepense.Size = new System.Drawing.Size(144, 28);
             this.txtMontantDepense.TabIndex = 12;
             // 
             // lblDepense
@@ -315,16 +320,16 @@
             this.lblDepense.Location = new System.Drawing.Point(15, 88);
             this.lblDepense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepense.Name = "lblDepense";
-            this.lblDepense.Size = new System.Drawing.Size(103, 15);
+            this.lblDepense.Size = new System.Drawing.Size(148, 22);
             this.lblDepense.TabIndex = 11;
             this.lblDepense.Text = "Montant dépense";
             // 
             // dtDepense
             // 
-            this.dtDepense.Location = new System.Drawing.Point(129, 25);
+            this.dtDepense.Location = new System.Drawing.Point(104, 25);
             this.dtDepense.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtDepense.Name = "dtDepense";
-            this.dtDepense.Size = new System.Drawing.Size(258, 21);
+            this.dtDepense.Size = new System.Drawing.Size(307, 28);
             this.dtDepense.TabIndex = 10;
             // 
             // lblDtDepense
@@ -333,7 +338,7 @@
             this.lblDtDepense.Location = new System.Drawing.Point(25, 25);
             this.lblDtDepense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDtDepense.Name = "lblDtDepense";
-            this.lblDtDepense.Size = new System.Drawing.Size(33, 15);
+            this.lblDtDepense.Size = new System.Drawing.Size(48, 22);
             this.lblDtDepense.TabIndex = 9;
             this.lblDtDepense.Text = "Date";
             // 
@@ -344,10 +349,10 @@
             this.tabNouvelEvenement.Controls.Add(this.label1);
             this.tabNouvelEvenement.Controls.Add(this.dtNouvelEvent);
             this.tabNouvelEvenement.Controls.Add(this.lblDtNouvelEvent);
-            this.tabNouvelEvenement.Location = new System.Drawing.Point(4, 24);
+            this.tabNouvelEvenement.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelEvenement.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabNouvelEvenement.Name = "tabNouvelEvenement";
-            this.tabNouvelEvenement.Size = new System.Drawing.Size(424, 620);
+            this.tabNouvelEvenement.Size = new System.Drawing.Size(445, 528);
             this.tabNouvelEvenement.TabIndex = 2;
             this.tabNouvelEvenement.Text = "Nouvel évènement";
             this.tabNouvelEvenement.UseVisualStyleBackColor = true;
@@ -355,7 +360,7 @@
             // btnValiderNouvelEvent
             // 
             this.btnValiderNouvelEvent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValiderNouvelEvent.Location = new System.Drawing.Point(299, 545);
+            this.btnValiderNouvelEvent.Location = new System.Drawing.Point(310, 422);
             this.btnValiderNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnValiderNouvelEvent.Name = "btnValiderNouvelEvent";
             this.btnValiderNouvelEvent.Size = new System.Drawing.Size(112, 51);
@@ -379,16 +384,16 @@
             this.label1.Location = new System.Drawing.Point(25, 95);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(116, 22);
             this.label1.TabIndex = 13;
             this.label1.Text = "Commentaire";
             // 
             // dtNouvelEvent
             // 
-            this.dtNouvelEvent.Location = new System.Drawing.Point(129, 27);
+            this.dtNouvelEvent.Location = new System.Drawing.Point(119, 27);
             this.dtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtNouvelEvent.Name = "dtNouvelEvent";
-            this.dtNouvelEvent.Size = new System.Drawing.Size(258, 21);
+            this.dtNouvelEvent.Size = new System.Drawing.Size(199, 28);
             this.dtNouvelEvent.TabIndex = 12;
             // 
             // lblDtNouvelEvent
@@ -397,7 +402,7 @@
             this.lblDtNouvelEvent.Location = new System.Drawing.Point(25, 27);
             this.lblDtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDtNouvelEvent.Name = "lblDtNouvelEvent";
-            this.lblDtNouvelEvent.Size = new System.Drawing.Size(33, 15);
+            this.lblDtNouvelEvent.Size = new System.Drawing.Size(48, 22);
             this.lblDtNouvelEvent.TabIndex = 11;
             this.lblDtNouvelEvent.Text = "Date";
             // 
@@ -408,9 +413,9 @@
             this.tabNouvelleCapture.Controls.Add(this.btnValiderNouvelleCapture);
             this.tabNouvelleCapture.Controls.Add(this.cmbEnnemiCapture);
             this.tabNouvelleCapture.Controls.Add(this.lblCaptureEnnemi);
-            this.tabNouvelleCapture.Location = new System.Drawing.Point(4, 24);
+            this.tabNouvelleCapture.Location = new System.Drawing.Point(4, 31);
             this.tabNouvelleCapture.Name = "tabNouvelleCapture";
-            this.tabNouvelleCapture.Size = new System.Drawing.Size(424, 620);
+            this.tabNouvelleCapture.Size = new System.Drawing.Size(445, 528);
             this.tabNouvelleCapture.TabIndex = 3;
             this.tabNouvelleCapture.Text = "Nouvelle Capture";
             this.tabNouvelleCapture.UseVisualStyleBackColor = true;
@@ -419,7 +424,7 @@
             // 
             this.txtNbCapture.Location = new System.Drawing.Point(131, 105);
             this.txtNbCapture.Name = "txtNbCapture";
-            this.txtNbCapture.Size = new System.Drawing.Size(100, 21);
+            this.txtNbCapture.Size = new System.Drawing.Size(113, 28);
             this.txtNbCapture.TabIndex = 4;
             this.txtNbCapture.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberOnlyField_KeyPress);
             // 
@@ -428,13 +433,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
+            this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre :";
             // 
             // btnValiderNouvelleCapture
             // 
-            this.btnValiderNouvelleCapture.Location = new System.Drawing.Point(289, 558);
+            this.btnValiderNouvelleCapture.Location = new System.Drawing.Point(293, 389);
             this.btnValiderNouvelleCapture.Name = "btnValiderNouvelleCapture";
             this.btnValiderNouvelleCapture.Size = new System.Drawing.Size(114, 40);
             this.btnValiderNouvelleCapture.TabIndex = 2;
@@ -448,7 +453,7 @@
             this.cmbEnnemiCapture.FormattingEnabled = true;
             this.cmbEnnemiCapture.Location = new System.Drawing.Point(131, 43);
             this.cmbEnnemiCapture.Name = "cmbEnnemiCapture";
-            this.cmbEnnemiCapture.Size = new System.Drawing.Size(250, 23);
+            this.cmbEnnemiCapture.Size = new System.Drawing.Size(250, 30);
             this.cmbEnnemiCapture.TabIndex = 1;
             // 
             // lblCaptureEnnemi
@@ -456,57 +461,57 @@
             this.lblCaptureEnnemi.AutoSize = true;
             this.lblCaptureEnnemi.Location = new System.Drawing.Point(16, 43);
             this.lblCaptureEnnemi.Name = "lblCaptureEnnemi";
-            this.lblCaptureEnnemi.Size = new System.Drawing.Size(56, 15);
+            this.lblCaptureEnnemi.Size = new System.Drawing.Size(80, 22);
             this.lblCaptureEnnemi.TabIndex = 0;
             this.lblCaptureEnnemi.Text = "Ennemi :";
             // 
             // lblMission
             // 
             this.lblMission.AutoSize = true;
-            this.lblMission.Location = new System.Drawing.Point(144, 10);
+            this.lblMission.Location = new System.Drawing.Point(155, 40);
             this.lblMission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMission.Name = "lblMission";
-            this.lblMission.Size = new System.Drawing.Size(50, 15);
+            this.lblMission.Size = new System.Drawing.Size(70, 22);
             this.lblMission.TabIndex = 1;
             this.lblMission.Text = "Mission";
             // 
             // lblDtDepart
             // 
             this.lblDtDepart.AutoSize = true;
-            this.lblDtDepart.Location = new System.Drawing.Point(28, 73);
+            this.lblDtDepart.Location = new System.Drawing.Point(36, 91);
             this.lblDtDepart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDtDepart.Name = "lblDtDepart";
-            this.lblDtDepart.Size = new System.Drawing.Size(41, 15);
+            this.lblDtDepart.Size = new System.Drawing.Size(58, 22);
             this.lblDtDepart.TabIndex = 2;
             this.lblDtDepart.Text = "label1";
             // 
             // lblDtRetour
             // 
             this.lblDtRetour.AutoSize = true;
-            this.lblDtRetour.Location = new System.Drawing.Point(28, 103);
+            this.lblDtRetour.Location = new System.Drawing.Point(36, 121);
             this.lblDtRetour.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDtRetour.Name = "lblDtRetour";
-            this.lblDtRetour.Size = new System.Drawing.Size(41, 15);
+            this.lblDtRetour.Size = new System.Drawing.Size(58, 22);
             this.lblDtRetour.TabIndex = 3;
             this.lblDtRetour.Text = "label1";
             // 
             // lblBudget
             // 
             this.lblBudget.AutoSize = true;
-            this.lblBudget.Location = new System.Drawing.Point(294, 73);
+            this.lblBudget.Location = new System.Drawing.Point(302, 91);
             this.lblBudget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBudget.Name = "lblBudget";
-            this.lblBudget.Size = new System.Drawing.Size(41, 15);
+            this.lblBudget.Size = new System.Drawing.Size(58, 22);
             this.lblBudget.TabIndex = 4;
             this.lblBudget.Text = "label1";
             // 
             // lblBudgetApresDepenses
             // 
             this.lblBudgetApresDepenses.AutoSize = true;
-            this.lblBudgetApresDepenses.Location = new System.Drawing.Point(294, 103);
+            this.lblBudgetApresDepenses.Location = new System.Drawing.Point(302, 121);
             this.lblBudgetApresDepenses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBudgetApresDepenses.Name = "lblBudgetApresDepenses";
-            this.lblBudgetApresDepenses.Size = new System.Drawing.Size(41, 15);
+            this.lblBudgetApresDepenses.Size = new System.Drawing.Size(58, 22);
             this.lblBudgetApresDepenses.TabIndex = 5;
             this.lblBudgetApresDepenses.Text = "label1";
             // 
@@ -590,7 +595,7 @@
             // 
             // picStatutMission
             // 
-            this.picStatutMission.Location = new System.Drawing.Point(446, 12);
+            this.picStatutMission.Location = new System.Drawing.Point(477, 45);
             this.picStatutMission.Name = "picStatutMission";
             this.picStatutMission.Size = new System.Drawing.Size(70, 68);
             this.picStatutMission.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -608,19 +613,76 @@
             this.btnContacterExtra.UseVisualStyleBackColor = true;
             this.btnContacterExtra.Click += new System.EventHandler(this.btnContacterExtra_Click);
             // 
+            // btnPlusContact
+            // 
+            this.btnPlusContact.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.contact;
+            this.btnPlusContact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlusContact.Location = new System.Drawing.Point(613, 73);
+            this.btnPlusContact.Name = "btnPlusContact";
+            this.btnPlusContact.Size = new System.Drawing.Size(98, 52);
+            this.btnPlusContact.TabIndex = 12;
+            this.btnPlusContact.UseVisualStyleBackColor = true;
+            this.btnPlusContact.Click += new System.EventHandler(this.btnPlusContact_Click);
+            // 
+            // btnPlusDepense
+            // 
+            this.btnPlusDepense.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.depense;
+            this.btnPlusDepense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlusDepense.Location = new System.Drawing.Point(733, 73);
+            this.btnPlusDepense.Name = "btnPlusDepense";
+            this.btnPlusDepense.Size = new System.Drawing.Size(98, 52);
+            this.btnPlusDepense.TabIndex = 13;
+            this.btnPlusDepense.UseVisualStyleBackColor = true;
+            this.btnPlusDepense.Click += new System.EventHandler(this.btnPlusDepense_Click);
+            // 
+            // btnPlusEvent
+            // 
+            this.btnPlusEvent.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.plusEvent;
+            this.btnPlusEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlusEvent.Location = new System.Drawing.Point(837, 73);
+            this.btnPlusEvent.Name = "btnPlusEvent";
+            this.btnPlusEvent.Size = new System.Drawing.Size(98, 52);
+            this.btnPlusEvent.TabIndex = 14;
+            this.btnPlusEvent.UseVisualStyleBackColor = true;
+            this.btnPlusEvent.Click += new System.EventHandler(this.btnPlusEvent_Click);
+            // 
+            // btnPlusCapture
+            // 
+            this.btnPlusCapture.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.plusCapture;
+            this.btnPlusCapture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlusCapture.Location = new System.Drawing.Point(951, 73);
+            this.btnPlusCapture.Name = "btnPlusCapture";
+            this.btnPlusCapture.Size = new System.Drawing.Size(98, 52);
+            this.btnPlusCapture.TabIndex = 15;
+            this.btnPlusCapture.UseVisualStyleBackColor = true;
+            this.btnPlusCapture.Click += new System.EventHandler(this.btnPlusCapture_Click);
+            // 
+            // menuBar1
+            // 
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(3, -4);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(1084, 41);
+            this.menuBar1.TabIndex = 16;
+            // 
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(978, 681);
+            this.buttonBack1.Location = new System.Drawing.Point(995, 686);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(67, 62);
+            this.buttonBack1.Size = new System.Drawing.Size(67, 72);
             this.buttonBack1.TabIndex = 11;
             // 
             // frmFicheMission
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 755);
+            this.Controls.Add(this.menuBar1);
+            this.Controls.Add(this.btnPlusCapture);
+            this.Controls.Add(this.btnPlusEvent);
+            this.Controls.Add(this.btnPlusDepense);
+            this.Controls.Add(this.btnPlusContact);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.btnContacterExtra);
             this.Controls.Add(this.picStatutMission);
@@ -709,5 +771,10 @@
         private System.Windows.Forms.Label lblDG;
         private System.Windows.Forms.Label label3;
         private control.ButtonBack buttonBack1;
+        private System.Windows.Forms.Button btnPlusContact;
+        private System.Windows.Forms.Button btnPlusDepense;
+        private System.Windows.Forms.Button btnPlusEvent;
+        private System.Windows.Forms.Button btnPlusCapture;
+        private control.menuBar menuBar1;
     }
 }
