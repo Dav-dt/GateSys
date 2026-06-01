@@ -56,18 +56,23 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             if (parent is Button btn)
             {
+
+                btn.UseVisualStyleBackColor = false;
+
                 if (btn.Image != null || btn.BackgroundImage != null)
                 {
                     btn.BackColor = Color.Transparent;
+                    btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    btn.FlatAppearance.MouseDownBackColor = Color.Transparent;
 
                 }
                 else
                 {
                     // Bouton classique
                     btn.BackColor = m_couleurSecondaire;
-                    btn.MouseEnter += new EventHandler(survolBouton);
-                    btn.MouseLeave += new EventHandler(quitterSurvolBouton);
                 }
+                btn.MouseEnter += new EventHandler(survolBouton);
+                btn.MouseLeave += new EventHandler(quitterSurvolBouton);
 
                 btn.ForeColor = m_couleurTexte;
                 btn.FlatStyle = FlatStyle.Flat;
@@ -169,6 +174,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             else if (parent is DateTimePicker dt)
             {
                 //marche pas du tout
+                /*
                 Font dtFont = new Font(font.FontFamily, font.Size, FontStyle.Bold);
                 dt.Font = dtFont;
                 dt.CalendarFont = dtFont;
@@ -177,7 +183,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 dt.CalendarTitleBackColor = m_couleurTitre;
                 dt.CalendarMonthBackground = m_couleurTitre;
                 dt.CalendarTitleBackColor = m_couleurSecondaire;
-
+                */
             }
 
             //a ajouter : le tab control
@@ -192,7 +198,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             if (sender is Button btn)
             {
-                btn.BackColor = m_survolage;
+                //si le btn nas pas dimage pas de couleur
+                if (btn.BackgroundImage ==  null)
+                    btn.BackColor = m_survolage;
                 btn.Size = new Size(btn.Size.Width + 2, btn.Size.Height + 2);
             }
         }
@@ -201,7 +209,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             if (sender is Button btn)
             {
-                btn.BackColor = m_couleurSecondaire;
+                if ( btn.BackgroundImage == null )
+                    btn.BackColor = m_couleurSecondaire;
                 btn.Size = new Size(btn.Size.Width - 2, btn.Size.Height - 2);
             }
         }

@@ -56,10 +56,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
         private void picFermer_MouseEnter(object sender, EventArgs e)
         {
+            PictureBox pic = sender as PictureBox;
+            pic.Size = new Size(pic.Size.Width +2, pic.Size.Height +2);
         }
 
         private void picFermer_MouseLeave(object sender, EventArgs e)
         {
+            PictureBox pic = sender as PictureBox;
+            pic.Size = new Size(pic.Size.Width -2, pic.Size.Height -2);
+
         }
 
 

@@ -44,7 +44,7 @@
             // btnInfosPlanetes
             // 
             this.btnInfosPlanetes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfosPlanetes.Location = new System.Drawing.Point(43, 403);
+            this.btnInfosPlanetes.Location = new System.Drawing.Point(44, 374);
             this.btnInfosPlanetes.Name = "btnInfosPlanetes";
             this.btnInfosPlanetes.Size = new System.Drawing.Size(192, 58);
             this.btnInfosPlanetes.TabIndex = 0;
@@ -55,7 +55,7 @@
             // btnRaces
             // 
             this.btnRaces.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRaces.Location = new System.Drawing.Point(43, 318);
+            this.btnRaces.Location = new System.Drawing.Point(44, 286);
             this.btnRaces.Name = "btnRaces";
             this.btnRaces.Size = new System.Drawing.Size(192, 55);
             this.btnRaces.TabIndex = 1;
@@ -66,7 +66,7 @@
             // btnNouvellesMissions
             // 
             this.btnNouvellesMissions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNouvellesMissions.Location = new System.Drawing.Point(43, 217);
+            this.btnNouvellesMissions.Location = new System.Drawing.Point(44, 186);
             this.btnNouvellesMissions.Name = "btnNouvellesMissions";
             this.btnNouvellesMissions.Size = new System.Drawing.Size(192, 77);
             this.btnNouvellesMissions.TabIndex = 2;
@@ -77,7 +77,7 @@
             // btnQuitter
             // 
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuitter.Location = new System.Drawing.Point(72, 583);
+            this.btnQuitter.Location = new System.Drawing.Point(76, 578);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(124, 48);
             this.btnQuitter.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.picLogo.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.logo;
             this.picLogo.InitialImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.logo;
-            this.picLogo.Location = new System.Drawing.Point(12, 91);
+            this.picLogo.Location = new System.Drawing.Point(13, 50);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(268, 102);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@
             // btnStat
             // 
             this.btnStat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStat.Location = new System.Drawing.Point(43, 488);
+            this.btnStat.Location = new System.Drawing.Point(44, 462);
             this.btnStat.Name = "btnStat";
             this.btnStat.Size = new System.Drawing.Size(192, 58);
             this.btnStat.TabIndex = 10;
@@ -123,7 +123,7 @@
             this.cmbFiltre.FormattingEnabled = true;
             this.cmbFiltre.Location = new System.Drawing.Point(893, 80);
             this.cmbFiltre.Name = "cmbFiltre";
-            this.cmbFiltre.Size = new System.Drawing.Size(164, 26);
+            this.cmbFiltre.Size = new System.Drawing.Size(164, 34);
             this.cmbFiltre.TabIndex = 11;
             this.cmbFiltre.SelectedIndexChanged += new System.EventHandler(this.cmbFiltre_SelectedIndexChanged);
             // 
@@ -132,22 +132,22 @@
             this.lblTbb.AutoSize = true;
             this.lblTbb.Location = new System.Drawing.Point(287, 83);
             this.lblTbb.Name = "lblTbb";
-            this.lblTbb.Size = new System.Drawing.Size(114, 18);
+            this.lblTbb.Size = new System.Drawing.Size(168, 26);
             this.lblTbb.TabIndex = 12;
             this.lblTbb.Text = "Tableau de bord";
             // 
             // menuBar1
             // 
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(-1, -1);
-            this.menuBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menuBar1.Location = new System.Drawing.Point(11, -1);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
             this.menuBar1.Name = "menuBar1";
             this.menuBar1.Size = new System.Drawing.Size(1058, 35);
             this.menuBar1.TabIndex = 13;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 656);
             this.Controls.Add(this.menuBar1);
