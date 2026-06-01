@@ -38,10 +38,10 @@
             // pnlIndics
             // 
             this.pnlIndics.AutoScroll = true;
-            this.pnlIndics.Location = new System.Drawing.Point(76, 79);
-            this.pnlIndics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIndics.Location = new System.Drawing.Point(16, 82);
+            this.pnlIndics.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIndics.Name = "pnlIndics";
-            this.pnlIndics.Size = new System.Drawing.Size(496, 302);
+            this.pnlIndics.Size = new System.Drawing.Size(714, 292);
             this.pnlIndics.TabIndex = 0;
             // 
             // label1
@@ -67,8 +67,8 @@
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(582, 378);
-            this.buttonBack1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBack1.Location = new System.Drawing.Point(655, 381);
+            this.buttonBack1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack1.Name = "buttonBack1";
             this.buttonBack1.Size = new System.Drawing.Size(75, 60);
             this.buttonBack1.TabIndex = 3;
@@ -78,7 +78,7 @@
             this.menuBar1.AutoSize = true;
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(523, 3);
+            this.menuBar1.Location = new System.Drawing.Point(595, 2);
             this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
             this.menuBar1.Name = "menuBar1";
             this.menuBar1.Size = new System.Drawing.Size(154, 32);
@@ -88,13 +88,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 452);
+            this.ClientSize = new System.Drawing.Size(760, 452);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.llblTotalSomme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlIndics);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmJournalIndics";
             this.Text = "frmJournalIndics";
             this.Load += new System.EventHandler(this.frmJournalIndics_Load);
