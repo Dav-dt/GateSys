@@ -49,6 +49,7 @@
             this.btnValiderPlanete = new System.Windows.Forms.Button();
             this.cmbPlanete = new System.Windows.Forms.ComboBox();
             this.lblChoixPlanete = new System.Windows.Forms.Label();
+            this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.grpCreationMission.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +75,9 @@
             this.grpCreationMission.Controls.Add(this.btnValiderPlanete);
             this.grpCreationMission.Controls.Add(this.cmbPlanete);
             this.grpCreationMission.Controls.Add(this.lblChoixPlanete);
-            this.grpCreationMission.Location = new System.Drawing.Point(39, 12);
+            this.grpCreationMission.Location = new System.Drawing.Point(39, 47);
             this.grpCreationMission.Name = "grpCreationMission";
-            this.grpCreationMission.Size = new System.Drawing.Size(748, 737);
+            this.grpCreationMission.Size = new System.Drawing.Size(748, 731);
             this.grpCreationMission.TabIndex = 0;
             this.grpCreationMission.TabStop = false;
             this.grpCreationMission.Text = "Nouvelle Mission";
@@ -84,7 +85,7 @@
             // btnValiderMission
             // 
             this.btnValiderMission.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValiderMission.Location = new System.Drawing.Point(596, 656);
+            this.btnValiderMission.Location = new System.Drawing.Point(561, 608);
             this.btnValiderMission.Name = "btnValiderMission";
             this.btnValiderMission.Size = new System.Drawing.Size(146, 61);
             this.btnValiderMission.TabIndex = 19;
@@ -96,21 +97,21 @@
             // 
             this.txtBudget.Location = new System.Drawing.Point(418, 664);
             this.txtBudget.Name = "txtBudget";
-            this.txtBudget.Size = new System.Drawing.Size(100, 32);
+            this.txtBudget.Size = new System.Drawing.Size(100, 24);
             this.txtBudget.TabIndex = 18;
             // 
             // txtObjectifQDB
             // 
             this.txtObjectifQDB.Location = new System.Drawing.Point(418, 622);
             this.txtObjectifQDB.Name = "txtObjectifQDB";
-            this.txtObjectifQDB.Size = new System.Drawing.Size(100, 32);
+            this.txtObjectifQDB.Size = new System.Drawing.Size(100, 24);
             this.txtObjectifQDB.TabIndex = 17;
             // 
             // txtNbMembres
             // 
             this.txtNbMembres.Location = new System.Drawing.Point(418, 584);
             this.txtNbMembres.Name = "txtNbMembres";
-            this.txtNbMembres.Size = new System.Drawing.Size(100, 32);
+            this.txtNbMembres.Size = new System.Drawing.Size(100, 24);
             this.txtNbMembres.TabIndex = 16;
             // 
             // lblBudget
@@ -118,7 +119,7 @@
             this.lblBudget.AutoSize = true;
             this.lblBudget.Location = new System.Drawing.Point(150, 670);
             this.lblBudget.Name = "lblBudget";
-            this.lblBudget.Size = new System.Drawing.Size(93, 26);
+            this.lblBudget.Size = new System.Drawing.Size(62, 18);
             this.lblBudget.TabIndex = 15;
             this.lblBudget.Text = "Budget :";
             // 
@@ -127,7 +128,7 @@
             this.lblObjectifQDB.AutoSize = true;
             this.lblObjectifQDB.Location = new System.Drawing.Point(38, 629);
             this.lblObjectifQDB.Name = "lblObjectifQDB";
-            this.lblObjectifQDB.Size = new System.Drawing.Size(205, 26);
+            this.lblObjectifQDB.Size = new System.Drawing.Size(139, 18);
             this.lblObjectifQDB.TabIndex = 14;
             this.lblObjectifQDB.Text = "Objectif QDataBaz :";
             // 
@@ -136,7 +137,7 @@
             this.lblNbMembres.AutoSize = true;
             this.lblNbMembres.Location = new System.Drawing.Point(14, 584);
             this.lblNbMembres.Name = "lblNbMembres";
-            this.lblNbMembres.Size = new System.Drawing.Size(419, 26);
+            this.lblNbMembres.Size = new System.Drawing.Size(287, 18);
             this.lblNbMembres.TabIndex = 13;
             this.lblNbMembres.Text = "Nombre de Membres (capitaine compris) :";
             // 
@@ -153,7 +154,7 @@
             this.lblFeuilleRoute.AutoSize = true;
             this.lblFeuilleRoute.Location = new System.Drawing.Point(39, 441);
             this.lblFeuilleRoute.Name = "lblFeuilleRoute";
-            this.lblFeuilleRoute.Size = new System.Drawing.Size(176, 26);
+            this.lblFeuilleRoute.Size = new System.Drawing.Size(118, 18);
             this.lblFeuilleRoute.TabIndex = 11;
             this.lblFeuilleRoute.Text = "Feuille de Route:";
             // 
@@ -162,7 +163,7 @@
             this.dtRetour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtRetour.Location = new System.Drawing.Point(574, 374);
             this.dtRetour.Name = "dtRetour";
-            this.dtRetour.Size = new System.Drawing.Size(154, 32);
+            this.dtRetour.Size = new System.Drawing.Size(154, 24);
             this.dtRetour.TabIndex = 10;
             // 
             // dtDepart
@@ -170,7 +171,7 @@
             this.dtDepart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtDepart.Location = new System.Drawing.Point(226, 374);
             this.dtDepart.Name = "dtDepart";
-            this.dtDepart.Size = new System.Drawing.Size(154, 32);
+            this.dtDepart.Size = new System.Drawing.Size(154, 24);
             this.dtDepart.TabIndex = 9;
             this.dtDepart.ValueChanged += new System.EventHandler(this.dtDepart_ValueChanged);
             // 
@@ -179,7 +180,7 @@
             this.lblRetour.AutoSize = true;
             this.lblRetour.Location = new System.Drawing.Point(397, 375);
             this.lblRetour.Name = "lblRetour";
-            this.lblRetour.Size = new System.Drawing.Size(171, 26);
+            this.lblRetour.Size = new System.Drawing.Size(116, 18);
             this.lblRetour.TabIndex = 8;
             this.lblRetour.Text = "Date de Retour :";
             // 
@@ -188,7 +189,7 @@
             this.lblDepart.AutoSize = true;
             this.lblDepart.Location = new System.Drawing.Point(39, 374);
             this.lblDepart.Name = "lblDepart";
-            this.lblDepart.Size = new System.Drawing.Size(171, 26);
+            this.lblDepart.Size = new System.Drawing.Size(115, 18);
             this.lblDepart.TabIndex = 7;
             this.lblDepart.Text = "Date de Départ :";
             // 
@@ -197,7 +198,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 298);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 26);
+            this.label1.Size = new System.Drawing.Size(161, 18);
             this.label1.TabIndex = 6;
             this.label1.Text = "3) Détails de la Mission";
             // 
@@ -208,7 +209,7 @@
             this.cmbChefMission.FormattingEnabled = true;
             this.cmbChefMission.Location = new System.Drawing.Point(316, 197);
             this.cmbChefMission.Name = "cmbChefMission";
-            this.cmbChefMission.Size = new System.Drawing.Size(277, 34);
+            this.cmbChefMission.Size = new System.Drawing.Size(277, 26);
             this.cmbChefMission.TabIndex = 5;
             // 
             // lblChefMission
@@ -216,7 +217,7 @@
             this.lblChefMission.AutoSize = true;
             this.lblChefMission.Location = new System.Drawing.Point(6, 197);
             this.lblChefMission.Name = "lblChefMission";
-            this.lblChefMission.Size = new System.Drawing.Size(303, 26);
+            this.lblChefMission.Size = new System.Drawing.Size(206, 18);
             this.lblChefMission.TabIndex = 4;
             this.lblChefMission.Text = "2) Choix du chef de la Mission";
             // 
@@ -225,7 +226,7 @@
             this.lblNomMission.AutoSize = true;
             this.lblNomMission.Location = new System.Drawing.Point(39, 123);
             this.lblNomMission.Name = "lblNomMission";
-            this.lblNomMission.Size = new System.Drawing.Size(204, 26);
+            this.lblNomMission.Size = new System.Drawing.Size(140, 18);
             this.lblNomMission.TabIndex = 3;
             this.lblNomMission.Text = "Nom de la Mission :";
             // 
@@ -247,7 +248,7 @@
             this.cmbPlanete.FormattingEnabled = true;
             this.cmbPlanete.Location = new System.Drawing.Point(316, 57);
             this.cmbPlanete.Name = "cmbPlanete";
-            this.cmbPlanete.Size = new System.Drawing.Size(277, 34);
+            this.cmbPlanete.Size = new System.Drawing.Size(277, 26);
             this.cmbPlanete.TabIndex = 1;
             // 
             // lblChoixPlanete
@@ -255,15 +256,28 @@
             this.lblChoixPlanete.AutoSize = true;
             this.lblChoixPlanete.Location = new System.Drawing.Point(6, 57);
             this.lblChoixPlanete.Name = "lblChoixPlanete";
-            this.lblChoixPlanete.Size = new System.Drawing.Size(226, 26);
+            this.lblChoixPlanete.Size = new System.Drawing.Size(151, 18);
             this.lblChoixPlanete.TabIndex = 0;
             this.lblChoixPlanete.Text = "1) Choix de la Planète";
             // 
+            // menuBar1
+            // 
+            this.menuBar1.AutoSize = true;
+            this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(655, 7);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(146, 43);
+            this.menuBar1.TabIndex = 1;
+            // 
             // frmCreationMission
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 761);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(812, 818);
+            this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.grpCreationMission);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -273,6 +287,7 @@
             this.grpCreationMission.ResumeLayout(false);
             this.grpCreationMission.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -299,5 +314,6 @@
         private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.Label lblObjectifQDB;
         private System.Windows.Forms.Label lblNbMembres;
+        private control.menuBar menuBar1;
     }
 }

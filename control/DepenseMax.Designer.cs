@@ -75,7 +75,7 @@
             // 
             // pbChef
             // 
-            this.pbChef.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.pengu;
+            this.pbChef.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.chef;
             this.pbChef.Location = new System.Drawing.Point(354, 15);
             this.pbChef.Name = "pbChef";
             this.pbChef.Size = new System.Drawing.Size(86, 82);

@@ -38,9 +38,10 @@
             // 
             this.picMoins.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.picMoins.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.moins;
-            this.picMoins.Location = new System.Drawing.Point(1050, 3);
+            this.picMoins.Location = new System.Drawing.Point(700, 2);
+            this.picMoins.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picMoins.Name = "picMoins";
-            this.picMoins.Size = new System.Drawing.Size(30, 42);
+            this.picMoins.Size = new System.Drawing.Size(20, 27);
             this.picMoins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMoins.TabIndex = 0;
             this.picMoins.TabStop = false;
@@ -50,11 +51,12 @@
             // 
             // picFermer
             // 
-            this.picFermer.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picFermer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picFermer.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.fermerFrm;
-            this.picFermer.Location = new System.Drawing.Point(1108, 3);
+            this.picFermer.Location = new System.Drawing.Point(739, 2);
+            this.picFermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picFermer.Name = "picFermer";
-            this.picFermer.Size = new System.Drawing.Size(30, 42);
+            this.picFermer.Size = new System.Drawing.Size(20, 27);
             this.picFermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFermer.TabIndex = 1;
             this.picFermer.TabStop = false;
@@ -64,13 +66,14 @@
             // 
             // menuBar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.picFermer);
             this.Controls.Add(this.picMoins);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "menuBar";
-            this.Size = new System.Drawing.Size(1327, 70);
+            this.Size = new System.Drawing.Size(885, 46);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuBar_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.picMoins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFermer)).EndInit();

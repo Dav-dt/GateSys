@@ -40,6 +40,7 @@
             this.gbDepenseMax = new System.Windows.Forms.GroupBox();
             this.grpMissionPlanete = new System.Windows.Forms.GroupBox();
             this.grpBudget = new System.Windows.Forms.GroupBox();
+            this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.grpCollegue.SuspendLayout();
             this.gbInformateur.SuspendLayout();
             this.grpBudget.SuspendLayout();
@@ -51,7 +52,7 @@
             this.flpBudget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpBudget.Location = new System.Drawing.Point(39, 32);
             this.flpBudget.Name = "flpBudget";
-            this.flpBudget.Size = new System.Drawing.Size(566, 354);
+            this.flpBudget.Size = new System.Drawing.Size(566, 403);
             this.flpBudget.TabIndex = 0;
             // 
             // grpCollegue
@@ -145,9 +146,9 @@
             // 
             // grpMissionPlanete
             // 
-            this.grpMissionPlanete.Location = new System.Drawing.Point(13, 10);
+            this.grpMissionPlanete.Location = new System.Drawing.Point(12, 74);
             this.grpMissionPlanete.Name = "grpMissionPlanete";
-            this.grpMissionPlanete.Size = new System.Drawing.Size(780, 413);
+            this.grpMissionPlanete.Size = new System.Drawing.Size(780, 452);
             this.grpMissionPlanete.TabIndex = 5;
             this.grpMissionPlanete.TabStop = false;
             this.grpMissionPlanete.Text = "Mission par Planete";
@@ -155,19 +156,31 @@
             // grpBudget
             // 
             this.grpBudget.Controls.Add(this.flpBudget);
-            this.grpBudget.Location = new System.Drawing.Point(819, 7);
+            this.grpBudget.Location = new System.Drawing.Point(809, 72);
             this.grpBudget.Name = "grpBudget";
-            this.grpBudget.Size = new System.Drawing.Size(640, 415);
+            this.grpBudget.Size = new System.Drawing.Size(640, 454);
             this.grpBudget.TabIndex = 6;
             this.grpBudget.TabStop = false;
             this.grpBudget.Text = "Budget par mission";
+            // 
+            // menuBar1
+            // 
+            this.menuBar1.AutoSize = true;
+            this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(1318, 11);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(131, 32);
+            this.menuBar1.TabIndex = 7;
             // 
             // frmStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1547, 952);
+            this.ClientSize = new System.Drawing.Size(1461, 952);
+            this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.grpBudget);
             this.Controls.Add(this.grpMissionPlanete);
             this.Controls.Add(this.gbDepenseMax);
@@ -180,6 +193,7 @@
             this.gbInformateur.ResumeLayout(false);
             this.grpBudget.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +211,6 @@
         private System.Windows.Forms.GroupBox gbDepenseMax;
         private System.Windows.Forms.GroupBox grpMissionPlanete;
         private System.Windows.Forms.GroupBox grpBudget;
+        private control.menuBar menuBar1;
     }
 }

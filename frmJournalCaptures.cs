@@ -92,5 +92,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             Style.InitControles(this);
         }
+
+        private void buttonBack1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

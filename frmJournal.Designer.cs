@@ -39,6 +39,7 @@
             this.btnDepenses = new System.Windows.Forms.Button();
             this.btnCapturesAfficher = new System.Windows.Forms.Button();
             this.btnIndics = new System.Windows.Forms.Button();
+            this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.grpEventsJournal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +52,11 @@
             this.grpEventsJournal.Controls.Add(this.btnPrecedent);
             this.grpEventsJournal.Controls.Add(this.btnSuivant);
             this.grpEventsJournal.Controls.Add(this.btnTTfin);
-            this.grpEventsJournal.Location = new System.Drawing.Point(12, 28);
+            this.grpEventsJournal.Location = new System.Drawing.Point(64, 57);
+            this.grpEventsJournal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpEventsJournal.Name = "grpEventsJournal";
-            this.grpEventsJournal.Size = new System.Drawing.Size(712, 338);
+            this.grpEventsJournal.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpEventsJournal.Size = new System.Drawing.Size(475, 220);
             this.grpEventsJournal.TabIndex = 0;
             this.grpEventsJournal.TabStop = false;
             this.grpEventsJournal.Text = "Évènements du journal";
@@ -61,9 +64,10 @@
             // lblCompteur
             // 
             this.lblCompteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCompteur.Location = new System.Drawing.Point(15, 51);
+            this.lblCompteur.Location = new System.Drawing.Point(10, 33);
+            this.lblCompteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompteur.Name = "lblCompteur";
-            this.lblCompteur.Size = new System.Drawing.Size(226, 39);
+            this.lblCompteur.Size = new System.Drawing.Size(151, 25);
             this.lblCompteur.TabIndex = 6;
             this.lblCompteur.Text = "Évènement - / -";
             // 
@@ -72,25 +76,28 @@
             this.dtEventJournal.CustomFormat = "dd/MM/yyyy";
             this.dtEventJournal.Enabled = false;
             this.dtEventJournal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEventJournal.Location = new System.Drawing.Point(470, 25);
+            this.dtEventJournal.Location = new System.Drawing.Point(313, 16);
+            this.dtEventJournal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtEventJournal.Name = "dtEventJournal";
-            this.dtEventJournal.Size = new System.Drawing.Size(200, 26);
+            this.dtEventJournal.Size = new System.Drawing.Size(135, 20);
             this.dtEventJournal.TabIndex = 0;
             // 
             // lblEventJournal
             // 
-            this.lblEventJournal.Location = new System.Drawing.Point(6, 90);
+            this.lblEventJournal.Location = new System.Drawing.Point(4, 58);
+            this.lblEventJournal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEventJournal.Name = "lblEventJournal";
-            this.lblEventJournal.Size = new System.Drawing.Size(700, 145);
+            this.lblEventJournal.Size = new System.Drawing.Size(467, 94);
             this.lblEventJournal.TabIndex = 1;
             this.lblEventJournal.Text = "Aucun événement trouvé";
             // 
             // btnTTdebut
             // 
             this.btnTTdebut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTdebut.Location = new System.Drawing.Point(5, 238);
+            this.btnTTdebut.Location = new System.Drawing.Point(3, 155);
+            this.btnTTdebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTTdebut.Name = "btnTTdebut";
-            this.btnTTdebut.Size = new System.Drawing.Size(126, 85);
+            this.btnTTdebut.Size = new System.Drawing.Size(84, 55);
             this.btnTTdebut.TabIndex = 2;
             this.btnTTdebut.Text = "|<  Début";
             this.btnTTdebut.UseVisualStyleBackColor = true;
@@ -99,9 +106,10 @@
             // btnPrecedent
             // 
             this.btnPrecedent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrecedent.Location = new System.Drawing.Point(193, 238);
+            this.btnPrecedent.Location = new System.Drawing.Point(129, 155);
+            this.btnPrecedent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPrecedent.Name = "btnPrecedent";
-            this.btnPrecedent.Size = new System.Drawing.Size(143, 85);
+            this.btnPrecedent.Size = new System.Drawing.Size(95, 55);
             this.btnPrecedent.TabIndex = 4;
             this.btnPrecedent.Text = "<  Précédent";
             this.btnPrecedent.UseVisualStyleBackColor = true;
@@ -110,9 +118,10 @@
             // btnSuivant
             // 
             this.btnSuivant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuivant.Location = new System.Drawing.Point(396, 238);
+            this.btnSuivant.Location = new System.Drawing.Point(264, 155);
+            this.btnSuivant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(131, 85);
+            this.btnSuivant.Size = new System.Drawing.Size(87, 55);
             this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant  >";
             this.btnSuivant.UseVisualStyleBackColor = true;
@@ -121,9 +130,10 @@
             // btnTTfin
             // 
             this.btnTTfin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTfin.Location = new System.Drawing.Point(571, 238);
+            this.btnTTfin.Location = new System.Drawing.Point(381, 155);
+            this.btnTTfin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTTfin.Name = "btnTTfin";
-            this.btnTTfin.Size = new System.Drawing.Size(135, 85);
+            this.btnTTfin.Size = new System.Drawing.Size(90, 55);
             this.btnTTfin.TabIndex = 3;
             this.btnTTfin.Text = "Fin  >|";
             this.btnTTfin.UseVisualStyleBackColor = true;
@@ -132,9 +142,10 @@
             // btnDepenses
             // 
             this.btnDepenses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDepenses.Location = new System.Drawing.Point(23, 372);
+            this.btnDepenses.Location = new System.Drawing.Point(64, 315);
+            this.btnDepenses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDepenses.Name = "btnDepenses";
-            this.btnDepenses.Size = new System.Drawing.Size(190, 100);
+            this.btnDepenses.Size = new System.Drawing.Size(127, 65);
             this.btnDepenses.TabIndex = 1;
             this.btnDepenses.Text = "Consulter les dépenses";
             this.btnDepenses.UseVisualStyleBackColor = true;
@@ -143,9 +154,10 @@
             // btnCapturesAfficher
             // 
             this.btnCapturesAfficher.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapturesAfficher.Location = new System.Drawing.Point(516, 372);
+            this.btnCapturesAfficher.Location = new System.Drawing.Point(400, 312);
+            this.btnCapturesAfficher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCapturesAfficher.Name = "btnCapturesAfficher";
-            this.btnCapturesAfficher.Size = new System.Drawing.Size(202, 100);
+            this.btnCapturesAfficher.Size = new System.Drawing.Size(135, 65);
             this.btnCapturesAfficher.TabIndex = 3;
             this.btnCapturesAfficher.Text = "Afficher l\'avancée des captures";
             this.btnCapturesAfficher.UseVisualStyleBackColor = true;
@@ -154,28 +166,43 @@
             // btnIndics
             // 
             this.btnIndics.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIndics.Location = new System.Drawing.Point(279, 375);
+            this.btnIndics.Location = new System.Drawing.Point(224, 315);
+            this.btnIndics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIndics.Name = "btnIndics";
-            this.btnIndics.Size = new System.Drawing.Size(202, 95);
+            this.btnIndics.Size = new System.Drawing.Size(135, 62);
             this.btnIndics.TabIndex = 2;
             this.btnIndics.Text = "Consulter les contacts";
             this.btnIndics.UseVisualStyleBackColor = true;
             this.btnIndics.Click += new System.EventHandler(this.btnIndics_Click);
             // 
+            // menuBar1
+            // 
+            this.menuBar1.AutoSize = true;
+            this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(457, 0);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(174, 32);
+            this.menuBar1.TabIndex = 4;
+            // 
             // frmJournal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 484);
+            this.ClientSize = new System.Drawing.Size(642, 400);
+            this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.btnCapturesAfficher);
             this.Controls.Add(this.btnIndics);
             this.Controls.Add(this.btnDepenses);
             this.Controls.Add(this.grpEventsJournal);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmJournal";
             this.Text = "Journal de bord";
             this.Load += new System.EventHandler(this.frmJournal_Load);
             this.grpEventsJournal.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,5 +219,6 @@
         private System.Windows.Forms.Button btnDepenses;
         private System.Windows.Forms.Button btnCapturesAfficher;
         private System.Windows.Forms.Button btnIndics;
+        private control.menuBar menuBar1;
     }
 }

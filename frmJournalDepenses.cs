@@ -54,5 +54,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             lblTotal.Text = totalDepense + " $DG";
             Style.InitControles(this);
         }
+
+        private void menuBar1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

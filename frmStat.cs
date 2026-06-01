@@ -63,6 +63,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             //Style(grpBudget);
             Style.InitControles(this);
+            menuBar1.BringToFront();
 
 
 
