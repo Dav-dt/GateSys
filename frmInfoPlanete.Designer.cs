@@ -32,6 +32,7 @@
             this.lbMission = new System.Windows.Forms.ListBox();
             this.labelMission = new System.Windows.Forms.Label();
             this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
+            this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.SuspendLayout();
             // 
             // labelEspece
@@ -70,11 +71,23 @@
             this.buttonBack1.Size = new System.Drawing.Size(59, 60);
             this.buttonBack1.TabIndex = 4;
             // 
+            // menuBar1
+            // 
+            this.menuBar1.AutoSize = true;
+            this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(514, 2);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(184, 32);
+            this.menuBar1.TabIndex = 5;
+            // 
             // frmInfoPlanete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 463);
+            this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.lbMission);
             this.Controls.Add(this.labelMission);
@@ -93,5 +106,6 @@
         private System.Windows.Forms.ListBox lbMission;
         private System.Windows.Forms.Label labelMission;
         private control.ButtonBack buttonBack1;
+        private control.menuBar menuBar1;
     }
 }
