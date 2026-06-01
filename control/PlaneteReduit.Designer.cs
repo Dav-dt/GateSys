@@ -38,14 +38,14 @@
             // 
             this.lblNom.Location = new System.Drawing.Point(9, 117);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(90, 13);
+            this.lblNom.Size = new System.Drawing.Size(90, 43);
             this.lblNom.TabIndex = 1;
             this.lblNom.Text = "label1";
             this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNombre
             // 
-            this.lblNombre.Location = new System.Drawing.Point(12, 144);
+            this.lblNombre.Location = new System.Drawing.Point(9, 171);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(87, 13);
             this.lblNombre.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pbPlanete);
             this.Name = "PlaneteReduit";
-            this.Size = new System.Drawing.Size(108, 168);
+            this.Size = new System.Drawing.Size(108, 199);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
 

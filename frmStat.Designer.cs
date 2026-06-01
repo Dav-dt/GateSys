@@ -52,7 +52,7 @@
             this.flpBudget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpBudget.Location = new System.Drawing.Point(39, 32);
             this.flpBudget.Name = "flpBudget";
-            this.flpBudget.Size = new System.Drawing.Size(566, 354);
+            this.flpBudget.Size = new System.Drawing.Size(566, 403);
             this.flpBudget.TabIndex = 0;
             // 
             // grpCollegue
@@ -148,7 +148,7 @@
             // 
             this.grpMissionPlanete.Location = new System.Drawing.Point(12, 74);
             this.grpMissionPlanete.Name = "grpMissionPlanete";
-            this.grpMissionPlanete.Size = new System.Drawing.Size(780, 413);
+            this.grpMissionPlanete.Size = new System.Drawing.Size(780, 452);
             this.grpMissionPlanete.TabIndex = 5;
             this.grpMissionPlanete.TabStop = false;
             this.grpMissionPlanete.Text = "Mission par Planete";
@@ -158,7 +158,7 @@
             this.grpBudget.Controls.Add(this.flpBudget);
             this.grpBudget.Location = new System.Drawing.Point(809, 72);
             this.grpBudget.Name = "grpBudget";
-            this.grpBudget.Size = new System.Drawing.Size(640, 415);
+            this.grpBudget.Size = new System.Drawing.Size(640, 454);
             this.grpBudget.TabIndex = 6;
             this.grpBudget.TabStop = false;
             this.grpBudget.Text = "Budget par mission";
