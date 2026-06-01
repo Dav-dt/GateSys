@@ -371,6 +371,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
             doc.Close();
             MessageBox.Show("PDF généré avec succès !\n" + sfd.FileName);
+            System.Diagnostics.Process.Start(sfd.FileName); //ouvrir sur navigateur
         }
         protected override void OnPaint(PaintEventArgs e)
         {
