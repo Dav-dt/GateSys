@@ -22,9 +22,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void frmPlanete_Load(object sender, EventArgs e)
         {
             DataSet ds = MesDatas.DsGlobal;
-            int top = 10;
-            int left = 10;
-            int i = 0;
+
 
             foreach(DataRow item in ds.Tables["Planete"].Rows)
             {
@@ -62,22 +60,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
 
                 Planete pl = new Planete(nom, nom, temp,gravite, databaz);
-                pl.Top = top;
-                pl.Left = left;
-                i++;
-                if (i % 3 == 0)
-                {
-                    top += 220;
-                    left = 10;
-                }
-                else
-                {
-
-                    left += 400;
-                }
+              
 
 
-                this.Controls.Add(pl);
+                flpPlanete.Controls.Add(pl);
             }
             Style.InitControles(this);
         }

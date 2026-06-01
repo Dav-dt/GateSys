@@ -123,7 +123,7 @@
             this.cmbFiltre.FormattingEnabled = true;
             this.cmbFiltre.Location = new System.Drawing.Point(893, 80);
             this.cmbFiltre.Name = "cmbFiltre";
-            this.cmbFiltre.Size = new System.Drawing.Size(164, 34);
+            this.cmbFiltre.Size = new System.Drawing.Size(164, 26);
             this.cmbFiltre.TabIndex = 11;
             this.cmbFiltre.SelectedIndexChanged += new System.EventHandler(this.cmbFiltre_SelectedIndexChanged);
             // 
@@ -132,20 +132,22 @@
             this.lblTbb.AutoSize = true;
             this.lblTbb.Location = new System.Drawing.Point(287, 83);
             this.lblTbb.Name = "lblTbb";
-            this.lblTbb.Size = new System.Drawing.Size(168, 26);
+            this.lblTbb.Size = new System.Drawing.Size(114, 18);
             this.lblTbb.TabIndex = 12;
             this.lblTbb.Text = "Tableau de bord";
             // 
             // menuBar1
             // 
-            this.menuBar1.Location = new System.Drawing.Point(-1, -2);
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(-1, -1);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.menuBar1.Name = "menuBar1";
             this.menuBar1.Size = new System.Drawing.Size(1058, 35);
             this.menuBar1.TabIndex = 13;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 656);
             this.Controls.Add(this.menuBar1);
