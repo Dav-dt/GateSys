@@ -1,4 +1,4 @@
-﻿using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
+using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +32,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             {
                 cboCouleur.Items.Add(row["couleur"]);
             }
+            cboCouleur.SelectedIndex = 0;
             Style.InitControles(this);
         }
 
@@ -67,93 +68,101 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             flpRace.Controls.Clear();
         }
 
-        private void btnFiltre_Click(object sender, EventArgs e)
+        private void RafraichirAliens()
         {
-            
             Clear();
-            ajoutAlien();
+            DataSet ds = MesDatas.DsGlobal;
+
+            if (rbAllie.Checked)
+            {
+                if (!ds.Relations.Contains("relAllieEspece"))
+                {
+                    DataRelation rel = new DataRelation("relAllieEspece", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Allie"].Columns["idEspece"]);
+                    ds.Relations.Add(rel);
+                }
+                DataRow[] allie = ds.Tables["Allie"].Select();
+                if (allie.Length > 0)
+                {
+                    foreach (DataRow dr in allie)
+                    {
+                        DataRow espece = dr.GetParentRow("relAllieEspece");
+                        List<string> nomPlanete = getPlanete(espece["id"].ToString());
+                        Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Bienveillance:{dr["degreBienveillance"].ToString()}", $"{dr["instrumentMusique"].ToString()}",Color.Green);
+                        flpRace.Controls.Add(al);
+                    }
+                }
+            }
+            else if (rbEnnemi.Checked)
+            {
+                if (!ds.Relations.Contains("relAllieEnnemi"))
+                {
+                    DataRelation rel = new DataRelation("relAllieEnnemi", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Ennemi"].Columns["idEspece"]);
+                    ds.Relations.Add(rel);
+                }
+                DataRow[] allie = ds.Tables["Ennemi"].Select();
+                if (allie.Length > 0)
+                {
+                    foreach (DataRow dr in allie)
+                    {
+                        DataRow espece = dr.GetParentRow("relAllieEnnemi");
+                        List<string> nomPlanete = getPlanete(espece["id"].ToString());
+                        Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Agréssivité:{dr["degreAgressivite"].ToString()}", $"{dr["typeArme"].ToString()}", Color.Red);
+                        flpRace.Controls.Add(al);
+                    }
+                }
+            }
+            else
+            {
+                ajoutAlien();
+            }
+
             string nom = txtNom.Text.ToLower();
             string couleur = "";
             if (cboCouleur.SelectedItem != null)
             {
                 couleur = cboCouleur.SelectedItem.ToString().ToLower();
+                if (couleur == "tous")
+                {
+                    couleur = "";
+                }
             }
 
-
-
-                for (int i = flpRace.Controls.Count - 1; i >= 0; i--)
+            for (int i = flpRace.Controls.Count - 1; i >= 0; i--)
             {
                 if (flpRace.Controls[i] is Alien al)
                 {
-                    //MessageBox.Show(couleur + "      " + al.getCouleur());
-                    if (!(al.getNom().Contains(nom)) || (al.getCouleur() != couleur && !string.IsNullOrEmpty(couleur)))
+                    if (!(al.getNom().ToLower().Contains(nom)) || (al.getCouleur().ToLower() != couleur && !string.IsNullOrEmpty(couleur)))
                     {
-                        //MessageBox.Show(al.getCouleur());
                         flpRace.Controls.Remove(al);
                     }
                 }
-           
             }
             Style.InitControles(this);
+        }
+
+        private void btnFiltre_Click(object sender, EventArgs e)
+        {
+            RafraichirAliens();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            DataSet ds = MesDatas.DsGlobal;
-            Clear();
-            if (!ds.Relations.Contains("relAllieEnnemi"))
-            {
-                DataRelation rel = new DataRelation("relAllieEnnemi", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Ennemi"].Columns["idEspece"]);
-                ds.Relations.Add(rel);
-            }
-            DataRow[] allie = ds.Tables["Ennemi"].Select();
-            if (allie.Length > 0)
-            {
-                foreach (DataRow dr in allie)
-                {
-                    DataRow espece = dr.GetParentRow("relAllieEnnemi");
-                    List<string> nomPlanete = getPlanete(espece["id"].ToString());
-                    Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Agréssivité:{dr["degreAgressivite"].ToString()}", $"{dr["typeArme"].ToString()}", Color.Red);
-                    flpRace.Controls.Add(al);
-                }
-            }
-            Style.InitControles(this);
-
+            if (rbEnnemi.Checked) RafraichirAliens();
         }
 
         private void rbTous_CheckedChanged(object sender, EventArgs e)
         {
-            Clear();
-            ajoutAlien();
-            Style.InitControles(this);
+            if (rbTous.Checked) RafraichirAliens();
         }
 
         private void rbAllie_CheckedChanged(object sender, EventArgs e)
         {
-            DataSet ds = MesDatas.DsGlobal;
-            Clear();
-            if (!ds.Relations.Contains("relAllieEspece"))
-            {
-                DataRelation rel = new DataRelation("relAllieEspece", MesDatas.DsGlobal.Tables["Espece"].Columns["id"], MesDatas.DsGlobal.Tables["Allie"].Columns["idEspece"]);
-                ds.Relations.Add(rel);
-            }
-            DataRow[] allie = ds.Tables["Allie"].Select();
-            if (allie.Length > 0)
-            {
-                foreach (DataRow dr in allie)
-                {
-                    DataRow espece = dr.GetParentRow("relAllieEspece");
-                    List<string> nomPlanete = getPlanete(espece["id"].ToString());
-                    Alien al = new Alien(espece["nom"].ToString(), espece["couleur"].ToString(), nomPlanete, $"Bienveillance:{dr["degreBienveillance"].ToString()}", $"{dr["instrumentMusique"].ToString()}",Color.Green);
-                    flpRace.Controls.Add(al);
-                }
-            }
-            Style.InitControles(this);
+            if (rbAllie.Checked) RafraichirAliens();
         }
 
         private void cboCouleur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            btnFiltre_Click(sender, e);
         }
     }
 }
