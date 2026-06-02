@@ -215,8 +215,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                        sommeVersee, appreciation, nomCodeInformateur)
                         VALUES('{m_nomPlanete}', {m_numero}, 
                         '{dtIndic.Value.ToString("yyyy-MM-dd")}', 
-                        {Convert.ToInt32(txtSoudoiementIndic.Text)}, '{txtAppreciationIndic.Text}', 
-                        '{cmbINomIndic.SelectedValue}')".Replace("'", "''");
+                        {Convert.ToInt32(txtSoudoiementIndic.Text)},
+                        '{txtAppreciationIndic.Text.Replace("'", "''")}', 
+                        '{cmbINomIndic.SelectedValue}')";
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
 
@@ -275,7 +276,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         commentaires)
                         VALUES('{m_nomPlanete}', {m_numero}, 
                         '{dtNouvelEvent.Value.ToString("yyyy-MM-dd")}',
-                        '{txtNouvelEvent.Text}')".Replace("'", "''");
+                        '{txtNouvelEvent.Text.Replace("'", "''")}')";
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();
@@ -324,8 +325,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         montant, motif, idTypeDepense)
                     VALUES('{m_nomPlanete}', {m_numero}, {prochainId},
                     '{dtDepense.Value.ToString("yyyy-MM-dd")}', 
-                        {Convert.ToInt32(txtMontantDepense.Text)},'{txtMotifDepense.Text}', 
-                        {cmbIdDepense.SelectedValue})".Replace("'", "''");
+                        {Convert.ToInt32(txtMontantDepense.Text)},
+                        '{txtMotifDepense.Text.Replace("'", "''")}', 
+                        {cmbIdDepense.SelectedValue})";
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                 cmd.ExecuteNonQuery();

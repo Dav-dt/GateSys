@@ -92,7 +92,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             if (dtcolegue.Rows.Count == 0)
             {
                 Label lbl = new Label();
-                lbl.Text = "Cette personne a travailler avec aucun Menbre";
+                lbl.Text = "Cette personne n'a travaillé avec aucun membre";
                 lbl.AutoSize = true;
                 flpCollegue.Controls.Add(lbl);
             }

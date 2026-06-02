@@ -138,7 +138,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     dateDepart, dateRetour, matriculeChef, feuilleDeRoute,objectifDatabaz,budget)
                     VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
-                    '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text}', {txtObjectifQDB.Text}, 
+                    '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text.Replace("'", "''")}', {txtObjectifQDB.Text}, 
                     {txtBudget.Text})";
 
                 SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);

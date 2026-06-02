@@ -19,7 +19,22 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             this.Resize += (s, e) => ReposionnerBoutons();
             this.Load += (s, e) => ReposionnerBoutons();
         }
-        
+
+        protected override void OnParentChanged(EventArgs e)
+        {
+            base.OnParentChanged(e);
+            if ( this.Parent != null )
+            {
+                this.Parent.Layout += layoutCustom;
+            }
+        }
+
+        private void layoutCustom(object sender, LayoutEventArgs e)
+        {
+            this.Location = new Point(0, 0);
+            this.Width = this.Parent.ClientSize.Width;
+
+        }
 
         //merci stack overflow
         public const int WM_NCLBUTTONDOWN = 0xA1;

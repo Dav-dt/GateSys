@@ -38,39 +38,35 @@
             // pnlIndics
             // 
             this.pnlIndics.AutoScroll = true;
-            this.pnlIndics.Location = new System.Drawing.Point(16, 82);
-            this.pnlIndics.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIndics.Location = new System.Drawing.Point(24, 126);
             this.pnlIndics.Name = "pnlIndics";
-            this.pnlIndics.Size = new System.Drawing.Size(714, 292);
+            this.pnlIndics.Size = new System.Drawing.Size(1071, 449);
             this.pnlIndics.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 410);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(20, 631);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 13);
+            this.label1.Size = new System.Drawing.Size(205, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Total des sommes versées :";
             // 
             // llblTotalSomme
             // 
             this.llblTotalSomme.AutoSize = true;
-            this.llblTotalSomme.Location = new System.Drawing.Point(242, 410);
-            this.llblTotalSomme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.llblTotalSomme.Location = new System.Drawing.Point(363, 631);
             this.llblTotalSomme.Name = "llblTotalSomme";
-            this.llblTotalSomme.Size = new System.Drawing.Size(35, 13);
+            this.llblTotalSomme.Size = new System.Drawing.Size(51, 20);
             this.llblTotalSomme.TabIndex = 2;
             this.llblTotalSomme.Text = "label2";
             // 
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(655, 381);
-            this.buttonBack1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBack1.Location = new System.Drawing.Point(982, 586);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(75, 60);
+            this.buttonBack1.Size = new System.Drawing.Size(112, 92);
             this.buttonBack1.TabIndex = 3;
             // 
             // menuBar1
@@ -78,23 +74,21 @@
             this.menuBar1.AutoSize = true;
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(595, 2);
-            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Location = new System.Drawing.Point(1, -2);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(154, 32);
+            this.menuBar1.Size = new System.Drawing.Size(1140, 48);
             this.menuBar1.TabIndex = 4;
             // 
             // frmJournalIndics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 452);
+            this.ClientSize = new System.Drawing.Size(1140, 695);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.llblTotalSomme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlIndics);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmJournalIndics";
             this.Text = "frmJournalIndics";
             this.Load += new System.EventHandler(this.frmJournalIndics_Load);

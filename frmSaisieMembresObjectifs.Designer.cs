@@ -48,7 +48,7 @@
             this.lblAffectationMembres.AutoSize = true;
             this.lblAffectationMembres.Location = new System.Drawing.Point(51, 54);
             this.lblAffectationMembres.Name = "lblAffectationMembres";
-            this.lblAffectationMembres.Size = new System.Drawing.Size(193, 18);
+            this.lblAffectationMembres.Size = new System.Drawing.Size(285, 26);
             this.lblAffectationMembres.TabIndex = 0;
             this.lblAffectationMembres.Text = "4 - Affectation des membres";
             // 
@@ -59,7 +59,7 @@
             this.cmbMembres.FormattingEnabled = true;
             this.cmbMembres.Location = new System.Drawing.Point(54, 93);
             this.cmbMembres.Name = "cmbMembres";
-            this.cmbMembres.Size = new System.Drawing.Size(437, 26);
+            this.cmbMembres.Size = new System.Drawing.Size(437, 34);
             this.cmbMembres.TabIndex = 1;
             // 
             // btnAjouterMembres
@@ -87,10 +87,10 @@
             // lstMembres
             // 
             this.lstMembres.FormattingEnabled = true;
-            this.lstMembres.ItemHeight = 18;
+            this.lstMembres.ItemHeight = 26;
             this.lstMembres.Location = new System.Drawing.Point(54, 145);
             this.lstMembres.Name = "lstMembres";
-            this.lstMembres.Size = new System.Drawing.Size(820, 202);
+            this.lstMembres.Size = new System.Drawing.Size(820, 186);
             this.lstMembres.TabIndex = 4;
             // 
             // lblCaptures
@@ -98,7 +98,7 @@
             this.lblCaptures.AutoSize = true;
             this.lblCaptures.Location = new System.Drawing.Point(49, 386);
             this.lblCaptures.Name = "lblCaptures";
-            this.lblCaptures.Size = new System.Drawing.Size(160, 18);
+            this.lblCaptures.Size = new System.Drawing.Size(236, 26);
             this.lblCaptures.TabIndex = 5;
             this.lblCaptures.Text = "5 - Objectifs de capture";
             // 
@@ -109,14 +109,14 @@
             this.cmbCapture.FormattingEnabled = true;
             this.cmbCapture.Location = new System.Drawing.Point(54, 445);
             this.cmbCapture.Name = "cmbCapture";
-            this.cmbCapture.Size = new System.Drawing.Size(437, 26);
+            this.cmbCapture.Size = new System.Drawing.Size(437, 34);
             this.cmbCapture.TabIndex = 6;
             // 
             // txtNbCapture
             // 
             this.txtNbCapture.Location = new System.Drawing.Point(510, 444);
             this.txtNbCapture.Name = "txtNbCapture";
-            this.txtNbCapture.Size = new System.Drawing.Size(59, 24);
+            this.txtNbCapture.Size = new System.Drawing.Size(59, 32);
             this.txtNbCapture.TabIndex = 7;
             // 
             // btnAjouterCapture
@@ -133,10 +133,10 @@
             // lstCapture
             // 
             this.lstCapture.FormattingEnabled = true;
-            this.lstCapture.ItemHeight = 18;
+            this.lstCapture.ItemHeight = 26;
             this.lstCapture.Location = new System.Drawing.Point(54, 494);
             this.lstCapture.Name = "lstCapture";
-            this.lstCapture.Size = new System.Drawing.Size(820, 130);
+            this.lstCapture.Size = new System.Drawing.Size(820, 108);
             this.lstCapture.TabIndex = 9;
             // 
             // btnValiderTout
@@ -166,15 +166,15 @@
             this.menuBar1.AutoSize = true;
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(693, 2);
+            this.menuBar1.Location = new System.Drawing.Point(-6, -10);
             this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(225, 43);
+            this.menuBar1.Size = new System.Drawing.Size(931, 62);
             this.menuBar1.TabIndex = 12;
             // 
             // frmSaisieMembresObjectifs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 711);
             this.Controls.Add(this.menuBar1);

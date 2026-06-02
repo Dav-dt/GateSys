@@ -35,9 +35,10 @@
             // flpPlanete
             // 
             this.flpPlanete.AutoScroll = true;
-            this.flpPlanete.Location = new System.Drawing.Point(13, 64);
+            this.flpPlanete.Location = new System.Drawing.Point(20, 98);
+            this.flpPlanete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flpPlanete.Name = "flpPlanete";
-            this.flpPlanete.Size = new System.Drawing.Size(793, 503);
+            this.flpPlanete.Size = new System.Drawing.Size(1190, 774);
             this.flpPlanete.TabIndex = 1;
             // 
             // menuBar1
@@ -45,20 +46,20 @@
             this.menuBar1.AutoSize = true;
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(551, 11);
-            this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.menuBar1.Location = new System.Drawing.Point(1075, 0);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(264, 32);
+            this.menuBar1.Size = new System.Drawing.Size(163, 48);
             this.menuBar1.TabIndex = 2;
             // 
             // frmPlanete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(826, 579);
+            this.ClientSize = new System.Drawing.Size(1239, 891);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.flpPlanete);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPlanete";
             this.Text = "frmPlanete";
             this.Load += new System.EventHandler(this.frmPlanete_Load);

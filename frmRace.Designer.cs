@@ -40,8 +40,8 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
+            this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
             this.grpFiltre.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,9 +114,8 @@
             // 
             // btnFiltre
             // 
-            this.btnFiltre.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupe;
+            this.btnFiltre.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupeBetter;
             this.btnFiltre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFiltre.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupe;
             this.btnFiltre.Location = new System.Drawing.Point(1018, 49);
             this.btnFiltre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiltre.Name = "btnFiltre";
@@ -163,6 +162,14 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom";
             // 
+            // menuBar1
+            // 
+            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar1.Location = new System.Drawing.Point(3, -3);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(1244, 58);
+            this.menuBar1.TabIndex = 3;
+            // 
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
@@ -171,14 +178,6 @@
             this.buttonBack1.Name = "buttonBack1";
             this.buttonBack1.Size = new System.Drawing.Size(136, 91);
             this.buttonBack1.TabIndex = 2;
-            // 
-            // menuBar1
-            // 
-            this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(3, -3);
-            this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1244, 58);
-            this.menuBar1.TabIndex = 3;
             // 
             // frmRace
             // 

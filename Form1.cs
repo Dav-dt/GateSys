@@ -133,6 +133,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void MettreAJourDs(DataSet ds)
         {
+            ds.EnforceConstraints = false; //desactiver les rel ca fait crash quand on essaye de suppr les tables
             DataTable schemaTable = Connexion.Connec.GetSchema("Tables");
             SQLiteDataAdapter da;
 
@@ -148,6 +149,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
                 da.Fill(ds, nomTable);
             }
+            ds.EnforceConstraints = true;
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
