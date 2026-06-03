@@ -17,20 +17,33 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             InitializeComponent();
         }
 
-        public BarBudget(int budget,int budgetActuelle)
+        public BarBudget(int budget, int budgetActuelle)
         {
             InitializeComponent();
             pBarBudget.Minimum = 0;
             pBarBudget.Maximum = budget;
 
-            pBarBudget.Value = budgetActuelle;
             lblBudget.Text = budget.ToString();
+            if (budgetActuelle > 0)
+            {
+                pBarBudget.Value = budgetActuelle;
+                Label lbl = new Label();
+                lbl.Text = budgetActuelle.ToString();
+                lbl.Top = pBarBudget.Top + 50;
+                lbl.Left = pBarBudget.Left + (pBarBudget.Width * budgetActuelle) / budget;
+                this.Controls.Add(lbl);
+            }
+            else
+            {
+                pBarBudget.Value = 0;
+                Label lbl = new Label();
+                lbl.Text = budgetActuelle.ToString();
+                lbl.ForeColor = Color.Red;
+                lbl.Top = pBarBudget.Top + 50;
+                lbl.Left = pBarBudget.Left;
+                this.Controls.Add(lbl);
 
-            Label lbl = new Label();
-            lbl.Text = budgetActuelle.ToString();
-            lbl.Top = pBarBudget.Top + 50;
-            lbl.Left = pBarBudget.Left + (pBarBudget.Width *budgetActuelle)/budget;
-            this.Controls.Add(lbl);
+            }
         }
     }
 }
