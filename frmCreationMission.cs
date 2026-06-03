@@ -132,6 +132,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
+            else if ( txtNbMembres.Text == String.Empty || 
+                    Convert.ToInt32(txtNbMembres.Text) <= 0 )
+            {
+                MessageBox.Show("Veuillez un nombre valide de membres ");
+            }
+
             try
                 {
                 string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 

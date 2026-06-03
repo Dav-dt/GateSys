@@ -17,7 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
             InitializeComponent();
         }
 
-        public Membre(string nom,string prenom,bool militaire)
+        public Membre(string nom, string prenom, bool militaire)
         {
             InitializeComponent();
             lblNom.Text = nom;
@@ -32,6 +32,30 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                 Image img = Properties.Resources.civil;
                 pbMenbre.Image = img;
             }
+        }
+        public Membre(string nom, string prenom, bool militaire, bool estCapitaine)
+        {
+            InitializeComponent();
+            lblNom.Text = nom;
+            lblPrenom.Text = prenom;
+            if ( militaire )
+            {
+                Image img;
+                if ( estCapitaine )
+                {
+                    img = Properties.Resources.chef;
+                }
+                else
+                    img = Properties.Resources.militaire;
+                pbMenbre.Image = img;
+            }
+            else
+            {
+                Image img = Properties.Resources.civil;
+                pbMenbre.Image = img;
+            }
+
+
         }
     }
 }

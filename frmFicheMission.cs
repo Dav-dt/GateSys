@@ -38,6 +38,15 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmFicheMission_Load(object sender, EventArgs e)
         {
+
+            DateTime dtCreation = Convert.ToDateTime(MesDatas.DsGlobal.Tables["Mission"].Select(
+                $@"nomPlanete = '{m_nomPlanete}' AND 
+                numero = '{m_numero}'")[0]["dateDepart"]);
+
+            dtDepense.MinDate = dtCreation;
+            dtIndic.MinDate = dtCreation;
+            dtNouvelEvent.MinDate = dtCreation;
+
             
             //verifier que la mission existe
             DataRow[] dr = MesDatas.DsGlobal.Tables["Mission"].Select(
@@ -81,11 +90,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 DataRow[] infosMembre = MesDatas.DsGlobal.Tables["Membre"].Select(
                             $@"Matricule = '{matricule}'");
 
+                bool estCapitaine = MesDatas.DsGlobal.Tables["Mission"].Select(
+                    $@"matriculeChef = '{infosMembre[0]["matricule"]}'").Length > 0;
                 bool estMilitaire = matricule.StartsWith("M");
                 string nom = infosMembre[0]["nom"].ToString();
                 string prenom = infosMembre[0]["prenom"].ToString();
 
-                Membre membre = new Membre(nom, prenom, estMilitaire);
+                Membre membre = new Membre(nom, prenom, estMilitaire, estCapitaine);
                 //membre.Width = (pnlMembres.ClientSize.Width - 30) / 2;
 
                 int colonne = index % 4;
