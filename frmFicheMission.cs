@@ -218,6 +218,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             row["appreciation"] = txtAppreciationIndic.Text;
             row["nomCodeInformateur"] = cmbINomIndic.SelectedValue.ToString();
 
+            bool existeDeja = MesDatas.DsGlobal.Tables["Contact"].Select(
+                                $@"nomPlanete = '{m_nomPlanete}' AND
+                                numeroMission = {m_numero} AND 
+                                dateC = '{dtIndic.Value}'").Length > 0;
+
+            if ( existeDeja )
+            {
+                MessageBox.Show("Vous ne pouvez pas enregistrer deux fois le même contact !", "Erreur Logique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             MesDatas.DsGlobal.Tables["Contact"].Rows.Add(row);
 
             try
@@ -278,6 +289,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             row["numero"] = m_numero;
             row["dateJ"] = dtNouvelEvent.Value;
             row["commentaires"] = txtNouvelEvent.Text;
+
+            bool existeDeja = MesDatas.DsGlobal.Tables["JournalDeBord"].Select(
+                    $@"nomPlanete = '{m_nomPlanete}' AND
+                                numero = {m_numero} AND 
+                                dateJ = '{dtNouvelEvent.Value}'").Length > 0;
+
+            if ( existeDeja )
+            {
+                MessageBox.Show("Vous ne pouvez pas enregistrer deux fois le même évènement !", "Erreur Logique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             MesDatas.DsGlobal.Tables["JournalDeBord"].Rows.Add(row);
             //synchro vraie bdd

@@ -121,7 +121,7 @@
             // 
             this.cmbFiltre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltre.FormattingEnabled = true;
-            this.cmbFiltre.Location = new System.Drawing.Point(893, 80);
+            this.cmbFiltre.Location = new System.Drawing.Point(846, 80);
             this.cmbFiltre.Name = "cmbFiltre";
             this.cmbFiltre.Size = new System.Drawing.Size(164, 34);
             this.cmbFiltre.TabIndex = 11;
@@ -139,10 +139,10 @@
             // menuBar1
             // 
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(11, -1);
+            this.menuBar1.Location = new System.Drawing.Point(0, 0);
             this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1058, 35);
+            this.menuBar1.Size = new System.Drawing.Size(1069, 35);
             this.menuBar1.TabIndex = 13;
             // 
             // frmMain

@@ -40,7 +40,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             dtCapture.Columns.Add("Nom de l'espèce", typeof(string));
             dtCapture.Columns.Add("Objectif Initial", typeof(int));
             dtCapture.Columns.Add("Nombre de captures réalisées", typeof(int));
-            dtCapture.Columns.Add("Taux de réussite", typeof(int));
+            dtCapture.Columns.Add("Taux de réussite (%)", typeof(int));
 
             DataRow[] drObjectifs = MesDatas.DsGlobal.Tables["ObjectifCapture"].Select(
                 $"nomPlanete = '{m_nomPlanete}' " +

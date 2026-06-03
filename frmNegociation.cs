@@ -1,13 +1,8 @@
 ﻿using saeStargateTUAILLON_LONGO_YURTSEBEN.control;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace saeStargateTUAILLON_LONGO_YURTSEBEN
@@ -35,19 +30,31 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void btnValiderDemande_Click(object sender, EventArgs e)
         {
-            if ( txtQtDatabaz.Text == String.Empty || 
-                !int.TryParse(txtQtDatabaz.Text, out int nb)|| nb <= 0)
+            if (txtQtDatabaz.Text == String.Empty ||
+                !int.TryParse(txtQtDatabaz.Text, out int nb) || nb <= 0)
             {
                 MessageBox.Show("Veuillez entrer une quantité valide de DataBaz");
                 return;
             }
+
+
 
             DataRow dr = MesDatas.DsGlobal.Tables["Negocier"].NewRow();
             dr["numeroMission"] = m_numeroMission;
             dr["nomPlanete"] = m_nomPlanete;
             dr["idEspeceAllie"] = cmbAllie.SelectedValue;
             dr["qteDataBaz"] = Convert.ToInt32(txtQtDatabaz.Text);
-            
+
+            bool existeDeja = MesDatas.DsGlobal.Tables["Negocier"].Select(
+                                $@"numeroMission = {m_numeroMission} AND
+                                   nomPlanete = '{m_nomPlanete}' AND
+                                   idEspeceAllie = {cmbAllie.SelectedValue}").Length > 0;
+
+            if ( existeDeja )
+            {
+                MessageBox.Show("Vous ne pouvez pas négocier deux fois avec le même allié!","Erreur Logique",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             MesDatas.DsGlobal.Tables["Negocier"].Rows.Add(dr);
 
             MessageBox.Show("Demande de négociation envoyée avec succès !");
@@ -113,14 +120,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             pnlNegoc.Controls.Clear();
 
             int positionY = 10;
-            if ( drNegociations.Length > 0 )
+            if (drNegociations.Length > 0)
             {
-                foreach ( DataRow dr in drNegociations )
+                foreach (DataRow dr in drNegociations)
                 {
-                    foreach ( DataRow d2 in dtEspeceAllieDetaillee.Rows )
+                    foreach (DataRow d2 in dtEspeceAllieDetaillee.Rows)
                     {
-                        if ( Convert.ToInt32(d2["idEspece"]) == 
-                            Convert.ToInt32(dr["idEspeceAllie"]) )
+                        if (Convert.ToInt32(d2["idEspece"]) ==
+                            Convert.ToInt32(dr["idEspeceAllie"]))
                         {
                             string nomEspece = d2["nom"].ToString();
                             int qteDataBaz = Convert.ToInt32(dr["qteDataBaz"]);
@@ -130,7 +137,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         $"idEspece = {Convert.ToInt32(d2["idEspece"])}");
                             string couleur = extraCouleur[0]["couleur"].ToString();
 
-                            Negociation negociation = new Negociation(nomEspece, bienveillance, 
+                            Negociation negociation = new Negociation(nomEspece, bienveillance,
                                 instru, qteDataBaz, getImage(couleur));
 
                             negociation.Location = new Point(10, positionY);
@@ -153,7 +160,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             dtEspeceAllieDetaillee.Columns.Add("degreBienveillance", typeof(string));
             dtEspeceAllieDetaillee.Columns.Add("couleur", typeof(string));
             dtEspeceAllieDetaillee.Columns.Add("instrumentMusique", typeof(string));
-            foreach ( DataRow dr in MesDatas.DsGlobal.Tables["Allie"].Rows )
+            foreach (DataRow dr in MesDatas.DsGlobal.Tables["Allie"].Rows)
             {
                 DataRow[] drEspece = MesDatas.DsGlobal.Tables["Espece"].Select(
                     $"id = {dr["idEspece"]}");

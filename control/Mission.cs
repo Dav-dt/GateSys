@@ -36,7 +36,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
             switch ( m_nomPlanete )
             {
-                case "mercure":
+                case "Mercure":
                     pbPlanete.Image = Properties.Resources.mercury;
                     break;
 
@@ -93,7 +93,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
                     break;
 
                 default:
-                    pbPlanete.Image = Properties.Resources.pengu;
+                    pbPlanete.Image = Properties.Resources.setna;
                     break;
             }
         }

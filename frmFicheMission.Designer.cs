@@ -628,9 +628,9 @@
             // 
             this.btnPlusDepense.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.depense;
             this.btnPlusDepense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPlusDepense.Location = new System.Drawing.Point(733, 45);
+            this.btnPlusDepense.Location = new System.Drawing.Point(729, 45);
             this.btnPlusDepense.Name = "btnPlusDepense";
-            this.btnPlusDepense.Size = new System.Drawing.Size(98, 80);
+            this.btnPlusDepense.Size = new System.Drawing.Size(102, 81);
             this.btnPlusDepense.TabIndex = 13;
             this.btnPlusDepense.UseVisualStyleBackColor = true;
             this.btnPlusDepense.Click += new System.EventHandler(this.btnPlusDepense_Click);
@@ -639,7 +639,7 @@
             // 
             this.btnPlusEvent.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.plusEvent;
             this.btnPlusEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPlusEvent.Location = new System.Drawing.Point(837, 45);
+            this.btnPlusEvent.Location = new System.Drawing.Point(846, 46);
             this.btnPlusEvent.Name = "btnPlusEvent";
             this.btnPlusEvent.Size = new System.Drawing.Size(98, 80);
             this.btnPlusEvent.TabIndex = 14;
@@ -650,9 +650,9 @@
             // 
             this.btnPlusCapture.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.plusCapture;
             this.btnPlusCapture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPlusCapture.Location = new System.Drawing.Point(951, 45);
+            this.btnPlusCapture.Location = new System.Drawing.Point(964, 46);
             this.btnPlusCapture.Name = "btnPlusCapture";
-            this.btnPlusCapture.Size = new System.Drawing.Size(98, 80);
+            this.btnPlusCapture.Size = new System.Drawing.Size(110, 81);
             this.btnPlusCapture.TabIndex = 15;
             this.btnPlusCapture.UseVisualStyleBackColor = true;
             this.btnPlusCapture.Click += new System.EventHandler(this.btnPlusCapture_Click);
@@ -660,10 +660,10 @@
             // menuBar1
             // 
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(3, -4);
+            this.menuBar1.Location = new System.Drawing.Point(0, 0);
             this.menuBar1.Margin = new System.Windows.Forms.Padding(2);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1084, 41);
+            this.menuBar1.Size = new System.Drawing.Size(1086, 41);
             this.menuBar1.TabIndex = 16;
             // 
             // buttonBack1

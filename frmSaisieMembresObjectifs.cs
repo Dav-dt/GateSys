@@ -169,10 +169,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void btnAjouterMembres_Click(object sender, EventArgs e)
         {
             //pas 2 fois
-            if ( lstMembres.Items.Contains(cmbMembres.Text) )
+            if (lstMembres.Items.Contains(cmbMembres.Text))
                 return;
 
-            lstMembres.Items.Add(cmbMembres.Text);
+            else if (lstMembres.Items.Count == m_nbMembres)
+                return;
+
+                lstMembres.Items.Add(cmbMembres.Text);
             m_idsMembres.Add(cmbMembres.SelectedValue.ToString());
 
             Style.InitControles(this);
