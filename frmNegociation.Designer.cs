@@ -48,17 +48,20 @@
             // pnlNegoc
             // 
             this.pnlNegoc.AutoScroll = true;
-            this.pnlNegoc.Location = new System.Drawing.Point(22, 40);
+            this.pnlNegoc.Location = new System.Drawing.Point(15, 26);
+            this.pnlNegoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlNegoc.Name = "pnlNegoc";
-            this.pnlNegoc.Size = new System.Drawing.Size(928, 669);
+            this.pnlNegoc.Size = new System.Drawing.Size(619, 435);
             this.pnlNegoc.TabIndex = 0;
             // 
             // grpNegoc
             // 
             this.grpNegoc.Controls.Add(this.pnlNegoc);
-            this.grpNegoc.Location = new System.Drawing.Point(465, 89);
+            this.grpNegoc.Location = new System.Drawing.Point(310, 58);
+            this.grpNegoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpNegoc.Name = "grpNegoc";
-            this.grpNegoc.Size = new System.Drawing.Size(976, 720);
+            this.grpNegoc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpNegoc.Size = new System.Drawing.Size(651, 468);
             this.grpNegoc.TabIndex = 1;
             this.grpNegoc.TabStop = false;
             this.grpNegoc.Text = "Négociations passées pour cette Mission";
@@ -72,9 +75,11 @@
             this.grpContact.Controls.Add(this.lblDatabaz);
             this.grpContact.Controls.Add(this.picDatabaz);
             this.grpContact.Controls.Add(this.lblExtra);
-            this.grpContact.Location = new System.Drawing.Point(15, 114);
+            this.grpContact.Location = new System.Drawing.Point(10, 74);
+            this.grpContact.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpContact.Name = "grpContact";
-            this.grpContact.Size = new System.Drawing.Size(444, 685);
+            this.grpContact.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpContact.Size = new System.Drawing.Size(296, 445);
             this.grpContact.TabIndex = 2;
             this.grpContact.TabStop = false;
             this.grpContact.Text = "Contacter un extraterrestre";
@@ -83,24 +88,27 @@
             // 
             this.cmbAllie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAllie.FormattingEnabled = true;
-            this.cmbAllie.Location = new System.Drawing.Point(15, 109);
+            this.cmbAllie.Location = new System.Drawing.Point(10, 71);
+            this.cmbAllie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAllie.Name = "cmbAllie";
-            this.cmbAllie.Size = new System.Drawing.Size(212, 28);
+            this.cmbAllie.Size = new System.Drawing.Size(143, 21);
             this.cmbAllie.TabIndex = 6;
             this.cmbAllie.SelectedIndexChanged += new System.EventHandler(this.cmbAllie_SelectedIndexChanged);
             // 
             // txtQtDatabaz
             // 
-            this.txtQtDatabaz.Location = new System.Drawing.Point(36, 422);
+            this.txtQtDatabaz.Location = new System.Drawing.Point(24, 274);
+            this.txtQtDatabaz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtQtDatabaz.Name = "txtQtDatabaz";
-            this.txtQtDatabaz.Size = new System.Drawing.Size(128, 26);
+            this.txtQtDatabaz.Size = new System.Drawing.Size(87, 20);
             this.txtQtDatabaz.TabIndex = 5;
             // 
             // btnValiderDemande
             // 
-            this.btnValiderDemande.Location = new System.Drawing.Point(152, 585);
+            this.btnValiderDemande.Location = new System.Drawing.Point(101, 380);
+            this.btnValiderDemande.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnValiderDemande.Name = "btnValiderDemande";
-            this.btnValiderDemande.Size = new System.Drawing.Size(273, 74);
+            this.btnValiderDemande.Size = new System.Drawing.Size(182, 48);
             this.btnValiderDemande.TabIndex = 4;
             this.btnValiderDemande.Text = "Soumettre la demande";
             this.btnValiderDemande.UseVisualStyleBackColor = true;
@@ -109,9 +117,10 @@
             // picExtra
             // 
             this.picExtra.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.telephone;
-            this.picExtra.Location = new System.Drawing.Point(291, 80);
+            this.picExtra.Location = new System.Drawing.Point(194, 52);
+            this.picExtra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picExtra.Name = "picExtra";
-            this.picExtra.Size = new System.Drawing.Size(134, 135);
+            this.picExtra.Size = new System.Drawing.Size(89, 88);
             this.picExtra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picExtra.TabIndex = 3;
             this.picExtra.TabStop = false;
@@ -119,18 +128,20 @@
             // lblDatabaz
             // 
             this.lblDatabaz.AutoSize = true;
-            this.lblDatabaz.Location = new System.Drawing.Point(32, 338);
+            this.lblDatabaz.Location = new System.Drawing.Point(21, 220);
+            this.lblDatabaz.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatabaz.Name = "lblDatabaz";
-            this.lblDatabaz.Size = new System.Drawing.Size(183, 20);
+            this.lblDatabaz.Size = new System.Drawing.Size(122, 13);
             this.lblDatabaz.TabIndex = 2;
             this.lblDatabaz.Text = "Qté qDatabaz souhaitée";
             // 
             // picDatabaz
             // 
             this.picDatabaz.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.qDatabaz;
-            this.picDatabaz.Location = new System.Drawing.Point(286, 338);
+            this.picDatabaz.Location = new System.Drawing.Point(191, 220);
+            this.picDatabaz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picDatabaz.Name = "picDatabaz";
-            this.picDatabaz.Size = new System.Drawing.Size(140, 132);
+            this.picDatabaz.Size = new System.Drawing.Size(93, 86);
             this.picDatabaz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDatabaz.TabIndex = 1;
             this.picDatabaz.TabStop = false;
@@ -138,9 +149,10 @@
             // lblExtra
             // 
             this.lblExtra.AutoSize = true;
-            this.lblExtra.Location = new System.Drawing.Point(32, 65);
+            this.lblExtra.Location = new System.Drawing.Point(21, 42);
+            this.lblExtra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExtra.Name = "lblExtra";
-            this.lblExtra.Size = new System.Drawing.Size(103, 20);
+            this.lblExtra.Size = new System.Drawing.Size(69, 13);
             this.lblExtra.TabIndex = 0;
             this.lblExtra.Text = "Allie souhaité";
             // 
@@ -150,19 +162,21 @@
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuBar1.Location = new System.Drawing.Point(0, 0);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1458, 48);
+            this.menuBar1.Size = new System.Drawing.Size(971, 32);
             this.menuBar1.TabIndex = 3;
             // 
             // frmNegociation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1456, 845);
+            this.ClientSize = new System.Drawing.Size(971, 549);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpNegoc);
-            this.MinimumSize = new System.Drawing.Size(1470, 807);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(985, 538);
             this.Name = "frmNegociation";
             this.Text = "frmNegociation";
             this.Load += new System.EventHandler(this.frmNegociation_Load);

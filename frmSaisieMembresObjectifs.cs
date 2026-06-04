@@ -22,15 +22,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmSaisieMembresObjectifs()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public frmSaisieMembresObjectifs(string nomPlanete, int numeroMission, int nbMembres)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;
             m_nbMembres = nbMembres;
+
         }
 
         private void frmSaisieMembresObjectifs_Load(object sender, EventArgs e)

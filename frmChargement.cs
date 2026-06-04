@@ -15,6 +15,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmChargement()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             Style.InitControles(this);
             picCharg.Image = imgAleatoire();

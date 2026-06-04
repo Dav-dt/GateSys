@@ -16,6 +16,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmRace()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             Style.InitControles(this);
 
         }

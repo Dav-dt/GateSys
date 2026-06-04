@@ -18,6 +18,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmJournalCaptures()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public frmJournalCaptures(string nomPlanete, int numeroMission)
@@ -26,6 +27,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void frmJournalCaptures_Load(object sender, EventArgs e)

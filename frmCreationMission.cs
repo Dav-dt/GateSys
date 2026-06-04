@@ -35,6 +35,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmCreationMission()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             txtBudget.KeyPress += onlyNumbers_KeyPress;
             txtNbMembres.KeyPress += onlyNumbers_KeyPress;

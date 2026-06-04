@@ -22,11 +22,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmFicheMission()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public frmFicheMission(string nomPlanete, int numero)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             Style.InitControles(this);
             m_nomPlanete = nomPlanete;
             m_numero = numero;

@@ -13,6 +13,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmStat()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             //Style.InitControles(this);  il faut le a la main sinon ce sera trop dure a tout fix 
             string path = Path.Combine(Application.StartupPath,
                 "fonts", "Saira_Condensed-Regular.ttf");

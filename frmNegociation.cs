@@ -18,11 +18,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmNegociation()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public frmNegociation(string nomPlanete, int numeroMission)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;

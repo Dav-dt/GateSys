@@ -19,11 +19,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmJournalDepenses()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public frmJournalDepenses(string nomPlanete, int numeroMission)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             m_nomPlanete = nomPlanete;
             m_numeroMission = numeroMission;
         }

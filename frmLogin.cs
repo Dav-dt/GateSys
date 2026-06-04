@@ -17,6 +17,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             Style.InitControles(this);
         }
 

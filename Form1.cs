@@ -22,6 +22,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         public frmMain()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             //chargement initial de la toute la bdd
             List<string> tables = ChargerBddDansDs(MesDatas.DsGlobal);
