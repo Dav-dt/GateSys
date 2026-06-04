@@ -126,12 +126,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
-            else if ( !estCapitaine(cmbChefMission.SelectedValue.ToString()) )
-            {
-                MessageBox.Show("La personne sélectionnée n'est pas capitaine");
-                return;
-            }
-
             else if ( txtNbMembres.Text == String.Empty || 
                     Convert.ToInt32(txtNbMembres.Text) <= 0 )
             {
@@ -174,16 +168,6 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         ex.Message);
                     return;
                 }
-        }
-
-        private bool estCapitaine(string matricule)
-        {
-            SQLiteCommand cmd = new SQLiteCommand(
-                $@"SELECT COUNT(*) FROM Militaire 
-              WHERE matriculeMembre = '{matricule}' 
-                  AND grade = 'Capitaine'", Connexion.Connec);
-            int nbLigne = Convert.ToInt32(cmd.ExecuteScalar());
-            return nbLigne> 0;
         }
 
         private void dtDepart_ValueChanged(object sender, EventArgs e)
