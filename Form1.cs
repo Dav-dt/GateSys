@@ -18,6 +18,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
     public partial class frmMain : Form
     {
         private bool m_hasConnectedOnce = false;
+        //cle : nom | valeur = col
+        private Dictionary<string, string> m_tablesAvecDates = new Dictionary<string, string>
+        {
+            { "datePremierContact", "Allie" },
+            { "dateC", "Contact" },
+            { "dateD", "Depense" },
+            { "dateJ", "JournalDeBord" },
+            { "dateDepart", "Mission" },
+            { "dateRetour", "Mission" },
+            { "dateNaissance", "Membre" }
+        };
 
         public frmMain()
         {
@@ -78,7 +89,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                         frmChargement.Show();
                         Application.DoEvents();
                         MessageBox.Show("Mission créée et objectifs saisis avec succès !" +
-                            "Vous pouvez consulter la mission dans le tableau de bord");
+                            " Vous pouvez consulter la mission dans le tableau de bord");
                         frmChargement.Close();
                         MettreAJourDs(MesDatas.DsGlobal);
 
@@ -126,6 +137,17 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 da = new SQLiteDataAdapter("SELECT * FROM " + nomTable,
                                             Connexion.Connec);
                 da.Fill(ds, nomTable);
+            }
+
+            foreach ( KeyValuePair<string,string> kv in m_tablesAvecDates )
+            {
+                for ( int i = 0; i < ds.Tables[kv.Value].Rows.Count; i++ )
+                {
+                    object val = ds.Tables[kv.Value].Rows[i][kv.Key];
+
+                    ds.Tables[kv.Value].Rows[i][kv.Key] =
+                        Convert.ToDateTime(val).ToString("yyyy-MM-dd");
+                }
             }
 
             return tables;

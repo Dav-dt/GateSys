@@ -131,18 +131,25 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                     Convert.ToInt32(txtNbMembres.Text) <= 0 )
             {
                 MessageBox.Show("Veuillez un nombre valide de membres ");
+                return;
             }
 
-            try
+            else if ( dtDepart.Value > dtRetour.Value )
+            {
+                MessageBox.Show("Veuillez entrer une date de retour valide ");
+                return;
+            }
+
+                try
                 {
-                string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
+                    string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
                     dateDepart, dateRetour, matriculeChef, feuilleDeRoute,objectifDatabaz,budget)
                     VALUES ('{cmbPlanete.SelectedItem.ToString()}', {numMission}, {txtNbMembres.Text},
                     '{dtDepart.Value.ToString("yyyy-MM-dd")}', '{dtRetour.Value.ToString("yyyy-MM-dd")}',
                     '{cmbChefMission.SelectedValue.ToString()}', '{txtFeuilleDeRoute.Text.Replace("'", "''")}', {txtObjectifQDB.Text}, 
                     {txtBudget.Text})";
 
-                SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
+                    SQLiteCommand cmd = new SQLiteCommand(requete, Connexion.Connec);
                     cmd.ExecuteNonQuery();
 
                     //insérer le chef aussi dans composer
@@ -150,20 +157,20 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                                 numeroMission, matriculeMembre) 
                                 VALUES ('{cmbPlanete.SelectedItem.ToString()}',
                                 {numMission}, '{cmbChefMission.SelectedValue.ToString()}')";
-                    
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Mission créée avec succès !");
 
                     this.DialogResult = DialogResult.OK;
                 }
-                catch ( SQLiteException ex )
+                catch (SQLiteException ex)
                 {
                     MessageBox.Show("Erreur lors de l'insertion de la mission : " +
                         ex.Message);
                     return;
                 }
 
-                catch ( Exception ex )
+                catch (Exception ex)
                 {
                     MessageBox.Show("Une erreur est survenue : " +
                         ex.Message);
