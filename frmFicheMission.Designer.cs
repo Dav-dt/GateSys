@@ -83,6 +83,8 @@
             this.btnPlusCapture = new System.Windows.Forms.Button();
             this.menuBar1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.menuBar();
             this.buttonBack1 = new saeStargateTUAILLON_LONGO_YURTSEBEN.control.ButtonBack();
+            this.picDep = new System.Windows.Forms.PictureBox();
+            this.picRet = new System.Windows.Forms.PictureBox();
             this.tabCtrlEdition.SuspendLayout();
             this.tabNouveauContact.SuspendLayout();
             this.tabNouvelleDepense.SuspendLayout();
@@ -92,6 +94,8 @@
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStatutMission)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCtrlEdition
@@ -674,11 +678,33 @@
             this.buttonBack1.Size = new System.Drawing.Size(67, 72);
             this.buttonBack1.TabIndex = 11;
             // 
+            // picDep
+            // 
+            this.picDep.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.fuseeBetter;
+            this.picDep.Location = new System.Drawing.Point(12, 91);
+            this.picDep.Name = "picDep";
+            this.picDep.Size = new System.Drawing.Size(25, 28);
+            this.picDep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDep.TabIndex = 17;
+            this.picDep.TabStop = false;
+            // 
+            // picRet
+            // 
+            this.picRet.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.drapeau;
+            this.picRet.Location = new System.Drawing.Point(12, 125);
+            this.picRet.Name = "picRet";
+            this.picRet.Size = new System.Drawing.Size(25, 28);
+            this.picRet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRet.TabIndex = 18;
+            this.picRet.TabStop = false;
+            // 
             // frmFicheMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 755);
+            this.Controls.Add(this.picRet);
+            this.Controls.Add(this.picDep);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.btnPlusCapture);
             this.Controls.Add(this.btnPlusEvent);
@@ -715,6 +741,8 @@
             this.grpMembresEquipe.ResumeLayout(false);
             this.grpCapture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picStatutMission)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -777,5 +805,7 @@
         private System.Windows.Forms.Button btnPlusEvent;
         private System.Windows.Forms.Button btnPlusCapture;
         private control.menuBar menuBar1;
+        private System.Windows.Forms.PictureBox picDep;
+        private System.Windows.Forms.PictureBox picRet;
     }
 }
