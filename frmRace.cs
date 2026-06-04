@@ -165,5 +165,18 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             btnFiltre_Click(sender, e);
         }
+
+        private void txtNom_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtNom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnFiltre.PerformClick();
+            }
+        }
     }
 }

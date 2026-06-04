@@ -48,10 +48,9 @@
             // flpRace
             // 
             this.flpRace.AutoScroll = true;
-            this.flpRace.Location = new System.Drawing.Point(39, 285);
-            this.flpRace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flpRace.Location = new System.Drawing.Point(26, 185);
             this.flpRace.Name = "flpRace";
-            this.flpRace.Size = new System.Drawing.Size(1176, 654);
+            this.flpRace.Size = new System.Drawing.Size(784, 425);
             this.flpRace.TabIndex = 0;
             // 
             // grpFiltre
@@ -64,11 +63,9 @@
             this.grpFiltre.Controls.Add(this.txtNom);
             this.grpFiltre.Controls.Add(this.lblCouleur);
             this.grpFiltre.Controls.Add(this.lblNom);
-            this.grpFiltre.Location = new System.Drawing.Point(39, 52);
-            this.grpFiltre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpFiltre.Location = new System.Drawing.Point(26, 34);
             this.grpFiltre.Name = "grpFiltre";
-            this.grpFiltre.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpFiltre.Size = new System.Drawing.Size(1160, 203);
+            this.grpFiltre.Size = new System.Drawing.Size(773, 132);
             this.grpFiltre.TabIndex = 1;
             this.grpFiltre.TabStop = false;
             this.grpFiltre.Text = "Filtres";
@@ -76,10 +73,9 @@
             // rbEnnemi
             // 
             this.rbEnnemi.AutoSize = true;
-            this.rbEnnemi.Location = new System.Drawing.Point(621, 152);
-            this.rbEnnemi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbEnnemi.Location = new System.Drawing.Point(414, 99);
             this.rbEnnemi.Name = "rbEnnemi";
-            this.rbEnnemi.Size = new System.Drawing.Size(88, 24);
+            this.rbEnnemi.Size = new System.Drawing.Size(60, 17);
             this.rbEnnemi.TabIndex = 7;
             this.rbEnnemi.TabStop = true;
             this.rbEnnemi.Text = "Ennemi";
@@ -89,10 +85,9 @@
             // rbAllie
             // 
             this.rbAllie.AutoSize = true;
-            this.rbAllie.Location = new System.Drawing.Point(621, 102);
-            this.rbAllie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbAllie.Location = new System.Drawing.Point(414, 66);
             this.rbAllie.Name = "rbAllie";
-            this.rbAllie.Size = new System.Drawing.Size(63, 24);
+            this.rbAllie.Size = new System.Drawing.Size(44, 17);
             this.rbAllie.TabIndex = 6;
             this.rbAllie.TabStop = true;
             this.rbAllie.Text = "Allie";
@@ -102,10 +97,9 @@
             // rbTous
             // 
             this.rbTous.AutoSize = true;
-            this.rbTous.Location = new System.Drawing.Point(621, 51);
-            this.rbTous.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbTous.Location = new System.Drawing.Point(414, 33);
             this.rbTous.Name = "rbTous";
-            this.rbTous.Size = new System.Drawing.Size(69, 24);
+            this.rbTous.Size = new System.Drawing.Size(49, 17);
             this.rbTous.TabIndex = 5;
             this.rbTous.TabStop = true;
             this.rbTous.Text = "Tous";
@@ -116,10 +110,9 @@
             // 
             this.btnFiltre.BackgroundImage = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.loupeBetter;
             this.btnFiltre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFiltre.Location = new System.Drawing.Point(1018, 49);
-            this.btnFiltre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFiltre.Location = new System.Drawing.Point(679, 32);
             this.btnFiltre.Name = "btnFiltre";
-            this.btnFiltre.Size = new System.Drawing.Size(117, 98);
+            this.btnFiltre.Size = new System.Drawing.Size(78, 64);
             this.btnFiltre.TabIndex = 4;
             this.btnFiltre.UseVisualStyleBackColor = true;
             this.btnFiltre.Click += new System.EventHandler(this.btnFiltre_Click);
@@ -127,68 +120,65 @@
             // cboCouleur
             // 
             this.cboCouleur.FormattingEnabled = true;
-            this.cboCouleur.Location = new System.Drawing.Point(99, 109);
-            this.cboCouleur.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboCouleur.Location = new System.Drawing.Point(66, 71);
             this.cboCouleur.Name = "cboCouleur";
-            this.cboCouleur.Size = new System.Drawing.Size(220, 28);
+            this.cboCouleur.Size = new System.Drawing.Size(148, 21);
             this.cboCouleur.TabIndex = 3;
             this.cboCouleur.SelectedIndexChanged += new System.EventHandler(this.cboCouleur_SelectedIndexChanged);
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(99, 42);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNom.Location = new System.Drawing.Point(66, 27);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(212, 26);
+            this.txtNom.Size = new System.Drawing.Size(143, 20);
             this.txtNom.TabIndex = 2;
+            this.txtNom.Enter += new System.EventHandler(this.txtNom_Enter);
+            this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom_KeyPress);
             // 
             // lblCouleur
             // 
             this.lblCouleur.AutoSize = true;
-            this.lblCouleur.Location = new System.Drawing.Point(9, 114);
-            this.lblCouleur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCouleur.Location = new System.Drawing.Point(6, 74);
             this.lblCouleur.Name = "lblCouleur";
-            this.lblCouleur.Size = new System.Drawing.Size(64, 20);
+            this.lblCouleur.Size = new System.Drawing.Size(43, 13);
             this.lblCouleur.TabIndex = 1;
             this.lblCouleur.Text = "Couleur";
             // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(15, 46);
-            this.lblNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNom.Location = new System.Drawing.Point(10, 30);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(42, 20);
+            this.lblNom.Size = new System.Drawing.Size(29, 13);
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom";
             // 
             // menuBar1
             // 
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(3, -3);
+            this.menuBar1.Location = new System.Drawing.Point(0, 0);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1244, 58);
+            this.menuBar1.Size = new System.Drawing.Size(831, 38);
             this.menuBar1.TabIndex = 3;
             // 
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(1079, 949);
-            this.buttonBack1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonBack1.Location = new System.Drawing.Point(719, 617);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(136, 91);
+            this.buttonBack1.Size = new System.Drawing.Size(91, 59);
             this.buttonBack1.TabIndex = 2;
             // 
             // frmRace
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1246, 1045);
+            this.ClientSize = new System.Drawing.Size(831, 623);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.grpFiltre);
             this.Controls.Add(this.flpRace);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRace";
             this.Text = "frmRace";
             this.Load += new System.EventHandler(this.frmRace_Load);
