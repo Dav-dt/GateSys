@@ -24,6 +24,8 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         {
             InitializeComponent();
             Planete plt = new Planete(non, planete, temperature, gravite, databaz, false);
+            plt.Top = 50;
+            plt.Left = 10;
             this.Controls.Add(plt);
             nomplanete = planete;
         }
@@ -82,7 +84,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             }
             //Dictionary<string, int> dic = new Dictionary<string, int> { { "test", 100 }, { "test2",20} };
             populationPlanete pl = new populationPlanete(dic, color);
-            pl.Top = 175;
+            pl.Top = 210;
             pl.Left = 10;
             this.Controls.Add(pl);
             Style.InitControles(this);
@@ -120,6 +122,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         }
 
+        private void labelEspece_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

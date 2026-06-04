@@ -189,6 +189,10 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void dtDepart_ValueChanged(object sender, EventArgs e)
         {
             dtRetour.MinDate = dtDepart.Value;
+            if(dtRetour.Value < dtDepart.Value)
+            {
+                dtRetour.Value = dtDepart.Value;
+            }
             //date pas avant c logique
         }
     }
