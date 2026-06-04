@@ -38,42 +38,38 @@
             // labelEspece
             // 
             this.labelEspece.AutoSize = true;
-            this.labelEspece.Location = new System.Drawing.Point(18, 340);
-            this.labelEspece.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEspece.Location = new System.Drawing.Point(22, 283);
             this.labelEspece.Name = "labelEspece";
-            this.labelEspece.Size = new System.Drawing.Size(120, 20);
+            this.labelEspece.Size = new System.Drawing.Size(106, 13);
             this.labelEspece.TabIndex = 0;
-            this.labelEspece.Text = "Espece vivante:";
+            this.labelEspece.Text = "Espece(s) vivante(s):";
+            this.labelEspece.Click += new System.EventHandler(this.labelEspece_Click);
             // 
             // lbMission
             // 
             this.lbMission.FormattingEnabled = true;
-            this.lbMission.ItemHeight = 20;
             this.lbMission.Items.AddRange(new object[] {
             ""});
-            this.lbMission.Location = new System.Drawing.Point(496, 386);
-            this.lbMission.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbMission.Location = new System.Drawing.Point(349, 313);
             this.lbMission.Name = "lbMission";
-            this.lbMission.Size = new System.Drawing.Size(508, 204);
+            this.lbMission.Size = new System.Drawing.Size(340, 134);
             this.lbMission.TabIndex = 3;
             // 
             // labelMission
             // 
             this.labelMission.AutoSize = true;
-            this.labelMission.Location = new System.Drawing.Point(492, 340);
-            this.labelMission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMission.Location = new System.Drawing.Point(346, 283);
             this.labelMission.Name = "labelMission";
-            this.labelMission.Size = new System.Drawing.Size(66, 20);
+            this.labelMission.Size = new System.Drawing.Size(56, 13);
             this.labelMission.TabIndex = 2;
-            this.labelMission.Text = "Mission:";
+            this.labelMission.Text = "Mission(s):";
             // 
             // buttonBack1
             // 
             this.buttonBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.buttonBack1.Location = new System.Drawing.Point(918, 602);
-            this.buttonBack1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonBack1.Location = new System.Drawing.Point(630, 453);
             this.buttonBack1.Name = "buttonBack1";
-            this.buttonBack1.Size = new System.Drawing.Size(88, 92);
+            this.buttonBack1.Size = new System.Drawing.Size(59, 60);
             this.buttonBack1.TabIndex = 4;
             // 
             // menuBar1
@@ -81,22 +77,22 @@
             this.menuBar1.AutoSize = true;
             this.menuBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.menuBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuBar1.Location = new System.Drawing.Point(-1, -1);
+            this.menuBar1.Location = new System.Drawing.Point(0, 0);
+            this.menuBar1.Margin = new System.Windows.Forms.Padding(1);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(1053, 48);
+            this.menuBar1.Size = new System.Drawing.Size(701, 32);
             this.menuBar1.TabIndex = 5;
             // 
             // frmInfoPlanete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 712);
+            this.ClientSize = new System.Drawing.Size(701, 524);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.lbMission);
             this.Controls.Add(this.labelMission);
             this.Controls.Add(this.labelEspece);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmInfoPlanete";
             this.Text = "InfoPlanete";
             this.Load += new System.EventHandler(this.frmInfoPlanete_Load);
