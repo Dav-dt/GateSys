@@ -58,6 +58,7 @@
             this.dtNouvelEvent = new System.Windows.Forms.DateTimePicker();
             this.lblDtNouvelEvent = new System.Windows.Forms.Label();
             this.tabNouvelleCapture = new System.Windows.Forms.TabPage();
+            this.picAlienCapture = new System.Windows.Forms.PictureBox();
             this.txtNbCapture = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnValiderNouvelleCapture = new System.Windows.Forms.Button();
@@ -90,6 +91,7 @@
             this.tabNouvelleDepense.SuspendLayout();
             this.tabNouvelEvenement.SuspendLayout();
             this.tabNouvelleCapture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAlienCapture)).BeginInit();
             this.grpFeuilleDeRoute.SuspendLayout();
             this.grpMembresEquipe.SuspendLayout();
             this.grpCapture.SuspendLayout();
@@ -397,7 +399,7 @@
             this.dtNouvelEvent.Location = new System.Drawing.Point(119, 27);
             this.dtNouvelEvent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtNouvelEvent.Name = "dtNouvelEvent";
-            this.dtNouvelEvent.Size = new System.Drawing.Size(199, 28);
+            this.dtNouvelEvent.Size = new System.Drawing.Size(292, 28);
             this.dtNouvelEvent.TabIndex = 12;
             // 
             // lblDtNouvelEvent
@@ -412,6 +414,7 @@
             // 
             // tabNouvelleCapture
             // 
+            this.tabNouvelleCapture.Controls.Add(this.picAlienCapture);
             this.tabNouvelleCapture.Controls.Add(this.txtNbCapture);
             this.tabNouvelleCapture.Controls.Add(this.label2);
             this.tabNouvelleCapture.Controls.Add(this.btnValiderNouvelleCapture);
@@ -424,9 +427,19 @@
             this.tabNouvelleCapture.Text = "Nouvelle Capture";
             this.tabNouvelleCapture.UseVisualStyleBackColor = true;
             // 
+            // picAlienCapture
+            // 
+            this.picAlienCapture.Image = global::saeStargateTUAILLON_LONGO_YURTSEBEN.Properties.Resources.etranger;
+            this.picAlienCapture.Location = new System.Drawing.Point(116, 93);
+            this.picAlienCapture.Name = "picAlienCapture";
+            this.picAlienCapture.Size = new System.Drawing.Size(265, 193);
+            this.picAlienCapture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAlienCapture.TabIndex = 5;
+            this.picAlienCapture.TabStop = false;
+            // 
             // txtNbCapture
             // 
-            this.txtNbCapture.Location = new System.Drawing.Point(131, 105);
+            this.txtNbCapture.Location = new System.Drawing.Point(105, 320);
             this.txtNbCapture.Name = "txtNbCapture";
             this.txtNbCapture.Size = new System.Drawing.Size(113, 28);
             this.txtNbCapture.TabIndex = 4;
@@ -435,7 +448,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 105);
+            this.label2.Location = new System.Drawing.Point(16, 320);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 3;
@@ -459,6 +472,7 @@
             this.cmbEnnemiCapture.Name = "cmbEnnemiCapture";
             this.cmbEnnemiCapture.Size = new System.Drawing.Size(250, 30);
             this.cmbEnnemiCapture.TabIndex = 1;
+            this.cmbEnnemiCapture.SelectionChangeCommitted += new System.EventHandler(this.cmbEnnemiCapture_SelectionChangeCommitted);
             // 
             // lblCaptureEnnemi
             // 
@@ -736,6 +750,7 @@
             this.tabNouvelEvenement.PerformLayout();
             this.tabNouvelleCapture.ResumeLayout(false);
             this.tabNouvelleCapture.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAlienCapture)).EndInit();
             this.grpFeuilleDeRoute.ResumeLayout(false);
             this.grpFeuilleDeRoute.PerformLayout();
             this.grpMembresEquipe.ResumeLayout(false);
@@ -807,5 +822,6 @@
         private control.menuBar menuBar1;
         private System.Windows.Forms.PictureBox picDep;
         private System.Windows.Forms.PictureBox picRet;
+        private System.Windows.Forms.PictureBox picAlienCapture;
     }
 }

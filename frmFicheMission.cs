@@ -169,6 +169,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             cmbEnnemiCapture.DisplayMember = "nom";
             cmbEnnemiCapture.ValueMember = "id";
 
+            if ( cmbEnnemiCapture.Items.Count > 0 ) //on met la vraie image manuellement selected index marche pas
+            {
+                int idEnnemi = Convert.ToInt32(cmbEnnemiCapture.SelectedValue);
+
+                string couleur = MesDatas.DsGlobal.Tables["Espece"].Select(
+                    $"id = {idEnnemi}")[0]["couleur"].ToString();
+
+                picAlienCapture.Image = Alien.getImage(couleur);
+            }
+
         }
 
         private int GetMontantDesDepenses()
@@ -468,6 +478,16 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
         private void btnPlusCapture_Click(object sender, EventArgs e)
         {
             tabCtrlEdition.SelectedTab = tabNouvelleCapture;
+        }
+
+        private void cmbEnnemiCapture_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int idEnnemi = Convert.ToInt32(cmbEnnemiCapture.SelectedValue);
+
+            string couleur = MesDatas.DsGlobal.Tables["Espece"].Select(
+                    $@"id = {idEnnemi}")[0]["couleur"].ToString();
+
+            picAlienCapture.Image = Alien.getImage(couleur);
         }
     }
 }

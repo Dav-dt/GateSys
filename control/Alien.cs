@@ -91,7 +91,7 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN.control
 
         }
 
-        private Image getImage(string nom)
+        public static Image getImage(string nom)
         {
             switch (nom.ToLower())
             {
