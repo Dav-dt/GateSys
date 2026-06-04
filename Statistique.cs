@@ -64,12 +64,12 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             string request = $@"SELECT  M.nomPlanete, M.numero, 
                             (SELECT COUNT(*) FROM Composer C WHERE C.nomPlanete = M.nomPlanete AND C.numeroMission = M.numero) AS Membres,
                             M.budget,
-                            M.budget - (SELECT SUM(montant) FROM Depense D WHERE D.nomPlanete = M.nomPlanete AND D.numeroMission = M.numero) AS BudgetActuel
+                            M.budget - coalesce ((SELECT SUM(montant) FROM Depense D WHERE D.nomPlanete = M.nomPlanete AND D.numeroMission = M.numero),0) AS BudgetActuel
                             FROM Mission M
                             WHERE (SELECT COUNT(*) FROM Composer C WHERE C.nomPlanete = M.nomPlanete AND C.numeroMission = M.numero) > 1;";
             SQLiteCommand cmd = new SQLiteCommand(request, connection);
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable(); 
             da.Fill(dt);
             return dt;
         }
