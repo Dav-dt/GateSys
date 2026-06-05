@@ -38,6 +38,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmSaisieMembresObjectifs_Load(object sender, EventArgs e)
         {
+            txtNbCapture.KeyPress += numberOnlyField_KeyPress;
+            txtNbCapture.ShortcutsEnabled = false;
+
             string requete = @"SELECT * FROM membre me
                     LEFT JOIN Militaire mi 
                         ON me.matricule = mi.matriculeMembre
@@ -216,6 +219,14 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             e.Cancel = true;
             //empêcher le user de fermer le formulaire et
             // de tout casser
+        }
+
+        private void numberOnlyField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

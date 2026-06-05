@@ -40,6 +40,9 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
 
         private void frmFicheMission_Load(object sender, EventArgs e)
         {
+            txtNbCapture.ShortcutsEnabled = false;
+            txtMontantDepense.ShortcutsEnabled = false;
+            txtSoudoiementIndic.ShortcutsEnabled = false;
 
             DateTime dtCreation = Convert.ToDateTime(MesDatas.DsGlobal.Tables["Mission"].Select(
                 $@"nomPlanete = '{m_nomPlanete}' AND 

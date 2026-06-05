@@ -41,6 +41,11 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
             txtNbMembres.KeyPress += onlyNumbers_KeyPress;
             txtObjectifQDB.KeyPress += onlyNumbers_KeyPress;
 
+            // je ne vous fais pas confiance
+            txtBudget.ShortcutsEnabled = false;
+            txtNbMembres.ShortcutsEnabled = false;
+            txtObjectifQDB.ShortcutsEnabled = false;
+
             Style.InitControles(this);
         }
 
@@ -140,6 +145,13 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 return;
             }
 
+            else if ( Convert.ToInt32(txtNbMembres.Text) >= getMaxMembresAjoutablesPossibles()-1 )
+            {
+                MessageBox.Show("Vous ne pourrez pas ajouter autant de membre, le max est de "+
+                    getMaxMembresAjoutablesPossibles().ToString());
+                return;
+            }
+
                 try
                 {
                     string requete = $@"INSERT INTO Mission (nomPlanete, numero, nbMembreRequis, 
@@ -186,6 +198,19 @@ namespace saeStargateTUAILLON_LONGO_YURTSEBEN
                 dtRetour.Value = dtDepart.Value;
             }
             //date pas avant c logique
+        }
+
+        private int getMaxMembresAjoutablesPossibles()
+        {
+            string requete = @"SELECT Count(*) FROM membre me
+                    LEFT JOIN Militaire mi 
+                        ON me.matricule = mi.matriculeMembre
+                    LEFT JOIN Civil c 
+                        ON me.matricule = c.matriculeMembre";
+
+            SQLiteCommand cd = new SQLiteCommand(requete, Connexion.Connec);
+
+            return Convert.ToInt32(cd.ExecuteScalar());
         }
     }
 }

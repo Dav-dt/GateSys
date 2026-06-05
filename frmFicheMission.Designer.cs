@@ -319,6 +319,7 @@
             this.txtMontantDepense.Name = "txtMontantDepense";
             this.txtMontantDepense.Size = new System.Drawing.Size(144, 28);
             this.txtMontantDepense.TabIndex = 12;
+            this.txtMontantDepense.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberOnlyField_KeyPress);
             // 
             // lblDepense
             // 
