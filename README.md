@@ -4,6 +4,10 @@ GateSys (développé sous le nom de projet `saeStargateTUAILLON_LONGO_YURTSEBEN`
 
 L'application s'appuie sur une base de données locale SQLite (`Stargate.db`) pour centraliser les données sur les planètes, les espèces extraterrestres (alliées ou ennemies), les membres des équipes d'exploration, le budget et le journal des événements de chaque mission.
 
+<p align="center">
+  <img src="images/tableauBord.png" alt="Tableau de bord GateSys" width="600" />
+</p>
+
 ---
 
 ## 🚀 Fonctionnalités
@@ -16,6 +20,10 @@ GateSys offre une interface utilisateur immersive sur le thème de Stargate, dot
 * **Constitution de l'Équipage** : Affectation des membres à la mission (militaires et scientifiques), avec distinction automatique des rôles (chef de mission/capitaine).
 * **Objectifs de Capture** : Définition d'objectifs précis de capture d'espèces hostiles sur les planètes d'arrivée.
 
+<p align="center">
+  <img src="images/Mission.png" alt="Gestion des Missions" width="500" />
+</p>
+
 ### 2. Suivi et Journal de Bord des Missions
 * **Fiche de Mission Détaillée** : Vue d'ensemble affichant le statut de la mission (En cours ou Terminée), l'équipage affecté, les objectifs de capture, le budget initial et le budget restant calculé en temps réel après déduction des dépenses.
 * **Journal des Événements** : Enregistrement chronologique et consultation étape par étape des événements survenus pendant l'expédition.
@@ -27,6 +35,10 @@ GateSys offre une interface utilisateur immersive sur le thème de Stargate, dot
 * **Base de Données des Planètes** : Explorateur de l'univers connu affichant les caractéristiques de chaque planète (température moyenne, gravité, présence de la ressource stratégique *DataBaz* et statut opérationnel de sa porte des étoiles).
 * **Base de Données des Espèces** : Répertoire complet des peuples extraterrestres (Aliens) répertoriés selon leur type de relation (Alliés, Ennemis, Neutres) et leurs caractéristiques physiques (couleur de peau, degré de bienveillance ou instruments de musique préférés).
 * **Demandes de Négociation** : Module d'échange de ressources permettant de négocier des quantités de *DataBaz* auprès des factions alliées rencontrées.
+
+<p align="center">
+  <img src="images/Planete.png" alt="Encyclopédie Stellaire et Planètes" width="500" />
+</p>
 
 ### 4. Module de Statistiques Avancées
 * **Statistiques Financières** : Graphiques d'analyse comparative montrant le budget alloué par rapport aux dépenses réelles engagées sur chaque planète.
