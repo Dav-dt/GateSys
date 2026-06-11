@@ -90,4 +90,3 @@ Pour exécuter et compiler ce projet en local, suivez les instructions ci-dessou
 Ce projet a été réalisé par :
 * **Tuaillon**
 * **Longo**
-* **Yurtseven**
